@@ -1,0 +1,505 @@
+            /*********************************IMPORTS********************************************/
+            
+            @use "./partials/reset.scss" as *;
+            @use "./partials/mixins.scss" as *;
+            @use "./partials/_variables.scss" as *;
+            @use "./partials/_typography.scss" as *;
+            *,
+            *::before,
+            *::after {
+                font-family: AvenirNextLTProRegular;
+                box-sizing: inherit;
+                margin: 0px;
+            }
+            /*********************************************HEADINGS**h1-h6**************************************/
+            /*H1 - Header*/
+            
+            h1 {
+                font-size: 24px;
+                line-height: 32px;
+                font-family: AvenirNextLTProBold;
+                @include tablet {
+                    font-size: 36px;
+                    line-height: 44px;
+                    font-family: AvenirNextLTProBold;
+                }
+            }
+            /*H2 - Header*/
+            
+            h2 {
+                font-size: 14px;
+                line-height: 22px;
+                font-family: AvenirNextLTProDemi;
+                @include tablet {
+                    font-size: 24px;
+                    line-height: 32px;
+                    font-family: AvenirNextLTProBold;
+                }
+            }
+            /*H3 - Subheader for Tablet and Desktop*/
+            
+            h3 {
+                font-size: 16px;
+                line-height: 24px;
+                font-family: AvenirNextLTProDemi;
+            }
+            /*H4 - Paragraph & comments*/
+            
+            h4 {
+                font-size: 13px;
+                line-height: 18px;
+                font-family: AvenirNextLTProRegular;
+                @include tablet {
+                    font-size: 14px;
+                    line-height: 22px;
+                    font-family: AvenirNextLTProRegular;
+                }
+            }
+            
+            p {
+                font-size: 13px;
+                line-height: 18px;
+                font-family: AvenirNextLTProRegular;
+                @include tablet {
+                    font-size: 14px;
+                    line-height: 20px;
+                    font-family: AvenirNextLTProRegular;
+                    display: inline-block;
+                }
+            }
+            /*H5 - LABELS*/
+            
+            h5 {
+                font-size: 12px;
+                line-height: 20px;
+                font-family: AvenirNextLTProRegular;
+                @include tablet {
+                    font-size: 12px;
+                    line-height: 20px;
+                    font-family: AvenirNextLTProBold;
+                }
+                @include desktop {
+                    font-size: 12px;
+                    line-height: 20px;
+                    font-family: AvenirNextLTProBold;
+                }
+            }
+            /*********************************************END OF HEADINGS**h1-h6**************************************/
+            /************************************MAIN NAV************************************/
+            
+            .main-nav {
+                background-color: $black;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                color: $silver;
+                height: 80px;
+                width: 100%;
+                @include tablet {
+                    flex-direction: row;
+                }
+                &__logo {
+                    padding: 1rem 0 1rem 0;
+                    color: $white;
+                    @include tablet {
+                        padding: 0 3rem 0 1.5rem;
+                    }
+                    @include desktop {
+                        padding: 0 3.5rem 0 5rem;
+                    }
+                }
+                &__list {
+                    display: flex;
+                    width: 100%;
+                    text-align: center;
+                    list-style-type: none;
+                    @include tablet {
+                        width: 13.5rem;
+                    }
+                }
+                &__item {
+                    padding: 0 0 0.5rem 0;
+                    width: 50%;
+                    @include tablet {
+                        width: 5rem;
+                        padding: 2rem 3rem 0 3.5rem;
+                    }
+                    @include desktop {
+                        width: 5rem;
+                        padding: 2rem 3.5rem 0 3.5rem;
+                    }
+                    &--active {
+                        border-bottom: 1rem solid $white;
+                        padding-bottom: 0.5rem;
+                        width: 50%;
+                        @include tablet {
+                            width: 40%;
+                            padding: 2rem 0 2rem 0;
+                        }
+                    }
+                }
+                &__link {
+                    text-decoration: none;
+                    color: $white;
+                }
+            }
+            /************************************HERO CONTAINER****************************/
+            
+            .hero-container {
+                display: flex;
+                position: relative;
+                background-image: url("../assets/images/hero-image.jpg");
+                background-position: center;
+                background-size: cover;
+                background-color: rgba(50, 50, 50, 0.50);
+                margin: 0 0 32px 0;
+                 ::before {
+                    content: "";
+                    position: absolute;
+                    top: 0rem;
+                    right: 0rem;
+                    bottom: 0rem;
+                    left: 0rem;
+                    background-color: rgba(0, 0, 0, 0.25);
+                    z-index: -1;
+                }
+                min-height: 57.18vw; //320x --> 183px/320px= 57.18 vw
+                max-height: 400px;
+                @include tablet {
+                    min-height: 400px;
+                    max-height: 52.08vw; //400px --> 400px/768px = 52.08vw
+                    margin: 0 0 48px 0;
+                }
+                @include desktop {
+                    min-height: 670px;
+                    max-height: 52.34vw; //670px --> 670px/1280px = 52.34vw
+                }
+                &--scale {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+                &__title {
+                    color: $white;
+                    font-family: AvenirNextLTProBold;
+                    font-size: 3vw; //24px/320= 7.5vw
+                    //line-height: 11.25vw; //36px/320=11.25vw
+                    @include tablet {
+                        // @include h1-hero-heading;
+                    }
+                }
+                &__box {
+                    color: $white;
+                    padding: 15vw 11.25vw 0 7.5vw; //48px 36px 0px 24px 56/320=17.5vw
+                    max-width: 63.12vw;
+                    z-index: 1;
+                    @include desktop {
+                        padding: 223px 0px 0px 80px;
+                        width: 600px;
+                    }
+                }
+                &__text {
+                    font-family: AvenirNextLTProBold;
+                    font-size: 7.5vw; //24px/320= 7.5vw
+                    line-height: 11.25vw; //36px/320=11.25vw
+                    @include tablet {
+                        @include h1-hero-heading;
+                    }
+                }
+                .soundcloud {
+                    padding: 0 16px 0 16px;
+                    height: 194px;
+                    width: 436px;
+                    @include tablet {
+                        padding: 0 24px 0 16px;
+                        height: 194px;
+                        width: 436px;
+                    }
+                }
+            }
+            /************************************SHOWS SECTION************************************/
+            
+            .shows {
+                background-color: $white;
+                color: $black;
+                width: 100%;
+                display: flex;
+                flex-wrap: wrap;
+                flex-direction: row;
+                width: 100%;
+                padding: 0 1rem; //mobile horizontal padding 16px 1rem
+                @include tablet {
+                    padding: 0 1.5rem; //horizontal 24px padding 1.5rem
+                }
+                @include desktop {
+                    padding: 0 5rem; //horizontal 80px padding 5rem
+                }
+                &__banner {
+                    display: none;
+                    @include tablet {
+                        margin: 0 0 0;
+                        display: flex;
+                        flex-wrap: wrap;
+                        flex-direction: row;
+                        background-color: $white;
+                        width: 100%;
+                        display: contents;
+                    }
+                    @include desktop {
+                        display: contents;
+                    }
+                }
+                &__heading {
+                    margin: 40px 0px 32px 0px;
+                }
+                &__dateo {
+                    display: none;
+                    @include tablet {
+                        display: contents;
+                        margin: 0 160px 0 0;
+                    }
+                    @include desktop {
+                        display: contents;
+                    }
+                }
+                &__venueo {
+                    display: none;
+                    @include tablet {
+                        display: contents;
+                        margin: 0 16px 0 0;
+                    }
+                    @include desktop {
+                        display: contents;
+                    }
+                }
+                &__locationo {
+                    display: none;
+                    @include tablet {
+                        display: contents;
+                        margin: 0 16px 0 0;
+                    }
+                    @include desktop {
+                        display: contents;
+                    }
+                }
+                .card {
+                    border-bottom: 1px solid $silver; //just a guess
+                    display: flex;
+                    flex-flow: row wrap;
+                    width: 100%;
+                    padding: 0 24px 0 0;
+                    @include tablet {
+                        flex-direction: row;
+                    }
+                    @include desktop {
+                        width: 804px;
+                    }
+                    &__datie {
+                        font-family: AvenirNextLTProRegular;
+                        margin: 16px 50vw 16px 0; //below ies 16px mobile 16px top between itself and line
+                        color: $silver; //guess
+                        @include tablet {
+                            display: none; //no individual venue heading on tablet
+                        }
+                    }
+                    &__date {
+                        display: block; // works with -> :after content: "" to make mobile go in a row
+                        margin: 0px 50vw 24px 0; //below 24px mobile 
+                        font-family: AvenirNextLTProBold;
+                        // margin: 0 5vw 0 0;
+                        @include tablet {
+                            width: 184px;
+                            margin: 0 50px 0 0; //the date venu and location are one single tablet line column away from eachother 100px
+                            display: inline-block; //for tablet row opposes display block above
+                        }
+                    }
+                    &__venuie {
+                        font-family: AvenirNextLTProRegular;
+                        margin: 0 50vw 16px 0; //below ies 16px mobile
+                        color: $silver; //guess
+                        @include tablet {
+                            display: none; //no individual venue heading on tablet
+                        }
+                    }
+                    &__venue {
+                        margin: 0 50vw 24px 0; //below 24px mobile
+                        display: block; // works with -> :after content: "" to make mobile go in a row 
+                        @include tablet {
+                            width: 80px;
+                            margin: 0 50px 0 0;
+                            // margin: 0 100px 0 0; //the date venu and location are one single tablet line column away from eachother 100px
+                            display: inline-block; //for tablet row opposes display block above
+                        }
+                    }
+                    &__locationie {
+                        font-family: AvenirNextLTProRegular;
+                        margin: 0 50vw 16px 0; //below ies 16px mobile
+                        color: $silver; //guess
+                        @include tablet {
+                            display: none; //no individual tablet heading on tablet
+                        }
+                    }
+                    &__location {
+                        font-family: AvenirNextLTProRegular;
+                        margin: 0 50vw 24px 0; //below 24px mobile
+                        display: block; // works with -> :after content: "" to make mobile go in a row 
+                        @include tablet {
+                            margin: 0 10vw 0 0;
+                            // margin: 0 30vw 0 0; //the date venu and location are one single tablet line column away from eachother 100px
+                            display: inline-block; //for tablet row
+                        }
+                    }
+                    &__datie &__venuie &__locationie :after {
+                        content: ""; //make the mobile verisions go to the next line works with the following classes display:block
+                    }
+                    &__button {
+                        background-color: $black; //mobile needs to be 288px /24px
+                        font-family: AvenirNextLTProRegular;
+                        color: $white;
+                        width: 260px; //guess check this again
+                        height: 32px; //guess
+                        border-radius: 8px; //round the corners of my button
+                        margin: 0 0 16px 0px;
+                        @include tablet {
+                            margin-right: auto;
+                            align-items: flex-end; //needs to be on the left side for tablet 
+                            width: 160px; //for tablet it doesn't say what size but it defintely doesn't look like mobile's size
+                            height: 48px; //make it desktop's size for now 
+                        }
+                        @include desktop {
+                            margin-right: auto;
+                            width: 160px; //desktop needs to be 160px / 48px
+                            height: 48px;
+                        }
+                    }
+                }
+            }
+            /************************************FOOTER BANNER************************************/
+            
+            .footer {
+                background-color: $black;
+                color: $white;
+                width: 100%;
+                padding: 0 1rem; //mobile horizontal padding 16px 1rem
+                @include tablet {
+                    padding: 0 1.5rem; //horizontal 24px padding 1.5rem
+                }
+                @include desktop {
+                    padding: 0 5rem; //horizontal 80px padding 5rem
+                }
+                &__banner {
+                    background-color: $black;
+                    display: flex;
+                    flex-wrap: wrap;
+                    flex-direction: row;
+                    width: 100%;
+                }
+                &__title {
+                    width: 208px;
+                    display: flex;
+                    margin: 1.5rem 4rem 1.5rem 0; // 24px top 64px right 24px bottom 0 px left 1.5rem 4 rem 1.5rem 0
+                    @include tablet {
+                        width: 230px; //230px
+                        margin: 1.5rem 3rem 1.5rem 0; //24 48 24 0px
+                    }
+                    @include desktop {
+                        margin: 3rem 3.5rem 3.5rem 0;
+                    }
+                }
+                &__icons {
+                    display: flex;
+                    margin: 0px 2rem 24px 0; //just change all these to rem 
+                    @include tablet {
+                        margin: 2rem 2rem 24px 0;
+                    }
+                    @include desktop {
+                        margin: 62px 2rem 0px 0px;
+                    }
+                }
+                &__icon {
+                    margin: 0 1.5rem 0 0;
+                    width: 1rem;
+                    height: 1rem;
+                    @include tablet {
+                        margin: 0 2rem 0 0;
+                        width: 24px;
+                        height: 24px;
+                    }
+                }
+                &__logo {
+                    display: none;
+                    @include tablet {
+                        display: contents;
+                    }
+                    @include desktop {
+                        display: contents;
+                    }
+                }
+                &__img {
+                    @include tablet {
+                        height: 24px;
+                        width: 120px;
+                    }
+                    @include desktop {
+                        height: 24px;
+                        width: 120px;
+                    }
+                }
+                &__link {
+                    margin-left: auto;
+                    @include tablet {
+                        margin: 24px 0px 0 14vw;
+                    }
+                    @include desktop {
+                        margin: 48px 0 0 38vw;
+                    }
+                }
+                /************************************FOOTER CARD************************************/
+                .contacts {
+                    @include h4-list-contact-information;
+                    &__card {
+                        display: inline-block;
+                        @include tablet {
+                            flex-direction: row;
+                            width: 220px;
+                        }
+                        @include desktop {
+                            width: 240px;
+                        }
+                    }
+                    &__name {
+                        font-family: AvenirNextLTProBold;
+                    }
+                    &__company {
+                        margin: 0 0 1rem 0;
+                        font-family: AvenirNextLTProBold;
+                        @include tablet {
+                            padding-bottom: 1.5rem;
+                        }
+                    }
+                    &__address {
+                        width: 180px;
+                        margin: 0 0 1rem 0;
+                        font-family: AvenirNextLTProRegular;
+                    }
+                    &__email {
+                        margin: 0 0 1rem 0;
+                        width: 50vw;
+                        font-family: AvenirNextLTProRegular;
+                    }
+                }
+                &__base {
+                    padding: 1.5rem 0 2rem 0;
+                    display: flex;
+                    font-family: AvenirNextLTProRegular;
+                    max-width: 65vw;
+                    @include tablet {
+                        max-width: 30vw;
+                        padding: 1.5rem 0 1.5rem 0;
+                    }
+                    @include desktop {
+                        max-width: 18vw;
+                        padding: 2.5rem 0 2.5rem 0;
+                    }
+                }
+            }

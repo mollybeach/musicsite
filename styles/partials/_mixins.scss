@@ -1,0 +1,47 @@
+/*********************************IMPORTS********************************************/
+
+@use './variables' as *;
+@use '../partials/typography' as *;
+
+/************************************FONTS******************************************/
+
+//H4 - Paragraph & comments
+@mixin h4-list-contact-information {
+    font-size: 13px;
+    line-height: 18px;
+    font-family: AvenirNextLTProRegular;
+    @include tablet {
+        font-size: 14px;
+        line-height: 20px;
+        font-family: AvenirNextLTProRegular;
+    }
+} //H3 - Subheader for Tablet and Desktop
+@mixin h3-subheader {
+    font-size: 16px;
+    line-height: 24px;
+    font-family: AvenirNextLTProDemi;
+}
+
+@mixin h1-hero-heading {
+    font-family: AvenirNextLTProBold;
+    font-size: 3.75rem;
+    line-height: 3.625rem;
+}
+
+
+/********************************* FOR TABLETS*************************************/
+
+@mixin tablet {
+    @media (min-width: $breakpoint-tablet) {
+        @content;
+    }
+}
+
+
+/********************************* DESKTOP*************************************/
+
+@mixin desktop {
+    @media (min-width: $breakpoint-desktop) {
+        @content;
+    }
+}

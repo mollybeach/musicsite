@@ -1,0 +1,666 @@
+/*********************************IMPORTS********************************************/
+
+@use "./partials/_reset.scss" as *;
+@use "./partials/_mixins.scss" as *;
+@use "./partials/_variables.scss" as *;
+@use "./partials/_typography.scss" as *;
+*,
+*::before,
+*::after {
+    font-family: AvenirNextLTProRegular;
+    box-sizing: inherit;
+    margin: 0px;
+}
+
+
+/*********************************************HEADINGS**h1-h6**************************************/
+
+
+/*H1 - Header*/
+
+h1 {
+    font-size: 24px;
+    line-height: 32px;
+    font-family: AvenirNextLTProBold;
+    @include tablet {
+        font-size: 36px;
+        line-height: 44px;
+        font-family: AvenirNextLTProBold;
+    }
+}
+
+
+/*H2 - Header*/
+
+h2 {
+    font-size: 14px;
+    line-height: 22px;
+    font-family: AvenirNextLTProDemi;
+    @include tablet {
+        font-size: 24px;
+        line-height: 32px;
+        font-family: AvenirNextLTProBold;
+    }
+}
+
+
+/*H3 - Subheader for Tablet and Desktop*/
+
+h3 {
+    font-size: 16px;
+    line-height: 24px;
+    font-family: AvenirNextLTProDemi;
+}
+
+
+/*H4 - Paragraph & comments*/
+
+h4 {
+    font-size: 13px;
+    line-height: 18px;
+    font-family: AvenirNextLTProRegular;
+    @include tablet {
+        font-size: 14px;
+        line-height: 22px;
+        font-family: AvenirNextLTProRegular;
+    }
+}
+
+p {
+    font-size: 13px;
+    line-height: 18px;
+    font-family: AvenirNextLTProRegular;
+    @include tablet {
+        font-size: 14px;
+        line-height: 20px;
+        font-family: AvenirNextLTProRegular;
+        display: inline-block;
+    }
+}
+
+
+/*H5 - LABELS*/
+
+h5 {
+    font-size: 12px;
+    line-height: 20px;
+    font-family: AvenirNextLTProRegular;
+    @include tablet {
+        font-size: 12px;
+        line-height: 20px;
+        font-family: AvenirNextLTProBold;
+    }
+    @include desktop {
+        font-size: 12px;
+        line-height: 20px;
+        font-family: AvenirNextLTProBold;
+    }
+}
+
+
+/*********************************************END OF HEADINGS**h1-h6**************************************/
+
+
+/************************************MAIN NAV************************************/
+
+.main-nav {
+    background-color: $black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: $silver;
+    height: 80px;
+    width: 100%;
+    @include tablet {
+        flex-direction: row;
+    }
+    &__logo {
+        padding: 1rem 0 1rem 0;
+        color: $white;
+        @include tablet {
+            padding: 0 3rem 0 1.5rem;
+        }
+        @include desktop {
+            padding: 0 3.5rem 0 5rem;
+        }
+    }
+    &__list {
+        display: flex;
+        width: 100%;
+        text-align: center;
+        list-style-type: none;
+        @include tablet {
+            width: 13.5rem;
+        }
+    }
+    &__item {
+        padding: 0 0 0.5rem 0;
+        width: 50%;
+        @include tablet {
+            width: 5rem;
+            padding: 2rem 3rem 0 3.5rem;
+        }
+        @include desktop {
+            width: 5rem;
+            padding: 2rem 3.5rem 0 3.5rem;
+        }
+        &--active {
+            border-bottom: 1rem solid $white;
+            padding-bottom: 0.5rem;
+            width: 50%;
+            @include tablet {
+                width: 40%;
+                padding: 2rem 0 2rem 0;
+            }
+        }
+    }
+    &__link {
+        text-decoration: none;
+        color: $white;
+    }
+}
+
+
+/************************************HERO CONTAINER************************************/
+
+.hero-container {
+    display: flex;
+    position: relative;
+    background-image: url("../assets/images/hero-image.jpg");
+    background-position: center;
+    background-size: cover;
+    background-color: rgba(50, 50, 50, 0.50);
+     ::before {
+        content: "";
+        position: absolute;
+        top: 0rem;
+        right: 0rem;
+        bottom: 0rem;
+        left: 0rem;
+        background-color: rgba(0, 0, 0, 0.25);
+        z-index: -1;
+    }
+    min-height: 57.18vw; //320x --> 183px/320px= 57.18 vw
+    max-height: 400px;
+    @include tablet {
+        min-height: 400px;
+        max-height: 52.08vw; //400px --> 400px/768px = 52.08vw
+    }
+    @include desktop {
+        min-height: 670px;
+        max-height: 52.34vw; //670px --> 670px/1280px = 52.34vw
+    }
+    &--scale {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    &__box {
+        color: $white;
+        padding: 15vw 11.25vw 0 7.5vw; //48px 36px 0px 24px 56/320=17.5vw
+        max-width: 63.12vw;
+        z-index: 1;
+        @include desktop {
+            padding: 223px 0px 0px 80px;
+            width: 600px;
+        }
+    }
+    &__text {
+        font-family: AvenirNextLTProBold;
+        font-size: 7.5vw; //24px/320= 7.5vw
+        line-height: 11.25vw; //36px/320=11.25vw
+        @include tablet {
+            @include h1-hero-heading;
+        }
+    }
+}
+
+
+/************************************ABOUT SECTION************************************/
+
+.about-section {
+    background-color: $white;
+    color: $black;
+    display: flex;
+    flex-direction: column;
+    padding: 0 1rem; //mobile padding 16px 
+    @include tablet {
+        padding: 0 1.5rem; //horizontal 24px padding change all these to rem
+    }
+    @include desktop {
+        padding: 0 0 0 10.5rem; //horizontal 80px padding
+    }
+    &__title {
+        margin: 2rem 0 1.5rem; //top horizontal bottom margin
+        font-family: AvenirNextLTProBold;
+        @include desktop {
+            margin: 3rem 0; //vertical 48px
+        }
+    }
+    &__img {
+        display: flex;
+        justify-content: center;
+        height: 45vw;
+        margin: 0px 0 1.5rem; //top horizontal bottom 0 0 24px
+        min-width: 288px;
+        @include tablet {
+            min-width: 720px; //width size of tablet
+            min-height: 362px; //height size of tablet
+            max-width: 896px; //width of desktop
+            max-height: 450px; //height of tablet
+        }
+        @include desktop {
+            margin: 0 0 0 3rem;
+        }
+        &--scale {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+    &__quote {
+        margin: 0 0 2.5rem 0; //0 top 0 right 40px bottom 0px left
+        max-width: 50rem; //800px 896 deskphoto-space
+        @include desktop {
+            margin: 0 0 2.5rem 3rem; //48px top 0 px right  40px bottom 48px left because of extra spaced section 
+        }
+    }
+    //we can assume that tablet maintains mobile margin because its not defined
+    &__name {
+        margin: 0 0 2.5rem 0; //0 top 0 right 40px bottom 0px left
+        @include h3-subheader;
+        @include tablet {
+            margin: 0 0 2.5rem 0; //0 top 0 right 40px bottom 0px left
+        }
+    }
+    &__names {
+        margin: 0 0 1.5rem; //padding 24px
+        @include desktop {
+            margin: 0 0 2rem 3rem; //168 left 32 bottom
+        }
+        @include desktop {
+            margin: 0 0 2.5rem 3rem; //48px top 0 px right  40px bottom 48px left because of extra spaced section 
+        }
+    }
+    &__text {
+        display: inline-block;
+        margin: 1.5rem 0 2.5rem; //top24 bottom40 
+        @include tablet {
+            flex-direction: row;
+        }
+        @include desktop {
+            margin: 1.5rem 0 2.5rem 3rem;
+        }
+    }
+    &__top {
+        margin: 0 1.5rem 0 0; //horizontal 24px'
+        @include tablet {
+            max-width: 348px; //348px
+        }
+        @include desktop {
+            max-width: 420px; //420px
+        }
+    }
+    &__bottom {
+        @include tablet {
+            max-width: 348px; //348px
+        }
+        @include desktop {
+            max-width: 420px; //420px
+        }
+    }
+}
+
+
+/************************************PHOTO GALLERY SECTION************************************/
+
+.photo-gallery-section {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: $alabaster;
+    width: 100%;
+    padding: 0 1rem; //mobile padding 16px 
+    @include tablet {
+        padding: 0 1.5rem; //horizontal 24px padding 
+    }
+    @include desktop {
+        padding: 0 5rem; //horizontal 80px padding
+    }
+    &__title {
+        font-family: AvenirNextLTProBold;
+        margin: 2rem 0 1.5rem; //margin top 32px bottom 24px
+    }
+    &__photo {
+        margin: 0px 50vw 1rem 0px; //mobile photo is vertical so it's 16px ot the bottom  50vw to push the inbetween photos to the next line
+        max-width: 288px; //288px 8 rem
+        max-height: 162px; //162px
+        @include tablet {
+            min-width: 224px; //width of single photo of tablet
+            min-height: 126px; //126px
+            max-width: 29.16vw; //224/768 =
+            max-height: 16.4vw; //162/768 =
+            margin: 0px 12px 24px 0px; //tablet bottom is 24px not specified for the in between the maximum before pushing photo to next line is 12px 
+        }
+        @include desktop {
+            min-width: 344px; //width of single photo of desktop
+            min-height: 193px; //width of single height of photo on dekstop
+            max-width: 26.87vw; //344/1280 =
+            max-height: 15.08vw; //193/1280=
+            margin: 0px 1.5rem 1.5rem 0px; //24px
+        }
+        &--scale {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+}
+
+
+/************************************COMMENTS SECTION************************************/
+
+form {
+    background-color: $white;
+    height: 50vw; //temporary 
+}
+
+.article-header {
+    padding: 0 16px 40px 16px;
+    //margin: 0 0 40px 0; //40px or mobile
+    @include tablet {
+        padding: 48px 24px 56px 24px; //top 48px 
+    }
+}
+
+.feed {
+    padding: 40px 0 0 16px; //top 40px mobile padding 16px left 
+    @include tablet {
+        //margin: 0 0 56px 0; //56px botton doesn't say but lets assume its the same as desktop
+        padding: 0px 124px 0 124px;
+    }
+    @include desktop {
+        padding-left: 264px; //68px*3+24px*3=264px counted columns for desktop
+    }
+    &__avi {
+        margin: 24px 48px 0 0px; //top 24px mobile
+        height: 3rem; // just seems like 48px
+        width: 3rem; //just seems like 48px
+        border-radius: 30px; //makes the images circle like in the mockup
+        float: left;
+        position: absolute;
+        @include tablet {
+            margin: 24px 0px 0px 0px; //top 24px mobile
+        }
+    }
+    &__boxes {
+        padding-left: 64px; //counted columns for mobile
+        display: block;
+        float: left;
+        @include tablet {
+            //padding-left: 124px; //100px+24px = 124px counted columns for tablet
+        }
+        @include desktop {
+            //padding-left: 264px; //68px*3+24px*3=264px counted columns for desktop
+        }
+        label {
+            padding: 0 0 0 0; //mobile padding
+            box-sizing: border-box;
+            font-size: 12px;
+            color: $silver; //just a guess check later
+            font-family: AvenirNextLTProBold;
+        }
+        label,
+        textarea,
+        input {
+            padding: 0 30vw 0 0; //move to right side page 
+        }
+        input {
+            box-sizing: border-box;
+            font-size: 12px;
+            color: $silver; //just a guess check later
+            margin: 16px 0 16px 0;
+            width: 224px; //width of name box
+            height: 32px; //height of name box
+            border-radius: 4px; //round the corners of my name box 
+            @include tablet {
+                width: 460px; //24*4+100*3+64 = 460px so we can assume it's the same size as desktop
+                height: 48px; ///height of tablet name box
+            }
+            @include desktop {
+                padding: 0 0 5rem 0; //horizontal 80px padding
+            }
+            padding: 3px 0 0 10px; //remove the 20vw padding for place holder and center it in the box
+        }
+        input textarea::after {
+            content: '.'; //clear the textboxes after submission not working 
+        }
+    }
+    textarea {
+        box-sizing: border-box;
+        border-radius: 4px; //round the corners of my comment box
+        width: 224px;
+        height: 64px;
+        margin: 16px 0 16px 0;
+        @include tablet {
+            width: 460px; //24*4+100*3+64 = 460px so we can assume it's the same size as desktop
+            height: 96px; ///height of tablet comment box
+        }
+        @include desktop {
+            padding: 0 0 5rem 0; //horizontal 80px padding
+        }
+        padding: 10px 0 0 10px; //remove the 20vw padding for place holder and center it in the box
+    }
+    .buttony {
+        margin: 0 0 32px 0; // 32px bottom of button
+        width: 200px; //mobile button is 224px width  tablet looks about 48+32+48+32+48+(32/2)=224px but at this width its isn't acting right so 200px
+        height: 48px; //32px 2rem mobile height looks about 48px
+        font-family: AvenirNextLTProBold;
+        color: $white;
+        background-color: $black;
+        border-radius: 8px; //round the corners of my button
+        @include tablet {
+            width: 160px; //tablet width doesn't say looks about 100+24px+24px+16px=164px so it's probably desktop's size
+            height: 48px; //tablet height doesn't say but we're assuming it's desktop's size for now
+        }
+        @include desktop {
+            width: 160px; //desktop button width is 160px 
+            height: 48px; //desktop button height is 48px
+        }
+    }
+}
+
+.card {
+    display: flex;
+    flex-flow: row wrap;
+    width: 288px; //mobile version 320px -16px-16px=288px
+    padding: 0 16px 0 16px; //top 40px bottom 40px  mobile padding 16px left for mobile 
+    margin: 0 0 24px 0;
+    border-bottom: $silver solid 1px; //guess change later
+    @include tablet {
+        width: 528px; //width is actually 528px
+        padding: 0 124px 0 124px;
+    }
+    @include desktop {
+        //padding: 40px 0 124px 124px; //desktop does not say counted column 64*3+24*3= 264px left 264px right
+    }
+    &__img {
+        margin: 0 16px 0 0; //looks like 16px to the right 
+        height: 3rem; // just seems like 48px
+        width: 3rem; //just seems like 48px
+        border-radius: 30px; //makes the images circle like in the mockup
+        @include tablet {
+            margin: 0 16px 0 0; //tablet 16px to the right
+        }
+    }
+    &__name {
+        width: 140px; //measure width of the name on mobile + the distance between name and time : 16px + 48px + 16px + 48px = 96px 144px+ a little extra cuz looks wrong  + 48
+        margin: 0 0 0.5rem 0; //16px bottom mobile
+        font-family: AvenirNextLTProBold;
+        @include tablet {
+            line-height: none;
+            height: 16px;
+            // margin: 0 0 25px 0;
+            //width: 472px; //768-24-24-100-100=520px
+            // height: 12.5vw;
+            padding: 0px 0px 0px 0px;
+            margin: 0px 0px 0px 0px; //16px bottom mobile
+        }
+        @include desktop {
+            //padding: 0 5rem; //horizontal 80px padding
+        }
+    }
+    &__time {
+        width: 16px;
+        height: 16px;
+        margin: 0 0 0 0;
+        font-family: AvenirNextLTProRegular;
+    }
+    &__comment {
+        width: 240px; //the width not given but column estimate is 320px-48px-16px-16px=240px
+        margin: 0 0 24px 48px; //16px top 24px bottom mobile doesnt say the margin left but counting columns: looks like it needs an additional 48px to the left
+        padding: 24px 0;
+        @include tablet {
+            width: 476px; //768-24-24-100-100=520px //460px+16px=476
+            // height: 12.5vw;
+            padding: 0px 0px 24px 0px; //24 top and bottom
+            margin: 0px 0px 0px 68px;
+        }
+        @include desktop {
+            //  margin: 0 0 5rem 0; //horizontal 80px padding
+            width: 476px; //desktop wide for comments 
+        }
+    }
+}
+
+
+/************************************FOOTER BANNER************************************/
+
+.footer {
+    background-color: $black;
+    color: $white;
+    width: 100%;
+    padding: 0 1rem; //mobile horizontal padding 16px 1rem
+    margin-top: 40px;
+    @include tablet {
+        padding: 0 1.5rem; //horizontal 24px padding 1.5rem
+    }
+    @include desktop {
+        padding: 0 5rem; //horizontal 80px padding 5rem
+    }
+    &__banner {
+        background-color: $black;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        width: 100%;
+    }
+    &__title {
+        width: 208px;
+        display: flex;
+        margin: 1.5rem 4rem 1.5rem 0; // 24px top 64px right 24px bottom 0 px left 1.5rem 4 rem 1.5rem 0
+        @include tablet {
+            width: 230px; //230px
+            margin: 1.5rem 3rem 1.5rem 0; //24 48 24 0px
+        }
+        @include desktop {
+            margin: 3rem 3.5rem 3.5rem 0;
+        }
+    }
+    &__icons {
+        display: flex;
+        margin: 0px 2rem 24px 0; //just change all these to rem 
+        @include tablet {
+            margin: 2rem 2rem 24px 0;
+        }
+        @include desktop {
+            margin: 62px 2rem 0px 0px;
+        }
+    }
+    &__icon {
+        margin: 0 1.5rem 0 0;
+        width: 1rem;
+        height: 1rem;
+        @include tablet {
+            margin: 0 2rem 0 0;
+            width: 24px;
+            height: 24px;
+        }
+    }
+    &__logo {
+        display: none;
+        @include tablet {
+            display: contents;
+        }
+        @include desktop {
+            display: contents;
+        }
+    }
+    &__img {
+        @include tablet {
+            height: 24px;
+            width: 120px;
+        }
+        @include desktop {
+            height: 24px;
+            width: 120px;
+        }
+    }
+    &__link {
+        margin-left: auto;
+        @include tablet {
+            margin: 24px 0px 0 14vw;
+        }
+        @include desktop {
+            margin: 48px 0 0 38vw;
+        }
+    }
+    /************************************FOOTER CARD************************************/
+    .contacts {
+        @include h4-list-contact-information;
+        &__card {
+            display: inline-block;
+            justify-content: left;
+            @include tablet {
+                flex-direction: row;
+                width: 220px;
+            }
+            @include desktop {
+                width: 240px;
+            }
+        }
+        &__name {
+            font-family: AvenirNextLTProBold;
+        }
+        &__company {
+            margin: 0 0 1rem 0;
+            font-family: AvenirNextLTProBold;
+            @include tablet {
+                padding-bottom: 1.5rem;
+            }
+        }
+        &__address {
+            width: 180px;
+            margin: 0 0 1rem 0;
+            font-family: AvenirNextLTProRegular;
+        }
+        &__email {
+            margin: 0 0 1rem 0;
+            width: 50vw;
+            font-family: AvenirNextLTProRegular;
+        }
+    }
+    &__base {
+        padding: 1.5rem 0 2rem 0;
+        display: flex;
+        font-family: AvenirNextLTProRegular;
+        max-width: 65vw;
+        @include tablet {
+            max-width: 30vw;
+            padding: 1.5rem 0 1.5rem 0;
+        }
+        @include desktop {
+            max-width: 18vw;
+            padding: 2.5rem 0 2.5rem 0;
+        }
+    }
+}
