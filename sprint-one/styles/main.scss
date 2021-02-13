@@ -1,0 +1,489 @@
+/*********************************IMPORTS********************************************/
+
+@use "./partials/_reset.scss" as *;
+@use "./partials/_mixins.scss" as *;
+@use "./partials/_variables.scss" as *;
+@use "./partials/_typography.scss" as *;
+*,
+*::before,
+*::after {
+    font-family: AvenirNextLTProRegular;
+    box-sizing: inherit;
+    margin: 0px;
+}
+
+
+/*********************************************HEADINGS**h1-h6**************************************/
+
+
+/*H1 - Header*/
+
+h1 {
+    font-size: 24px;
+    line-height: 32px;
+    font-family: AvenirNextLTProBold;
+    @include tablet {
+        font-size: 36px;
+        line-height: 44px;
+        font-family: AvenirNextLTProBold;
+    }
+}
+
+
+/*H2 - Header*/
+
+h2 {
+    font-size: 14px;
+    line-height: 22px;
+    font-family: AvenirNextLTProDemi;
+    @include tablet {
+        font-size: 24px;
+        line-height: 32px;
+        font-family: AvenirNextLTProBold;
+    }
+}
+
+
+/*H3 - Subheader for Tablet and Desktop*/
+
+h3 {
+    font-size: 16px;
+    line-height: 24px;
+    font-family: AvenirNextLTProDemi;
+}
+
+
+/*H4 - Paragraph & comments*/
+
+h4 {
+    font-size: 13px;
+    line-height: 18px;
+    font-family: AvenirNextLTProRegular;
+    @include tablet {
+        font-size: 14px;
+        line-height: 22px;
+        font-family: AvenirNextLTProRegular;
+    }
+}
+
+p {
+    font-size: 13px;
+    line-height: 18px;
+    font-family: AvenirNextLTProRegular;
+    @include tablet {
+        font-size: 14px;
+        line-height: 20px;
+        font-family: AvenirNextLTProRegular;
+        display: inline-block;
+    }
+}
+
+
+/*H5 - LABELS*/
+
+h5 {
+    font-size: 12px;
+    line-height: 20px;
+    font-family: AvenirNextLTProRegular;
+    @include tablet {
+        font-size: 12px;
+        line-height: 20px;
+        font-family: AvenirNextLTProBold;
+    }
+    @include desktop {
+        font-size: 12px;
+        line-height: 20px;
+        font-family: AvenirNextLTProBold;
+    }
+}
+
+
+/*********************************************END OF HEADINGS**h1-h6**************************************/
+
+
+/**************************************MAIN NAV************************************/
+
+.main-nav {
+    background-color: $black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: $silver;
+    height: 80px;
+    width: 100%;
+    @include tablet {
+        flex-direction: row;
+    }
+    &__logo {
+        padding: 1rem 0 1rem 0;
+        color: $white;
+        @include tablet {
+            padding: 0 3rem 0 1.5rem;
+        }
+        @include desktop {
+            padding: 0 3.5rem 0 5rem;
+        }
+    }
+    &__list {
+        display: flex;
+        width: 100%;
+        text-align: center;
+        list-style-type: none;
+        @include tablet {
+            width: 13.5rem;
+        }
+    }
+    &__item {
+        padding: 0 0 0.5rem 0;
+        width: 50%;
+        @include tablet {
+            width: 5rem;
+            padding: 2rem 3rem 0 3.5rem;
+        }
+        @include desktop {
+            width: 5rem;
+            padding: 2rem 3.5rem 0 3.5rem;
+        }
+        &--active {
+            border-bottom: 1rem solid $white;
+            padding-bottom: 0.5rem;
+            width: 50%;
+            @include tablet {
+                width: 40%;
+                padding: 2rem 0 2rem 0;
+            }
+        }
+    }
+    &__link {
+        text-decoration: none;
+        color: $white;
+    }
+}
+
+
+/************************************HERO CONTAINER************************************/
+
+.hero-container {
+    display: flex;
+    position: relative;
+    background-image: url("../assets/images/hero-image.jpg");
+    background-position: center;
+    background-size: cover;
+    background-color: rgba(50, 50, 50, 0.50);
+     ::before {
+        content: "";
+        position: absolute;
+        top: 0rem;
+        right: 0rem;
+        bottom: 0rem;
+        left: 0rem;
+        background-color: rgba(0, 0, 0, 0.25);
+        z-index: -1;
+    }
+    min-height: 57.18vw; //320x --> 183px/320px= 57.18 vw
+    max-height: 400px;
+    @include tablet {
+        min-height: 400px;
+        max-height: 52.08vw; //400px --> 400px/768px = 52.08vw
+    }
+    @include desktop {
+        min-height: 670px;
+        max-height: 52.34vw; //670px --> 670px/1280px = 52.34vw
+    }
+    &--scale {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    &__box {
+        color: $white;
+        padding: 15vw 11.25vw 0 7.5vw; //48px 36px 0px 24px 56/320=17.5vw
+        max-width: 63.12vw;
+        z-index: 1;
+        @include desktop {
+            padding: 223px 0px 0px 80px;
+            width: 600px;
+        }
+    }
+    &__text {
+        font-family: AvenirNextLTProBold;
+        font-size: 7.5vw; //24px/320= 7.5vw
+        line-height: 11.25vw; //36px/320=11.25vw
+        @include tablet {
+            @include h1-hero-heading;
+        }
+    }
+}
+
+
+/************************************ABOUT SECTION************************************/
+
+.about-section {
+    background-color: $white;
+    color: $black;
+    display: flex;
+    flex-direction: column;
+    padding: 0 1rem; //mobile padding 16px 
+    @include tablet {
+        padding: 0 1.5rem; //horizontal 24px padding change all these to rem
+    }
+    @include desktop {
+        padding: 0 0 0 10.5rem; //horizontal 80px padding
+    }
+    &__title {
+        margin: 2rem 0 1.5rem; //top horizontal bottom margin
+        font-family: AvenirNextLTProBold;
+        @include desktop {
+            margin: 3rem 0; //vertical 48px
+        }
+    }
+    &__img {
+        display: flex;
+        justify-content: center;
+        height: 45vw;
+        margin: 0px 0 1.5rem; //top horizontal bottom 0 0 24px
+        min-width: 288px;
+        @include tablet {
+            min-width: 720px; //width size of tablet
+            min-height: 362px; //height size of tablet
+            max-width: 896px; //width of desktop
+            max-height: 450px; //height of tablet
+        }
+        @include desktop {
+            margin: 0 0 0 3rem;
+        }
+        &--scale {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+    &__quote {
+        margin: 0 0 2.5rem 0; //0 top 0 right 40px bottom 0px left
+        max-width: 50rem; //800px 896 deskphoto-space
+        @include desktop {
+            margin: 0 0 2.5rem 3rem; //48px top 0 px right  40px bottom 48px left because of extra spaced section 
+        }
+    }
+    //we can assume that tablet maintains mobile margin because its not defined
+    &__name {
+        margin: 0 0 2.5rem 0; //0 top 0 right 40px bottom 0px left
+        @include h3-subheader;
+        @include tablet {
+            margin: 0 0 2.5rem 0; //0 top 0 right 40px bottom 0px left
+        }
+    }
+    &__names {
+        margin: 0 0 1.5rem; //padding 24px
+        @include desktop {
+            margin: 0 0 2rem 3rem; //168 left 32 bottom
+        }
+        @include desktop {
+            margin: 0 0 2.5rem 3rem; //48px top 0 px right  40px bottom 48px left because of extra spaced section 
+        }
+    }
+    &__text {
+        display: inline-block;
+        margin: 1.5rem 0 2.5rem; //top24 bottom40 
+        @include tablet {
+            flex-direction: row;
+        }
+        @include desktop {
+            margin: 1.5rem 0 2.5rem 3rem;
+        }
+    }
+    &__top {
+        margin: 0 1.5rem 0 0; //horizontal 24px'
+        @include tablet {
+            max-width: 348px; //348px
+        }
+        @include desktop {
+            max-width: 420px; //420px
+        }
+    }
+    &__bottom {
+        @include tablet {
+            max-width: 348px; //348px
+        }
+        @include desktop {
+            max-width: 420px; //420px
+        }
+    }
+}
+
+
+/************************************PHOTO GALLERY SECTION************************************/
+
+.photo-gallery-section {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: $alabaster;
+    width: 100%;
+    padding: 0 1rem; //mobile padding 16px 
+    @include tablet {
+        padding: 0 1.5rem; //horizontal 24px padding 
+    }
+    @include desktop {
+        padding: 0 5rem; //horizontal 80px padding
+    }
+    &__title {
+        font-family: AvenirNextLTProBold;
+        margin: 2rem 0 1.5rem; //margin top 32px bottom 24px
+    }
+    &__photo {
+        margin: 0px 50vw 1rem 0px; //mobile photo is vertical so it's 16px ot the bottom  50vw to push the inbetween photos to the next line
+        max-width: 288px; //288px 8 rem
+        max-height: 162px; //162px
+        @include tablet {
+            min-width: 224px; //width of single photo of tablet
+            min-height: 126px; //126px
+            max-width: 29.16vw; //224/768 =
+            max-height: 16.4vw; //162/768 =
+            margin: 0px 12px 24px 0px; //tablet bottom is 24px not specified for the in between the maximum before pushing photo to next line is 12px 
+        }
+        @include desktop {
+            min-width: 344px; //width of single photo of desktop
+            min-height: 193px; //width of single height of photo on dekstop
+            max-width: 26.87vw; //344/1280 =
+            max-height: 15.08vw; //193/1280=
+            margin: 0px 1.5rem 1.5rem 0px; //24px
+        }
+        &--scale {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+}
+
+
+/************************************FOOTER BANNER************************************/
+
+.footer {
+    background-color: $black;
+    color: $white;
+    width: 100%;
+    padding: 0 1rem; //mobile horizontal padding 16px 1rem
+    @include tablet {
+        padding: 0 1.5rem; //horizontal 24px padding 1.5rem
+    }
+    @include desktop {
+        padding: 0 5rem; //horizontal 80px padding 5rem
+    }
+    &__banner {
+        background-color: $black;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        width: 100%;
+    }
+    &__title {
+        width: 208px;
+        display: flex;
+        margin: 1.5rem 4rem 1.5rem 0; // 24px top 64px right 24px bottom 0 px left 1.5rem 4 rem 1.5rem 0
+        @include tablet {
+            width: 230px; //230px
+            margin: 1.5rem 3rem 1.5rem 0; //24 48 24 0px
+        }
+        @include desktop {
+            margin: 3rem 3.5rem 3.5rem 0;
+        }
+    }
+    &__icons {
+        display: flex;
+        margin: 0px 2rem 24px 0; //just change all these to rem 
+        @include tablet {
+            margin: 2rem 2rem 24px 0;
+        }
+        @include desktop {
+            margin: 62px 2rem 0px 0px;
+        }
+    }
+    &__icon {
+        margin: 0 1.5rem 0 0;
+        width: 1rem;
+        height: 1rem;
+        @include tablet {
+            margin: 0 2rem 0 0;
+            width: 24px;
+            height: 24px;
+        }
+    }
+    &__logo {
+        display: none;
+        @include tablet {
+            display: contents;
+        }
+        @include desktop {
+            display: contents;
+        }
+    }
+    &__img {
+        @include tablet {
+            height: 24px;
+            width: 120px;
+        }
+        @include desktop {
+            height: 24px;
+            width: 120px;
+        }
+    }
+    &__link {
+        margin-left: auto;
+        @include tablet {
+            margin: 24px 0px 0 14vw;
+        }
+        @include desktop {
+            margin: 48px 0 0 38vw;
+        }
+    }
+    /************************************FOOTER CARD************************************/
+    .contacts {
+        @include h4-list-contact-information;
+        &__card {
+            display: inline-block;
+            justify-content: left;
+            @include tablet {
+                flex-direction: row;
+                width: 220px;
+            }
+            @include desktop {
+                width: 240px;
+            }
+        }
+        &__name {
+            font-family: AvenirNextLTProBold;
+        }
+        &__company {
+            margin: 0 0 1rem 0;
+            font-family: AvenirNextLTProBold;
+            @include tablet {
+                padding-bottom: 1.5rem;
+            }
+        }
+        &__address {
+            width: 180px;
+            margin: 0 0 1rem 0;
+            font-family: AvenirNextLTProRegular;
+        }
+        &__email {
+            margin: 0 0 1rem 0;
+            width: 50vw;
+            font-family: AvenirNextLTProRegular;
+        }
+    }
+    &__base {
+        padding: 1.5rem 0 2rem 0;
+        display: flex;
+        font-family: AvenirNextLTProRegular;
+        max-width: 65vw;
+        @include tablet {
+            max-width: 30vw;
+            padding: 1.5rem 0 1.5rem 0;
+        }
+        @include desktop {
+            max-width: 18vw;
+            padding: 2.5rem 0 2.5rem 0;
+        }
+    }
+}
