@@ -483,10 +483,9 @@ h5 {
      object-fit: cover;
 }
 
-/************************************COMMENTS SECTION************************************/
+/************************************COMMENTS FEED SECTION************************************/
 form {
   background-color: #FFFF;
-  height: 50vw;
 }
 
 .article-header {
@@ -497,18 +496,23 @@ form {
     padding: 48px 24px 56px 24px;
   }
 }
+@media (min-width: 1280px) {
+  .article-header {
+    padding: 48px 24px 56px 80px;
+  }
+}
 
 .feed {
   padding: 40px 0 0 16px;
 }
 @media (min-width: 768px) {
   .feed {
-    padding: 0px 124px 0 124px;
+    padding: 0px 24px 0 24px;
   }
 }
 @media (min-width: 1280px) {
   .feed {
-    padding-left: 264px;
+    padding: 0 80px 0 80px;
   }
 }
 .feed__avi {
@@ -521,13 +525,29 @@ form {
 }
 @media (min-width: 768px) {
   .feed__avi {
-    margin: 24px 0px 0px 0px;
+    margin: 24px 0px 0px 100px;
+  }
+}
+@media (min-width: 1280px) {
+  .feed__avi {
+    margin: 24px 0px 0px 196px;
   }
 }
 .feed__boxes {
-  padding-left: 64px;
+  margin: 0 0 0 64px;
   display: block;
   float: left;
+}
+@media (min-width: 768px) {
+  .feed__boxes {
+    margin: 0 0 0 172px;
+    width: 460px;
+  }
+}
+@media (min-width: 1280px) {
+  .feed__boxes {
+    margin: 0 0 0 264px;
+  }
 }
 .feed__boxes label {
   padding: 0 0 0 0;
@@ -560,7 +580,7 @@ form {
 .feed__boxes input textarea::after {
   content: ".";
 }
-.feed textarea {
+.feed__boxes textarea {
   box-sizing: border-box;
   border-radius: 4px;
   width: 224px;
@@ -570,12 +590,12 @@ form {
   padding: 10px 0 0 10px;
 }
 @media (min-width: 768px) {
-  .feed textarea {
+  .feed__boxes textarea {
     width: 460px;
     height: 96px;
   }
 }
-.feed .buttony {
+.feed__boxes .buttony {
   margin: 0 0 32px 0;
   width: 200px;
   height: 48px;
@@ -585,16 +605,18 @@ form {
   border-radius: 8px;
 }
 @media (min-width: 768px) {
-  .feed .buttony {
+  .feed__boxes .buttony {
     float: right;
     width: 160px;
     height: 48px;
+    margin: 24px 0 24px 0;
   }
 }
 @media (min-width: 1280px) {
-  .feed .buttony {
+  .feed__boxes .buttony {
     width: 160px;
     height: 48px;
+    margin: 24px 0 24px 0;
   }
 }
 
@@ -610,6 +632,11 @@ form {
   .card {
     width: 528px;
     padding: 0 124px 0 124px;
+  }
+}
+@media (min-width: 1280px) {
+  .card {
+    padding: 40px 124px 0 264px;
   }
 }
 .card__img {

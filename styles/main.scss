@@ -357,11 +357,10 @@ h5 {
 }
 
 
-/************************************COMMENTS SECTION************************************/
+/************************************COMMENTS FEED SECTION************************************/
 
 form {
     background-color: $white;
-    height: 50vw; //temporary 
 }
 
 .article-header {
@@ -370,16 +369,19 @@ form {
     @include tablet {
         padding: 48px 24px 56px 24px; //top 48px 
     }
+    @include desktop {
+        padding: 48px 24px 56px 80px; //top 48px left 80px 
+    }
 }
 
 .feed {
     padding: 40px 0 0 16px; //top 40px mobile padding 16px left 
     @include tablet {
         //margin: 0 0 56px 0; //56px botton doesn't say but lets assume its the same as desktop
-        padding: 0px 124px 0 124px;
+        padding: 0px 24px 0 24px;
     }
     @include desktop {
-        padding-left: 264px; //68px*3+24px*3=264px counted columns for desktop
+        padding: 0 80px 0 80px; //68px*3+24px*3=264px +80counted columns for desktop
     }
     &__avi {
         margin: 24px 48px 0 0px; //top 24px mobile
@@ -389,18 +391,22 @@ form {
         float: left;
         position: absolute;
         @include tablet {
-            margin: 24px 0px 0px 0px; //top 24px mobile
+            margin: 24px 0px 0px 100px; //top 24px mobile left 124px-24=100px
+        }
+        @include desktop {
+            margin: 24px 0px 0px 196px; //top 24px desktop 264px-(size of avi 48px+20=68px)=196px margin between comment box and avi
         }
     }
     &__boxes {
-        padding-left: 64px; //counted columns for mobile
+        margin: 0 0 0 64px; //counted columns for mobile
         display: block;
         float: left;
         @include tablet {
-            //padding-left: 124px; //100px+24px = 124px counted columns for tablet
+            margin: 0 0 0 172px; //100px+24p+24+48(about)-24 = 124px counted columns for tablet
+            width: 460px;
         }
         @include desktop {
-            //padding-left: 264px; //68px*3+24px*3=264px counted columns for desktop
+            margin: 0 0 0 264px; //68px*3+24px*3=264px  leftcounted columns for desktop
         }
         label {
             padding: 0 0 0 0; //mobile padding
@@ -431,36 +437,38 @@ form {
         input textarea::after {
             content: '.'; //clear the textboxes after submission not working 
         }
-    }
-    textarea {
-        box-sizing: border-box;
-        border-radius: 4px; //round the corners of my comment box
-        width: 224px;
-        height: 64px;
-        margin: 16px 0 16px 0;
-        resize: none;
-        @include tablet {
-            width: 460px; //24*4+100*3+64 = 460px so we can assume it's the same size as desktop
-            height: 96px; ///height of tablet comment box
+        textarea {
+            box-sizing: border-box;
+            border-radius: 4px; //round the corners of my comment box
+            width: 224px;
+            height: 64px;
+            margin: 16px 0 16px 0; //for the spaces in between the text boxes
+            resize: none;
+            @include tablet {
+                width: 460px; //24*4+100*3+64 = 460px so we can assume it's the same size as desktop
+                height: 96px; ///height of tablet comment box
+            }
+            padding: 10px 0 0 10px; //remove the 20vw padding for place holder and center it in the box
         }
-        padding: 10px 0 0 10px; //remove the 20vw padding for place holder and center it in the box
-    }
-    .buttony {
-        margin: 0 0 32px 0; // 32px bottom of button
-        width: 200px; //mobile button is 224px width  tablet looks about 48+32+48+32+48+(32/2)=224px but at this width its isn't acting right so 200px
-        height: 48px; //32px 2rem mobile height looks about 48px
-        font-family: AvenirNextLTProBold;
-        color: $white;
-        background-color: $black;
-        border-radius: 8px; //round the corners of my button
-        @include tablet {
-            float: right;
-            width: 160px; //tablet width doesn't say looks about 100+24px+24px+16px=164px so it's probably desktop's size
-            height: 48px; //tablet height doesn't say but we're assuming it's desktop's size for now
-        }
-        @include desktop {
-            width: 160px; //desktop button width is 160px 
-            height: 48px; //desktop button height is 48px
+        .buttony {
+            margin: 0 0 32px 0; // 32px bottom of button
+            width: 200px; //mobile button is 224px width  tablet looks about 48+32+48+32+48+(32/2)=224px but at this width its isn't acting right so 200px
+            height: 48px; //32px 2rem mobile height looks about 48px
+            font-family: AvenirNextLTProBold;
+            color: $white;
+            background-color: $black;
+            border-radius: 8px; //round the corners of my button
+            @include tablet {
+                float: right;
+                width: 160px; //tablet width doesn't say looks about 100+24px+24px+16px=164px so it's probably desktop's size
+                height: 48px; //tablet height doesn't say but we're assuming it's desktop's size for now
+                margin: 24px 0 24px 0;
+            }
+            @include desktop {
+                width: 160px; //desktop button width is 160px 
+                height: 48px; //desktop button height is 48px
+                margin: 24px 0 24px 0; //top 24px for desktop bottom looks like 24px too
+            }
         }
     }
 }
@@ -477,7 +485,7 @@ form {
         padding: 0 124px 0 124px;
     }
     @include desktop {
-        //padding: 40px 0 124px 124px; //desktop does not say counted column 64*3+24*3= 264px left 264px right
+        padding: 40px 124px 0 264px; //desktop does not say counted column 64*3+24*3= 264px left 264px right
     }
     &__img {
         margin: 0 16px 0 0; //looks like 16px to the right 

@@ -14,10 +14,7 @@ const commentary = [{
     time: '11/15/2018',
     comment: 'How can someone be so good!!! You can tell he lives for this and loves to do it every day. Everytime I see him I feel instantly happy! He’s definitely my favorite ever!'
 }];
-
-//console.log(commentary);
-//create elements with commentary array
-
+//create html elements with commentary array
 function defaultComment() {
     for (i = 0; i < commentary.length; i++) {
         let div = document.createElement("card");
@@ -61,24 +58,27 @@ function displayComment() {
         document.querySelector('.card').innerText = "";
         //refreshpage
         event.preventDefault();
-        event.document.querySelector(".name").value = '';
         var today = new Date(); //todays date 
         var dd = String(today.getDate()).padStart(2, '0');
-        var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
+        var mm = String(today.getMonth() + 1).padStart(2, '0');
         var yyyy = today.getFullYear();
         today = mm + '/' + dd + '/' + yyyy; //print date in desired format
         let newObject = {
-            img: "https://www.sbdems.org/wp-content/uploads/2020/08/facebook-female-profile-icon-67.png ", //avi
-            //name: event.target.elements.name.value, //        name: event.target.elements.name.value,
-            time: today, //adds current time to time value 
+            img: "https://www.sbdems.org/wp-content/uploads/2020/08/facebook-female-profile-icon-67.png ", //add default photo to new indices 
+            name: event.target.elements.name.value,
+            time: today, //adds current time to new indices 
             comment: event.target.elements.comment.value,
         };
-
-        console.log(newObject);
-        commentary.unshift(newObject); //adds new object to the top of the array 
-        defaultComment(commentary); //invokes the default comment function with the new array 
-
+        commentary.unshift(newObject); //adds new object to the start of the array  newObject now has index of 0
+        if (commentary.length < 5) {
+            defaultComment(commentary); //invokes the default comment function with the new array
+        } else {
+            //commentary has a length of 5 [newObject,newObject, originalObject originalObject, originalObject]
+            let updatedCommentary = commentary.splice(1, 1); //remove index[1] the old newObject splice removes a specific number of elements from a specific index
+            //commentary now has a length of 4 with only the newest entry remaining at the top of the feed 
+            defaultComment(updatedCommentary); //invokes the default comment function with the updated array
+        }
     });
 }
-defaultComment(commentary);
+defaultComment(commentary); //invokes defaultComment function with commentary array
 displayComment(commentary);
