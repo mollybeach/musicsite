@@ -58,8 +58,10 @@ function displayComment() {
     form.addEventListener('submit', function(event) {
         //remove the card of the card 
         //clear the previous feed
-        document.querySelector('.card').innerHTML = "";
+        document.querySelector('.card').innerText = "";
+        //refreshpage
         event.preventDefault();
+        event.document.querySelector(".name").value = '';
         var today = new Date(); //todays date 
         var dd = String(today.getDate()).padStart(2, '0');
         var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
@@ -67,7 +69,7 @@ function displayComment() {
         today = mm + '/' + dd + '/' + yyyy; //print date in desired format
         let newObject = {
             img: "https://www.sbdems.org/wp-content/uploads/2020/08/facebook-female-profile-icon-67.png ", //avi
-            name: event.target.elements.name.value, //        name: event.target.elements.name.value,
+            //name: event.target.elements.name.value, //        name: event.target.elements.name.value,
             time: today, //adds current time to time value 
             comment: event.target.elements.comment.value,
         };
@@ -75,6 +77,7 @@ function displayComment() {
         console.log(newObject);
         commentary.unshift(newObject); //adds new object to the top of the array 
         defaultComment(commentary); //invokes the default comment function with the new array 
+
     });
 }
 defaultComment(commentary);

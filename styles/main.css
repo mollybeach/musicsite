@@ -557,11 +557,6 @@ form {
     height: 48px;
   }
 }
-@media (min-width: 1280px) {
-  .feed__boxes input {
-    padding: 0 0 5rem 0;
-  }
-}
 .feed__boxes input textarea::after {
   content: ".";
 }
@@ -571,17 +566,13 @@ form {
   width: 224px;
   height: 64px;
   margin: 16px 0 16px 0;
+  resize: none;
   padding: 10px 0 0 10px;
 }
 @media (min-width: 768px) {
   .feed textarea {
     width: 460px;
     height: 96px;
-  }
-}
-@media (min-width: 1280px) {
-  .feed textarea {
-    padding: 0 0 5rem 0;
   }
 }
 .feed .buttony {
@@ -595,6 +586,7 @@ form {
 }
 @media (min-width: 768px) {
   .feed .buttony {
+    float: right;
     width: 160px;
     height: 48px;
   }
@@ -665,6 +657,8 @@ form {
 @media (min-width: 1280px) {
   .card__comment {
     width: 476px;
+    padding: 0px 0px 24px 0px;
+    margin: 0px 0px 0px 68px;
   }
 }
 

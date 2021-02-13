@@ -426,9 +426,6 @@ form {
                 width: 460px; //24*4+100*3+64 = 460px so we can assume it's the same size as desktop
                 height: 48px; ///height of tablet name box
             }
-            @include desktop {
-                padding: 0 0 5rem 0; //horizontal 80px padding
-            }
             padding: 3px 0 0 10px; //remove the 20vw padding for place holder and center it in the box
         }
         input textarea::after {
@@ -441,12 +438,10 @@ form {
         width: 224px;
         height: 64px;
         margin: 16px 0 16px 0;
+        resize: none;
         @include tablet {
             width: 460px; //24*4+100*3+64 = 460px so we can assume it's the same size as desktop
             height: 96px; ///height of tablet comment box
-        }
-        @include desktop {
-            padding: 0 0 5rem 0; //horizontal 80px padding
         }
         padding: 10px 0 0 10px; //remove the 20vw padding for place holder and center it in the box
     }
@@ -459,6 +454,7 @@ form {
         background-color: $black;
         border-radius: 8px; //round the corners of my button
         @include tablet {
+            float: right;
             width: 160px; //tablet width doesn't say looks about 100+24px+24px+16px=164px so it's probably desktop's size
             height: 48px; //tablet height doesn't say but we're assuming it's desktop's size for now
         }
@@ -526,8 +522,10 @@ form {
             margin: 0px 0px 0px 68px;
         }
         @include desktop {
-            //  margin: 0 0 5rem 0; //horizontal 80px padding
-            width: 476px; //desktop wide for comments 
+            width: 476px; //768-24-24-100-100=520px //460px+16px=476
+            // height: 12.5vw;
+            padding: 0px 0px 24px 0px; //24 top and bottom
+            margin: 0px 0px 0px 68px;
         }
     }
 }
