@@ -47,6 +47,9 @@ function defaultComment() {
         //add img attribute to img
         let submission = commentary[i];
         img.setAttribute("src", submission.img);
+
+
+
     }
 }
 
@@ -58,7 +61,7 @@ function displayComment() {
         document.querySelector('.card').innerText = "";
         //refreshpage
         event.preventDefault();
-        var today = new Date(); //todays date 
+        var today = new Date(); //grabs todays date in unix time 
         var dd = String(today.getDate()).padStart(2, '0');
         var mm = String(today.getMonth() + 1).padStart(2, '0');
         var yyyy = today.getFullYear();
@@ -78,7 +81,9 @@ function displayComment() {
             //commentary now has a length of 4 with only the newest entry remaining at the top of the feed 
             defaultComment(updatedCommentary); //invokes the default comment function with the updated array
         }
+        document.querySelector('.feed').reset(); //clears the text inside textbox the name and the comment 
     });
+
 }
 defaultComment(commentary); //invokes defaultComment function with commentary array
 displayComment(commentary);

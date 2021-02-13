@@ -503,9 +503,6 @@ form {
         @include tablet {
             line-height: none;
             height: 16px;
-            // margin: 0 0 25px 0;
-            //width: 472px; //768-24-24-100-100=520px
-            // height: 12.5vw;
             padding: 0px 0px 0px 0px;
             margin: 0px 0px 0px 0px; //16px bottom mobile
         }
