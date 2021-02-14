@@ -319,7 +319,7 @@ h5 {
     flex-wrap: wrap;
     background-color: $alabaster;
     width: 100%;
-    padding: 0 1rem; //mobile padding 16px 
+    padding: 0 1rem 2.5rem 1rem; //mobile padding 16px  40px bottom
     @include tablet {
         padding: 0 1.5rem; //horizontal 24px padding 
     }
@@ -364,8 +364,7 @@ form {
 }
 
 .article-header {
-    padding: 0 16px 40px 16px;
-    //margin: 0 0 40px 0; //40px or mobile
+    padding: 32px 16px 40px 16px; //mobile top is 32px bottom 40px
     @include tablet {
         padding: 48px 24px 56px 24px; //top 48px 
     }
@@ -375,7 +374,7 @@ form {
 }
 
 .feed {
-    padding: 40px 0 0 16px; //top 40px mobile padding 16px left 
+    padding: 0px 16px 0 16px; //top 40px mobile padding 16px left 
     @include tablet {
         //margin: 0 0 56px 0; //56px botton doesn't say but lets assume its the same as desktop
         padding: 0px 24px 0 24px;
@@ -398,15 +397,18 @@ form {
         }
     }
     &__boxes {
-        margin: 0 0 0 64px; //counted columns for mobile
+        padding: 0 0 0 64px; //counted columns for mobile
         display: block;
         float: left;
+        width: 288px;
+        border-bottom: $silver solid 1px; //guess change later
         @include tablet {
-            margin: 0 0 0 172px; //100px+24p+24+48(about)-24 = 124px counted columns for tablet
+            margin: 0 0 0 100px; //100px like the avi
             width: 460px;
+            //padding: 0 0 0 88px;
         }
         @include desktop {
-            margin: 0 0 0 264px; //68px*3+24px*3=264px  leftcounted columns for desktop
+            margin: 0 0 0 196px; //68px*3+24px*3=264px  leftcounted columns for desktop
         }
         label {
             padding: 0 0 0 0; //mobile padding
@@ -473,19 +475,21 @@ form {
     }
 }
 
+
+/*****************************************CARD FEED SECTION***********************************/
+
 .card {
+    @include h4;
     display: flex;
     flex-flow: row wrap;
-    width: 288px; //mobile version 320px -16px-16px=288px
-    padding: 0 16px 0 16px; //top 40px bottom 40px  mobile padding 16px left for mobile 
-    margin: 0 0 24px 0;
-    border-bottom: $silver solid 1px; //guess change later
+    width: 280px; //mobile version 320px -16px-16px=288px
+    margin: 0px 0px 24px 16px; //top 40px bottom 40px  mobile padding 16px left for mobile 
     @include tablet {
         width: 528px; //width is actually 528px
-        padding: 0 124px 0 124px;
+        margin: 0 124px 24px 124px;
     }
     @include desktop {
-        padding: 40px 124px 0 264px; //desktop does not say counted column 64*3+24*3= 264px left 264px right
+        margin: 40px 124px 0 264px; //desktop does not say counted column 64*3+24*3= 264px left 264px right
     }
     &__img {
         margin: 0 16px 0 0; //looks like 16px to the right 
@@ -498,7 +502,8 @@ form {
     }
     &__name {
         width: 140px; //measure width of the name on mobile + the distance between name and time : 16px + 48px + 16px + 48px = 96px 144px+ a little extra cuz looks wrong  + 48
-        margin: 0 0 0.5rem 0; //16px bottom mobile
+        //padding: 0 0 0.5rem 0; //16px bottom mobile
+        height: 0;
         font-family: AvenirNextLTProBold;
         @include tablet {
             line-height: none;
@@ -518,19 +523,18 @@ form {
     }
     &__comment {
         width: 240px; //the width not given but column estimate is 320px-48px-16px-16px=240px
-        margin: 0 0 24px 48px; //16px top 24px bottom mobile doesnt say the margin left but counting columns: looks like it needs an additional 48px to the left
-        padding: 24px 0;
+        padding: 0 0 24px 64px; //16px top bottom mobile doesnt say the margin left but counting columns: looks like it needs an additional 48px to the left
+        width: 240px; //width of mobile 320-48-16-16
+        border-bottom: $silver solid 1px; //guess change later
         @include tablet {
             width: 476px; //768-24-24-100-100=520px //460px+16px=476
             // height: 12.5vw;
-            padding: 0px 0px 24px 0px; //24 top and bottom
-            margin: 0px 0px 0px 68px;
+            padding: 0px 0px 24px 68px; //24 top and bottom
         }
         @include desktop {
             width: 476px; //768-24-24-100-100=520px //460px+16px=476
             // height: 12.5vw;
-            padding: 0px 0px 24px 0px; //24 top and bottom
-            margin: 0px 0px 0px 68px;
+            padding: 0px 0px 24px 68px; //24 top and bottom
         }
     }
 }

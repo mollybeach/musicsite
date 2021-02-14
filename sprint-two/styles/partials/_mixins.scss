@@ -5,6 +5,17 @@
 
 /************************************FONTS******************************************/
 
+@mixin h4 {
+    font-size: 13px;
+    line-height: 18px;
+    font-family: AvenirNextLTProRegular;
+    @include tablet {
+        font-size: 14px;
+        line-height: 22px;
+        font-family: AvenirNextLTProRegular;
+    }
+}
+
 //H4 - Paragraph & comments
 @mixin h4-list-contact-information {
     font-size: 13px;

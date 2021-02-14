@@ -437,7 +437,7 @@ h5 {
   flex-wrap: wrap;
   background-color: #FAFAFA;
   width: 100%;
-  padding: 0 1rem;
+  padding: 0 1rem 2.5rem 1rem;
 }
 @media (min-width: 768px) {
   .photo-gallery-section {
@@ -489,7 +489,7 @@ form {
 }
 
 .article-header {
-  padding: 0 16px 40px 16px;
+  padding: 32px 16px 40px 16px;
 }
 @media (min-width: 768px) {
   .article-header {
@@ -503,7 +503,7 @@ form {
 }
 
 .feed {
-  padding: 40px 0 0 16px;
+  padding: 0px 16px 0 16px;
 }
 @media (min-width: 768px) {
   .feed {
@@ -534,19 +534,21 @@ form {
   }
 }
 .feed__boxes {
-  margin: 0 0 0 64px;
+  padding: 0 0 0 64px;
   display: block;
   float: left;
+  width: 288px;
+  border-bottom: #AFAFAF solid 1px;
 }
 @media (min-width: 768px) {
   .feed__boxes {
-    margin: 0 0 0 172px;
+    margin: 0 0 0 100px;
     width: 460px;
   }
 }
 @media (min-width: 1280px) {
   .feed__boxes {
-    margin: 0 0 0 264px;
+    margin: 0 0 0 196px;
   }
 }
 .feed__boxes label {
@@ -620,23 +622,32 @@ form {
   }
 }
 
+/*****************************************CARD FEED SECTION***********************************/
 .card {
+  font-size: 13px;
+  line-height: 18px;
+  font-family: AvenirNextLTProRegular;
   display: flex;
   flex-flow: row wrap;
-  width: 288px;
-  padding: 0 16px 0 16px;
-  margin: 0 0 24px 0;
-  border-bottom: #AFAFAF solid 1px;
+  width: 280px;
+  margin: 0px 0px 24px 16px;
+}
+@media (min-width: 768px) {
+  .card {
+    font-size: 14px;
+    line-height: 22px;
+    font-family: AvenirNextLTProRegular;
+  }
 }
 @media (min-width: 768px) {
   .card {
     width: 528px;
-    padding: 0 124px 0 124px;
+    margin: 0 124px 24px 124px;
   }
 }
 @media (min-width: 1280px) {
   .card {
-    padding: 40px 124px 0 264px;
+    margin: 40px 124px 0 264px;
   }
 }
 .card__img {
@@ -652,7 +663,7 @@ form {
 }
 .card__name {
   width: 140px;
-  margin: 0 0 0.5rem 0;
+  height: 0;
   font-family: AvenirNextLTProBold;
 }
 @media (min-width: 768px) {
@@ -671,21 +682,20 @@ form {
 }
 .card__comment {
   width: 240px;
-  margin: 0 0 24px 48px;
-  padding: 24px 0;
+  padding: 0 0 24px 64px;
+  width: 240px;
+  border-bottom: #AFAFAF solid 1px;
 }
 @media (min-width: 768px) {
   .card__comment {
     width: 476px;
-    padding: 0px 0px 24px 0px;
-    margin: 0px 0px 0px 68px;
+    padding: 0px 0px 24px 68px;
   }
 }
 @media (min-width: 1280px) {
   .card__comment {
     width: 476px;
-    padding: 0px 0px 24px 0px;
-    margin: 0px 0px 0px 68px;
+    padding: 0px 0px 24px 68px;
   }
 }
 

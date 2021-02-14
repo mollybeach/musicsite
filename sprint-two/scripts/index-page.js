@@ -18,6 +18,7 @@ const commentary = [{
 function defaultComment() {
     for (i = 0; i < commentary.length; i++) {
         let div = document.createElement("card");
+
         let img = document.createElement("img");
         let name = document.createElement("name");
         let time = document.createElement("time");
