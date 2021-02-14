@@ -79,6 +79,7 @@ table {
 /*H3 - Subheader for Tablet and Desktop*/
 /*H4 - Paragraph & comments*/
 /*H5 - LABELS*/
+/***************************************PADDING**************************/
 /***********************************H*****************************************/
 /********************************* FOR TABLETS*************************************/
 /********************************* DESKTOP*************************************/
@@ -262,21 +263,35 @@ h5 {
      object-fit: cover;
 }
 .hero-container__box {
+  padding: 0 1rem 0 1rem;
   color: #FFFF;
-  padding: 4rem 1rem 4rem 1rem;
-  min-width: 90vw;
+  margin: 4rem 0;
+  min-width: 288px;
+  max-width: 90vw;
   z-index: 1;
 }
 @media (min-width: 768px) {
   .hero-container__box {
-    padding: 6rem 0px 0px 1.5rem;
-    width: 600px;
+    padding: 0 1.5rem 0 1.5rem;
   }
 }
 @media (min-width: 1280px) {
   .hero-container__box {
-    padding: 126px 0px 0 5rem;
-    width: 600px;
+    padding: 0 5rem 0 5;
+  }
+}
+@media (min-width: 768px) {
+  .hero-container__box {
+    margin: 6rem 0;
+    min-width: 564px;
+    max-width: 73.4vw;
+  }
+}
+@media (min-width: 1280px) {
+  .hero-container__box {
+    margin: 10rem 0;
+    min-width: 568px;
+    max-width: 43.1vw;
   }
 }
 .hero-container__title {
@@ -293,15 +308,8 @@ h5 {
     font-family: AvenirNextLTProBold;
   }
 }
-@media (min-width: 768px) {
-  .hero-container__title {
-    width: 312;
-  }
-}
 .hero-container__text {
   z-index: 1;
-  font-size: 36px;
-  line-height: 44px;
   font-size: 36px;
   line-height: 44px;
   font-family: AvenirNextLTProBold;
@@ -312,34 +320,43 @@ h5 {
     font-size: 3.75rem;
     line-height: 4.25rem;
     color: #FFFF;
-    width: 560px;
   }
 }
 .hero-container__soundcloud {
-  display: flex;
-  min-height: 30vw;
-  min-width: 90vw;
-  max-width: 56.77vw;
-  max-height: 19vw;
+  padding: 0 1rem 0 1rem;
+  position: absolute;
   z-index: 1;
   align-self: flex-end;
-  position: absolute;
-  padding: 0 1rem 4rem 1rem;
+  margin: 0 0 4rem 0;
+  min-width: 288px;
+  min-height: 96px;
+  max-width: 90vw;
+  max-height: 30vw;
 }
 @media (min-width: 768px) {
   .hero-container__soundcloud {
-    min-width: 56.77vw;
-    min-height: 10vw;
-    max-width: 34.06vw;
-    max-height: 146px;
+    padding: 0 1.5rem 0 1.5rem;
   }
 }
 @media (min-width: 1280px) {
   .hero-container__soundcloud {
-    padding: 22.65vw 0 0 59.86vw;
-    min-width: 34.06vw;
+    padding: 0 5rem 0 5;
+  }
+}
+@media (min-width: 768px) {
+  .hero-container__soundcloud {
+    margin: 0 0 6rem 0;
+    min-width: 436px;
     min-height: 146px;
-    max-width: 34.06vw;
+    max-width: 56.8vw;
+    max-height: 19vw;
+  }
+}
+@media (min-width: 1280px) {
+  .hero-container__soundcloud {
+    min-width: 436px;
+    min-height: 146px;
+    max-width: 34.1vw;
     max-height: 146px;
   }
 }

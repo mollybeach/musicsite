@@ -1,6 +1,5 @@
 const unit = [{}];
 let byEight = [];
-
 for (i = 0; i < 1280; i++) {
     if (i % 8 === 0) {
         byEight.push(i);
@@ -20,8 +19,17 @@ function createUnit() {
     }
 }
 createUnit(unit);
-console.log(unit);
-//Output of unit
+//console.log(unit);
+//for width and height I use min-width:__px (given in mockup) max-width:__px min-height:__px (given in mockup)  max-height:__vw for each breakpoint
+//for padding and margin I use rem
+//desktop column size: 
+//MOBILE 320PX / 4 COLUMN GRID  2-16: 3-32: 3-48
+//16| 48| 32 |48 |32 |48| 32|16
+//TABLET 768PX / 6 COLUMN GRID 6-100: 7-24
+//24| 100| 24| 100 |24 |100| 24 |100| 24 |100|24|100|24
+//DESK 1280PX WIDTH / 12 COLUMN GRID  2-80: 11-24 : 12-68 
+//80|24|68|24|68|24|68|24|68|24|68|24|68|24|68|24|68|24|68|24|68|24|68|80
+//Output of unit  
 const outPut = [{
     0: {},
     1: { input: 0, rem: "0.0", mobileVW: "0.0", tabletVW: "0.0", desktopVW: "0.0" },

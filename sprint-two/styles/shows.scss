@@ -169,60 +169,58 @@ h5 {
         object-fit: cover;
     }
     &__box {
+        @include standard-padding-left-right;
         color: $white;
-        padding: 4rem 1rem 4rem 1rem; //paddingtopbottom 64px for mobile left right 16px top 
-        min-width: 90vw; //320-16-16=288px 288px/320=90vw
+        margin: 4.0rem 0; //64px {input: 64, rem: "4.0", mobileVW: "20.0", tabletVW: "8.3", desktopVW: "5.0"}
+        min-width: 288px; //288px  320-(16*2)=288px
+        max-width: 90.0vw; //288px { input: 288, rem: "18.0", mobileVW: "90.0", tabletVW: "37.5", desktopVW: "22.5" }
         z-index: 1;
         @include tablet {
-            padding: 6rem 0px 0px 1.5rem; //96px top 24px left 96=6rem
-            width: 600px;
+            margin: 6.0rem 0; //96px {input: 96, rem: "6.0", mobileVW: "30.0", tabletVW: "12.5", desktopVW: "7.5"}
+            min-width: 564px; //564px 768-((24*3+100+~32)=204)=564px 
+            max-width: 73.4vw; //564px {input: 564, rem: "35.3", mobileVW: "176.3", tabletVW: "73.4", desktopVW: "44.1"}}
         }
         @include desktop {
-            padding: 126px 0px 0 5rem; //padding top 126px  80 left
-            width: 600px;
+            margin: 10.0rem 0; //160px {input: 160, rem: "10.0", mobileVW: "50.0", tabletVW: "20.8", desktopVW: "12.5"}
+            min-width: 568px; //552px (24*6+68*6+~16)=568px
+            max-width: 43.1vw; //552px {input: 552, rem: "34.5", mobileVW: "172.5", tabletVW: "71.9", desktopVW: "43.1"}
         }
     }
     &__title {
         @include h2-header;
         color: $white;
-        @include tablet {
-            width: 312; //24*2+100*2+64=312
-        }
     }
     &__text {
         z-index: 1;
-        font-size: 36px;
-        line-height: 44px;
         @include h1-tablet-desktop; //based on the mockup this is the ideal size for the mobile hero heading looks perfect
         @include tablet {
             @include h1-hero-heading;
-            width: 560px; //24*4+100*4+64=560
         }
     }
     &__soundcloud {
-        display: flex;
-        min-height: 30vw; //seems like good height 96px/320=30vw
-        min-width: 90vw; //counting from mockup 320-16-16=288px
-        max-width: 56.77vw; //436/768 56.77vw
-        max-height: 19vw; //146/768=19vw
+        @include standard-padding-left-right;
+        position: absolute;
         z-index: 1;
         align-self: flex-end; //push soundcloud to bottom of container
-        position: absolute;
-        padding: 0 1rem 4rem 1rem; //64px top 64px  16px left mobile
+        margin: 0 0 4.0rem 0; //64px bottom match top input: 64, rem: "4.0", mobileVW: "20.0", tabletVW: "8.3", desktopVW: "5.0"}
+        min-width: 288px; //288px counted from mockup
+        min-height: 96px; //looked about right for the mockup
+        max-width: 90.0vw; // 288px { input: 288, rem: "18.0", mobileVW: "90.0", tabletVW: "37.5", desktopVW: "22.5" }
+        max-height: 30.0vw; //96px {input: 96, rem: "6.0", mobileVW: "30.0", tabletVW: "12.5", desktopVW: "7.5" }
         @include tablet {
-            // padding: 55.72vw 0 1.5rem; //670-146-96=428px 24px left 428/768=55.72vw
-            min-width: 56.77vw; //436/768 56.77vw
-            min-height: 10vw; //146/768=19vw
-            max-width: 34.06vw; //436/1280=34.06vw
-            max-height: 146px; //146/1280=11.40vw
+            margin: 0 0 6.0rem 0; //96px match top margin {input: 96, rem: "6.0", mobileVW: "30.0", tabletVW: "12.5", desktopVW: "7.5"}
+            min-width: 436px; //436px {input: 436, rem: "27.3", mobileVW: "136.3", tabletVW: "56.8", desktopVW: "34.1"}
+            min-height: 146px; //146px {input: 146, rem: "9.1", mobileVW: "45.6", tabletVW: "19.0", desktopVW: "11.4"}
+            max-width: 56.8vw; //436px {input: 436, rem: "27.3", mobileVW: "136.3", tabletVW: "56.8", desktopVW: "34.1"}
+            max-height: 19.0vw; //146px {input: 146, rem: "9.1", mobileVW: "45.6", tabletVW: "19.0", desktopVW: "11.4"}
         }
         @include desktop {
-            padding: 22.65vw 0 0 59.86vw; // 290px 0 0 764px; 290/1280=22.65vw 764/1280=59.68vw
+            // padding: 22.65vw 0 0 59.86vw; // 290px 0 0 764px; 290/1280=22.65vw 764/1280=59.68vw
             //margin-right: auto;
-            min-width: 34.06vw; //436/1280=34.06vw
-            min-height: 146px; //146/1280=11.40vw
-            max-width: 34.06vw; //436/148034.06vw
-            max-height: 146px; //146/1480=11.40vw
+            min-width: 436px; //436px {input: 436, rem: "27.3", mobileVW: "136.3", tabletVW: "56.8", desktopVW: "34.1"}
+            min-height: 146px; //146px {input: 146, rem: "9.1", mobileVW: "45.6", tabletVW: "19.0", desktopVW: "11.4"}
+            max-width: 34.1vw; //436px {input: 436, rem: "27.3", mobileVW: "136.3", tabletVW: "56.8", desktopVW: "34.1"}
+            max-height: 146px; //146px {input: 146, rem: "9.1", mobileVW: "45.6", tabletVW: "19.0", desktopVW: "11.4"}
         }
     }
 }

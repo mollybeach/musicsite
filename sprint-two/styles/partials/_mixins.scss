@@ -118,6 +118,19 @@
 }
 
 
+/***************************************PADDING**************************/
+
+@mixin standard-padding-left-right {
+    padding: 0 1.0rem 0 1.0rem; //16px right 16px left { input: 16, rem: "1.0", mobileVW: "5.0", tabletVW: "2.1", desktopVW: "1.3" }
+    @include tablet {
+        padding: 0 1.5rem 0 1.5rem; //24px right 24px left  { input: 24, rem: "1.5", mobileVW: "7.5", tabletVW: "3.1", desktopVW: "1.9" }
+    }
+    @include desktop {
+        padding: 0 5.0rem 0 5.0; //80px right 80px left { input: 80, rem: "5.0", mobileVW: "25.0", tabletVW: "10.4", desktopVW: "6.3" }
+    }
+}
+
+
 /***********************************H*****************************************/
 
 @mixin h4 {
