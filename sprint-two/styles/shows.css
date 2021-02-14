@@ -74,6 +74,12 @@ table {
 }
 /*********************************IMPORTS********************************************/
 /************************************FONTS******************************************/
+/*H2 - Header*/
+/**subheader for mobile**/
+/*H3 - Subheader for Tablet and Desktop*/
+/*H4 - Paragraph & comments*/
+/*H5 - LABELS*/
+/***********************************H*****************************************/
 /********************************* FOR TABLETS*************************************/
 /********************************* DESKTOP*************************************/
 /*********************************IMPORTS********************************************/
@@ -86,34 +92,6 @@ table {
 }
 
 /*********************************************HEADINGS**h1-h6**************************************/
-/*H1 - Header*/
-h1 {
-  font-size: 24px;
-  line-height: 32px;
-  font-family: AvenirNextLTProBold;
-}
-@media (min-width: 768px) {
-  h1 {
-    font-size: 36px;
-    line-height: 44px;
-    font-family: AvenirNextLTProBold;
-  }
-}
-
-/*H2 - Header*/
-h2 {
-  font-size: 14px;
-  line-height: 22px;
-  font-family: AvenirNextLTProDemi;
-}
-@media (min-width: 768px) {
-  h2 {
-    font-size: 24px;
-    line-height: 32px;
-    font-family: AvenirNextLTProBold;
-  }
-}
-
 /*H3 - Subheader for Tablet and Desktop*/
 h3 {
   font-size: 16px;
@@ -228,7 +206,7 @@ h5 {
   }
 }
 .main-nav__item--active {
-  border-bottom: 1rem solid #FFFF;
+  border-bottom: 0.3rem solid #FFFF;
   padding-bottom: 0.5rem;
   width: 50%;
 }
@@ -291,7 +269,7 @@ h5 {
 }
 @media (min-width: 768px) {
   .hero-container__box {
-    padding: 96px 0px 0px 1.5rem;
+    padding: 6rem 0px 0px 1.5rem;
     width: 600px;
   }
 }
@@ -302,9 +280,18 @@ h5 {
   }
 }
 .hero-container__title {
-  font-family: AvenirNextLTProBold;
-  line-height: 9.25vw;
+  font-size: 0.875rem;
+  line-height: 1.375rem;
+  font-family: AvenirNextLTProDemi;
+  color: #323232;
   color: #FFFF;
+}
+@media (min-width: 768px) {
+  .hero-container__title {
+    font-size: 1.5rem;
+    line-height: 2rem;
+    font-family: AvenirNextLTProBold;
+  }
 }
 @media (min-width: 768px) {
   .hero-container__title {
@@ -313,40 +300,34 @@ h5 {
 }
 .hero-container__text {
   z-index: 1;
+  font-size: 36px;
+  line-height: 44px;
+  font-size: 36px;
+  line-height: 44px;
   font-family: AvenirNextLTProBold;
-  font-size: 10.3vw;
-  line-height: 9.25vw;
 }
 @media (min-width: 768px) {
   .hero-container__text {
     font-family: AvenirNextLTProBold;
     font-size: 3.75rem;
-    line-height: 3.625rem;
+    line-height: 4.25rem;
+    color: #FFFF;
     width: 560px;
-    line-height: 10.25vw;
   }
 }
-@media (min-width: 1280px) {
-  .hero-container__text {
-    font-family: AvenirNextLTProBold;
-    font-size: 3.75rem;
-    line-height: 3.625rem;
-    width: 560px;
-    line-height: 5.25vw;
-  }
-}
-.hero-container .soundcloud {
+.hero-container__soundcloud {
+  display: flex;
   min-height: 30vw;
   min-width: 90vw;
   max-width: 56.77vw;
   max-height: 19vw;
   z-index: 1;
+  align-self: flex-end;
   position: absolute;
-  padding: 19.5rem 1rem 4rem 1rem;
+  padding: 0 1rem 4rem 1rem;
 }
 @media (min-width: 768px) {
-  .hero-container .soundcloud {
-    padding: 55.72vw 0 1.5rem;
+  .hero-container__soundcloud {
     min-width: 56.77vw;
     min-height: 10vw;
     max-width: 34.06vw;
@@ -354,7 +335,7 @@ h5 {
   }
 }
 @media (min-width: 1280px) {
-  .hero-container .soundcloud {
+  .hero-container__soundcloud {
     padding: 22.65vw 0 0 59.86vw;
     min-width: 34.06vw;
     min-height: 146px;
@@ -380,7 +361,18 @@ h5 {
   }
 }
 .shows__heading {
-  margin: 0 0 0 0;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-family: AvenirNextLTProBold;
+  color: #FFFF;
+  color: #323232;
+}
+@media (min-width: 768px) {
+  .shows__heading {
+    font-size: 2.25rem;
+    line-height: 2.75rem;
+    font-family: AvenirNextLTProBold;
+  }
 }
 @media (min-width: 768px) {
   .shows__heading {
@@ -557,7 +549,18 @@ h5 {
 .footer__title {
   width: 208px;
   display: flex;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-family: AvenirNextLTProBold;
+  color: #FFFF;
   margin: 1.5rem 4rem 1.5rem 0;
+}
+@media (min-width: 768px) {
+  .footer__title {
+    font-size: 2.25rem;
+    line-height: 2.75rem;
+    font-family: AvenirNextLTProBold;
+  }
 }
 @media (min-width: 768px) {
   .footer__title {

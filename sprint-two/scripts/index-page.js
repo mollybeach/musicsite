@@ -18,13 +18,15 @@ const commentary = [{
 function defaultComment() {
     for (i = 0; i < commentary.length; i++) {
         let div = document.createElement("card");
-
         let img = document.createElement("img");
         let name = document.createElement("name");
         let time = document.createElement("time");
         let comment = document.createElement("comment");
         //div
-        div.classList.add('card'); //add a class to name
+        div.classList.add('card'); //add a class to card div the holder of all of the inner elements
+        //img
+        img.classList.add('card__img'); //add an class to img
+        img.innerText = commentary[i].img; //property of object 
         //name
         name.classList.add('card__name'); //add a class to name
         name.innerText = commentary[i].name; //property of object 
@@ -34,9 +36,6 @@ function defaultComment() {
         //comments
         comment.classList.add('card__comment'); //add a class to comment
         comment.innerText = commentary[i].comment; //property of object 
-        //img
-        img.classList.add('card__img'); //add an class to img
-        img.innerText = commentary[i].img; //property of object 
         //append to card
         let comments = document.querySelector(".card"); //class from emtpy card container in html
         comments.appendChild(div);

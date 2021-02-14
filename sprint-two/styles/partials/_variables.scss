@@ -1,11 +1,14 @@
 $breakpoint-tablet: 768px;
 $breakpoint-desktop: 1280px;
-$breakpoint-larger-mobile: 321px;
-$breakpoint-larger-tablet: 769px;
-$breakpoint-larger-desktop: 1281px;
-$black: #323232;
-$silver: #AFAFAF;
-$mercury: #E1E1E1;
+$black: #323232; //paragraph text navigation background
+$silver: #AFAFAF; //text label style
+$mercury: #E1E1E1; //dividers 
 $alabaster: #FAFAFA;
 $white: #FFFF;
-$brainflix-blue: #0065AD;
+$brainflix-blue: #0065AD; //primary CTA hover
+//dividers are 1px and use $mercury
+//desk dividers are 1080px 
+//tablets are 720px
+//mobile are 288px
+//4px radius corners PRIMARY CTA : HOVER STATE
+//2px radius corners Shadow color: #000000 x: 0, y: 40 Blur: 32 Spread: -4

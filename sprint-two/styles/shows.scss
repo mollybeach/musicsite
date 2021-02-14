@@ -16,34 +16,6 @@
 /*********************************************HEADINGS**h1-h6**************************************/
 
 
-/*H1 - Header*/
-
-h1 {
-    font-size: 24px;
-    line-height: 32px;
-    font-family: AvenirNextLTProBold;
-    @include tablet {
-        font-size: 36px;
-        line-height: 44px;
-        font-family: AvenirNextLTProBold;
-    }
-}
-
-
-/*H2 - Header*/
-
-h2 {
-    font-size: 14px;
-    line-height: 22px;
-    font-family: AvenirNextLTProDemi;
-    @include tablet {
-        font-size: 24px;
-        line-height: 32px;
-        font-family: AvenirNextLTProBold;
-    }
-}
-
-
 /*H3 - Subheader for Tablet and Desktop*/
 
 h3 {
@@ -145,7 +117,7 @@ h5 {
             padding: 2rem 3.5rem 0 3.5rem;
         }
         &--active {
-            border-bottom: 1rem solid $white;
+            border-bottom: 0.3rem solid $white;
             padding-bottom: 0.5rem;
             width: 50%;
             @include tablet {
@@ -198,11 +170,11 @@ h5 {
     }
     &__box {
         color: $white;
-        padding: 4rem 1rem 4rem 1rem; //paddingtopbottom 64px for mobile left right 16px
+        padding: 4rem 1rem 4rem 1rem; //paddingtopbottom 64px for mobile left right 16px top 
         min-width: 90vw; //320-16-16=288px 288px/320=90vw
         z-index: 1;
         @include tablet {
-            padding: 96px 0px 0px 1.5rem; //96px top 24px left
+            padding: 6rem 0px 0px 1.5rem; //96px top 24px left 96=6rem
             width: 600px;
         }
         @include desktop {
@@ -211,8 +183,7 @@ h5 {
         }
     }
     &__title {
-        font-family: AvenirNextLTProBold;
-        line-height: 9.25vw; //36px/320=11.25vw
+        @include h2-header;
         color: $white;
         @include tablet {
             width: 312; //24*2+100*2+64=312
@@ -220,30 +191,26 @@ h5 {
     }
     &__text {
         z-index: 1;
-        font-family: AvenirNextLTProBold;
-        font-size: 10.3vw; //24px/320= 7.5vw
-        line-height: 9.25vw;
+        font-size: 36px;
+        line-height: 44px;
+        @include h1-tablet-desktop; //based on the mockup this is the ideal size for the mobile hero heading looks perfect
         @include tablet {
             @include h1-hero-heading;
             width: 560px; //24*4+100*4+64=560
-            line-height: 10.25vw; //36px/320=11.25vw
-        }
-        @include desktop {
-            @include h1-hero-heading;
-            width: 560px; //24*4+100*4+64=560
-            line-height: 5.25vw; //36px/320=11.25vw
         }
     }
-    .soundcloud {
+    &__soundcloud {
+        display: flex;
         min-height: 30vw; //seems like good height 96px/320=30vw
         min-width: 90vw; //counting from mockup 320-16-16=288px
         max-width: 56.77vw; //436/768 56.77vw
         max-height: 19vw; //146/768=19vw
         z-index: 1;
+        align-self: flex-end; //push soundcloud to bottom of container
         position: absolute;
-        padding: 19.5rem 1rem 4rem 1rem; //64px top 64px bottom 472-64-96=312px 312 16 64 16 312/320=97.5vw change to rem 
+        padding: 0 1rem 4rem 1rem; //64px top 64px  16px left mobile
         @include tablet {
-            padding: 55.72vw 0 1.5rem; //670-146-96=428px 24px left 428/768=55.72vw
+            // padding: 55.72vw 0 1.5rem; //670-146-96=428px 24px left 428/768=55.72vw
             min-width: 56.77vw; //436/768 56.77vw
             min-height: 10vw; //146/768=19vw
             max-width: 34.06vw; //436/1280=34.06vw
@@ -274,7 +241,8 @@ h5 {
         padding: 0 5rem; //horizontal 80px padding 5rem
     }
     &__heading {
-        margin: 0 0 0 0;
+        @include h1-main-header;
+        color: $black; //change from default 
         @include tablet {
             padding: 1.5rem 0 0 0; //padding top 24p/768
         }
@@ -416,6 +384,7 @@ h5 {
     &__title {
         width: 208px;
         display: flex;
+        @include h1-main-header;
         margin: 1.5rem 4rem 1.5rem 0; // 24px top 64px right 24px bottom 0 px left 1.5rem 4 rem 1.5rem 0
         @include tablet {
             width: 230px; //230px
