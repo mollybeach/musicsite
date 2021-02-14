@@ -243,7 +243,7 @@
             margin: 0 0 2.5rem 0; //0 top 0 right 40px bottom 0px left
             max-width: 50rem; //800px 896 deskphoto-space
             @include desktop {
-                margin: 0 0 2.5rem 3rem; //48px top 0 px right  40px bottom 48px left because of extra spaced section 
+                margin: 3.5rem 0 2.5rem 3rem; //48px top 0 px right  40px bottom 48px left because of extra spaced section 
             }
         }
         //we can assume that tablet maintains mobile margin because its not defined
@@ -344,7 +344,7 @@
     
     article {
         @include tablet {
-            width: 528px;
+            width: 528px; //528px 33rem 528/768 68.75vw
         }
     }
     
@@ -353,51 +353,50 @@
     }
     
     .article-header {
-        padding: 32px 16px 40px 16px; //mobile top is 32px bottom 40px
+        padding: 2rem 1rem 2.5rem 1rem; //mobile top is 32px bottom 40px
         @include tablet {
-            padding: 48px 24px 56px 24px; //top 48px 
+            padding: 3.0rem 2rem 3.5rem 2rem; //top 48px 
         }
         @include desktop {
-            padding: 48px 24px 56px 80px; //top 48px left 80px 
+            padding: 3.0rem 1.5rem 3.5rem 5rem; //top 48px left 80px 
         }
     }
     
     .feed {
-        padding: 0px 16px 0 16px; //top 40px mobile padding 16px left 
+        padding: 0px 1rem 0 1rem; //top 40px mobile padding 16px left 
         @include tablet {
             //margin: 0 0 56px 0; //56px botton doesn't say but lets assume its the same as desktop
-            padding: 0px 24px 0 24px;
+            padding: 0px 1.5rem 0 1.5rem;
         }
         @include desktop {
-            padding: 0 80px 0 80px; //68px*3+24px*3=264px +80counted columns for desktop
+            padding: 0 5rem 0 5rem; //68px*3+24px*3=264px +80counted columns for desktop
         }
         &__avi {
-            margin: 24px 48px 0 0px; //top 24px mobile
+            margin: 1.5rem 3.0rem 0; //top 24px mobile 48px top
             height: 3rem; // just seems like 48px
             width: 3rem; //just seems like 48px
             border-radius: 30px; //makes the images circle like in the mockup
             float: left;
             position: absolute;
             @include tablet {
-                margin: 24px 0px 0px 100px; //top 24px mobile left 124px-24=100px
+                margin: 1.5rem 0px 0px 100px; //top 24px mobile left 124px-24=100px
             }
             @include desktop {
-                margin: 24px 0px 0px 196px; //top 24px desktop 264px-(size of avi 48px+20=68px)=196px margin between comment box and avi
+                margin: 1.5rem 0px 0px 196px; //top 24px desktop 264px-(size of avi 48px+20=68px)=196px margin between comment box and avi
             }
         }
         &__boxes {
             padding: 0 0 0 64px; //counted columns for mobile
             display: block;
             float: left;
-            width: 288px;
-            border-bottom: $silver solid 1px; //guess change later
+            min-width: 224px; //320-16-16-24=224px 
+            max-width: 460px;
+            border-bottom: $silver solid 0.063rem; //1px=0.063rem
             @include tablet {
-                margin: 0 0 0 100px; //100px like the avi
-                width: 460px;
-                //padding: 0 0 0 88px;
+                margin: 0 0 0 6.25rem; //100px like the avi
             }
             @include desktop {
-                margin: 0 0 0 196px; //68px*3+24px*3=264px  leftcounted columns for desktop
+                margin: 0 0 0 12.25rem; //68px*3+24px*3=264px  leftcounted columns for desktop
             }
             label {
                 padding: 0 0 0 0; //mobile padding
@@ -415,35 +414,35 @@
                 box-sizing: border-box;
                 font-size: 12px;
                 color: $silver; //just a guess check later
-                margin: 16px 0 16px 0;
+                margin: 1rem 0 1rem 0; //16px
                 width: 224px; //width of name box
                 height: 32px; //height of name box
                 border-radius: 4px; //round the corners of my name box 
                 @include tablet {
-                    width: 460px; //24*4+100*3+64 = 460px so we can assume it's the same size as desktop
-                    height: 48px; ///height of tablet name box
+                    width: 28.75rem; //24*4+100*3+64 = 460px same size as desktop 28.75rem
+                    height: 3.0rem; ///height of tablet name box 48px
                 }
-                padding: 3px 0 0 10px; //remove the 20vw padding for place holder and center it in the box
+                padding: 3px 0 0 10px; //remove the 20vw padding for place holder and center it in the box check
             }
             input textarea::after {
                 content: '.'; //clear the textboxes after submission not working 
             }
             textarea {
                 box-sizing: border-box;
-                border-radius: 4px; //round the corners of my comment box
+                border-radius: 0.25rem; //round the corners of my comment box 4px 0.25rem
                 width: 224px;
                 height: 64px;
                 margin: 16px 0 16px 0; //for the spaces in between the text boxes
                 resize: none;
                 @include tablet {
-                    width: 460px; //24*4+100*3+64 = 460px so we can assume it's the same size as desktop
+                    width: 460px; //24*4+100*3+64 = 460px same size as desktop
                     height: 96px; ///height of tablet comment box
                 }
-                padding: 10px 0 0 10px; //remove the 20vw padding for place holder and center it in the box
+                padding: 10px 0 0 10px; //remove the 20vw padding for place holder and center it in the box check
             }
             .buttony {
-                margin: 0 0 32px 0; // 32px bottom of button
-                width: 200px; //mobile button is 224px width  tablet looks about 48+32+48+32+48+(32/2)=224px but at this width its isn't acting right so 200px
+                margin: 0 0 2rem 0; // 32px bottom of button 32px for all
+                width: 12.5rem; //mobile button is 224px width  tablet looks about 48+32+48+32+48+(32/2)=224px but at this width its isn't acting right so 200px
                 height: 48px; //32px 2rem mobile height looks about 48px
                 font-family: AvenirNextLTProBold;
                 color: $white;
@@ -470,58 +469,45 @@
         display: flex;
         flex-flow: row wrap;
         width: 280px; //mobile version 320px -16px-16px=288px
-        margin: 0px 16px 24px 16px; //top 40px bottom 40px  mobile padding 16px left for mobile 
+        margin: 0px 1rem 1.5rem 1rem; //top 40px bottom 40px  mobile padding 16px left for mobile 
         @include tablet {
             width: 528px; //width is actually 528px
-            margin: 0 124px 24px 124px;
+            margin: 0 124px 1.5rem 124px;
         }
         @include desktop {
             margin: 40px 264px 0 264px; //desktop does not say counted column 64*3+24*3= 264px left 264px right
         }
         &__img {
-            margin: 0 16px 0 0; //looks like 16px to the right 
+            margin: 0 1.5rem 0 0; //looks like 16px to the right 
             height: 3rem; // just seems like 48px
             width: 3rem; //just seems like 48px
             border-radius: 30px; //makes the images circle like in the mockup
             @include tablet {
-                margin: 0 16px 0 0; //tablet 16px to the right
+                margin: 0 1rem 0 0; //tablet 16px to the right
             }
         }
         &__name {
             width: 140px; //measure width of the name on mobile + the distance between name and time : 16px + 48px + 16px + 48px = 96px 144px+ a little extra cuz looks wrong  + 48
-            //padding: 0 0 0.5rem 0; //16px bottom mobile
             height: 0;
             font-family: AvenirNextLTProBold;
             @include tablet {
                 line-height: none;
-                height: 16px;
-                padding: 0px 0px 0px 0px;
-                margin: 0px 0px 0px 0px; //16px bottom mobile
-            }
-            @include desktop {
-                //padding: 0 5rem; //horizontal 80px padding
+                height: 1rem;
             }
         }
         &__time {
-            width: 16px;
-            height: 16px;
-            margin: 0 0 0 0;
+            height: 1rem; //16px
+            width: 1rem; //16px
             font-family: AvenirNextLTProRegular;
         }
         &__comment {
             width: 240px; //the width not given but column estimate is 320px-48px-16px-16px=240px
-            padding: 0 0 24px 64px; //16px top bottom mobile doesnt say the margin left but counting columns: looks like it needs an additional 48px to the left
+            padding: 0 0 1.5rem 4.0rem; //64px mobile doesnt say the margin left but counting columns: looks like it needs an additional 48px to the left
             width: 240px; //width of mobile 320-48-16-16
-            border-bottom: $silver solid 1px; //guess change later
+            border-bottom: $silver solid 0.0625rem; //guess change later check
             @include tablet {
-                width: 476px; //768-24-24-100-100=520px //460px+16px=476
-                // height: 12.5vw;
-                padding: 0px 0px 24px 68px; //24 top and bottom
-            }
-            @include desktop {
-                width: 476px; //768-24-24-100-100=520px //460px+16px=476
-                // height: 12.5vw;
-                padding: 0px 0px 24px 68px; //24 top and bottom
+                width: 476px; //has to be in px
+                padding: 0px 0px 1.5rem 4.25rem; //24 top and bottom 68left 4.25rem
             }
         }
     }
@@ -530,7 +516,6 @@
     .footer {
         background-color: $black;
         color: $white;
-        width: 100%;
         padding: 0 1rem; //mobile horizontal padding 16px 1rem
         margin-top: 40px;
         @include tablet {
@@ -544,7 +529,6 @@
             display: flex;
             flex-wrap: wrap;
             flex-direction: row;
-            width: 100%;
         }
         &__title {
             width: 208px;
@@ -560,12 +544,12 @@
         }
         &__icons {
             display: flex;
-            margin: 0px 2rem 24px 0; //just change all these to rem 
+            margin: 0px 2rem 1.5rem 0; //just change all these to rem 
             @include tablet {
-                margin: 2rem 2rem 24px 0;
+                margin: 2rem 2rem 1.5rem 0;
             }
             @include desktop {
-                margin: 62px 2rem 0px 0px;
+                margin: 3.875rem 2rem 0px 0px; //62px 3.875rem
             }
         }
         &__icon {
@@ -574,8 +558,8 @@
             height: 1rem;
             @include tablet {
                 margin: 0 2rem 0 0;
-                width: 24px;
-                height: 24px;
+                width: 1.5rem;
+                height: 1.5rem;
             }
         }
         &__logo {
@@ -589,11 +573,11 @@
         }
         &__img {
             @include tablet {
-                height: 24px;
+                height: 1.5rem;
                 width: 120px;
             }
             @include desktop {
-                height: 24px;
+                height: 1.5rem;
                 width: 120px;
             }
         }

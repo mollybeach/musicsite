@@ -367,7 +367,7 @@ h5 {
 }
 @media (min-width: 1280px) {
   .about-section__quote {
-    margin: 0 0 2.5rem 3rem;
+    margin: 3.5rem 0 2.5rem 3rem;
   }
 }
 .about-section__name {
@@ -503,34 +503,34 @@ form {
 }
 
 .article-header {
-  padding: 32px 16px 40px 16px;
+  padding: 2rem 1rem 2.5rem 1rem;
 }
 @media (min-width: 768px) {
   .article-header {
-    padding: 48px 24px 56px 24px;
+    padding: 3rem 2rem 3.5rem 2rem;
   }
 }
 @media (min-width: 1280px) {
   .article-header {
-    padding: 48px 24px 56px 80px;
+    padding: 3rem 1.5rem 3.5rem 5rem;
   }
 }
 
 .feed {
-  padding: 0px 16px 0 16px;
+  padding: 0px 1rem 0 1rem;
 }
 @media (min-width: 768px) {
   .feed {
-    padding: 0px 24px 0 24px;
+    padding: 0px 1.5rem 0 1.5rem;
   }
 }
 @media (min-width: 1280px) {
   .feed {
-    padding: 0 80px 0 80px;
+    padding: 0 5rem 0 5rem;
   }
 }
 .feed__avi {
-  margin: 24px 48px 0 0px;
+  margin: 1.5rem 3rem 0;
   height: 3rem;
   width: 3rem;
   border-radius: 30px;
@@ -539,30 +539,30 @@ form {
 }
 @media (min-width: 768px) {
   .feed__avi {
-    margin: 24px 0px 0px 100px;
+    margin: 1.5rem 0px 0px 100px;
   }
 }
 @media (min-width: 1280px) {
   .feed__avi {
-    margin: 24px 0px 0px 196px;
+    margin: 1.5rem 0px 0px 196px;
   }
 }
 .feed__boxes {
   padding: 0 0 0 64px;
   display: block;
   float: left;
-  width: 288px;
-  border-bottom: #AFAFAF solid 1px;
+  min-width: 224px;
+  max-width: 460px;
+  border-bottom: #AFAFAF solid 0.063rem;
 }
 @media (min-width: 768px) {
   .feed__boxes {
-    margin: 0 0 0 100px;
-    width: 460px;
+    margin: 0 0 0 6.25rem;
   }
 }
 @media (min-width: 1280px) {
   .feed__boxes {
-    margin: 0 0 0 196px;
+    margin: 0 0 0 12.25rem;
   }
 }
 .feed__boxes label {
@@ -581,7 +581,7 @@ form {
   box-sizing: border-box;
   font-size: 12px;
   color: #AFAFAF;
-  margin: 16px 0 16px 0;
+  margin: 1rem 0 1rem 0;
   width: 224px;
   height: 32px;
   border-radius: 4px;
@@ -589,8 +589,8 @@ form {
 }
 @media (min-width: 768px) {
   .feed__boxes input {
-    width: 460px;
-    height: 48px;
+    width: 28.75rem;
+    height: 3rem;
   }
 }
 .feed__boxes input textarea::after {
@@ -598,7 +598,7 @@ form {
 }
 .feed__boxes textarea {
   box-sizing: border-box;
-  border-radius: 4px;
+  border-radius: 0.25rem;
   width: 224px;
   height: 64px;
   margin: 16px 0 16px 0;
@@ -612,8 +612,8 @@ form {
   }
 }
 .feed__boxes .buttony {
-  margin: 0 0 32px 0;
-  width: 200px;
+  margin: 0 0 2rem 0;
+  width: 12.5rem;
   height: 48px;
   font-family: AvenirNextLTProBold;
   color: #FFFF;
@@ -644,7 +644,7 @@ form {
   display: flex;
   flex-flow: row wrap;
   width: 280px;
-  margin: 0px 16px 24px 16px;
+  margin: 0px 1rem 1.5rem 1rem;
 }
 @media (min-width: 768px) {
   .card {
@@ -656,7 +656,7 @@ form {
 @media (min-width: 768px) {
   .card {
     width: 528px;
-    margin: 0 124px 24px 124px;
+    margin: 0 124px 1.5rem 124px;
   }
 }
 @media (min-width: 1280px) {
@@ -665,14 +665,14 @@ form {
   }
 }
 .card__img {
-  margin: 0 16px 0 0;
+  margin: 0 1.5rem 0 0;
   height: 3rem;
   width: 3rem;
   border-radius: 30px;
 }
 @media (min-width: 768px) {
   .card__img {
-    margin: 0 16px 0 0;
+    margin: 0 1rem 0 0;
   }
 }
 .card__name {
@@ -683,33 +683,24 @@ form {
 @media (min-width: 768px) {
   .card__name {
     line-height: none;
-    height: 16px;
-    padding: 0px 0px 0px 0px;
-    margin: 0px 0px 0px 0px;
+    height: 1rem;
   }
 }
 .card__time {
-  width: 16px;
-  height: 16px;
-  margin: 0 0 0 0;
+  height: 1rem;
+  width: 1rem;
   font-family: AvenirNextLTProRegular;
 }
 .card__comment {
   width: 240px;
-  padding: 0 0 24px 64px;
+  padding: 0 0 1.5rem 4rem;
   width: 240px;
-  border-bottom: #AFAFAF solid 1px;
+  border-bottom: #AFAFAF solid 0.0625rem;
 }
 @media (min-width: 768px) {
   .card__comment {
     width: 476px;
-    padding: 0px 0px 24px 68px;
-  }
-}
-@media (min-width: 1280px) {
-  .card__comment {
-    width: 476px;
-    padding: 0px 0px 24px 68px;
+    padding: 0px 0px 1.5rem 4.25rem;
   }
 }
 
@@ -717,7 +708,6 @@ form {
 .footer {
   background-color: #323232;
   color: #FFFF;
-  width: 100%;
   padding: 0 1rem;
   margin-top: 40px;
   /************************************FOOTER CARD************************************/
@@ -737,7 +727,6 @@ form {
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
-  width: 100%;
 }
 .footer__title {
   width: 208px;
@@ -757,16 +746,16 @@ form {
 }
 .footer__icons {
   display: flex;
-  margin: 0px 2rem 24px 0;
+  margin: 0px 2rem 1.5rem 0;
 }
 @media (min-width: 768px) {
   .footer__icons {
-    margin: 2rem 2rem 24px 0;
+    margin: 2rem 2rem 1.5rem 0;
   }
 }
 @media (min-width: 1280px) {
   .footer__icons {
-    margin: 62px 2rem 0px 0px;
+    margin: 3.875rem 2rem 0px 0px;
   }
 }
 .footer__icon {
@@ -777,8 +766,8 @@ form {
 @media (min-width: 768px) {
   .footer__icon {
     margin: 0 2rem 0 0;
-    width: 24px;
-    height: 24px;
+    width: 1.5rem;
+    height: 1.5rem;
   }
 }
 .footer__logo {
@@ -796,13 +785,13 @@ form {
 }
 @media (min-width: 768px) {
   .footer__img {
-    height: 24px;
+    height: 1.5rem;
     width: 120px;
   }
 }
 @media (min-width: 1280px) {
   .footer__img {
-    height: 24px;
+    height: 1.5rem;
     width: 120px;
   }
 }

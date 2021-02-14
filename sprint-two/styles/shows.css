@@ -234,7 +234,7 @@ h5 {
 }
 @media (min-width: 768px) {
   .main-nav__item--active {
-    width: 80%;
+    width: 40%;
     border-bottom: 0.5rem solid #FFFF;
     padding: 2rem 0 2rem 0;
   }
@@ -242,11 +242,6 @@ h5 {
 .main-nav__link {
   text-decoration: none;
   color: #FFFF;
-}
-@media (min-width: 768px) {
-  .main-nav__link {
-    padding: 0rem 0.5rem 0 0.5rem;
-  }
 }
 
 /************************************HERO CONTAINER****************************/
@@ -290,19 +285,19 @@ h5 {
 }
 .hero-container__box {
   color: #FFFF;
-  padding: 64px 16px 64px 16px;
+  padding: 4rem 1rem 4rem 1rem;
   min-width: 90vw;
   z-index: 1;
 }
 @media (min-width: 768px) {
   .hero-container__box {
-    padding: 96px 0px 0px 24px;
+    padding: 96px 0px 0px 1.5rem;
     width: 600px;
   }
 }
 @media (min-width: 1280px) {
   .hero-container__box {
-    padding: 126px 0px 0px 80px;
+    padding: 126px 0px 0 5rem;
     width: 600px;
   }
 }
@@ -331,25 +326,40 @@ h5 {
     line-height: 10.25vw;
   }
 }
+@media (min-width: 1280px) {
+  .hero-container__text {
+    font-family: AvenirNextLTProBold;
+    font-size: 3.75rem;
+    line-height: 3.625rem;
+    width: 560px;
+    line-height: 5.25vw;
+  }
+}
 .hero-container .soundcloud {
-  height: 96px;
-  width: 288px;
+  min-height: 30vw;
+  min-width: 90vw;
+  max-width: 56.77vw;
+  max-height: 19vw;
   z-index: 1;
   position: absolute;
-  padding: 312px 16px 64px 16px;
+  padding: 19.5rem 1rem 4rem 1rem;
 }
 @media (min-width: 768px) {
   .hero-container .soundcloud {
-    padding: 428px 0px 0 24px;
-    width: 436px;
-    height: 146px;
+    padding: 55.72vw 0 1.5rem;
+    min-width: 56.77vw;
+    min-height: 10vw;
+    max-width: 34.06vw;
+    max-height: 146px;
   }
 }
 @media (min-width: 1280px) {
   .hero-container .soundcloud {
-    padding: 290px 0 0 764px;
-    width: 436px;
-    height: 146px;
+    padding: 22.65vw 0 0 59.86vw;
+    min-width: 34.06vw;
+    min-height: 146px;
+    max-width: 34.06vw;
+    max-height: 146px;
   }
 }
 
@@ -357,8 +367,6 @@ h5 {
 .shows {
   background-color: #FFFF;
   color: #323232;
-  flex-direction: row;
-  width: 100%;
   padding: 0 1rem;
 }
 @media (min-width: 768px) {
@@ -372,11 +380,17 @@ h5 {
   }
 }
 .shows__heading {
-  margin: 24px 0 0 0;
+  margin: 0 0 0 0;
+}
+@media (min-width: 768px) {
+  .shows__heading {
+    padding: 1.5rem 0 0 0;
+  }
 }
 @media (min-width: 1280px) {
   .shows__heading {
-    width: 120px;
+    float: left;
+    padding: 0 0 0 0;
   }
 }
 .shows__bar {
@@ -391,7 +405,7 @@ h5 {
 }
 @media (min-width: 768px) and (min-width: 1280px) {
   .shows__bar {
-    margin: 0 0 40px 264px;
+    margin: 48px 0 40px 264px;
   }
 }
 .shows__dateo {
@@ -405,6 +419,9 @@ h5 {
 }
 
 .card {
+  font-size: 13px;
+  line-height: 18px;
+  font-family: AvenirNextLTProRegular;
   border-bottom: 1px solid #AFAFAF;
   display: flex;
   flex-flow: row wrap;
@@ -413,12 +430,19 @@ h5 {
 }
 @media (min-width: 768px) {
   .card {
+    font-size: 14px;
+    line-height: 20px;
+    font-family: AvenirNextLTProRegular;
+  }
+}
+@media (min-width: 768px) {
+  .card {
     flex-direction: row;
   }
 }
 @media (min-width: 1280px) {
   .card {
-    width: 856px;
+    width: 804px;
     padding: 0 0 0 264px;
   }
 }
@@ -446,7 +470,7 @@ h5 {
 }
 .card__venuie {
   font-family: AvenirNextLTProRegular;
-  margin: 0 50vw 16px 0;
+  margin: 0 50vw 1rem 0;
   color: #AFAFAF;
 }
 @media (min-width: 768px) {
@@ -455,7 +479,7 @@ h5 {
   }
 }
 .card__venue {
-  margin: 0 50vw 24px 0;
+  margin: 0 50vw 1.5rem 0;
   display: block;
 }
 @media (min-width: 768px) {
@@ -467,7 +491,7 @@ h5 {
 }
 .card__locationie {
   font-family: AvenirNextLTProRegular;
-  margin: 0 50vw 16px 0;
+  margin: 0 50vw 1rem 0;
   color: #AFAFAF;
 }
 @media (min-width: 768px) {
@@ -496,21 +520,14 @@ h5 {
   width: 260px;
   height: 32px;
   border-radius: 8px;
-  margin: 0 0 16px 0px;
+  margin: 0 0 1rem 0px;
 }
 @media (min-width: 768px) {
   .card__button {
     margin-right: auto;
     align-items: flex-end;
     width: 160px;
-    height: 48px;
-  }
-}
-@media (min-width: 1280px) {
-  .card__button {
-    margin-right: auto;
-    width: 160px;
-    height: 48px;
+    height: 4rem;
   }
 }
 
@@ -518,7 +535,6 @@ h5 {
 .footer {
   background-color: #323232;
   color: #FFFF;
-  width: 100%;
   padding: 0 1rem;
   /************************************FOOTER CARD************************************/
 }
@@ -537,7 +553,6 @@ h5 {
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
-  width: 100%;
 }
 .footer__title {
   width: 208px;
@@ -611,7 +626,7 @@ h5 {
 }
 @media (min-width: 768px) {
   .footer__link {
-    margin: 24px 0px 0 14vw;
+    margin: 24px 0px 0 8vw;
   }
 }
 @media (min-width: 1280px) {

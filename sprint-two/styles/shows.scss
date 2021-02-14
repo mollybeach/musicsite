@@ -149,7 +149,7 @@ h5 {
             padding-bottom: 0.5rem;
             width: 50%;
             @include tablet {
-                width: 80%;
+                width: 40%;
                 border-bottom: 0.5rem solid $white;
                 padding: 2rem 0 2rem 0;
             }
@@ -158,9 +158,6 @@ h5 {
     &__link {
         text-decoration: none;
         color: $white;
-        @include tablet {
-            padding: 0rem 0.5rem 0 0.5rem;
-        }
     }
 }
 
@@ -201,30 +198,23 @@ h5 {
     }
     &__box {
         color: $white;
-        //display: inline-block;
-        //padding: 15vw 0 0 7.5vw; //48px 36px 0px 24px 56/320=17.5vw
-        //max-width: 100.12vw;
-        //position: relative;
-        //padding: 223px 0px 0px 80px;
-        padding: 64px 16px 64px 16px; //paddingtopbottom 64px for mobile left right 16px
+        padding: 4rem 1rem 4rem 1rem; //paddingtopbottom 64px for mobile left right 16px
         min-width: 90vw; //320-16-16=288px 288px/320=90vw
         z-index: 1;
         @include tablet {
-            padding: 96px 0px 0px 24px; //96px top
+            padding: 96px 0px 0px 1.5rem; //96px top 24px left
             width: 600px;
         }
         @include desktop {
-            padding: 126px 0px 0px 80px; //padding top 126px
+            padding: 126px 0px 0 5rem; //padding top 126px  80 left
             width: 600px;
         }
     }
     &__title {
         font-family: AvenirNextLTProBold;
-        //font-size: 7.5vw; //24px/320= 7.5vw
         line-height: 9.25vw; //36px/320=11.25vw
         color: $white;
         @include tablet {
-            //@include h1-hero-heading;
             width: 312; //24*2+100*2+64=312
         }
     }
@@ -233,31 +223,39 @@ h5 {
         font-family: AvenirNextLTProBold;
         font-size: 10.3vw; //24px/320= 7.5vw
         line-height: 9.25vw;
-        //@include h1-hero-heading; //font-size: 16px;
-        //   font-size: 7.5vw; //24px/320= 7.5vw
-        // line-height: 11.25vw; //36px/320=11.25vw
         @include tablet {
             @include h1-hero-heading;
             width: 560px; //24*4+100*4+64=560
             line-height: 10.25vw; //36px/320=11.25vw
         }
+        @include desktop {
+            @include h1-hero-heading;
+            width: 560px; //24*4+100*4+64=560
+            line-height: 5.25vw; //36px/320=11.25vw
+        }
     }
     .soundcloud {
-        height: 96px; //seems like good height
-        width: 288px; //counting from mockup 320-16-16=288px
+        min-height: 30vw; //seems like good height 96px/320=30vw
+        min-width: 90vw; //counting from mockup 320-16-16=288px
+        max-width: 56.77vw; //436/768 56.77vw
+        max-height: 19vw; //146/768=19vw
         z-index: 1;
         position: absolute;
-        padding: 312px 16px 64px 16px; //64px top 64px bottom 472-64-96=312px
+        padding: 19.5rem 1rem 4rem 1rem; //64px top 64px bottom 472-64-96=312px 312 16 64 16 312/320=97.5vw change to rem 
         @include tablet {
-            padding: 428px 0px 0 24px; //670-146-96=428px
-            width: 436px;
-            height: 146px;
+            padding: 55.72vw 0 1.5rem; //670-146-96=428px 24px left 428/768=55.72vw
+            min-width: 56.77vw; //436/768 56.77vw
+            min-height: 10vw; //146/768=19vw
+            max-width: 34.06vw; //436/1280=34.06vw
+            max-height: 146px; //146/1280=11.40vw
         }
         @include desktop {
-            padding: 290px 0 0 764px; //670-146-96=428px
+            padding: 22.65vw 0 0 59.86vw; // 290px 0 0 764px; 290/1280=22.65vw 764/1280=59.68vw
             //margin-right: auto;
-            width: 436px;
-            height: 146px;
+            min-width: 34.06vw; //436/1280=34.06vw
+            min-height: 146px; //146/1280=11.40vw
+            max-width: 34.06vw; //436/148034.06vw
+            max-height: 146px; //146/1480=11.40vw
         }
     }
 }
@@ -268,11 +266,6 @@ h5 {
 .shows {
     background-color: $white;
     color: $black;
-    //width: 100%;
-    // display: flex;
-    //flex-wrap: wrap;
-    flex-direction: row;
-    width: 100%;
     padding: 0 1rem; //mobile horizontal padding 16px 1rem
     @include tablet {
         padding: 0 1.5rem; //horizontal 24px padding 1.5rem
@@ -281,10 +274,13 @@ h5 {
         padding: 0 5rem; //horizontal 80px padding 5rem
     }
     &__heading {
-        margin: 24px 0 0 0;
-        //width: 740px;
+        margin: 0 0 0 0;
+        @include tablet {
+            padding: 1.5rem 0 0 0; //padding top 24p/768
+        }
         @include desktop {
-            width: 120px; //64+24+32
+            float: left;
+            padding: 0 0 0 0;
         }
     }
     &__bar {
@@ -294,7 +290,7 @@ h5 {
             display: flex;
             margin: 24px 176px 24px 0;
             @include desktop {
-                margin: 0 0 40px 264px; //64*3+24*3 bottom 40px
+                margin: 48px 0 40px 264px; //64*3+24*3 bottom 40px
             }
         }
     }
@@ -310,6 +306,7 @@ h5 {
 }
 
 .card {
+    @include h4-list-contact-information;
     border-bottom: 1px solid $silver; //just a guess
     display: flex;
     flex-flow: row wrap;
@@ -319,7 +316,7 @@ h5 {
         flex-direction: row;
     }
     @include desktop {
-        width: 856px; //856-792
+        width: 804px; //width is 804px on desktop
         padding: 0 0 0 264px; //64*3+24*3
     }
     &__datie {
@@ -343,14 +340,14 @@ h5 {
     }
     &__venuie {
         font-family: AvenirNextLTProRegular;
-        margin: 0 50vw 16px 0; //below ies 16px mobile
+        margin: 0 50vw 1rem 0; //below ies 16px mobile
         color: $silver; //guess
         @include tablet {
             display: none; //no individual venue heading on tablet
         }
     }
     &__venue {
-        margin: 0 50vw 24px 0; //below 24px mobile
+        margin: 0 50vw 1.5rem 0; //below 24px mobile
         display: block; // works with -> :after content: "" to make mobile go in a row 
         @include tablet {
             width: 80px;
@@ -361,7 +358,7 @@ h5 {
     }
     &__locationie {
         font-family: AvenirNextLTProRegular;
-        margin: 0 50vw 16px 0; //below ies 16px mobile
+        margin: 0 50vw 1rem 0; //below ies 16px mobile
         color: $silver; //guess
         @include tablet {
             display: none; //no individual tablet heading on tablet
@@ -385,19 +382,14 @@ h5 {
         font-family: AvenirNextLTProRegular;
         color: $white;
         width: 260px; //guess check this again
-        height: 32px; //guess
+        height: 32px; //guess check
         border-radius: 8px; //round the corners of my button
-        margin: 0 0 16px 0px;
+        margin: 0 0 1rem 0px; //16 bottom
         @include tablet {
             margin-right: auto;
             align-items: flex-end; //needs to be on the left side for tablet 
             width: 160px; //for tablet it doesn't say what size but it defintely doesn't look like mobile's size
-            height: 48px; //make it desktop's size for now 
-        }
-        @include desktop {
-            margin-right: auto;
-            width: 160px; //desktop needs to be 160px / 48px
-            height: 48px;
+            height: 4rem; //desktops size 48px
         }
     }
 }
@@ -408,7 +400,6 @@ h5 {
 .footer {
     background-color: $black;
     color: $white;
-    width: 100%;
     padding: 0 1rem; //mobile horizontal padding 16px 1rem
     @include tablet {
         padding: 0 1.5rem; //horizontal 24px padding 1.5rem
@@ -421,7 +412,6 @@ h5 {
         display: flex;
         flex-wrap: wrap;
         flex-direction: row;
-        width: 100%;
     }
     &__title {
         width: 208px;
@@ -477,7 +467,7 @@ h5 {
     &__link {
         margin-left: auto;
         @include tablet {
-            margin: 24px 0px 0 14vw;
+            margin: 24px 0px 0 8vw;
         }
         @include desktop {
             margin: 48px 0 0 38vw;
