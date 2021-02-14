@@ -381,6 +381,11 @@ h5 {
     margin: 0 0 2.5rem 0;
   }
 }
+@media (min-width: 1280px) {
+  .about-section__name {
+    margin: 0 0 2.5rem 3rem;
+  }
+}
 .about-section__names {
   margin: 0 0 1.5rem;
 }

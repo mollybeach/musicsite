@@ -292,7 +292,6 @@ h5 {
         @include tablet {
             color: $black;
             display: flex;
-            //justify-content: space-between;
             margin: 24px 176px 24px 0;
             @include desktop {
                 margin: 0 0 40px 264px; //64*3+24*3 bottom 40px
@@ -321,7 +320,7 @@ h5 {
     }
     @include desktop {
         width: 856px; //856-792
-        margin: 0 0 0 264px; //64*3+24*3
+        padding: 0 0 0 264px; //64*3+24*3
     }
     &__datie {
         font-family: AvenirNextLTProRegular;

@@ -419,7 +419,7 @@ h5 {
 @media (min-width: 1280px) {
   .card {
     width: 856px;
-    margin: 0 0 0 264px;
+    padding: 0 0 0 264px;
   }
 }
 .card__datie {

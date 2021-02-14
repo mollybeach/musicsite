@@ -253,6 +253,9 @@
             @include tablet {
                 margin: 0 0 2.5rem 0; //0 top 0 right 40px bottom 0px left
             }
+            @include desktop {
+                margin: 0 0 2.5rem 3rem; //48px top 0 px right  40px bottom 48px left because of extra spaced section 
+            }
         }
         &__names {
             margin: 0 0 1.5rem; //padding 24px
