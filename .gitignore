@@ -3,6 +3,7 @@
 ### macOS ###
 # General
 .DS_Store
+.vscode
  *.css.map 
  *.DS_Store   
  *.vscode
