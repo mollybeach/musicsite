@@ -197,7 +197,7 @@ h5 {
     }
     &__box {
         color: $white;
-        display: inline-block;
+        //display: inline-block;
         //padding: 15vw 0 0 7.5vw; //48px 36px 0px 24px 56/320=17.5vw
         //max-width: 100.12vw;
         //position: relative;
@@ -205,35 +205,40 @@ h5 {
         padding: 64px 16px 64px 16px; //paddingtopbottom 64px for mobile left right 16px
         min-width: 90vw; //320-16-16=288px 288px/320=90vw
         z-index: 1;
-        line-height: 16px; //false
+        @include tablet {
+            padding: 223px 0px 0px 24px;
+            width: 600px;
+        }
         @include desktop {
             padding: 223px 0px 0px 80px;
             width: 600px;
         }
     }
-    &__text {
+    &__title {
         font-family: AvenirNextLTProBold;
-        //font-size: 16px;
-        //   font-size: 7.5vw; //24px/320= 7.5vw
-        // line-height: 11.25vw; //36px/320=11.25vw
+        //font-size: 7.5vw; //24px/320= 7.5vw
+        line-height: 11.25vw; //36px/320=11.25vw
         @include tablet {
             //@include h1-hero-heading;
         }
     }
-    &__title {
+    &__text {
         font-family: AvenirNextLTProBold;
+        font-size: 10.3vw; //24px/320= 7.5vw
+        line-height: 11.25vw; //36px/320=11.25vw
+        //@include h1-hero-heading; //font-size: 16px;
         //   font-size: 7.5vw; //24px/320= 7.5vw
         // line-height: 11.25vw; //36px/320=11.25vw
         @include tablet {
-            //@include h1-hero-heading;
+            @include h1-hero-heading;
         }
     }
     .soundcloud {
-        height: 94px;
-        width: 236px;
+        height: 96px; //seems like good height
+        width: 288px; //counting from mockup 320-16-16=288px
         z-index: 1;
-        display: flex;
-        margin: 300px 50px 0 0px;
+        position: absolute;
+        padding: 312px 16px 64px 16px; //64px top 64px bottom 472-64-96=312px
         @include tablet {
             padding: 0 24px 0 16px;
             height: 194px;

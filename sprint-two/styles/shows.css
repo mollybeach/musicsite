@@ -284,11 +284,15 @@ h5 {
 }
 .hero-container__box {
   color: #FFFF;
-  display: inline-block;
   padding: 64px 16px 64px 16px;
   min-width: 90vw;
   z-index: 1;
-  line-height: 16px;
+}
+@media (min-width: 768px) {
+  .hero-container__box {
+    padding: 223px 0px 0px 24px;
+    width: 600px;
+  }
 }
 @media (min-width: 1280px) {
   .hero-container__box {
@@ -296,18 +300,28 @@ h5 {
     width: 600px;
   }
 }
-.hero-container__text {
-  font-family: AvenirNextLTProBold;
-}
 .hero-container__title {
   font-family: AvenirNextLTProBold;
+  line-height: 11.25vw;
+}
+.hero-container__text {
+  font-family: AvenirNextLTProBold;
+  font-size: 10.3vw;
+  line-height: 11.25vw;
+}
+@media (min-width: 768px) {
+  .hero-container__text {
+    font-family: AvenirNextLTProBold;
+    font-size: 3.75rem;
+    line-height: 3.625rem;
+  }
 }
 .hero-container .soundcloud {
-  height: 94px;
-  width: 236px;
+  height: 96px;
+  width: 288px;
   z-index: 1;
-  display: flex;
-  margin: 300px 50px 0 0px;
+  position: absolute;
+  padding: 312px 16px 64px 16px;
 }
 @media (min-width: 768px) {
   .hero-container .soundcloud {
