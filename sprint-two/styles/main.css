@@ -235,6 +235,7 @@ h5 {
 @media (min-width: 768px) {
   .main-nav__item--active {
     width: 40%;
+    border-bottom: 0.5rem solid #FFFF;
     padding: 2rem 0 2rem 0;
   }
 }
@@ -413,11 +414,13 @@ h5 {
 @media (min-width: 768px) {
   .about-section__top {
     max-width: 348px;
+    margin: 0 1rem 0 0;
   }
 }
 @media (min-width: 1280px) {
   .about-section__top {
     max-width: 420px;
+    margin: 0 1.5rem 0 0;
   }
 }
 @media (min-width: 768px) {
@@ -484,6 +487,12 @@ h5 {
 }
 
 /************************************COMMENTS FEED SECTION************************************/
+@media (min-width: 768px) {
+  article {
+    width: 528px;
+  }
+}
+
 form {
   background-color: #FFFF;
 }
@@ -630,7 +639,7 @@ form {
   display: flex;
   flex-flow: row wrap;
   width: 280px;
-  margin: 0px 0px 24px 16px;
+  margin: 0px 16px 24px 16px;
 }
 @media (min-width: 768px) {
   .card {
@@ -647,7 +656,7 @@ form {
 }
 @media (min-width: 1280px) {
   .card {
-    margin: 40px 124px 0 264px;
+    margin: 40px 264px 0 264px;
   }
 }
 .card__img {

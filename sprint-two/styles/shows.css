@@ -234,13 +234,19 @@ h5 {
 }
 @media (min-width: 768px) {
   .main-nav__item--active {
-    width: 40%;
+    width: 80%;
+    border-bottom: 0.5rem solid #FFFF;
     padding: 2rem 0 2rem 0;
   }
 }
 .main-nav__link {
   text-decoration: none;
   color: #FFFF;
+}
+@media (min-width: 768px) {
+  .main-nav__link {
+    padding: 0rem 0.5rem 0 0.5rem;
+  }
 }
 
 /************************************HERO CONTAINER****************************/
@@ -290,30 +296,39 @@ h5 {
 }
 @media (min-width: 768px) {
   .hero-container__box {
-    padding: 223px 0px 0px 24px;
+    padding: 96px 0px 0px 24px;
     width: 600px;
   }
 }
 @media (min-width: 1280px) {
   .hero-container__box {
-    padding: 223px 0px 0px 80px;
+    padding: 126px 0px 0px 80px;
     width: 600px;
   }
 }
 .hero-container__title {
   font-family: AvenirNextLTProBold;
-  line-height: 11.25vw;
+  line-height: 9.25vw;
+  color: #FFFF;
+}
+@media (min-width: 768px) {
+  .hero-container__title {
+    width: 312;
+  }
 }
 .hero-container__text {
+  z-index: 1;
   font-family: AvenirNextLTProBold;
   font-size: 10.3vw;
-  line-height: 11.25vw;
+  line-height: 9.25vw;
 }
 @media (min-width: 768px) {
   .hero-container__text {
     font-family: AvenirNextLTProBold;
     font-size: 3.75rem;
     line-height: 3.625rem;
+    width: 560px;
+    line-height: 10.25vw;
   }
 }
 .hero-container .soundcloud {
@@ -325,9 +340,16 @@ h5 {
 }
 @media (min-width: 768px) {
   .hero-container .soundcloud {
-    padding: 0 24px 0 16px;
-    height: 194px;
+    padding: 428px 0px 0 24px;
     width: 436px;
+    height: 146px;
+  }
+}
+@media (min-width: 1280px) {
+  .hero-container .soundcloud {
+    padding: 290px 0 0 764px;
+    width: 436px;
+    height: 146px;
   }
 }
 
@@ -349,6 +371,14 @@ h5 {
     padding: 0 5rem;
   }
 }
+.shows__heading {
+  margin: 24px 0 0 0;
+}
+@media (min-width: 1280px) {
+  .shows__heading {
+    width: 120px;
+  }
+}
 .shows__bar {
   display: none;
 }
@@ -356,31 +386,25 @@ h5 {
   .shows__bar {
     color: #323232;
     display: flex;
-    justify-content: space-between;
-    width: 68%;
+    margin: 24px 176px 24px 0;
   }
 }
 @media (min-width: 768px) and (min-width: 1280px) {
   .shows__bar {
-    width: 67.5%;
+    margin: 0 0 40px 264px;
   }
 }
-@media (min-width: 768px) {
-  .shows__bar--dateo {
-    width: 140px;
-  }
+.shows__dateo {
+  width: 234px;
 }
-@media (min-width: 768px) {
-  .shows__bar--venueo {
-    width: 95px;
-  }
+.shows__venueo {
+  width: 130px;
 }
-@media (min-width: 768px) {
-  .shows__bar--locationo {
-    width: 130px;
-  }
+.shows__locationo {
+  width: 130px;
 }
-.shows .card {
+
+.card {
   border-bottom: 1px solid #AFAFAF;
   display: flex;
   flex-flow: row wrap;
@@ -388,83 +412,84 @@ h5 {
   padding: 0 24px 0 0;
 }
 @media (min-width: 768px) {
-  .shows .card {
+  .card {
     flex-direction: row;
   }
 }
 @media (min-width: 1280px) {
-  .shows .card {
-    width: 804px;
+  .card {
+    width: 856px;
+    margin: 0 0 0 264px;
   }
 }
-.shows .card__datie {
+.card__datie {
   font-family: AvenirNextLTProRegular;
   margin: 16px 50vw 16px 0;
   color: #AFAFAF;
 }
 @media (min-width: 768px) {
-  .shows .card__datie {
+  .card__datie {
     display: none;
   }
 }
-.shows .card__date {
+.card__date {
   display: block;
   margin: 0px 50vw 24px 0;
   font-family: AvenirNextLTProBold;
 }
 @media (min-width: 768px) {
-  .shows .card__date {
+  .card__date {
     width: 184px;
     margin: 0 50px 0 0;
     display: inline-block;
   }
 }
-.shows .card__venuie {
+.card__venuie {
   font-family: AvenirNextLTProRegular;
   margin: 0 50vw 16px 0;
   color: #AFAFAF;
 }
 @media (min-width: 768px) {
-  .shows .card__venuie {
+  .card__venuie {
     display: none;
   }
 }
-.shows .card__venue {
+.card__venue {
   margin: 0 50vw 24px 0;
   display: block;
 }
 @media (min-width: 768px) {
-  .shows .card__venue {
+  .card__venue {
     width: 80px;
     margin: 0 50px 0 0;
     display: inline-block;
   }
 }
-.shows .card__locationie {
+.card__locationie {
   font-family: AvenirNextLTProRegular;
   margin: 0 50vw 16px 0;
   color: #AFAFAF;
 }
 @media (min-width: 768px) {
-  .shows .card__locationie {
+  .card__locationie {
     display: none;
   }
 }
-.shows .card__location {
+.card__location {
   font-family: AvenirNextLTProRegular;
   margin: 0 50vw 24px 0;
   display: block;
 }
 @media (min-width: 768px) {
-  .shows .card__location {
+  .card__location {
     margin: 0 10vw 0 0;
     display: inline-block;
   }
 }
-.shows .card__datie .shows .card__venuie .shows .card__locationie :after {
+.card__datie .card__venuie .card__locationie :after {
   content: "";
 }
-.shows .card__button {
+.card__button {
   background-color: #323232;
   font-family: AvenirNextLTProRegular;
   color: #FFFF;
@@ -474,7 +499,7 @@ h5 {
   margin: 0 0 16px 0px;
 }
 @media (min-width: 768px) {
-  .shows .card__button {
+  .card__button {
     margin-right: auto;
     align-items: flex-end;
     width: 160px;
@@ -482,7 +507,7 @@ h5 {
   }
 }
 @media (min-width: 1280px) {
-  .shows .card__button {
+  .card__button {
     margin-right: auto;
     width: 160px;
     height: 48px;

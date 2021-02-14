@@ -149,7 +149,8 @@ h5 {
             padding-bottom: 0.5rem;
             width: 50%;
             @include tablet {
-                width: 40%;
+                width: 80%;
+                border-bottom: 0.5rem solid $white;
                 padding: 2rem 0 2rem 0;
             }
         }
@@ -157,6 +158,9 @@ h5 {
     &__link {
         text-decoration: none;
         color: $white;
+        @include tablet {
+            padding: 0rem 0.5rem 0 0.5rem;
+        }
     }
 }
 
@@ -206,31 +210,36 @@ h5 {
         min-width: 90vw; //320-16-16=288px 288px/320=90vw
         z-index: 1;
         @include tablet {
-            padding: 223px 0px 0px 24px;
+            padding: 96px 0px 0px 24px; //96px top
             width: 600px;
         }
         @include desktop {
-            padding: 223px 0px 0px 80px;
+            padding: 126px 0px 0px 80px; //padding top 126px
             width: 600px;
         }
     }
     &__title {
         font-family: AvenirNextLTProBold;
         //font-size: 7.5vw; //24px/320= 7.5vw
-        line-height: 11.25vw; //36px/320=11.25vw
+        line-height: 9.25vw; //36px/320=11.25vw
+        color: $white;
         @include tablet {
             //@include h1-hero-heading;
+            width: 312; //24*2+100*2+64=312
         }
     }
     &__text {
+        z-index: 1;
         font-family: AvenirNextLTProBold;
         font-size: 10.3vw; //24px/320= 7.5vw
-        line-height: 11.25vw; //36px/320=11.25vw
+        line-height: 9.25vw;
         //@include h1-hero-heading; //font-size: 16px;
         //   font-size: 7.5vw; //24px/320= 7.5vw
         // line-height: 11.25vw; //36px/320=11.25vw
         @include tablet {
             @include h1-hero-heading;
+            width: 560px; //24*4+100*4+64=560
+            line-height: 10.25vw; //36px/320=11.25vw
         }
     }
     .soundcloud {
@@ -240,9 +249,15 @@ h5 {
         position: absolute;
         padding: 312px 16px 64px 16px; //64px top 64px bottom 472-64-96=312px
         @include tablet {
-            padding: 0 24px 0 16px;
-            height: 194px;
+            padding: 428px 0px 0 24px; //670-146-96=428px
             width: 436px;
+            height: 146px;
+        }
+        @include desktop {
+            padding: 290px 0 0 764px; //670-146-96=428px
+            //margin-right: auto;
+            width: 436px;
+            height: 146px;
         }
     }
 }
@@ -265,116 +280,125 @@ h5 {
     @include desktop {
         padding: 0 5rem; //horizontal 80px padding 5rem
     }
+    &__heading {
+        margin: 24px 0 0 0;
+        //width: 740px;
+        @include desktop {
+            width: 120px; //64+24+32
+        }
+    }
     &__bar {
         display: none;
         @include tablet {
             color: $black;
             display: flex;
-            justify-content: space-between;
-            width: 68%;
+            //justify-content: space-between;
+            margin: 24px 176px 24px 0;
             @include desktop {
-                width: 67.5%;
-            }
-            &--dateo {
-                width: 140px;
-            }
-            &--venueo {
-                width: 95px;
-            }
-            &--locationo {
-                width: 130px;
+                margin: 0 0 40px 264px; //64*3+24*3 bottom 40px
             }
         }
     }
-    .card {
-        border-bottom: 1px solid $silver; //just a guess
-        display: flex;
-        flex-flow: row wrap;
-        width: 100%;
-        padding: 0 24px 0 0;
+    &__dateo {
+        width: 234px;
+    }
+    &__venueo {
+        width: 130px;
+    }
+    &__locationo {
+        width: 130px;
+    }
+}
+
+.card {
+    border-bottom: 1px solid $silver; //just a guess
+    display: flex;
+    flex-flow: row wrap;
+    width: 100%;
+    padding: 0 24px 0 0;
+    @include tablet {
+        flex-direction: row;
+    }
+    @include desktop {
+        width: 856px; //856-792
+        margin: 0 0 0 264px; //64*3+24*3
+    }
+    &__datie {
+        font-family: AvenirNextLTProRegular;
+        margin: 16px 50vw 16px 0; //below ies 16px mobile 16px top between itself and line
+        color: $silver; //guess
         @include tablet {
-            flex-direction: row;
+            display: none; //no individual venue heading on tablet
+        }
+    }
+    &__date {
+        display: block; // works with -> :after content: "" to make mobile go in a row
+        margin: 0px 50vw 24px 0; //below 24px mobile 
+        font-family: AvenirNextLTProBold;
+        // margin: 0 5vw 0 0;
+        @include tablet {
+            width: 184px;
+            margin: 0 50px 0 0; //the date venu and location are one single tablet line column away from eachother 100px
+            display: inline-block; //for tablet row opposes display block above
+        }
+    }
+    &__venuie {
+        font-family: AvenirNextLTProRegular;
+        margin: 0 50vw 16px 0; //below ies 16px mobile
+        color: $silver; //guess
+        @include tablet {
+            display: none; //no individual venue heading on tablet
+        }
+    }
+    &__venue {
+        margin: 0 50vw 24px 0; //below 24px mobile
+        display: block; // works with -> :after content: "" to make mobile go in a row 
+        @include tablet {
+            width: 80px;
+            margin: 0 50px 0 0;
+            // margin: 0 100px 0 0; //the date venu and location are one single tablet line column away from eachother 100px
+            display: inline-block; //for tablet row opposes display block above
+        }
+    }
+    &__locationie {
+        font-family: AvenirNextLTProRegular;
+        margin: 0 50vw 16px 0; //below ies 16px mobile
+        color: $silver; //guess
+        @include tablet {
+            display: none; //no individual tablet heading on tablet
+        }
+    }
+    &__location {
+        font-family: AvenirNextLTProRegular;
+        margin: 0 50vw 24px 0; //below 24px mobile
+        display: block; // works with -> :after content: "" to make mobile go in a row 
+        @include tablet {
+            margin: 0 10vw 0 0;
+            // margin: 0 30vw 0 0; //the date venu and location are one single tablet line column away from eachother 100px
+            display: inline-block; //for tablet row
+        }
+    }
+    &__datie &__venuie &__locationie :after {
+        content: ""; //make the mobile verisions go to the next line works with the following classes display:block
+    }
+    &__button {
+        background-color: $black; //mobile needs to be 288px /24px
+        font-family: AvenirNextLTProRegular;
+        color: $white;
+        width: 260px; //guess check this again
+        height: 32px; //guess
+        border-radius: 8px; //round the corners of my button
+        margin: 0 0 16px 0px;
+        @include tablet {
+            margin-right: auto;
+            align-items: flex-end; //needs to be on the left side for tablet 
+            width: 160px; //for tablet it doesn't say what size but it defintely doesn't look like mobile's size
+            height: 48px; //make it desktop's size for now 
         }
         @include desktop {
-            width: 804px;
-        }
-        &__datie {
-            font-family: AvenirNextLTProRegular;
-            margin: 16px 50vw 16px 0; //below ies 16px mobile 16px top between itself and line
-            color: $silver; //guess
-            @include tablet {
-                display: none; //no individual venue heading on tablet
-            }
-        }
-        &__date {
-            display: block; // works with -> :after content: "" to make mobile go in a row
-            margin: 0px 50vw 24px 0; //below 24px mobile 
-            font-family: AvenirNextLTProBold;
-            // margin: 0 5vw 0 0;
-            @include tablet {
-                width: 184px;
-                margin: 0 50px 0 0; //the date venu and location are one single tablet line column away from eachother 100px
-                display: inline-block; //for tablet row opposes display block above
-            }
-        }
-        &__venuie {
-            font-family: AvenirNextLTProRegular;
-            margin: 0 50vw 16px 0; //below ies 16px mobile
-            color: $silver; //guess
-            @include tablet {
-                display: none; //no individual venue heading on tablet
-            }
-        }
-        &__venue {
-            margin: 0 50vw 24px 0; //below 24px mobile
-            display: block; // works with -> :after content: "" to make mobile go in a row 
-            @include tablet {
-                width: 80px;
-                margin: 0 50px 0 0;
-                // margin: 0 100px 0 0; //the date venu and location are one single tablet line column away from eachother 100px
-                display: inline-block; //for tablet row opposes display block above
-            }
-        }
-        &__locationie {
-            font-family: AvenirNextLTProRegular;
-            margin: 0 50vw 16px 0; //below ies 16px mobile
-            color: $silver; //guess
-            @include tablet {
-                display: none; //no individual tablet heading on tablet
-            }
-        }
-        &__location {
-            font-family: AvenirNextLTProRegular;
-            margin: 0 50vw 24px 0; //below 24px mobile
-            display: block; // works with -> :after content: "" to make mobile go in a row 
-            @include tablet {
-                margin: 0 10vw 0 0;
-                // margin: 0 30vw 0 0; //the date venu and location are one single tablet line column away from eachother 100px
-                display: inline-block; //for tablet row
-            }
-        }
-        &__datie &__venuie &__locationie :after {
-            content: ""; //make the mobile verisions go to the next line works with the following classes display:block
-        }
-        &__button {
-            background-color: $black; //mobile needs to be 288px /24px
-            font-family: AvenirNextLTProRegular;
-            color: $white;
-            width: 260px; //guess check this again
-            height: 32px; //guess
-            border-radius: 8px; //round the corners of my button
-            margin: 0 0 16px 0px;
-            @include tablet {
-                margin-right: auto;
-                align-items: flex-end; //needs to be on the left side for tablet 
-                width: 160px; //for tablet it doesn't say what size but it defintely doesn't look like mobile's size
-                height: 48px; //make it desktop's size for now 
-            }
-            @include desktop {
-                margin-right: auto;
-                width: 160px; //desktop needs to be 160px / 48px
-                height: 48px;
-            }
+            margin-right: auto;
+            width: 160px; //desktop needs to be 160px / 48px
+            height: 48px;
         }
     }
 }
