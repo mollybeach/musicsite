@@ -73,6 +73,30 @@
     }
 }
 
+@mixin h4-paragraphs-and-comments-bold {
+    font-size: 13px;
+    line-height: 18px;
+    font-family: AvenirNextLTProBold;
+    color: $black;
+    @include tablet {
+        font-size: 14px;
+        line-height: 22px;
+        font-family: AvenirNextLTProBold;
+    }
+}
+
+//H4 - Paragraph & comments
+@mixin h4-list-contact-information {
+    font-size: 13px;
+    line-height: 18px;
+    font-family: AvenirNextLTProRegular;
+    @include tablet {
+        font-size: 14px;
+        line-height: 20px;
+        font-family: AvenirNextLTProRegular;
+    }
+}
+
 @mixin p-paragraph {
     font-size: 13px;
     line-height: 18px;
@@ -93,27 +117,32 @@
     font-size: 12px;
     line-height: 20px;
     font-family: AvenirNextLTProRegular;
-    color: $black;
+    color: $silver; //labels
     @include tablet {
         font-size: 12px;
         line-height: 20px;
-        font-family: AvenirNextLTProBold;
+        font-family: AvenirNextLTDemi;
     }
     @include desktop {
         font-size: 12px;
         line-height: 20px;
-        font-family: AvenirNextLTProBold;
+        font-family: AvenirNextLTProDemi;
     }
 }
 
 @mixin divider {
     border-bottom: 1px solid $mercury;
-    width: 288px;
+    min-width: 288px; //288px mobile
+    max-width: 90.0vw; //{ input: 288, rem: "18.0", mobileVW: "90.0", tabletVW: "37.5", desktopVW: "22.5" }
     @include tablet {
-        width: 720px;
+        min-width: 720px; //720px tablet
+        max-width: 93.8vw; // 720px{ input: 720, rem: "45.0", mobileVW: "225.0", tabletVW: "93.8", desktopVW: "56.3" }
     }
     @include desktop {
-        width: 1080px;
+        min-width: 804px; //width: 1080px; mockup says 804 desktop
+        max-width: 62.8vw; //width: 1080px; mockup says 804 {input: 804, rem: "50.3", mobileVW: "251.3", tabletVW: "104.7", desktopVW: "62.8"}
+        padding: 0;
+        margin: 0;
     }
 }
 
@@ -126,7 +155,7 @@
         padding: 0 1.5rem 0 1.5rem; //24px right 24px left  { input: 24, rem: "1.5", mobileVW: "7.5", tabletVW: "3.1", desktopVW: "1.9" }
     }
     @include desktop {
-        padding: 0 5.0rem 0 5.0; //80px right 80px left { input: 80, rem: "5.0", mobileVW: "25.0", tabletVW: "10.4", desktopVW: "6.3" }
+        padding: 0 5.0rem 0 5.0rem; //80px right 80px left { input: 80, rem: "5.0", mobileVW: "25.0", tabletVW: "10.4", desktopVW: "6.3" }
     }
 }
 
@@ -142,23 +171,6 @@
         line-height: 22px;
         font-family: AvenirNextLTProRegular;
     }
-}
-
-//H4 - Paragraph & comments
-@mixin h4-list-contact-information {
-    font-size: 13px;
-    line-height: 18px;
-    font-family: AvenirNextLTProRegular;
-    @include tablet {
-        font-size: 14px;
-        line-height: 20px;
-        font-family: AvenirNextLTProRegular;
-    }
-} //H3 - Subheader for Tablet and Desktop
-@mixin h3-subheader {
-    font-size: 16px;
-    line-height: 24px;
-    font-family: AvenirNextLTProDemi;
 }
 
 

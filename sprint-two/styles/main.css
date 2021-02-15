@@ -383,6 +383,7 @@ h5 {
   font-size: 16px;
   line-height: 24px;
   font-family: AvenirNextLTProDemi;
+  color: #323232;
 }
 @media (min-width: 768px) {
   .about-section__name {

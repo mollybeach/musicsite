@@ -189,6 +189,10 @@ h5 {
     &__title {
         @include h2-header;
         color: $white;
+        margin: 0 0 2.0rem 0; //looks about 32px check  { input: 32, rem: "2.0", mobileVW: "10.0", tabletVW: "4.2", desktopVW: "2.5" }
+        @include tablet {
+            margin: 0 0 3.0rem 0; //48px desktop { input: 48, rem: "3.0", mobileVW: "15.0", tabletVW: "6.3", desktopVW: "3.8" }
+        }
     }
     &__text {
         z-index: 1;
@@ -203,7 +207,7 @@ h5 {
         z-index: 1;
         align-self: flex-end; //push soundcloud to bottom of container
         margin: 0 0 4.0rem 0; //64px bottom match top input: 64, rem: "4.0", mobileVW: "20.0", tabletVW: "8.3", desktopVW: "5.0"}
-        min-width: 288px; //288px counted from mockup
+        min-width: 288px; //288px mockup column grid
         min-height: 96px; //looked about right for the mockup
         max-width: 90.0vw; // 288px { input: 288, rem: "18.0", mobileVW: "90.0", tabletVW: "37.5", desktopVW: "22.5" }
         max-height: 30.0vw; //96px {input: 96, rem: "6.0", mobileVW: "30.0", tabletVW: "12.5", desktopVW: "7.5" }
@@ -215,12 +219,13 @@ h5 {
             max-height: 19.0vw; //146px {input: 146, rem: "9.1", mobileVW: "45.6", tabletVW: "19.0", desktopVW: "11.4"}
         }
         @include desktop {
-            // padding: 22.65vw 0 0 59.86vw; // 290px 0 0 764px; 290/1280=22.65vw 764/1280=59.68vw
-            //margin-right: auto;
+            padding: 0; //remove standard padding mixin
+            margin: 0 0 17.1rem 0; //274px {input: 274, rem: "17.1", mobileVW: "85.6", tabletVW: "35.7", desktopVW: "21.4"}51.6", desktopVW: "30.9"}
+            position: relative;
             min-width: 436px; //436px {input: 436, rem: "27.3", mobileVW: "136.3", tabletVW: "56.8", desktopVW: "34.1"}
             min-height: 146px; //146px {input: 146, rem: "9.1", mobileVW: "45.6", tabletVW: "19.0", desktopVW: "11.4"}
-            max-width: 34.1vw; //436px {input: 436, rem: "27.3", mobileVW: "136.3", tabletVW: "56.8", desktopVW: "34.1"}
-            max-height: 146px; //146px {input: 146, rem: "9.1", mobileVW: "45.6", tabletVW: "19.0", desktopVW: "11.4"}
+            max-width: 30.3vw; //436px { input: 436, rem: "27.3", desktopxlVW: "30.3" }
+            max-height: 10.1vw; //146px { input: 146, rem: "9.1", desktopxlVW: "10.1" }
         }
     }
 }
@@ -261,22 +266,24 @@ h5 {
         }
     }
     &__dateo {
+        @include h5-labels;
         width: 234px;
     }
     &__venueo {
+        @include h5-labels;
         width: 130px;
     }
     &__locationo {
+        @include h5-labels;
         width: 130px;
     }
 }
 
 .card {
     @include h4-list-contact-information;
-    border-bottom: 1px solid $silver; //just a guess
+    @include divider;
     display: flex;
     flex-flow: row wrap;
-    width: 100%;
     padding: 0 24px 0 0;
     @include tablet {
         flex-direction: row;
@@ -286,7 +293,7 @@ h5 {
         padding: 0 0 0 264px; //64*3+24*3
     }
     &__datie {
-        font-family: AvenirNextLTProRegular;
+        @include h5-labels;
         margin: 16px 50vw 16px 0; //below ies 16px mobile 16px top between itself and line
         color: $silver; //guess
         @include tablet {
@@ -295,9 +302,8 @@ h5 {
     }
     &__date {
         display: block; // works with -> :after content: "" to make mobile go in a row
-        margin: 0px 50vw 24px 0; //below 24px mobile 
-        font-family: AvenirNextLTProBold;
-        // margin: 0 5vw 0 0;
+        margin: 1rem 50vw 24px 0; //below 24px mobile 
+        @include h4-paragraphs-and-comments-bold; // margin: 0 5vw 0 0;
         @include tablet {
             width: 184px;
             margin: 0 50px 0 0; //the date venu and location are one single tablet line column away from eachother 100px
@@ -305,7 +311,7 @@ h5 {
         }
     }
     &__venuie {
-        font-family: AvenirNextLTProRegular;
+        @include h5-labels;
         margin: 0 50vw 1rem 0; //below ies 16px mobile
         color: $silver; //guess
         @include tablet {
@@ -323,25 +329,21 @@ h5 {
         }
     }
     &__locationie {
-        font-family: AvenirNextLTProRegular;
+        @include h5-labels;
         margin: 0 50vw 1rem 0; //below ies 16px mobile
-        color: $silver; //guess
         @include tablet {
             display: none; //no individual tablet heading on tablet
         }
     }
     &__location {
-        font-family: AvenirNextLTProRegular;
-        margin: 0 50vw 24px 0; //below 24px mobile
+        @include h4-paragraphs-and-comments;
+        margin: 0 0 24px 0; //below 24px mobile
         display: block; // works with -> :after content: "" to make mobile go in a row 
         @include tablet {
             margin: 0 10vw 0 0;
             // margin: 0 30vw 0 0; //the date venu and location are one single tablet line column away from eachother 100px
             display: inline-block; //for tablet row
         }
-    }
-    &__datie &__venuie &__locationie :after {
-        content: ""; //make the mobile verisions go to the next line works with the following classes display:block
     }
     &__button {
         background-color: $black; //mobile needs to be 288px /24px

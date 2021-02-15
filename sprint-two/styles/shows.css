@@ -277,7 +277,7 @@ h5 {
 }
 @media (min-width: 1280px) {
   .hero-container__box {
-    padding: 0 5rem 0 5;
+    padding: 0 5rem 0 5rem;
   }
 }
 @media (min-width: 768px) {
@@ -300,12 +300,18 @@ h5 {
   font-family: AvenirNextLTProDemi;
   color: #323232;
   color: #FFFF;
+  margin: 0 0 2rem 0;
 }
 @media (min-width: 768px) {
   .hero-container__title {
     font-size: 1.5rem;
     line-height: 2rem;
     font-family: AvenirNextLTProBold;
+  }
+}
+@media (min-width: 768px) {
+  .hero-container__title {
+    margin: 0 0 3rem 0;
   }
 }
 .hero-container__text {
@@ -340,7 +346,7 @@ h5 {
 }
 @media (min-width: 1280px) {
   .hero-container__soundcloud {
-    padding: 0 5rem 0 5;
+    padding: 0 5rem 0 5rem;
   }
 }
 @media (min-width: 768px) {
@@ -354,10 +360,13 @@ h5 {
 }
 @media (min-width: 1280px) {
   .hero-container__soundcloud {
+    padding: 0;
+    margin: 0 0 17.1rem 0;
+    position: relative;
     min-width: 436px;
     min-height: 146px;
-    max-width: 34.1vw;
-    max-height: 146px;
+    max-width: 30.3vw;
+    max-height: 10.1vw;
   }
 }
 
@@ -418,23 +427,78 @@ h5 {
   }
 }
 .shows__dateo {
+  font-size: 12px;
+  line-height: 20px;
+  font-family: AvenirNextLTProRegular;
+  color: #AFAFAF;
   width: 234px;
 }
+@media (min-width: 768px) {
+  .shows__dateo {
+    font-size: 12px;
+    line-height: 20px;
+    font-family: AvenirNextLTDemi;
+  }
+}
+@media (min-width: 1280px) {
+  .shows__dateo {
+    font-size: 12px;
+    line-height: 20px;
+    font-family: AvenirNextLTProDemi;
+  }
+}
 .shows__venueo {
+  font-size: 12px;
+  line-height: 20px;
+  font-family: AvenirNextLTProRegular;
+  color: #AFAFAF;
   width: 130px;
 }
+@media (min-width: 768px) {
+  .shows__venueo {
+    font-size: 12px;
+    line-height: 20px;
+    font-family: AvenirNextLTDemi;
+  }
+}
+@media (min-width: 1280px) {
+  .shows__venueo {
+    font-size: 12px;
+    line-height: 20px;
+    font-family: AvenirNextLTProDemi;
+  }
+}
 .shows__locationo {
+  font-size: 12px;
+  line-height: 20px;
+  font-family: AvenirNextLTProRegular;
+  color: #AFAFAF;
   width: 130px;
+}
+@media (min-width: 768px) {
+  .shows__locationo {
+    font-size: 12px;
+    line-height: 20px;
+    font-family: AvenirNextLTDemi;
+  }
+}
+@media (min-width: 1280px) {
+  .shows__locationo {
+    font-size: 12px;
+    line-height: 20px;
+    font-family: AvenirNextLTProDemi;
+  }
 }
 
 .card {
   font-size: 13px;
   line-height: 18px;
   font-family: AvenirNextLTProRegular;
-  border-bottom: 1px solid #AFAFAF;
+  border-bottom: 1px solid #E1E1E1;
+  min-width: 288px;
+  max-width: 90vw;
   display: flex;
   flex-flow: row wrap;
-  width: 100%;
   padding: 0 24px 0 0;
 }
 @media (min-width: 768px) {
@@ -442,6 +506,20 @@ h5 {
     font-size: 14px;
     line-height: 20px;
     font-family: AvenirNextLTProRegular;
+  }
+}
+@media (min-width: 768px) {
+  .card {
+    min-width: 720px;
+    max-width: 93.8vw;
+  }
+}
+@media (min-width: 1280px) {
+  .card {
+    min-width: 804px;
+    max-width: 62.8vw;
+    padding: 0;
+    margin: 0;
   }
 }
 @media (min-width: 768px) {
@@ -456,9 +534,26 @@ h5 {
   }
 }
 .card__datie {
+  font-size: 12px;
+  line-height: 20px;
   font-family: AvenirNextLTProRegular;
+  color: #AFAFAF;
   margin: 16px 50vw 16px 0;
   color: #AFAFAF;
+}
+@media (min-width: 768px) {
+  .card__datie {
+    font-size: 12px;
+    line-height: 20px;
+    font-family: AvenirNextLTDemi;
+  }
+}
+@media (min-width: 1280px) {
+  .card__datie {
+    font-size: 12px;
+    line-height: 20px;
+    font-family: AvenirNextLTProDemi;
+  }
 }
 @media (min-width: 768px) {
   .card__datie {
@@ -467,8 +562,18 @@ h5 {
 }
 .card__date {
   display: block;
-  margin: 0px 50vw 24px 0;
+  margin: 1rem 50vw 24px 0;
+  font-size: 13px;
+  line-height: 18px;
   font-family: AvenirNextLTProBold;
+  color: #323232;
+}
+@media (min-width: 768px) {
+  .card__date {
+    font-size: 14px;
+    line-height: 22px;
+    font-family: AvenirNextLTProBold;
+  }
 }
 @media (min-width: 768px) {
   .card__date {
@@ -478,9 +583,26 @@ h5 {
   }
 }
 .card__venuie {
+  font-size: 12px;
+  line-height: 20px;
   font-family: AvenirNextLTProRegular;
+  color: #AFAFAF;
   margin: 0 50vw 1rem 0;
   color: #AFAFAF;
+}
+@media (min-width: 768px) {
+  .card__venuie {
+    font-size: 12px;
+    line-height: 20px;
+    font-family: AvenirNextLTDemi;
+  }
+}
+@media (min-width: 1280px) {
+  .card__venuie {
+    font-size: 12px;
+    line-height: 20px;
+    font-family: AvenirNextLTProDemi;
+  }
 }
 @media (min-width: 768px) {
   .card__venuie {
@@ -499,9 +621,25 @@ h5 {
   }
 }
 .card__locationie {
+  font-size: 12px;
+  line-height: 20px;
   font-family: AvenirNextLTProRegular;
-  margin: 0 50vw 1rem 0;
   color: #AFAFAF;
+  margin: 0 50vw 1rem 0;
+}
+@media (min-width: 768px) {
+  .card__locationie {
+    font-size: 12px;
+    line-height: 20px;
+    font-family: AvenirNextLTDemi;
+  }
+}
+@media (min-width: 1280px) {
+  .card__locationie {
+    font-size: 12px;
+    line-height: 20px;
+    font-family: AvenirNextLTProDemi;
+  }
 }
 @media (min-width: 768px) {
   .card__locationie {
@@ -509,18 +647,25 @@ h5 {
   }
 }
 .card__location {
+  font-size: 13px;
+  line-height: 18px;
   font-family: AvenirNextLTProRegular;
-  margin: 0 50vw 24px 0;
+  color: #323232;
+  margin: 0 0 24px 0;
   display: block;
+}
+@media (min-width: 768px) {
+  .card__location {
+    font-size: 14px;
+    line-height: 22px;
+    font-family: AvenirNextLTProRegular;
+  }
 }
 @media (min-width: 768px) {
   .card__location {
     margin: 0 10vw 0 0;
     display: inline-block;
   }
-}
-.card__datie .card__venuie .card__locationie :after {
-  content: "";
 }
 .card__button {
   background-color: #323232;
