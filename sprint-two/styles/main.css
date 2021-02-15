@@ -525,7 +525,17 @@ form {
 }
 
 .feed {
+  font-size: 13px;
+  line-height: 18px;
+  font-family: AvenirNextLTProRegular;
   padding: 0px 1rem 0 1rem;
+}
+@media (min-width: 768px) {
+  .feed {
+    font-size: 14px;
+    line-height: 20px;
+    font-family: AvenirNextLTProRegular;
+  }
 }
 @media (min-width: 768px) {
   .feed {

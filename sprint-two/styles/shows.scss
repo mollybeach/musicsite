@@ -221,24 +221,23 @@
     .shows {
         background-color: $white;
         color: $black;
-        padding: 0 1rem; //mobile horizontal padding 16px 1rem
+        @include standard-padding-left-right;
         @include tablet {
             @include standard-padding-left-right;
         }
         @include desktop {
             display: flex-wrap;
-            @include standard-padding-left-right;
         }
         &__heading {
             @include h1-main-header;
-            padding: 2rem 0 2.5rem 0; //padding top 32px
+            padding: 2rem 0 2.5rem 0; //padding top 32px bottom 40px
             color: $black; //change from default 
             @include tablet {
                 padding: 1.5rem 0 0; //padding top 24p/768
             }
             @include desktop {
                 float: left;
-                margin: 0 162px 0 0;
+                margin: 0 10.1rem 0 0; // 162px {input: 162, rem: "10.1", mobileVW: "50.6", tabletVW: "21.1", desktopVW: "12.7"}
             }
         }
         &__bar {
@@ -246,18 +245,17 @@
             @include tablet {
                 color: $black;
                 display: flex;
-                margin: 24px 176px 24px 0;
+                margin: 1.5rem 11.0rem 1.5rem 0; // top 24px 176px right 24px bottom {input: 176, rem: "11.0", mobileVW: "55.0", tabletVW: "22.9", desktopVW: "13.8"}
                 @include desktop {
-                    //  margin: 48px 0 40px 0px; //64*3+24*3 bottom 40px
                     margin: 0 0 0 0;
                 }
             }
         }
         &__dateo {
             @include h5-labels;
-            margin: 0 0 1rem 0;
+            margin: 0 0 1rem 0; //16px bottom check
             min-width: 224px;
-            max-width: 29.2; //column gird { input: 224, rem: "14.0", mobileVW: "70.0", tabletVW: "29.2", desktopVW: "17.5" },
+            max-width: 29.2vw; //column gird 224px { input: 224, rem: "14.0", mobileVW: "70.0", tabletVW: "29.2", desktopVW: "17.5" },
             @include desktop {
                 min-width: 264px;
                 max-width: 20.6vw; //3*24+3*68  { input: 264, rem: "16.5", mobileVW: "82.5", tabletVW: "34.4", desktopVW: "20.6" },9.2", desktopVW: "17.5" },
@@ -268,15 +266,15 @@
             min-width: 148px;
             max-width: 11.6vw; //148px column grid tablet{input: 148, rem: "9.3", mobileVW: "46.3", tabletVW: "19.3", desktopVW: "11.6"}
             @include desktop {
-                min-width: 208px;
-                max-width: 16.3vw //{ input: 208, rem: "13.0", mobileVW: "65.0", tabletVW: "27.1", desktopVW: "16.3" },
+                min-width: 208px; //208px
+                max-width: 16.3vw // 208px { input: 208, rem: "13.0", mobileVW: "65.0", tabletVW: "27.1", desktopVW: "16.3" },
             }
         }
         &__locationo {
             @include h5-labels;
-            width: 148px;
+            width: 148px; //{input: 148, rem: "9.3", mobileVW: "46.3", tabletVW: "19.3", desktopVW: "11.6"}
             @include desktop {
-                width: 184px; //68*2+24*2
+                width: 184px; //68*2+24*2 {input: 184, rem: "11.5", mobileVW: "57.5", tabletVW: "24.0", desktopVW: "14.4"}
             }
         }
     }
@@ -289,12 +287,12 @@
         padding: 0 1.5rem 0 0; //24px
         @include tablet {
             flex-direction: row;
-            min-width: 720px;
+            min-width: 720px; //720px
             max-width: 93.8vw; //{ input: 720, rem: "45.0", mobileVW: "225.0", tabletVW: "93.8", desktopVW: "56.3" 
         }
         @include desktop {
-            min-width: 804px; //
-            max-width: 804px; //{input: 803, rem: "50.2", mobileVW: "250.9", tabletVW: "104.6", desktopVW: "62.7"}
+            min-width: 804px; // 804px{input: 804, rem: "50.3", mobileVW: "251.3", tabletVW: "104.7", desktopVW: "62.8"}
+            max-width: 62.8vw; //804px {input: 804, rem: "50.3", mobileVW: "251.3", tabletVW: "104.7", desktopVW: "62.8"}
             padding: 0 0 0 0; //64*3+24*3
         }
         &__datie {
@@ -308,16 +306,17 @@
         &__date {
             display: block; // works with -> :after content: "" to make mobile go in a row
             margin: 1rem 50vw 24px 0; //below 24px mobile 
-            width: 184px;
+            min-width: 184px; //184px {input: 184, rem: "11.5", mobileVW: "57.5", tabletVW: "24.0", desktopVW: "14.4"}
+            max-width: 57.5vw; //{input: 184, rem: "11.5", mobileVW: "57.5", tabletVW: "24.0", desktopVW: "14.4"}
             @include h4-paragraphs-and-comments-bold; // margin: 0 5vw 0 0;
             @include tablet {
-                min-width: 224px;
+                min-width: 224px; //24px
                 max-width: 17.5vw; //{ input: 224, rem: "14.0", mobileVW: "70.0", tabletVW: "29.2", desktopVW: "17.5" },
-                margin: 1rem 0px 0 0; //the date venu and location are one single tablet line column away from eachother 100px
+                margin: 1rem 0 0 0; //the date venu and location are one single tablet line column away from eachother 100px
                 display: inline-block; //for tablet row opposes display block above
             }
             @include desktop {
-                min-width: 264px;
+                min-width: 264px; //264px
                 max-width: 20.6vw; // { input: 264, rem: "16.5", mobileVW: "82.5", tabletVW: "34.4", desktopVW: "20.6" },
                 margin: 1rem 0px 0 0; //the date venu and location are one single tablet line column away from eachother 100px
                 display: inline-block; //for tablet row opposes display block above
@@ -325,8 +324,7 @@
         }
         &__venuie {
             @include h5-labels;
-            margin: 0 50vw 1rem 0; //below ies 16px mobile
-            color: $silver; //guess
+            margin: 0 50vw 1rem 0; //below is 16px mobile
             @include tablet {
                 display: none; //no individual venue heading on tablet
             }
@@ -370,12 +368,13 @@
             background-color: $black; //mobile needs to be 288px /24px
             font-family: AvenirNextLTProRegular;
             color: $white;
-            width: 160px; //guess check this again
+            width: 288px; //guess check this again
             height: 32px; //guess check
             border-radius: 8px; //round the corners of my button
             margin: 1rem 0 1rem 0px; //16 bottom
             @include tablet {
                 margin-right: auto;
+                width: 160px;
                 align-items: flex-end; //needs to be on the left side for tablet 
                 height: 4rem; //desktops size 48px
             }

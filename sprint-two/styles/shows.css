@@ -374,7 +374,17 @@ h5 {
 .shows {
   background-color: #FFFF;
   color: #323232;
-  padding: 0 1rem;
+  padding: 0 1rem 0 1rem;
+}
+@media (min-width: 768px) {
+  .shows {
+    padding: 0 1.5rem 0 1.5rem;
+  }
+}
+@media (min-width: 1280px) {
+  .shows {
+    padding: 0 5rem 0 5rem;
+  }
 }
 @media (min-width: 768px) {
   .shows {
@@ -394,17 +404,6 @@ h5 {
 @media (min-width: 1280px) {
   .shows {
     display: flex-wrap;
-    padding: 0 1rem 0 1rem;
-  }
-}
-@media (min-width: 1280px) and (min-width: 768px) {
-  .shows {
-    padding: 0 1.5rem 0 1.5rem;
-  }
-}
-@media (min-width: 1280px) and (min-width: 1280px) {
-  .shows {
-    padding: 0 5rem 0 5rem;
   }
 }
 .shows__heading {
@@ -430,7 +429,7 @@ h5 {
 @media (min-width: 1280px) {
   .shows__heading {
     float: left;
-    margin: 0 162px 0 0;
+    margin: 0 10.1rem 0 0;
   }
 }
 .shows__bar {
@@ -440,7 +439,7 @@ h5 {
   .shows__bar {
     color: #323232;
     display: flex;
-    margin: 24px 176px 24px 0;
+    margin: 1.5rem 11rem 1.5rem 0;
   }
 }
 @media (min-width: 768px) and (min-width: 1280px) {
@@ -455,7 +454,7 @@ h5 {
   color: #AFAFAF;
   margin: 0 0 1rem 0;
   min-width: 224px;
-  max-width: 29.2;
+  max-width: 29.2vw;
 }
 @media (min-width: 768px) {
   .shows__dateo {
@@ -574,7 +573,7 @@ h5 {
 @media (min-width: 1280px) {
   .card {
     min-width: 804px;
-    max-width: 804px;
+    max-width: 62.8vw;
     padding: 0 0 0 0;
   }
 }
@@ -608,7 +607,8 @@ h5 {
 .card__date {
   display: block;
   margin: 1rem 50vw 24px 0;
-  width: 184px;
+  min-width: 184px;
+  max-width: 57.5vw;
   font-size: 13px;
   line-height: 18px;
   font-family: AvenirNextLTProBold;
@@ -625,7 +625,7 @@ h5 {
   .card__date {
     min-width: 224px;
     max-width: 17.5vw;
-    margin: 1rem 0px 0 0;
+    margin: 1rem 0 0 0;
     display: inline-block;
   }
 }
@@ -643,7 +643,6 @@ h5 {
   font-family: AvenirNextLTProRegular;
   color: #AFAFAF;
   margin: 0 50vw 1rem 0;
-  color: #AFAFAF;
 }
 @media (min-width: 768px) {
   .card__venuie {
@@ -739,7 +738,7 @@ h5 {
   background-color: #323232;
   font-family: AvenirNextLTProRegular;
   color: #FFFF;
-  width: 160px;
+  width: 288px;
   height: 32px;
   border-radius: 8px;
   margin: 1rem 0 1rem 0px;
@@ -747,6 +746,7 @@ h5 {
 @media (min-width: 768px) {
   .card__button {
     margin-right: auto;
+    width: 160px;
     align-items: flex-end;
     height: 4rem;
   }
