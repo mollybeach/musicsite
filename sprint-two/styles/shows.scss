@@ -1,493 +1,519 @@
-/*********************************IMPORTS********************************************/
-
-@use "./partials/reset.scss" as *;
-@use "./partials/mixins.scss" as *;
-@use "./partials/_variables.scss" as *;
-@use "./partials/_typography.scss" as *;
-*,
-*::before,
-*::after {
-    font-family: AvenirNextLTProRegular;
-    box-sizing: inherit;
-    margin: 0px;
-}
-
-
-/*********************************************HEADINGS**h1-h6**************************************/
-
-
-/*H3 - Subheader for Tablet and Desktop*/
-
-h3 {
-    font-size: 16px;
-    line-height: 24px;
-    font-family: AvenirNextLTProDemi;
-}
-
-
-/*H4 - Paragraph & comments*/
-
-h4 {
-    font-size: 13px;
-    line-height: 18px;
-    font-family: AvenirNextLTProRegular;
-    @include tablet {
-        font-size: 14px;
-        line-height: 22px;
+    /*********************************IMPORTS********************************************/
+    
+    @use "./partials/reset.scss" as *;
+    @use "./partials/mixins.scss" as *;
+    @use "./partials/_variables.scss" as *;
+    @use "./partials/_typography.scss" as *;
+    *,
+    *::before,
+    *::after {
         font-family: AvenirNextLTProRegular;
+        box-sizing: inherit;
+        margin: 0px;
     }
-}
-
-p {
-    font-size: 13px;
-    line-height: 18px;
-    font-family: AvenirNextLTProRegular;
-    @include tablet {
-        font-size: 14px;
-        line-height: 20px;
+    /*********************************************HEADINGS**h1-h6**************************************/
+    /*H3 - Subheader for Tablet and Desktop*/
+    
+    h3 {
+        font-size: 16px;
+        line-height: 24px;
+        font-family: AvenirNextLTProDemi;
+    }
+    /*H4 - Paragraph & comments*/
+    
+    h4 {
+        font-size: 13px;
+        line-height: 18px;
         font-family: AvenirNextLTProRegular;
-        display: inline-block;
+        @include tablet {
+            font-size: 14px;
+            line-height: 22px;
+            font-family: AvenirNextLTProRegular;
+        }
     }
-}
-
-
-/*H5 - LABELS*/
-
-h5 {
-    font-size: 12px;
-    line-height: 20px;
-    font-family: AvenirNextLTProRegular;
-    @include tablet {
+    
+    p {
+        font-size: 13px;
+        line-height: 18px;
+        font-family: AvenirNextLTProRegular;
+        @include tablet {
+            font-size: 14px;
+            line-height: 20px;
+            font-family: AvenirNextLTProRegular;
+            display: inline-block;
+        }
+    }
+    /*H5 - LABELS*/
+    
+    h5 {
         font-size: 12px;
         line-height: 20px;
-        font-family: AvenirNextLTProBold;
-    }
-    @include desktop {
-        font-size: 12px;
-        line-height: 20px;
-        font-family: AvenirNextLTProBold;
-    }
-}
-
-
-/*********************************************END OF HEADINGS**h1-h6**************************************/
-
-
-/************************************MAIN NAV************************************/
-
-.main-nav {
-    background-color: $black;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    color: $silver;
-    height: 80px;
-    width: 100%;
-    @include tablet {
-        flex-direction: row;
-    }
-    &__logo {
-        padding: 1rem 0 1rem 0;
-        color: $white;
-        @include tablet {
-            padding: 0 3rem 0 1.5rem;
-        }
-        @include desktop {
-            padding: 0 3.5rem 0 5rem;
-        }
-    }
-    &__list {
-        display: flex;
-        width: 100%;
-        text-align: center;
-        list-style-type: none;
-        @include tablet {
-            width: 13.5rem;
-        }
-    }
-    &__item {
-        padding: 0 0 0.5rem 0;
-        width: 50%;
-        @include tablet {
-            width: 5rem;
-            padding: 2rem 3rem 0 3.5rem;
-        }
-        @include desktop {
-            width: 5rem;
-            padding: 2rem 3.5rem 0 3.5rem;
-        }
-        &--active {
-            border-bottom: 0.3rem solid $white;
-            padding-bottom: 0.5rem;
-            width: 50%;
-            @include tablet {
-                width: 40%;
-                border-bottom: 0.5rem solid $white;
-                padding: 2rem 0 2rem 0;
-            }
-        }
-    }
-    &__link {
-        text-decoration: none;
-        color: $white;
-    }
-}
-
-
-/************************************HERO CONTAINER****************************/
-
-.hero-container {
-    display: flex;
-    position: relative;
-    background-image: url("../assets/images/hero-image.jpg");
-    background-position: center;
-    background-size: cover;
-    background-color: rgba(50, 50, 50, 0.50);
-     ::before {
-        content: "";
-        position: absolute;
-        top: 0rem;
-        right: 0rem;
-        bottom: 0rem;
-        left: 0rem;
-        background-color: rgba(0, 0, 0, 0.25);
-        z-index: -1;
-    }
-    min-height: 147.5vw; //320x --> 472px/320px= 147.5vw
-    max-height: 672px;
-    @include tablet {
-        min-height: 670px;
-        max-height: 52.08vw; //670px --> 670/768 = 87.2vw
-    }
-    @include desktop {
-        min-height: 670px;
-        max-height: 52.34vw; //670px --> 670px/1280px = 52.34vw
-    }
-    &--scale {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-    }
-    &__box {
-        @include standard-padding-left-right;
-        color: $white;
-        margin: 4.0rem 0; //64px {input: 64, rem: "4.0", mobileVW: "20.0", tabletVW: "8.3", desktopVW: "5.0"}
-        min-width: 288px; //288px  320-(16*2)=288px
-        max-width: 90.0vw; //288px { input: 288, rem: "18.0", mobileVW: "90.0", tabletVW: "37.5", desktopVW: "22.5" }
-        z-index: 1;
-        @include tablet {
-            margin: 6.0rem 0; //96px {input: 96, rem: "6.0", mobileVW: "30.0", tabletVW: "12.5", desktopVW: "7.5"}
-            min-width: 564px; //564px 768-((24*3+100+~32)=204)=564px 
-            max-width: 73.4vw; //564px {input: 564, rem: "35.3", mobileVW: "176.3", tabletVW: "73.4", desktopVW: "44.1"}}
-        }
-        @include desktop {
-            margin: 10.0rem 0; //160px {input: 160, rem: "10.0", mobileVW: "50.0", tabletVW: "20.8", desktopVW: "12.5"}
-            min-width: 568px; //552px (24*6+68*6+~16)=568px
-            max-width: 43.1vw; //552px {input: 552, rem: "34.5", mobileVW: "172.5", tabletVW: "71.9", desktopVW: "43.1"}
-        }
-    }
-    &__title {
-        @include h2-header;
-        color: $white;
-        margin: 0 0 2.0rem 0; //looks about 32px check  { input: 32, rem: "2.0", mobileVW: "10.0", tabletVW: "4.2", desktopVW: "2.5" }
-        @include tablet {
-            margin: 0 0 3.0rem 0; //48px desktop { input: 48, rem: "3.0", mobileVW: "15.0", tabletVW: "6.3", desktopVW: "3.8" }
-        }
-    }
-    &__text {
-        z-index: 1;
-        @include h1-tablet-desktop; //based on the mockup this is the ideal size for the mobile hero heading looks perfect
-        @include tablet {
-            @include h1-hero-heading;
-        }
-    }
-    &__soundcloud {
-        @include standard-padding-left-right;
-        position: absolute;
-        z-index: 1;
-        align-self: flex-end; //push soundcloud to bottom of container
-        margin: 0 0 4.0rem 0; //64px bottom match top input: 64, rem: "4.0", mobileVW: "20.0", tabletVW: "8.3", desktopVW: "5.0"}
-        min-width: 288px; //288px mockup column grid
-        min-height: 96px; //looked about right for the mockup
-        max-width: 90.0vw; // 288px { input: 288, rem: "18.0", mobileVW: "90.0", tabletVW: "37.5", desktopVW: "22.5" }
-        max-height: 30.0vw; //96px {input: 96, rem: "6.0", mobileVW: "30.0", tabletVW: "12.5", desktopVW: "7.5" }
-        @include tablet {
-            margin: 0 0 6.0rem 0; //96px match top margin {input: 96, rem: "6.0", mobileVW: "30.0", tabletVW: "12.5", desktopVW: "7.5"}
-            min-width: 436px; //436px {input: 436, rem: "27.3", mobileVW: "136.3", tabletVW: "56.8", desktopVW: "34.1"}
-            min-height: 146px; //146px {input: 146, rem: "9.1", mobileVW: "45.6", tabletVW: "19.0", desktopVW: "11.4"}
-            max-width: 56.8vw; //436px {input: 436, rem: "27.3", mobileVW: "136.3", tabletVW: "56.8", desktopVW: "34.1"}
-            max-height: 19.0vw; //146px {input: 146, rem: "9.1", mobileVW: "45.6", tabletVW: "19.0", desktopVW: "11.4"}
-        }
-        @include desktop {
-            padding: 0; //remove standard padding mixin
-            margin: 0 0 17.1rem 0; //274px {input: 274, rem: "17.1", mobileVW: "85.6", tabletVW: "35.7", desktopVW: "21.4"}51.6", desktopVW: "30.9"}
-            position: relative;
-            min-width: 436px; //436px {input: 436, rem: "27.3", mobileVW: "136.3", tabletVW: "56.8", desktopVW: "34.1"}
-            min-height: 146px; //146px {input: 146, rem: "9.1", mobileVW: "45.6", tabletVW: "19.0", desktopVW: "11.4"}
-            max-width: 30.3vw; //436px { input: 436, rem: "27.3", desktopxlVW: "30.3" }
-            max-height: 10.1vw; //146px { input: 146, rem: "9.1", desktopxlVW: "10.1" }
-        }
-    }
-}
-
-
-/************************************SHOWS SECTION************************************/
-
-.shows {
-    background-color: $white;
-    color: $black;
-    padding: 0 1rem; //mobile horizontal padding 16px 1rem
-    @include tablet {
-        padding: 0 1.5rem; //horizontal 24px padding 1.5rem
-    }
-    @include desktop {
-        padding: 0 5rem; //horizontal 80px padding 5rem
-    }
-    &__heading {
-        @include h1-main-header;
-        color: $black; //change from default 
-        @include tablet {
-            padding: 1.5rem 0 0 0; //padding top 24p/768
-        }
-        @include desktop {
-            float: left;
-            padding: 0 0 0 0;
-        }
-    }
-    &__bar {
-        display: none;
-        @include tablet {
-            color: $black;
-            display: flex;
-            margin: 24px 176px 24px 0;
-            @include desktop {
-                margin: 48px 0 40px 264px; //64*3+24*3 bottom 40px
-            }
-        }
-    }
-    &__dateo {
-        @include h5-labels;
-        width: 234px;
-    }
-    &__venueo {
-        @include h5-labels;
-        width: 130px;
-    }
-    &__locationo {
-        @include h5-labels;
-        width: 130px;
-    }
-}
-
-.card {
-    @include h4-list-contact-information;
-    @include divider;
-    display: flex;
-    flex-flow: row wrap;
-    padding: 0 24px 0 0;
-    @include tablet {
-        flex-direction: row;
-    }
-    @include desktop {
-        width: 804px; //width is 804px on desktop
-        padding: 0 0 0 264px; //64*3+24*3
-    }
-    &__datie {
-        @include h5-labels;
-        margin: 16px 50vw 16px 0; //below ies 16px mobile 16px top between itself and line
-        color: $silver; //guess
-        @include tablet {
-            display: none; //no individual venue heading on tablet
-        }
-    }
-    &__date {
-        display: block; // works with -> :after content: "" to make mobile go in a row
-        margin: 1rem 50vw 24px 0; //below 24px mobile 
-        @include h4-paragraphs-and-comments-bold; // margin: 0 5vw 0 0;
-        @include tablet {
-            width: 184px;
-            margin: 0 50px 0 0; //the date venu and location are one single tablet line column away from eachother 100px
-            display: inline-block; //for tablet row opposes display block above
-        }
-    }
-    &__venuie {
-        @include h5-labels;
-        margin: 0 50vw 1rem 0; //below ies 16px mobile
-        color: $silver; //guess
-        @include tablet {
-            display: none; //no individual venue heading on tablet
-        }
-    }
-    &__venue {
-        margin: 0 50vw 1.5rem 0; //below 24px mobile
-        display: block; // works with -> :after content: "" to make mobile go in a row 
-        @include tablet {
-            width: 80px;
-            margin: 0 50px 0 0;
-            // margin: 0 100px 0 0; //the date venu and location are one single tablet line column away from eachother 100px
-            display: inline-block; //for tablet row opposes display block above
-        }
-    }
-    &__locationie {
-        @include h5-labels;
-        margin: 0 50vw 1rem 0; //below ies 16px mobile
-        @include tablet {
-            display: none; //no individual tablet heading on tablet
-        }
-    }
-    &__location {
-        @include h4-paragraphs-and-comments;
-        margin: 0 0 24px 0; //below 24px mobile
-        display: block; // works with -> :after content: "" to make mobile go in a row 
-        @include tablet {
-            margin: 0 10vw 0 0;
-            // margin: 0 30vw 0 0; //the date venu and location are one single tablet line column away from eachother 100px
-            display: inline-block; //for tablet row
-        }
-    }
-    &__button {
-        background-color: $black; //mobile needs to be 288px /24px
         font-family: AvenirNextLTProRegular;
-        color: $white;
-        width: 260px; //guess check this again
-        height: 32px; //guess check
-        border-radius: 8px; //round the corners of my button
-        margin: 0 0 1rem 0px; //16 bottom
         @include tablet {
-            margin-right: auto;
-            align-items: flex-end; //needs to be on the left side for tablet 
-            width: 160px; //for tablet it doesn't say what size but it defintely doesn't look like mobile's size
-            height: 4rem; //desktops size 48px
+            font-size: 12px;
+            line-height: 20px;
+            font-family: AvenirNextLTProBold;
+        }
+        @include desktop {
+            font-size: 12px;
+            line-height: 20px;
+            font-family: AvenirNextLTProBold;
         }
     }
-}
-
-
-/************************************FOOTER BANNER************************************/
-
-.footer {
-    background-color: $black;
-    color: $white;
-    padding: 0 1rem; //mobile horizontal padding 16px 1rem
-    @include tablet {
-        padding: 0 1.5rem; //horizontal 24px padding 1.5rem
-    }
-    @include desktop {
-        padding: 0 5rem; //horizontal 80px padding 5rem
-    }
-    &__banner {
+    /*********************************************END OF HEADINGS**h1-h6**************************************/
+    /************************************MAIN NAV************************************/
+    
+    .main-nav {
         background-color: $black;
         display: flex;
-        flex-wrap: wrap;
-        flex-direction: row;
-    }
-    &__title {
-        width: 208px;
-        display: flex;
-        @include h1-main-header;
-        margin: 1.5rem 4rem 1.5rem 0; // 24px top 64px right 24px bottom 0 px left 1.5rem 4 rem 1.5rem 0
+        flex-direction: column;
+        align-items: center;
+        color: $silver;
+        height: 80px;
+        width: 100%;
         @include tablet {
-            width: 230px; //230px
-            margin: 1.5rem 3rem 1.5rem 0; //24 48 24 0px
+            flex-direction: row;
         }
-        @include desktop {
-            margin: 3rem 3.5rem 3.5rem 0;
-        }
-    }
-    &__icons {
-        display: flex;
-        margin: 0px 2rem 24px 0; //just change all these to rem 
-        @include tablet {
-            margin: 2rem 2rem 24px 0;
-        }
-        @include desktop {
-            margin: 62px 2rem 0px 0px;
-        }
-    }
-    &__icon {
-        margin: 0 1.5rem 0 0;
-        width: 1rem;
-        height: 1rem;
-        @include tablet {
-            margin: 0 2rem 0 0;
-            width: 24px;
-            height: 24px;
-        }
-    }
-    &__logo {
-        display: none;
-        @include tablet {
-            display: contents;
-        }
-        @include desktop {
-            display: contents;
-        }
-    }
-    &__img {
-        @include tablet {
-            height: 24px;
-            width: 120px;
-        }
-        @include desktop {
-            height: 24px;
-            width: 120px;
-        }
-    }
-    &__link {
-        margin-left: auto;
-        @include tablet {
-            margin: 24px 0px 0 8vw;
-        }
-        @include desktop {
-            margin: 48px 0 0 38vw;
-        }
-    }
-    /************************************FOOTER CARD************************************/
-    .contacts {
-        @include h4-list-contact-information;
-        &__card {
-            display: inline-block;
+        &__logo {
+            padding: 1rem 0 1rem 0;
+            color: $white;
             @include tablet {
-                flex-direction: row;
-                width: 220px;
+                padding: 0 3rem 0 1.5rem;
             }
             @include desktop {
-                width: 240px;
+                padding: 0 3.5rem 0 5rem;
             }
         }
-        &__name {
-            font-family: AvenirNextLTProBold;
-        }
-        &__company {
-            margin: 0 0 1rem 0;
-            font-family: AvenirNextLTProBold;
+        &__list {
+            display: flex;
+            width: 100%;
+            text-align: center;
+            list-style-type: none;
             @include tablet {
-                padding-bottom: 1.5rem;
+                width: 13.5rem;
             }
         }
-        &__address {
-            width: 180px;
-            margin: 0 0 1rem 0;
-            font-family: AvenirNextLTProRegular;
+        &__item {
+            padding: 0 0 0.5rem 0;
+            width: 50%;
+            @include tablet {
+                width: 5rem;
+                padding: 2rem 3rem 0 3.5rem;
+            }
+            @include desktop {
+                width: 5rem;
+                padding: 2rem 3.5rem 0 3.5rem;
+            }
+            &--active {
+                border-bottom: 0.3rem solid $white;
+                padding-bottom: 0.5rem;
+                width: 50%;
+                @include tablet {
+                    width: 40%;
+                    border-bottom: 0.5rem solid $white;
+                    padding: 2rem 0 2rem 0;
+                }
+            }
         }
-        &__email {
-            margin: 0 0 1rem 0;
-            width: 50vw;
-            font-family: AvenirNextLTProRegular;
+        &__link {
+            text-decoration: none;
+            color: $white;
         }
     }
-    &__base {
-        padding: 1.5rem 0 2rem 0;
+    /************************************HERO CONTAINER****************************/
+    
+    .hero-container {
         display: flex;
-        font-family: AvenirNextLTProRegular;
-        max-width: 65vw;
+        position: relative;
+        background-image: url("../assets/images/hero-image.jpg");
+        background-position: center;
+        background-size: cover;
+        background-color: rgba(50, 50, 50, 0.50);
+         ::before {
+            content: "";
+            position: absolute;
+            top: 0rem;
+            right: 0rem;
+            bottom: 0rem;
+            left: 0rem;
+            background-color: rgba(0, 0, 0, 0.25);
+            z-index: -1;
+        }
+        min-height: 147.5vw; //320x --> 472px/320px= 147.5vw
+        max-height: 672px;
         @include tablet {
-            max-width: 30vw;
-            padding: 1.5rem 0 1.5rem 0;
+            min-height: 670px;
+            max-height: 52.08vw; //670px --> 670/768 = 87.2vw
         }
         @include desktop {
-            max-width: 18vw;
-            padding: 2.5rem 0 2.5rem 0;
+            min-height: 670px;
+            max-height: 52.34vw; //670px --> 670px/1280px = 52.34vw
+            margin: 0 0 3rem 0; //48px
+        }
+        &--scale {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        &__box {
+            @include standard-padding-left-right;
+            color: $white;
+            margin: 4.0rem 0; //64px {input: 64, rem: "4.0", mobileVW: "20.0", tabletVW: "8.3", desktopVW: "5.0"}
+            min-width: 288px; //288px  320-(16*2)=288px
+            max-width: 90.0vw; //288px { input: 288, rem: "18.0", mobileVW: "90.0", tabletVW: "37.5", desktopVW: "22.5" }
+            z-index: 1;
+            @include tablet {
+                margin: 6.0rem 0; //96px {input: 96, rem: "6.0", mobileVW: "30.0", tabletVW: "12.5", desktopVW: "7.5"}
+                min-width: 564px; //564px 768-((24*3+100+~32)=204)=564px 
+                max-width: 73.4vw; //564px {input: 564, rem: "35.3", mobileVW: "176.3", tabletVW: "73.4", desktopVW: "44.1"}}
+            }
+            @include desktop {
+                margin: 10.0rem 0; //160px {input: 160, rem: "10.0", mobileVW: "50.0", tabletVW: "20.8", desktopVW: "12.5"}
+                min-width: 568px; //552px (24*6+68*6+~16)=568px
+                max-width: 43.1vw; //552px {input: 552, rem: "34.5", mobileVW: "172.5", tabletVW: "71.9", desktopVW: "43.1"}
+            }
+        }
+        &__title {
+            @include h2-header;
+            color: $white;
+            margin: 0 0 2.0rem 0; //looks about 32px check  { input: 32, rem: "2.0", mobileVW: "10.0", tabletVW: "4.2", desktopVW: "2.5" }
+            @include tablet {
+                margin: 0 0 3.0rem 0; //48px desktop { input: 48, rem: "3.0", mobileVW: "15.0", tabletVW: "6.3", desktopVW: "3.8" }
+            }
+        }
+        &__text {
+            z-index: 1;
+            @include h1-tablet-desktop; //based on the mockup this is the ideal size for the mobile hero heading looks perfect
+            @include tablet {
+                @include h1-hero-heading;
+            }
+        }
+        &__soundcloud {
+            @include standard-padding-left-right;
+            position: absolute;
+            z-index: 1;
+            align-self: flex-end; //push soundcloud to bottom of container
+            margin: 0 0 4.0rem 0; //64px bottom match top input: 64, rem: "4.0", mobileVW: "20.0", tabletVW: "8.3", desktopVW: "5.0"}
+            min-width: 288px; //288px mockup column grid
+            min-height: 96px; //looked about right for the mockup
+            max-width: 90.0vw; // 288px { input: 288, rem: "18.0", mobileVW: "90.0", tabletVW: "37.5", desktopVW: "22.5" }
+            max-height: 30.0vw; //96px {input: 96, rem: "6.0", mobileVW: "30.0", tabletVW: "12.5", desktopVW: "7.5" }
+            @include tablet {
+                margin: 0 0 6.0rem 0; //96px match top margin {input: 96, rem: "6.0", mobileVW: "30.0", tabletVW: "12.5", desktopVW: "7.5"}
+                min-width: 436px; //436px {input: 436, rem: "27.3", mobileVW: "136.3", tabletVW: "56.8", desktopVW: "34.1"}
+                min-height: 146px; //146px {input: 146, rem: "9.1", mobileVW: "45.6", tabletVW: "19.0", desktopVW: "11.4"}
+                max-width: 56.8vw; //436px {input: 436, rem: "27.3", mobileVW: "136.3", tabletVW: "56.8", desktopVW: "34.1"}
+                max-height: 19.0vw; //146px {input: 146, rem: "9.1", mobileVW: "45.6", tabletVW: "19.0", desktopVW: "11.4"}
+            }
+            @include desktop {
+                padding: 0; //remove standard padding mixin
+                margin: 0 0 14.7rem 0; //274px {input: 274, rem: "17.1", mobileVW: "85.6", tabletVW: "35.7", desktopVW: "21.4"}51.6", desktopVW: "30.9"}
+                position: relative;
+                min-width: 436px; //436px {input: 436, rem: "27.3", mobileVW: "136.3", tabletVW: "56.8", desktopVW: "34.1"}
+                min-height: 146px; //146px {input: 146, rem: "9.1", mobileVW: "45.6", tabletVW: "19.0", desktopVW: "11.4"}
+                max-width: 34.1vw; //436px {input: 436, rem: "27.3", mobileVW: "136.3", tabletVW: "56.8", desktopVW: "34.1"}
+                max-height: 11.4vw; //146px {input: 146, rem: "9.1", mobileVW: "45.6", tabletVW: "19.0", desktopVW: "11.4"}
+            }
         }
     }
-}
+    /************************************SHOWS SECTION************************************/
+    
+    .shows {
+        background-color: $white;
+        color: $black;
+        padding: 0 1rem; //mobile horizontal padding 16px 1rem
+        @include tablet {
+            @include standard-padding-left-right;
+        }
+        @include desktop {
+            display: flex-wrap;
+            @include standard-padding-left-right;
+        }
+        &__heading {
+            @include h1-main-header;
+            padding: 2rem 0 2.5rem 0; //padding top 32px
+            color: $black; //change from default 
+            @include tablet {
+                padding: 1.5rem 0 0; //padding top 24p/768
+            }
+            @include desktop {
+                float: left;
+                margin: 0 162px 0 0;
+            }
+        }
+        &__bar {
+            display: none;
+            @include tablet {
+                color: $black;
+                display: flex;
+                margin: 24px 176px 24px 0;
+                @include desktop {
+                    //  margin: 48px 0 40px 0px; //64*3+24*3 bottom 40px
+                    margin: 0 0 0 0;
+                }
+            }
+        }
+        &__dateo {
+            @include h5-labels;
+            margin: 0 0 1rem 0;
+            min-width: 224px;
+            max-width: 29.2; //column gird { input: 224, rem: "14.0", mobileVW: "70.0", tabletVW: "29.2", desktopVW: "17.5" },
+            @include desktop {
+                min-width: 264px;
+                max-width: 20.6vw; //3*24+3*68  { input: 264, rem: "16.5", mobileVW: "82.5", tabletVW: "34.4", desktopVW: "20.6" },9.2", desktopVW: "17.5" },
+            }
+        }
+        &__venueo {
+            @include h5-labels;
+            min-width: 148px;
+            max-width: 11.6vw; //148px column grid tablet{input: 148, rem: "9.3", mobileVW: "46.3", tabletVW: "19.3", desktopVW: "11.6"}
+            @include desktop {
+                min-width: 208px;
+                max-width: 16.3vw //{ input: 208, rem: "13.0", mobileVW: "65.0", tabletVW: "27.1", desktopVW: "16.3" },
+            }
+        }
+        &__locationo {
+            @include h5-labels;
+            width: 148px;
+            @include desktop {
+                width: 184px; //68*2+24*2
+            }
+        }
+    }
+    
+    .card {
+        @include h4-list-contact-information;
+        @include divider;
+        display: flex;
+        flex-flow: row wrap;
+        padding: 0 1.5rem 0 0; //24px
+        @include tablet {
+            flex-direction: row;
+            min-width: 720px;
+            max-width: 93.8vw; //{ input: 720, rem: "45.0", mobileVW: "225.0", tabletVW: "93.8", desktopVW: "56.3" 
+        }
+        @include desktop {
+            min-width: 804px; //
+            max-width: 804px; //{input: 803, rem: "50.2", mobileVW: "250.9", tabletVW: "104.6", desktopVW: "62.7"}
+            padding: 0 0 0 0; //64*3+24*3
+        }
+        &__datie {
+            @include h5-labels;
+            margin: 1rem 50vw 1rem 0; //below ies 16px mobile 16px top between itself and line
+            color: $silver; //guess
+            @include tablet {
+                display: none; //no individual venue heading on tablet
+            }
+        }
+        &__date {
+            display: block; // works with -> :after content: "" to make mobile go in a row
+            margin: 1rem 50vw 24px 0; //below 24px mobile 
+            width: 184px;
+            @include h4-paragraphs-and-comments-bold; // margin: 0 5vw 0 0;
+            @include tablet {
+                min-width: 224px;
+                max-width: 17.5vw; //{ input: 224, rem: "14.0", mobileVW: "70.0", tabletVW: "29.2", desktopVW: "17.5" },
+                margin: 1rem 0px 0 0; //the date venu and location are one single tablet line column away from eachother 100px
+                display: inline-block; //for tablet row opposes display block above
+            }
+            @include desktop {
+                min-width: 264px;
+                max-width: 20.6vw; // { input: 264, rem: "16.5", mobileVW: "82.5", tabletVW: "34.4", desktopVW: "20.6" },
+                margin: 1rem 0px 0 0; //the date venu and location are one single tablet line column away from eachother 100px
+                display: inline-block; //for tablet row opposes display block above
+            }
+        }
+        &__venuie {
+            @include h5-labels;
+            margin: 0 50vw 1rem 0; //below ies 16px mobile
+            color: $silver; //guess
+            @include tablet {
+                display: none; //no individual venue heading on tablet
+            }
+        }
+        &__venue {
+            margin: 1rem 50vw 1.5rem 0; //below 24px mobile
+            display: block; // works with -> :after content: "" to make mobile go in a row 
+            @include tablet {
+                margin: 1rem 0 0 0;
+                display: inline-block;
+                min-width: 148px;
+                max-width: 11.6vw; //148px column grid tablet{input: 148, rem: "9.3", mobileVW: "46.3", tabletVW: "19.3", desktopVW: "11.6"}
+            }
+            @include desktop {
+                min-width: 208px;
+                max-width: 16.3vw //{ input: 208, rem: "13.0", mobileVW: "65.0", tabletVW: "27.1", desktopVW: "16.3" },
+            }
+        }
+        &__locationie {
+            @include h5-labels;
+            margin: 0 50vw 1rem 0; //below ies 16px mobile
+            @include tablet {
+                display: none; //no individual tablet heading on tablet
+            }
+        }
+        &__location {
+            @include h4-paragraphs-and-comments;
+            margin: 1rem 50vw 24px 0; //below 24px mobile
+            display: block; // works with -> :after content: "" to make mobile go in a row 
+            @include tablet {
+                width: 8.3rem; //{input: 132, rem: "8.3", mobileVW: "41.3", tabletVW: "17.2", desktopVW: "10.3"}
+                margin: 1rem 0 0 0;
+                // margin: 0 30vw 0 0; //the date venu and location are one single tablet line column away from eachother 100px
+                display: inline-block; //for tablet row
+            }
+            @include desktop {
+                width: 148px;
+            }
+        }
+        &__button {
+            background-color: $black; //mobile needs to be 288px /24px
+            font-family: AvenirNextLTProRegular;
+            color: $white;
+            width: 160px; //guess check this again
+            height: 32px; //guess check
+            border-radius: 8px; //round the corners of my button
+            margin: 1rem 0 1rem 0px; //16 bottom
+            @include tablet {
+                margin-right: auto;
+                align-items: flex-end; //needs to be on the left side for tablet 
+                height: 4rem; //desktops size 48px
+            }
+            @include desktop {
+                margin-right: auto;
+                align-items: flex-end; //needs to be on the left side for tablet 
+                width: 160px; //for tablet it doesn't say what size but it defintely doesn't look like mobile's size
+                height: 4rem; //desktops size 48px
+                padding: 0;
+                margin: 16px 0 16px 0;
+            }
+        }
+    }
+    /************************************FOOTER BANNER************************************/
+    
+    .footer {
+        background-color: $black;
+        color: $white;
+        padding: 0 1rem; //mobile horizontal padding 16px 1rem
+        @include tablet {
+            padding: 0 1.5rem; //horizontal 24px padding 1.5rem
+        }
+        @include desktop {
+            padding: 0 5rem; //horizontal 80px padding 5rem
+        }
+        &__banner {
+            background-color: $black;
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: row;
+        }
+        &__title {
+            width: 208px;
+            display: flex;
+            @include h1-main-header;
+            margin: 1.5rem 4rem 1.5rem 0; // 24px top 64px right 24px bottom 0 px left 1.5rem 4 rem 1.5rem 0
+            @include tablet {
+                width: 230px; //230px
+                margin: 1.5rem 3rem 1.5rem 0; //24 48 24 0px
+            }
+            @include desktop {
+                margin: 3rem 3.5rem 3.5rem 0;
+            }
+        }
+        &__icons {
+            display: flex;
+            margin: 0px 2rem 24px 0; //just change all these to rem 
+            @include tablet {
+                margin: 2rem 2rem 24px 0;
+            }
+            @include desktop {
+                margin: 62px 2rem 0px 0px;
+            }
+        }
+        &__icon {
+            margin: 0 1.5rem 0 0;
+            width: 1rem;
+            height: 1rem;
+            @include tablet {
+                margin: 0 2rem 0 0;
+                width: 24px;
+                height: 24px;
+            }
+        }
+        &__logo {
+            display: none;
+            @include tablet {
+                display: contents;
+            }
+            @include desktop {
+                display: contents;
+            }
+        }
+        &__img {
+            @include tablet {
+                height: 24px;
+                width: 120px;
+            }
+            @include desktop {
+                height: 24px;
+                width: 120px;
+            }
+        }
+        &__link {
+            margin-left: auto;
+            @include tablet {
+                margin: 24px 0px 0 8vw;
+            }
+            @include desktop {
+                margin: 48px 0 0 38vw;
+            }
+        }
+        /************************************FOOTER CARD************************************/
+        .contacts {
+            @include h4-list-contact-information;
+            &__card {
+                display: inline-block;
+                @include tablet {
+                    flex-direction: row;
+                    width: 220px;
+                }
+                @include desktop {
+                    width: 240px;
+                }
+            }
+            &__name {
+                font-family: AvenirNextLTProBold;
+            }
+            &__company {
+                margin: 0 0 1rem 0;
+                font-family: AvenirNextLTProBold;
+                @include tablet {
+                    padding-bottom: 1.5rem;
+                }
+            }
+            &__address {
+                width: 180px;
+                margin: 0 0 1rem 0;
+                font-family: AvenirNextLTProRegular;
+            }
+            &__email {
+                margin: 0 0 1rem 0;
+                width: 50vw;
+                font-family: AvenirNextLTProRegular;
+            }
+        }
+        &__base {
+            padding: 1.5rem 0 2rem 0;
+            display: flex;
+            font-family: AvenirNextLTProRegular;
+            max-width: 65vw;
+            @include tablet {
+                max-width: 30vw;
+                padding: 1.5rem 0 1.5rem 0;
+            }
+            @include desktop {
+                max-width: 18vw;
+                padding: 2.5rem 0 2.5rem 0;
+            }
+        }
+    }

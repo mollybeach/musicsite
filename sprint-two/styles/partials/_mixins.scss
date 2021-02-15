@@ -121,7 +121,7 @@
     @include tablet {
         font-size: 12px;
         line-height: 20px;
-        font-family: AvenirNextLTDemi;
+        font-family: AvenirNextLTProDemi;
     }
     @include desktop {
         font-size: 12px;
@@ -156,20 +156,6 @@
     }
     @include desktop {
         padding: 0 5.0rem 0 5.0rem; //80px right 80px left { input: 80, rem: "5.0", mobileVW: "25.0", tabletVW: "10.4", desktopVW: "6.3" }
-    }
-}
-
-
-/***********************************H*****************************************/
-
-@mixin h4 {
-    font-size: 13px;
-    line-height: 18px;
-    font-family: AvenirNextLTProRegular;
-    @include tablet {
-        font-size: 14px;
-        line-height: 22px;
-        font-family: AvenirNextLTProRegular;
     }
 }
 

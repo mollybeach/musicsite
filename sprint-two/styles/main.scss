@@ -372,7 +372,7 @@
             padding: 0 5rem 0 5rem; //68px*3+24px*3=264px +80counted columns for desktop
         }
         &__avi {
-            margin: 1.5rem 3.0rem 0; //top 24px mobile 48px top
+            margin: 1.5rem 0 3.0rem 0; //top 24px mobile 48px top
             height: 3rem; // just seems like 48px
             width: 3rem; //just seems like 48px
             border-radius: 30px; //makes the images circle like in the mockup
@@ -465,7 +465,7 @@
     /*****************************************CARD FEED SECTION***********************************/
     
     .card {
-        @include h4;
+        @include h4-paragraphs-and-comments;
         display: flex;
         flex-flow: row wrap;
         width: 280px; //mobile version 320px -16px-16px=288px
@@ -489,7 +489,7 @@
         &__name {
             width: 140px; //measure width of the name on mobile + the distance between name and time : 16px + 48px + 16px + 48px = 96px 144px+ a little extra cuz looks wrong  + 48
             height: 0;
-            font-family: AvenirNextLTProBold;
+            @include h4-paragraphs-and-comments-bold;
             @include tablet {
                 line-height: none;
                 height: 1rem;
@@ -498,7 +498,7 @@
         &__time {
             height: 1rem; //16px
             width: 1rem; //16px
-            font-family: AvenirNextLTProRegular;
+            @include h4-paragraphs-and-comments;
         }
         &__comment {
             width: 240px; //the width not given but column estimate is 320px-48px-16px-16px=240px

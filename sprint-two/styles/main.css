@@ -80,7 +80,6 @@ table {
 /*H4 - Paragraph & comments*/
 /*H5 - LABELS*/
 /***************************************PADDING**************************/
-/***********************************H*****************************************/
 /********************************* FOR TABLETS*************************************/
 /********************************* DESKTOP*************************************/
 /*********************************IMPORTS********************************************/
@@ -539,7 +538,7 @@ form {
   }
 }
 .feed__avi {
-  margin: 1.5rem 3rem 0;
+  margin: 1.5rem 0 3rem 0;
   height: 3rem;
   width: 3rem;
   border-radius: 30px;
@@ -650,6 +649,7 @@ form {
   font-size: 13px;
   line-height: 18px;
   font-family: AvenirNextLTProRegular;
+  color: #323232;
   display: flex;
   flex-flow: row wrap;
   width: 280px;
@@ -687,7 +687,17 @@ form {
 .card__name {
   width: 140px;
   height: 0;
+  font-size: 13px;
+  line-height: 18px;
   font-family: AvenirNextLTProBold;
+  color: #323232;
+}
+@media (min-width: 768px) {
+  .card__name {
+    font-size: 14px;
+    line-height: 22px;
+    font-family: AvenirNextLTProBold;
+  }
 }
 @media (min-width: 768px) {
   .card__name {
@@ -698,7 +708,17 @@ form {
 .card__time {
   height: 1rem;
   width: 1rem;
+  font-size: 13px;
+  line-height: 18px;
   font-family: AvenirNextLTProRegular;
+  color: #323232;
+}
+@media (min-width: 768px) {
+  .card__time {
+    font-size: 14px;
+    line-height: 22px;
+    font-family: AvenirNextLTProRegular;
+  }
 }
 .card__comment {
   width: 240px;
