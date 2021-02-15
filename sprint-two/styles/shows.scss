@@ -221,10 +221,8 @@
     .shows {
         background-color: $white;
         color: $black;
+        margin: 0 3.1vw 0 0;
         @include standard-padding-left-right;
-        @include tablet {
-            @include standard-padding-left-right;
-        }
         @include desktop {
             display: flex-wrap;
         }
@@ -284,21 +282,19 @@
         @include divider;
         display: flex;
         flex-flow: row wrap;
-        padding: 0 1.5rem 0 0; //24px
+        padding: 0 1.5rem 0 0; //24px right
         @include tablet {
             flex-direction: row;
             min-width: 720px; //720px
-            max-width: 93.8vw; //{ input: 720, rem: "45.0", mobileVW: "225.0", tabletVW: "93.8", desktopVW: "56.3" 
+            max-width: 62.8vw; //804px {input: 804, rem: "50.3", mobileVW: "251.3", tabletVW: "104.7", desktopVW: "62.8"}
         }
         @include desktop {
-            min-width: 804px; // 804px{input: 804, rem: "50.3", mobileVW: "251.3", tabletVW: "104.7", desktopVW: "62.8"}
             max-width: 62.8vw; //804px {input: 804, rem: "50.3", mobileVW: "251.3", tabletVW: "104.7", desktopVW: "62.8"}
             padding: 0 0 0 0; //64*3+24*3
         }
         &__datie {
             @include h5-labels;
             margin: 1rem 50vw 1rem 0; //below ies 16px mobile 16px top between itself and line
-            color: $silver; //guess
             @include tablet {
                 display: none; //no individual venue heading on tablet
             }
@@ -345,19 +341,18 @@
         }
         &__locationie {
             @include h5-labels;
-            margin: 0 50vw 1rem 0; //below ies 16px mobile
+            margin: 0 50vw 1rem 0; //below is 16px mobile
             @include tablet {
                 display: none; //no individual tablet heading on tablet
             }
         }
         &__location {
             @include h4-paragraphs-and-comments;
-            margin: 1rem 50vw 24px 0; //below 24px mobile
+            margin: 1rem 50vw 1.5rem 0; //below 24px mobile
             display: block; // works with -> :after content: "" to make mobile go in a row 
             @include tablet {
                 width: 8.3rem; //{input: 132, rem: "8.3", mobileVW: "41.3", tabletVW: "17.2", desktopVW: "10.3"}
                 margin: 1rem 0 0 0;
-                // margin: 0 30vw 0 0; //the date venu and location are one single tablet line column away from eachother 100px
                 display: inline-block; //for tablet row
             }
             @include desktop {
@@ -365,26 +360,27 @@
             }
         }
         &__button {
-            background-color: $black; //mobile needs to be 288px /24px
+            background-color: $black;
             font-family: AvenirNextLTProRegular;
             color: $white;
-            width: 288px; //guess check this again
-            height: 32px; //guess check
-            border-radius: 8px; //round the corners of my button
+            min-width: 288px; //288px /mobile needs to be 288px {input: 288, rem: "18.0", mobileVW: "90.0", tabletVW: "37.5", desktopVW: "22.5"}
+            max-width: 90vw; //288px {input: 288, rem: "18.0", mobileVW: "90.0", tabletVW: "37.5", desktopVW: "22.5"}
+            min-height: 32px; //32px {input: 32, rem: "2.0", mobileVW: "10.0", tabletVW: "4.2", desktopVW: "2.5"}
+            max-height: 10vw; //32px {input: 32, rem: "2.0", mobileVW: "10.0", tabletVW: "4.2", desktopVW: "2.5"}
+            border-radius: 4px; //round the corners of my button
             margin: 1rem 0 1rem 0px; //16 bottom
             @include tablet {
                 margin-right: auto;
-                width: 160px;
-                align-items: flex-end; //needs to be on the left side for tablet 
-                height: 4rem; //desktops size 48px
+                min-width: 160px; //160px
+                max-width: 50.0vw; // 160 {input: 160, rem: "10.0", mobileVW: "50.0", tabletVW: "20.8", desktopVW: "12.5"}
+                min-height: 48px; //48px
+                max-height: 6.3vw; //48px  {input: 48, rem: "3.0", mobileVW: "15.0", tabletVW: "6.3", desktopVW: "3.8"}
+                align-items: flex-end; //needs to be on the right side for tablet 
             }
             @include desktop {
-                margin-right: auto;
-                align-items: flex-end; //needs to be on the left side for tablet 
-                width: 160px; //for tablet it doesn't say what size but it defintely doesn't look like mobile's size
-                height: 4rem; //desktops size 48px
+                align-items: flex-end; //needs to be on the right side for desktop
                 padding: 0;
-                margin: 16px 0 16px 0;
+                margin: 1rem 0 1rem 0; //16px top 16px check 
             }
         }
     }
@@ -393,13 +389,7 @@
     .footer {
         background-color: $black;
         color: $white;
-        padding: 0 1rem; //mobile horizontal padding 16px 1rem
-        @include tablet {
-            padding: 0 1.5rem; //horizontal 24px padding 1.5rem
-        }
-        @include desktop {
-            padding: 0 5rem; //horizontal 80px padding 5rem
-        }
+        @include standard-padding-left-right;
         &__banner {
             background-color: $black;
             display: flex;
@@ -474,10 +464,12 @@
                 display: inline-block;
                 @include tablet {
                     flex-direction: row;
-                    width: 220px;
+                    min-width: 220px;
+                    max-width: 220px; //: 220px {input: 220, rem: "13.8", mobileVW: "68.8", tabletVW: "28.6", desktopVW: "17.2"}
                 }
                 @include desktop {
-                    width: 240px;
+                    min-width: 240px; //240px 
+                    max-width: 240px; //240px   {input: 240, rem: "15.0", mobileVW: "75.0", tabletVW: "31.3", desktopVW: "18.8"}
                 }
             }
             &__name {
@@ -491,28 +483,31 @@
                 }
             }
             &__address {
-                width: 180px;
+                width: 180px; //180px {input: 180, rem: "11.3", mobileVW: "56.3", tabletVW: "23.4", desktopVW: "14.1"}
                 margin: 0 0 1rem 0;
-                font-family: AvenirNextLTProRegular;
+                @include h4-list-contact-information;
             }
             &__email {
                 margin: 0 0 1rem 0;
                 width: 50vw;
-                font-family: AvenirNextLTProRegular;
+                @include h4-list-contact-information;
             }
         }
         &__base {
-            padding: 1.5rem 0 2rem 0;
+            padding: 1.5rem 0 1.5rem 0; //top 24px bottom 24px
             display: flex;
-            font-family: AvenirNextLTProRegular;
-            max-width: 65vw;
+            @include h4-list-contact-information;
+            min-width: 204px; //204px
+            max-width: 65vw; //204px {input: 204, rem: "12.8", mobileVW: "63.7", tabletVW: "26.6", desktopVW: "15.9"}
             @include tablet {
-                max-width: 30vw;
-                padding: 1.5rem 0 1.5rem 0;
+                min-width: 231px; //231px 
+                max-width: 30vw; //231px  {input: 231, rem: "14.4", mobileVW: "72.2", tabletVW: "30.1", desktopVW: "18.0"}
+                padding: 1.5rem 0 1.5rem 0; //top 24px bottom 24px
             }
             @include desktop {
-                max-width: 18vw;
-                padding: 2.5rem 0 2.5rem 0;
+                min-width: 230px; //{input: 230, rem: "14.4", mobileVW: "71.9", tabletVW: "29.9", desktopVW: "18.0"}
+                max-width: 18.0vw; //230px {input: 230, rem: "14.4", mobileVW: "71.9", tabletVW: "29.9", desktopVW: "18.0"}
+                padding: 2.5rem 0 2.5rem 0; //top 40px bottom 40px
             }
         }
     }
