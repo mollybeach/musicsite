@@ -363,6 +363,7 @@
     }
     
     .feed {
+        @include h4-list-contact-information;
         padding: 0px 1rem 0 1rem; //top 40px mobile padding 16px left 
         @include tablet {
             //margin: 0 0 56px 0; //56px botton doesn't say but lets assume its the same as desktop
