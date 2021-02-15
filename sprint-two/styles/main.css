@@ -309,9 +309,21 @@ h5 {
 @media (min-width: 768px) {
   .hero-container__text {
     font-family: AvenirNextLTProBold;
-    font-size: 3.75rem;
-    line-height: 4.25rem;
+    font-size: 18.8vw;
+    line-height: 21.3vw;
     color: #FFFF;
+  }
+}
+@media (min-width: 768px) and (min-width: 768px) {
+  .hero-container__text {
+    font-size: 7.8vw;
+    line-height: 8.9vw;
+  }
+}
+@media (min-width: 768px) and (min-width: 1280px) {
+  .hero-container__text {
+    font-size: 18.8vw;
+    line-height: 5.3vw;
   }
 }
 
@@ -539,6 +551,13 @@ form {
 }
 @media (min-width: 768px) {
   .feed {
+    font-size: 14px;
+    line-height: 20px;
+    font-family: AvenirNextLTProRegular;
+  }
+}
+@media (min-width: 768px) {
+  .feed {
     padding: 0px 1.5rem 0 1.5rem;
   }
 }
@@ -674,6 +693,13 @@ form {
 }
 @media (min-width: 768px) {
   .card {
+    font-size: 14px;
+    line-height: 22px;
+    font-family: AvenirNextLTProRegular;
+  }
+}
+@media (min-width: 768px) {
+  .card {
     width: 528px;
     margin: 0 124px 1.5rem 124px;
   }
@@ -711,6 +737,13 @@ form {
 }
 @media (min-width: 768px) {
   .card__name {
+    font-size: 14px;
+    line-height: 22px;
+    font-family: AvenirNextLTProBold;
+  }
+}
+@media (min-width: 768px) {
+  .card__name {
     line-height: none;
     height: 1rem;
   }
@@ -722,6 +755,13 @@ form {
   line-height: 18px;
   font-family: AvenirNextLTProRegular;
   color: #323232;
+}
+@media (min-width: 768px) {
+  .card__time {
+    font-size: 14px;
+    line-height: 22px;
+    font-family: AvenirNextLTProRegular;
+  }
 }
 @media (min-width: 768px) {
   .card__time {
@@ -851,6 +891,13 @@ form {
   font-size: 13px;
   line-height: 18px;
   font-family: AvenirNextLTProRegular;
+}
+@media (min-width: 768px) {
+  .footer .contacts {
+    font-size: 14px;
+    line-height: 20px;
+    font-family: AvenirNextLTProRegular;
+  }
 }
 @media (min-width: 768px) {
   .footer .contacts {

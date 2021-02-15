@@ -221,7 +221,6 @@
     .shows {
         background-color: $white;
         color: $black;
-        margin: 0 3.1vw 0 0;
         @include standard-padding-left-right;
         @include desktop {
             display: flex-wrap;
@@ -231,7 +230,7 @@
             padding: 2rem 0 2.5rem 0; //padding top 32px bottom 40px
             color: $black; //change from default 
             @include tablet {
-                padding: 1.5rem 0 0; //padding top 24p/768
+                padding: 1.5rem 0 0; //padding top 24px
             }
             @include desktop {
                 float: left;
@@ -252,7 +251,7 @@
         &__dateo {
             @include h5-labels;
             margin: 0 0 1rem 0; //16px bottom check
-            min-width: 224px;
+            min-width: 224px; //224px
             max-width: 29.2vw; //column gird 224px { input: 224, rem: "14.0", mobileVW: "70.0", tabletVW: "29.2", desktopVW: "17.5" },
             @include desktop {
                 min-width: 264px;
@@ -270,9 +269,11 @@
         }
         &__locationo {
             @include h5-labels;
-            width: 148px; //{input: 148, rem: "9.3", mobileVW: "46.3", tabletVW: "19.3", desktopVW: "11.6"}
+            min-width: 148px;
+            max-width: 19.3vw; //{input: 148, rem: "9.3", mobileVW: "46.3", tabletVW: "19.3", desktopVW: "11.6"}
             @include desktop {
-                width: 184px; //68*2+24*2 {input: 184, rem: "11.5", mobileVW: "57.5", tabletVW: "24.0", desktopVW: "14.4"}
+                min-width: 184px; //68*2+24*2 {input: 184, rem: "11.5", mobileVW: "57.5", tabletVW: "24.0", desktopVW: "14.4"}
+                max-width: 14.4vw; //184px {input: 184, rem: "11.5", mobileVW: "57.5", tabletVW: "24.0", desktopVW: "14.4"}
             }
         }
     }
