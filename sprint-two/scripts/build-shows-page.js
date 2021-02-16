@@ -4,7 +4,7 @@ const shows = [{
     venuie: 'VENUE', //for the Venue title on the individual cards for mobile
     venue: 'Ronald Lane',
     locationie: 'LOCATION', //for the location title on the individual cards for mobile
-    location: 'San Francisco',
+    location: 'San Francisco, CA',
     button: 'BUY TICKETS',
 }, {
     datie: 'DATE',
@@ -12,7 +12,7 @@ const shows = [{
     venuie: 'VENUE',
     venue: ' Pier 3 East',
     locationie: 'LOCATION',
-    location: 'San Francisco',
+    location: 'San Francisco, CA',
     button: 'BUY TICKETS',
 }, {
     datie: 'DATE',
@@ -20,7 +20,7 @@ const shows = [{
     venuie: 'VENUE',
     venue: 'View Loungue',
     locationie: 'LOCATION',
-    location: 'San Francisco',
+    location: 'San Francisco, CA',
     button: 'BUY TICKETS',
 }, {
     datie: 'DATE',
@@ -28,7 +28,7 @@ const shows = [{
     venuie: 'VENUE',
     venue: ' Hyatt Agency',
     locationie: 'LOCATION',
-    location: 'San Francisco',
+    location: 'San Francisco, CA',
     button: 'BUY TICKETS',
 }, {
     datie: 'DATE',
@@ -36,7 +36,7 @@ const shows = [{
     venuie: 'VENUE',
     venue: ' Moscow Center',
     locationie: 'LOCATION',
-    location: 'San Francisco',
+    location: 'San Francisco, CA',
     button: 'BUY TICKETS',
 }, {
     datie: 'DATE',
@@ -44,7 +44,7 @@ const shows = [{
     venuie: 'VENUE',
     venue: ' Pres Club',
     locationie: 'LOCATION',
-    location: 'San Francisco',
+    location: 'San Francisco, CA',
     button: 'BUY TICKETS',
 }];
 for (i = 0; i < shows.length; i++) {

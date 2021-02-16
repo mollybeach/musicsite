@@ -258,8 +258,8 @@ h5 {
   background-position: center;
   background-size: cover;
   background-color: rgba(50, 50, 50, 0.5);
-  min-height: 57.18vw;
-  max-height: 400px;
+  min-height: 183px;
+  max-height: 57.2vw;
 }
 .hero-container ::before {
   content: "";
@@ -273,14 +273,13 @@ h5 {
 }
 @media (min-width: 768px) {
   .hero-container {
-    min-height: 400px;
-    max-height: 52.08vw;
+    min-height: 670px;
+    max-height: 52.3vw;
   }
 }
 @media (min-width: 1280px) {
   .hero-container {
-    min-height: 670px;
-    max-height: 52.34vw;
+    margin: 0 0 3rem 0;
   }
 }
 .hero-container--scale {
@@ -290,21 +289,55 @@ h5 {
      object-fit: cover;
 }
 .hero-container__box {
+  padding: 0 1rem 0 1rem;
   color: #FFFF;
-  padding: 15vw 11.25vw 0 7.5vw;
-  max-width: 63.12vw;
+  margin: 4rem 0;
+  min-width: 224px;
+  max-width: 70vw;
   z-index: 1;
+}
+@media (min-width: 768px) {
+  .hero-container__box {
+    padding: 0 1.5rem 0 1.5rem;
+  }
 }
 @media (min-width: 1280px) {
   .hero-container__box {
-    padding: 223px 0px 0px 80px;
-    width: 600px;
+    padding: 0 5rem 0 5rem;
+  }
+}
+@media (min-width: 768px) {
+  .hero-container__box {
+    margin: 6rem 0;
+    min-width: 564px;
+    max-width: 73.4vw;
+  }
+}
+@media (min-width: 1280px) {
+  .hero-container__box {
+    margin: 10rem 0;
+    min-width: 568px;
+    max-width: 43.1vw;
   }
 }
 .hero-container__text {
-  font-family: AvenirNextLTProBold;
+  z-index: 1;
   font-size: 7.5vw;
-  line-height: 11.25vw;
+  line-height: 10vw;
+  font-family: AvenirNextLTProBold;
+  color: #FFFF;
+}
+@media (min-width: 768px) {
+  .hero-container__text {
+    font-size: 4.7vw;
+    line-height: 5.7vw;
+  }
+}
+@media (min-width: 1280px) {
+  .hero-container__text {
+    font-size: 2.8vw;
+    line-height: 3.4vw;
+  }
 }
 @media (min-width: 768px) {
   .hero-container__text {
@@ -477,16 +510,17 @@ h5 {
   flex-wrap: wrap;
   background-color: #FAFAFA;
   width: 100%;
-  padding: 0 1rem 2.5rem 1rem;
+  margin: 0 0 0 0;
+  padding: 0 1rem 0 1rem;
 }
 @media (min-width: 768px) {
   .photo-gallery-section {
-    padding: 0 1.5rem;
+    padding: 0 1.5rem 0 1.5rem;
   }
 }
 @media (min-width: 1280px) {
   .photo-gallery-section {
-    padding: 0 5rem;
+    padding: 0 5rem 0 5rem;
   }
 }
 .photo-gallery-section__title {
@@ -549,28 +583,11 @@ form {
 }
 
 .feed {
-  font-size: 4.1vw;
-  line-height: 5.6vw;
-  font-family: AvenirNextLTProRegular;
-  padding: 0px 1rem 0 1rem;
+  padding: 0 1rem 0 1rem;
 }
 @media (min-width: 768px) {
   .feed {
-    font-size: 1.8vw;
-    line-height: 1.6vw;
-    font-family: AvenirNextLTProRegular;
-  }
-}
-@media (min-width: 768px) {
-  .feed {
-    font-size: 1.1vw;
-    line-height: 1.6vw;
-    font-family: AvenirNextLTProRegular;
-  }
-}
-@media (min-width: 768px) {
-  .feed {
-    padding: 0px 1.5rem 0 1.5rem;
+    padding: 0 1.5rem 0 1.5rem;
   }
 }
 @media (min-width: 1280px) {
@@ -600,13 +617,15 @@ form {
   padding: 0 0 0 64px;
   display: block;
   float: left;
-  min-width: 224px;
+  min-width: 70vw;
   max-width: 460px;
   border-bottom: #AFAFAF solid 0.063rem;
 }
 @media (min-width: 768px) {
   .feed__boxes {
     margin: 0 0 0 6.25rem;
+    min-width: 224px;
+    max-width: 460px;
   }
 }
 @media (min-width: 1280px) {
@@ -617,9 +636,8 @@ form {
 .feed__boxes label {
   padding: 0 0 0 0;
   box-sizing: border-box;
-  font-size: 12px;
+  font-family: AvenirNextLTProRegular;
   color: #AFAFAF;
-  font-family: AvenirNextLTProBold;
 }
 .feed__boxes label,
 .feed__boxes textarea,
@@ -631,33 +649,55 @@ form {
   font-size: 12px;
   color: #AFAFAF;
   margin: 1rem 0 1rem 0;
-  width: 224px;
-  height: 32px;
+  min-width: 70vw;
+  max-width: 460px;
+  min-height: 10vw;
+  max-height: 48px;
   border-radius: 4px;
   padding: 3px 0 0 10px;
 }
 @media (min-width: 768px) {
   .feed__boxes input {
     width: 28.75rem;
-    height: 3rem;
+    min-height: 48px;
+    max-height: 3.8vw;
+    min-width: 460px;
+    max-width: 35.9vw;
   }
 }
-.feed__boxes input textarea::after {
-  content: ".";
+@media (min-width: 1280px) {
+  .feed__boxes input {
+    min-width: 460px;
+    max-width: 460px;
+    min-height: 48px;
+    min-height: 3.8vw;
+  }
 }
 .feed__boxes textarea {
   box-sizing: border-box;
   border-radius: 0.25rem;
-  width: 224px;
-  height: 64px;
-  margin: 16px 0 16px 0;
+  min-width: 70vw;
+  max-width: 460px;
+  min-height: 20vw;
+  max-height: 96px;
+  margin: 1rem 0 1rem 0;
   resize: none;
   padding: 10px 0 0 10px;
 }
 @media (min-width: 768px) {
   .feed__boxes textarea {
-    width: 460px;
-    height: 96px;
+    min-width: 460px;
+    max-width: 35.9vw;
+    min-height: 96px;
+    max-height: 7.5vw;
+  }
+}
+@media (min-width: 1280px) {
+  .feed__boxes textarea {
+    min-width: 460px;
+    max-width: 460px;
+    min-height: 96px;
+    max-height: 7.5vw;
   }
 }
 .feed__boxes .buttony {
@@ -667,21 +707,14 @@ form {
   font-family: AvenirNextLTProBold;
   color: #FFFF;
   background-color: #323232;
-  border-radius: 8px;
+  border-radius: 4px;
 }
 @media (min-width: 768px) {
   .feed__boxes .buttony {
     float: right;
     width: 160px;
     height: 48px;
-    margin: 24px 0 24px 0;
-  }
-}
-@media (min-width: 1280px) {
-  .feed__boxes .buttony {
-    width: 160px;
-    height: 48px;
-    margin: 24px 0 24px 0;
+    margin: 1.5rem 0 1.5rem 0;
   }
 }
 
@@ -693,7 +726,7 @@ form {
   color: #323232;
   display: flex;
   flex-flow: row wrap;
-  width: 280px;
+  min-width: 87.5vw;
   margin: 0px 1rem 1.5rem 1rem;
 }
 @media (min-width: 768px) {
@@ -710,7 +743,8 @@ form {
 }
 @media (min-width: 768px) {
   .card {
-    width: 528px;
+    min-width: 528px;
+    max-width: 41.3vw;
     margin: 0 124px 1.5rem 124px;
   }
 }
@@ -731,8 +765,7 @@ form {
   }
 }
 .card__name {
-  width: 140px;
-  height: 0;
+  min-width: 43.8vw;
   font-size: 4.1vw;
   line-height: 5.6vw;
   font-family: AvenirNextLTProBold;
@@ -752,6 +785,8 @@ form {
 }
 @media (min-width: 768px) {
   .card__name {
+    min-width: 18.1vw;
+    max-width: 10.9vw;
     line-height: none;
     height: 1rem;
   }
@@ -777,9 +812,9 @@ form {
   }
 }
 .card__comment {
-  width: 240px;
+  min-width: 240px;
+  max-width: 75vw;
   padding: 0 0 1.5rem 4rem;
-  width: 240px;
   border-bottom: #AFAFAF solid 0.0625rem;
 }
 @media (min-width: 768px) {

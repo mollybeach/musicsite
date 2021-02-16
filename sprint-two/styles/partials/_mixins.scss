@@ -137,33 +137,34 @@
 }
 
 @mixin h4-paragraphs-and-comments-bold {
-    font-size: 4.1vw; // 13px{input: 13, rem: "0.8", mobileVW: "4.1", tabletVW: "1.7", desktopVW: "1.0"}
-    line-height: 5.6vw; //18px{input: 18, rem: "1.1", mobileVW: "5.6", tabletVW: "2.3", desktopVW: "1.4"}
     font-family: AvenirNextLTProBold;
     color: $black;
+    font-size: 4.1vw; //13px {input: 13, rem: "0.8", mobileVW: "4.1", tabletVW: "1.7", desktopVW: "1.0"}
+    line-height: 5.6vw; //18px {input: 18, rem: "1.1", mobileVW: "5.6", tabletVW: "2.3", desktopVW: "1.4"}
     @include tablet {
-        font-size: 1.8vw; // 14px{input: 14, rem: "0.9", mobileVW: "4.4", tabletVW: "1.8", desktopVW: "1.1"}
-        line-height: 2.9vw; //22px{input: 22, rem: "1.4", mobileVW: "6.9", tabletVW: "2.9", desktopVW: "1.7"}
+        font-size: 1.8229166vw; //14px {input: 14, rem: "0.9", mobileVW: "4.4", tabletVW: "1.8", desktopVW: "1.1"}
+        line-height: 2.6vw; //20px {input: 20, rem: "1.3", mobileVW: "6.3", tabletVW: "2.6", desktopVW: "1.6"}
     }
-    @include tablet {
-        font-size: 1.1vw; // 14px{input: 14, rem: "0.9", mobileVW: "4.4", tabletVW: "1.8", desktopVW: "1.1"}
-        line-height: 1.7vw; // 18px {input: 22, rem: "1.4", mobileVW: "6.9", tabletVW: "2.9", desktopVW: "1.7"}
+    @include desktop {
+        font-size: 1.1vw; //14px {input: 14, rem: "0.9", mobileVW: "4.4", tabletVW: "1.8", desktopVW: "1.1"}
+        line-height: 1.6vw; //20px {input: 20, rem: "1.3", mobileVW: "6.3", tabletVW: "2.6", desktopVW: "1.6"}
     }
 }
 
 //H4 - Paragraph & comments
 @mixin h4-list-contact-information {
+    color: $black;
     font-size: 4.1vw; //13px {input: 13, rem: "0.8", mobileVW: "4.1", tabletVW: "1.7", desktopVW: "1.0"}
     line-height: 5.6vw; //18px {input: 18, rem: "1.1", mobileVW: "5.6", tabletVW: "2.3", desktopVW: "1.4"}
     font-family: AvenirNextLTProRegular;
     @include tablet {
         font-size: 1.8vw; //14px {input: 14, rem: "0.9", mobileVW: "4.4", tabletVW: "1.8", desktopVW: "1.1"}
-        line-height: 1.6vw; //18px {input: 20, rem: "1.3", mobileVW: "6.3", tabletVW: "2.6", desktopVW: "1.6"}
+        line-height: 2.6vw; //20px {input: 20, rem: "1.3", mobileVW: "6.3", tabletVW: "2.6", desktopVW: "1.6"}
         font-family: AvenirNextLTProRegular;
     }
-    @include tablet {
+    @include desktop {
         font-size: 1.1vw; //14px {input: 14, rem: "0.9", mobileVW: "4.4", tabletVW: "1.8", desktopVW: "1.1"}
-        line-height: 1.6vw; //18px {input: 20, rem: "1.3", mobileVW: "6.3", tabletVW: "2.6", desktopVW: "1.6"}
+        line-height: 1.6vw; //20px {input: 20, rem: "1.3", mobileVW: "6.3", tabletVW: "2.6", desktopVW: "1.6"}
         font-family: AvenirNextLTProRegular;
     }
 }

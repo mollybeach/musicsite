@@ -5,10 +5,15 @@
 .DS_Store
 .vscode
  *.css.map 
+ .css.map
+ .main.css.map
+  .shows.css.map
  *.DS_Store   
  *.vscode
 .AppleDouble
 .LSOverride
+._DS_Store
+.
 
 # Thumbnails
 ._*

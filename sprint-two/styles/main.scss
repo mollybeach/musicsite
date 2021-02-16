@@ -163,15 +163,14 @@
             background-color: rgba(0, 0, 0, 0.25);
             z-index: -1;
         }
-        min-height: 57.18vw; //320x --> 183px/320px= 57.18 vw
-        max-height: 400px;
+        min-height: 183px; //183px {input: 183, rem: "11.4", mobileVW: "57.2", tabletVW: "23.8", desktopVW: "14.3"}
+        max-height: 57.2vw; //183px tablets viewwidth  {input: 183, rem: "11.4", mobileVW: "57.2", tabletVW: "23.8", desktopVW: "14.3"}
         @include tablet {
-            min-height: 400px;
-            max-height: 52.08vw; //400px --> 400px/768px = 52.08vw
+            min-height: 670px; //670px
+            max-height: 52.3vw; //670px desktops viewwidth {input: 670, rem: "41.9", mobileVW: "209.4", tabletVW: "87.2", desktopVW: "52.3"}
         }
         @include desktop {
-            min-height: 670px;
-            max-height: 52.34vw; //670px --> 670px/1280px = 52.34vw
+            margin: 0 0 3rem 0; //48px
         }
         &--scale {
             width: 100%;
@@ -179,19 +178,26 @@
             object-fit: cover;
         }
         &__box {
+            @include standard-padding-left-right;
             color: $white;
-            padding: 15vw 11.25vw 0 7.5vw; //48px 36px 0px 24px 56/320=17.5vw
-            max-width: 63.12vw;
+            margin: 4.0rem 0; //64px {input: 64, rem: "4.0", mobileVW: "20.0", tabletVW: "8.3", desktopVW: "5.0"}
+            min-width: 224px; //224px  320-(16*2)=288px {input: 224, rem: "14.0", mobileVW: "70.0", tabletVW: "29.2", desktopVW: "17.5"}
+            max-width: 70.0vw; //224px {input: 224, rem: "14.0", mobileVW: "70.0", tabletVW: "29.2", desktopVW: "17.5"}
             z-index: 1;
+            @include tablet {
+                margin: 6.0rem 0; //96px {input: 96, rem: "6.0", mobileVW: "30.0", tabletVW: "12.5", desktopVW: "7.5"}
+                min-width: 564px; //564px 768-((24*3+100+~32)=204)=564px 
+                max-width: 73.4vw; //564px {input: 564, rem: "35.3", mobileVW: "176.3", tabletVW: "73.4", desktopVW: "44.1"}}
+            }
             @include desktop {
-                padding: 223px 0px 0px 80px;
-                width: 600px;
+                margin: 10.0rem 0; //160px {input: 160, rem: "10.0", mobileVW: "50.0", tabletVW: "20.8", desktopVW: "12.5"}
+                min-width: 568px; //552px (24*6+68*6+~16)=568px
+                max-width: 43.1vw; //552px {input: 552, rem: "34.5", mobileVW: "172.5", tabletVW: "71.9", desktopVW: "43.1"}
             }
         }
         &__text {
-            font-family: AvenirNextLTProBold;
-            font-size: 7.5vw; //24px/320= 7.5vw
-            line-height: 11.25vw; //36px/320=11.25vw
+            z-index: 1;
+            @include h1-main-header;
             @include tablet {
                 @include h1-hero-heading;
             }
@@ -304,13 +310,8 @@
         flex-wrap: wrap;
         background-color: $alabaster;
         width: 100%;
-        padding: 0 1rem 2.5rem 1rem; //mobile padding 16px  40px bottom
-        @include tablet {
-            padding: 0 1.5rem; //horizontal 24px padding 
-        }
-        @include desktop {
-            padding: 0 5rem; //horizontal 80px padding
-        }
+        margin: 0 0 0 0; // 40px bottom 
+        @include standard-padding-left-right;
         &__title {
             font-family: AvenirNextLTProBold;
             margin: 2rem 0 1.5rem; //margin top 32px bottom 24px
@@ -363,15 +364,7 @@
     }
     
     .feed {
-        @include h4-list-contact-information;
-        padding: 0px 1rem 0 1rem; //top 40px mobile padding 16px left 
-        @include tablet {
-            //margin: 0 0 56px 0; //56px botton doesn't say but lets assume its the same as desktop
-            padding: 0px 1.5rem 0 1.5rem;
-        }
-        @include desktop {
-            padding: 0 5rem 0 5rem; //68px*3+24px*3=264px +80counted columns for desktop
-        }
+        @include standard-padding-left-right;
         &__avi {
             margin: 1.5rem 0 3.0rem 0; //top 24px mobile 48px top
             height: 3rem; // just seems like 48px
@@ -390,11 +383,13 @@
             padding: 0 0 0 64px; //counted columns for mobile
             display: block;
             float: left;
-            min-width: 224px; //320-16-16-24=224px 
-            max-width: 460px;
+            min-width: 70.0vw; //224px 20-16-16-24=224px {input: 224, rem: "14.0", mobileVW: "70.0", tabletVW: "29.2", desktopVW: "17.5"}
+            max-width: 460px; //460px {input: 460, rem: "28.8", mobileVW: "143.8", tabletVW: "59.9", desktopVW: "35.9"}
             border-bottom: $silver solid 0.063rem; //1px=0.063rem
             @include tablet {
                 margin: 0 0 0 6.25rem; //100px like the avi
+                min-width: 224px; //224px 20-16-16-24=224px {input: 224, rem: "14.0", mobileVW: "70.0", tabletVW: "29.2", desktopVW: "17.5"}
+                max-width: 460px; //460px {input: 460, rem: "28.8", mobileVW: "143.8", tabletVW: "59.9", desktopVW: "35.9"}
             }
             @include desktop {
                 margin: 0 0 0 12.25rem; //68px*3+24px*3=264px  leftcounted columns for desktop
@@ -402,9 +397,9 @@
             label {
                 padding: 0 0 0 0; //mobile padding
                 box-sizing: border-box;
-                font-size: 12px;
-                color: $silver; //just a guess check later
-                font-family: AvenirNextLTProBold;
+                @include h5-heading;
+                //font-size: 3.8vw; //12px{input: 12, rem: "0.8", mobileVW: "3.8", tabletVW: "1.6", desktopVW: "0.9"}
+                //line-height: 6.3vw; //20px {input: 20, rem: "1.3", mobileVW: "6.3", tabletVW: "2.6", desktopVW: "1.6"}
             }
             label,
             textarea,
@@ -416,49 +411,62 @@
                 font-size: 12px;
                 color: $silver; //just a guess check later
                 margin: 1rem 0 1rem 0; //16px
-                width: 224px; //width of name box
-                height: 32px; //height of name box
+                min-width: 70.0vw; // 224px {input: 224, rem: "14.0", mobileVW: "70.0", tabletVW: "29.2", desktopVW: "17.5"}
+                max-width: 460px; //460px {input: 460, rem: "28.8", mobileVW: "143.8", tabletVW: "59.9", desktopVW: "35.9"}
+                min-height: 10.0vw; //height of name box {input: 32, rem: "2.0", mobileVW: "10.0", tabletVW: "4.2", desktopVW: "2.5"}
+                max-height: 48px; //height of name box {input: 48, rem: "3.0", mobileVW: "15.0", tabletVW: "6.3", desktopVW: "3.8"}
                 border-radius: 4px; //round the corners of my name box 
                 @include tablet {
                     width: 28.75rem; //24*4+100*3+64 = 460px same size as desktop 28.75rem
-                    height: 3.0rem; ///height of tablet name box 48px
+                    min-height: 48px; ///height of tablet name box 48px {input: 48, rem: "3.0", mobileVW: "15.0", tabletVW: "6.3", desktopVW: "3.8"}
+                    max-height: 3.8vw; ///height of tablet desktop vw name box 48px {input: 48, rem: "3.0", mobileVW: "15.0", tabletVW: "6.3", desktopVW: "3.8"}
+                    min-width: 460px; //24*4+100*3+64 = 460px same size as desktop
+                    max-width: 35.9vw; //460px {input: 460, rem: "28.8", mobileVW: "143.8", tabletVW: "59.9", desktopVW: "35.9"}
+                }
+                @include desktop {
+                    min-width: 460px; //24*4+100*3+64 = 460px same size as desktop
+                    max-width: 460px; //460px {input: 460, rem: "28.8", mobileVW: "143.8", tabletVW: "59.9", desktopVW: "35.9"}
+                    min-height: 48px; ///height of tablet name box 48px {input: 48, rem: "3.0", mobileVW: "15.0", tabletVW: "6.3", desktopVW: "3.8"}
+                    min-height: 3.8vw; ///height of tablet desktop vw name box 48px {input: 48, rem: "3.0", mobileVW: "15.0", tabletVW: "6.3", desktopVW: "3.8"}
                 }
                 padding: 3px 0 0 10px; //remove the 20vw padding for place holder and center it in the box check
-            }
-            input textarea::after {
-                content: '.'; //clear the textboxes after submission not working 
             }
             textarea {
                 box-sizing: border-box;
                 border-radius: 0.25rem; //round the corners of my comment box 4px 0.25rem
-                width: 224px;
-                height: 64px;
-                margin: 16px 0 16px 0; //for the spaces in between the text boxes
+                min-width: 70.0vw; // 224px {input: 224, rem: "14.0", mobileVW: "70.0", tabletVW: "29.2", desktopVW: "17.5"}
+                max-width: 460px; //460px {input: 460, rem: "28.8", mobileVW: "143.8", tabletVW: "59.9", desktopVW: "35.9"}
+                min-height: 20.0vw; //64px {input: 64, rem: "4.0", mobileVW: "20.0", tabletVW: "8.3", desktopVW: "5.0"}
+                max-height: 96px; //96px tablet size {input: 96, rem: "6.0", mobileVW: "30.0", tabletVW: "12.5", desktopVW: "7.5"}
+                margin: 1rem 0 1rem 0; //for the spaces in between the text boxes 16px 
                 resize: none;
                 @include tablet {
-                    width: 460px; //24*4+100*3+64 = 460px same size as desktop
-                    height: 96px; ///height of tablet comment box
+                    min-width: 460px; //24*4+100*3+64 = 460px same size as desktop
+                    max-width: 35.9vw; //460px {input: 460, rem: "28.8", mobileVW: "143.8", tabletVW: "59.9", desktopVW: "35.9"}
+                    min-height: 96px; //96px tablet size {input: 96, rem: "6.0", mobileVW: "30.0", tabletVW: "12.5", desktopVW: "7.5"}
+                    max-height: 7.5vw; //tablet size tablet size {input: 96, rem: "6.0", mobileVW: "30.0", tabletVW: "12.5", desktopVW: "7.5"}
+                }
+                @include desktop {
+                    min-width: 460px; //24*4+100*3+64 = 460px same size as desktop
+                    max-width: 460px; //460px {input: 460, rem: "28.8", mobileVW: "143.8", tabletVW: "59.9", desktopVW: "35.9"}
+                    min-height: 96px; //96px tablet size {input: 96, rem: "6.0", mobileVW: "30.0", tabletVW: "12.5", desktopVW: "7.5"}
+                    max-height: 7.5vw; //tablet size tablet size {input: 96, rem: "6.0", mobileVW: "30.0", tabletVW: "12.5", desktopVW: "7.5"}
                 }
                 padding: 10px 0 0 10px; //remove the 20vw padding for place holder and center it in the box check
             }
             .buttony {
                 margin: 0 0 2rem 0; // 32px bottom of button 32px for all
                 width: 12.5rem; //mobile button is 224px width  tablet looks about 48+32+48+32+48+(32/2)=224px but at this width its isn't acting right so 200px
-                height: 48px; //32px 2rem mobile height looks about 48px
+                height: 48px; //32px  // 48px {input: 48, rem: "3.0", mobileVW: "15.0", tabletVW: "6.3", desktopVW: "3.8"}
                 font-family: AvenirNextLTProBold;
                 color: $white;
                 background-color: $black;
-                border-radius: 8px; //round the corners of my button
+                border-radius: 4px; //round the corners of my button
                 @include tablet {
                     float: right;
-                    width: 160px; //tablet width doesn't say looks about 100+24px+24px+16px=164px so it's probably desktop's size
-                    height: 48px; //tablet height doesn't say but we're assuming it's desktop's size for now
-                    margin: 24px 0 24px 0;
-                }
-                @include desktop {
-                    width: 160px; //desktop button width is 160px 
-                    height: 48px; //desktop button height is 48px
-                    margin: 24px 0 24px 0; //top 24px for desktop bottom looks like 24px too
+                    width: 160px; //160px {input: 160, rem: "10.0", mobileVW: "50.0", tabletVW: "20.8", desktopVW: "12.5"}
+                    height: 48px; // 48px {input: 48, rem: "3.0", mobileVW: "15.0", tabletVW: "6.3", desktopVW: "3.8"}
+                    margin: 1.5rem 0 1.5rem 0; //24px {input: 24, rem: "1.5", mobileVW: "7.5", tabletVW: "3.1", desktopVW: "1.9"}
                 }
             }
         }
@@ -466,13 +474,14 @@
     /*****************************************CARD FEED SECTION***********************************/
     
     .card {
-        @include h4-paragraphs-and-comments;
         display: flex;
         flex-flow: row wrap;
-        width: 280px; //mobile version 320px -16px-16px=288px
+        min-width: 87.5vw; //280px //
+        // max-width: 87.5vw; //mobile version 320px -16px-16px=288px  {input: 280, rem: "17.5", mobileVW: "87.5", tabletVW: "36.5", desktopVW: "21.9"}
         margin: 0px 1rem 1.5rem 1rem; //top 40px bottom 40px  mobile padding 16px left for mobile 
         @include tablet {
-            width: 528px; //width is actually 528px
+            min-width: 528px; //width is actually 528px {input: 528, rem: "33.0", mobileVW: "165.0", tabletVW: "68.8", desktopVW: "41.3"}
+            max-width: 41.3vw; //maxwidth desktop is actually 528px {input: 528, rem: "33.0", mobileVW: "165.0", tabletVW: "68.8", desktopVW: "41.3"}
             margin: 0 124px 1.5rem 124px;
         }
         @include desktop {
@@ -482,16 +491,25 @@
             margin: 0 1.5rem 0 0; //looks like 16px to the right 
             height: 3rem; // just seems like 48px
             width: 3rem; //just seems like 48px
+            // margin-left: auto;
             border-radius: 30px; //makes the images circle like in the mockup
             @include tablet {
                 margin: 0 1rem 0 0; //tablet 16px to the right
             }
         }
         &__name {
-            width: 140px; //measure width of the name on mobile + the distance between name and time : 16px + 48px + 16px + 48px = 96px 144px+ a little extra cuz looks wrong  + 48
-            height: 0;
+            min-width: 43.8vw; //140px {input: 140, rem: "8.8", mobileVW: "43.8", tabletVW: "18.2", desktopVW: "10.9"}
+            max-width: 18.1vw; // 140px tablet vw{input: 139, rem: "8.7", mobileVW: "43.4", tabletVW: "18.1", desktopVW: "10.9"}
             @include h4-paragraphs-and-comments-bold;
             @include tablet {
+                min-width: 40px; //40px {input: 40, rem: "2.5", mobileVW: "12.5", tabletVW: "5.2", desktopVW: "3.1"}
+                max-width: 40px; // 140px tablet vw{input: 40, rem: "2.5", mobileVW: "12.5", tabletVW: "5.2", desktopVW: "3.1"}
+                line-height: none;
+                height: 1rem;
+            }
+            @include desktop {
+                min-width: 40px; // 140px tablet {input: 40, rem: "2.5", mobileVW: "12.5", tabletVW: "5.2", desktopVW: "3.1"}
+                max-width: 40px; // 140px tablet vw{input: 40, rem: "2.5", mobileVW: "12.5", tabletVW: "5.2", desktopVW: "3.1"}
                 line-height: none;
                 height: 1rem;
             }
@@ -500,12 +518,14 @@
             height: 1rem; //16px
             width: 1rem; //16px
             @include h4-paragraphs-and-comments;
+            //margin: 0 3.1vw 0 0; //mobile 320-204=116px  {input: 116, rem: "7.3", mobileVW: "36.3", tabletVW: "15.1", desktopVW: "9.1"}
         }
         &__comment {
-            width: 240px; //the width not given but column estimate is 320px-48px-16px-16px=240px
+            @include h4-list-contact-information;
+            min-width: 240px;
+            max-width: 75.0vw; //240px tablet vw  320px-48px-16px-16px=240px {input: 240, rem: "15.0", mobileVW: "75.0", tabletVW: "31.3", desktopVW: "18.8"}
             padding: 0 0 1.5rem 4.0rem; //64px mobile doesnt say the margin left but counting columns: looks like it needs an additional 48px to the left
-            width: 240px; //width of mobile 320-48-16-16
-            border-bottom: $silver solid 0.0625rem; //guess change later check
+            @include divider;
             @include tablet {
                 width: 476px; //has to be in px
                 padding: 0px 0px 1.5rem 4.25rem; //24 top and bottom 68left 4.25rem
