@@ -16,6 +16,20 @@
 /*********************************************HEADINGS**h1-h6**************************************/
 
 
+/*H4 - Paragraph & comments*/
+
+h4 {
+    font-size: 13px;
+    line-height: 18px;
+    font-family: AvenirNextLTProRegular;
+    @include tablet {
+        font-size: 14px;
+        line-height: 22px;
+        font-family: AvenirNextLTProRegular;
+    }
+}
+
+
 /*********************************************END OF HEADINGS**h1-h6**************************************/
 
 
@@ -377,16 +391,10 @@
     &__title {
         width: 208px;
         display: flex;
-        //@include h2-header;
         font-family: AvenirNextLTProBold;
-        font-size: 14px; //come back to this later and make footer responsive
-        line-height: 22px;
-        color: $white;
         margin: 1.5rem 4rem 1.5rem 0; // 24px top 64px right 24px bottom 0 px left 1.5rem 4 rem 1.5rem 0
         @include tablet {
-            width: 230px;
-            font-size: 24px;
-            line-height: 32px;
+            width: 230px; //230px
             margin: 1.5rem 3rem 1.5rem 0; //24 48 24 0px
         }
         @include desktop {
@@ -443,6 +451,7 @@
     }
     /************************************FOOTER CARD************************************/
     .contacts {
+        color: $white;
         @include h4-list-contact-information;
         &__card {
             display: inline-block;
@@ -457,10 +466,12 @@
         }
         &__name {
             font-family: AvenirNextLTProBold;
+            color: $white;
         }
         &__company {
             margin: 0 0 1rem 0;
             font-family: AvenirNextLTProBold;
+            color: $white;
             @include tablet {
                 padding-bottom: 1.5rem;
             }
@@ -469,6 +480,7 @@
             width: 180px;
             margin: 0 0 1rem 0;
             font-family: AvenirNextLTProRegular;
+            color: $white;
         }
         &__email {
             margin: 0 0 1rem 0;
@@ -480,6 +492,7 @@
         padding: 1.5rem 0 2rem 0;
         display: flex;
         font-family: AvenirNextLTProRegular;
+        color: $white;
         max-width: 65vw;
         @include tablet {
             max-width: 30vw;

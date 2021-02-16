@@ -92,6 +92,20 @@ table {
 }
 
 /*********************************************HEADINGS**h1-h6**************************************/
+/*H4 - Paragraph & comments*/
+h4 {
+  font-size: 13px;
+  line-height: 18px;
+  font-family: AvenirNextLTProRegular;
+}
+@media (min-width: 768px) {
+  h4 {
+    font-size: 14px;
+    line-height: 22px;
+    font-family: AvenirNextLTProRegular;
+  }
+}
+
 /*********************************************END OF HEADINGS**h1-h6**************************************/
 /************************************MAIN NAV************************************/
 .main-nav {
@@ -788,16 +802,11 @@ table {
   width: 208px;
   display: flex;
   font-family: AvenirNextLTProBold;
-  font-size: 14px;
-  line-height: 22px;
-  color: #FFFF;
   margin: 1.5rem 4rem 1.5rem 0;
 }
 @media (min-width: 768px) {
   .footer__title {
     width: 230px;
-    font-size: 24px;
-    line-height: 32px;
     margin: 1.5rem 3rem 1.5rem 0;
   }
 }
@@ -871,6 +880,7 @@ table {
   }
 }
 .footer .contacts {
+  color: #FFFF;
   color: #323232;
   font-size: 4.1vw;
   line-height: 5.6vw;
@@ -907,10 +917,12 @@ table {
 }
 .footer .contacts__name {
   font-family: AvenirNextLTProBold;
+  color: #FFFF;
 }
 .footer .contacts__company {
   margin: 0 0 1rem 0;
   font-family: AvenirNextLTProBold;
+  color: #FFFF;
 }
 @media (min-width: 768px) {
   .footer .contacts__company {
@@ -921,6 +933,7 @@ table {
   width: 180px;
   margin: 0 0 1rem 0;
   font-family: AvenirNextLTProRegular;
+  color: #FFFF;
 }
 .footer .contacts__email {
   margin: 0 0 1rem 0;
@@ -931,6 +944,7 @@ table {
   padding: 1.5rem 0 2rem 0;
   display: flex;
   font-family: AvenirNextLTProRegular;
+  color: #FFFF;
   max-width: 65vw;
 }
 @media (min-width: 768px) {
