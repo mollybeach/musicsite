@@ -81,12 +81,12 @@ getComment = () => {
     // function to calculate date difference
 
 
-const form = document.querySelector('.feed');
+const form = document.querySelector('.form__feed');
 
 form.addEventListener('submit', function(event) {
 
     //clear the previous feed
-    document.querySelector('.repository').innerText = '';
+    document.querySelector('.form__repository').innerText = '';
     event.preventDefault();
     let newUser = {
         name: '',
@@ -108,8 +108,8 @@ form.addEventListener('submit', function(event) {
 });
 
 function clearComments() {
-    document.querySelector('.feed').reset(); //clears the text inside textbox the name and the comment 
-    let element = document.querySelector('.repository');
+    document.querySelector('.form__feed').reset(); //clears the text inside textbox the name and the comment 
+    let element = document.querySelector('.form__repository');
     element.innerText = '';
 }
 
@@ -137,33 +137,33 @@ function displayComment(post) {
 
         /***************************NAME**************************/
         let repositoryName = document.createElement('div');
-        repositoryName.classList.add('repository__name'); //add a class to name
+        repositoryName.classList.add('form__name'); //add a class to name
         repositoryName.innerText = post[i].name; //property of object 
         /**************************DATE***************************/
 
         let repositoryTime = document.createElement('div');
-        repositoryTime.classList.add('repository__time'); //add a class to time
+        repositoryTime.classList.add('form__time'); //add a class to time
         repositoryTime.innerText = timeStamp(post[i].timestamp); //property of object 
 
         /*****************************IMAGE************************/
 
         let repositoryAvi = document.createElement('img');
-        repositoryAvi.classList.add('repository__avi'); //add an class to img
+        repositoryAvi.classList.add('form__avi'); //add an class to img
         repositoryAvi.src = randomPhotoGenerator([i]);
         repositoryAvi.innerText = post[i].img; //property of object 
 
         /*******************************COMMENT***************************/
         let repositoryComment = document.createElement('div');
-        repositoryComment.classList.add('repository__comment'); //add a class to comment
+        repositoryComment.classList.add('form__comment'); //add a class to comment
         repositoryComment.innerText = post[i].comment; //property of object 
         /***************************CREATE DIVIDER BETWEEN ****************/
         let repositoryBorder = document.createElement('div');
-        repositoryBorder.classList.add('repository__border');
+        repositoryBorder.classList.add('form__border');
 
         /**********************MAKE DIVS TO HOLD THE CONTENT EASIER TO STYLE**************** */
 
         /***********************GRAB ELEMENT FROM HTML*************************/
-        let repository = document.querySelector('.repository'); //class from emtpy card container in html
+        let repository = document.querySelector('.form__repository'); //class from emtpy card container in html
         /*******************CREATE ELEMENT**************************/
         //div
         let repositoryEmptyContainer = document.createElement('div');
@@ -171,10 +171,10 @@ function displayComment(post) {
         let repositoryTopRightContainer = document.createElement('div');
         let repositoryTopRightLeftContainer = document.createElement('div');
         /*******************************ADD CLASS********************/
-        repositoryEmptyContainer.classList.add('repository__empty-container'); //add a class to empty-container div the holder of all of the inner elements
-        repositoryTopContainer.classList.add('repository__top-container');
-        repositoryTopRightContainer.classList.add('repository__top-right-container');
-        repositoryTopRightLeftContainer.classList.add('repository__top-right-left-container');
+        repositoryEmptyContainer.classList.add('form__empty-container'); //add a class to empty-container div the holder of all of the inner elements
+        repositoryTopContainer.classList.add('form__top-container');
+        repositoryTopRightContainer.classList.add('form__top-right-container');
+        repositoryTopRightLeftContainer.classList.add('form__top-right-left-container');
         /**********************APPEND THE CONTENT TO THIER CONTAINERS*******************/
 
 

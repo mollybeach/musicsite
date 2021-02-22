@@ -31,9 +31,9 @@
 }
 
 @mixin width-100-percent-at-standard-padding {
-    width: calc(100% - 10.0vw); //5.0*2
+    width: calc(100% - 5.0vw); //5.0*2
     @include tablet {
-        width: calc(100% - 6.2vw); //3.1*2
+        width: calc(100% - 3.1vw); //3.1*2
     }
     @include desktop {
         width: calc(100% - 12.6vw); //6.3*2
@@ -44,38 +44,14 @@
 /**********************************************DIVIDERS******************************************************/
 
 @mixin logo-bandsite {
-    min-width: 37.5vw; //120px {input: 120, rem: "7.5", mobileVW: "37.5", tabletVW: "15.6", desktopVW: "9.4"}
-    min-height: 7.5vw; //24px  {input: 24, rem: "1.5", mobileVW: "7.5", tabletVW: "3.1", desktopVW: "1.9"}
-    max-width: 15.6vw; //120px{input: 120, rem: "7.5", mobileVW: "37.5", tabletVW: "15.6", desktopVW: "9.4"}
-    max-height: 3.1vw; //24px  {input: 24, rem: "1.5", mobileVW: "7.5", tabletVW: "3.1", desktopVW: "1.9"}
-    @include tablet {
-        min-width: 15.6vw; //120px
-        min-height: 3.1vw; //24px  
-        min-width: 15.6vw; //120px
-        min-height: 3.1vw; //24px  
-    }
-    @include desktop {
-        min-width: 9.4vw; //120px
-        min-height: 1.9vw; //24px 
-        max-width: 9.4vw; //120px
-        max-height: 1.9vw; //24px 
-    }
     img {
-        min-width: 37.5vw; //120px
-        min-height: 7.5vw; //24px  
-        max-width: 15.6vw; //120px
-        max-height: 3.1vw; //24px  
+        width: 120px; //120px
+        height: 24px; //24px  
+        // width: 160px; //120px
+        // height: 32px; //24px  
         @include tablet {
-            min-width: 15.6vw; //120px
-            min-height: 3.1vw; //24px  
-            min-width: 15.6vw; //120px
-            min-height: 3.1vw; //24px 
-        }
-        @include desktop {
-            min-width: 9.4vw; //120px
-            min-height: 1.9vw; //24px 
-            max-width: 9.4vw; //120px
-            max-height: 1.9vw; //24px  
+            width: 120px; //120px
+            height: 24px; //24px  
         }
     }
 }

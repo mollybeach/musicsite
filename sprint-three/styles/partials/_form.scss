@@ -1,6 +1,6 @@
 /************************************COMMENTS FEED SECTION************************************/
 
-.article {
+.form {
     @include standard-padding-left-right;
     background-color: $white;
     @include tablet {
@@ -32,94 +32,90 @@
     &__binding {
         padding: 0 0 2rem; //32px
     }
-    .feed {
+    &__feed {
         padding: 0 0 2rem;
         display: flex;
         justify-content: space-between;
         width: 100%;
-        &__avi {
-            width: 3.0rem; // 48px 
-            height: 3.0rem; // 48px 
-            border-radius: 33.3px; //circle
-            margin: 0 5.0vw 0 0; //16px
-            position: relative;
-            @include tablet {
-                margin: 0 2.1vw 0 0;
-            }
-            @include desktop {
-                margin: 0 1.3vw 0 0;
-            }
+    }
+    &__avi {
+        width: 3.0rem; // 48px 
+        height: 3.0rem; // 48px 
+        border-radius: 33.3px; //circle
+        margin: 0 5.0vw 0 0; //16px
+        position: relative;
+        @include tablet {
+            margin: 0 2.1vw 0 0;
         }
-        &__boxes {
-            padding: 0 0px 0 0px;
-        }
-        input:focus,
-        select:focus,
-        textarea:focus,
-        button:focus {
-            outline: $black;
-            border-width: 0.2rem;
-        }
-        &__tag {
-            box-sizing: border-box;
-            @include h5-labels;
-        }
-        &__tag,
-        &__alias-field,
-        &__note-field {
-            padding: 0 30vw 0 0; //move to right side page 
-        }
-        &__alias-field {
-            background-color: $alabaster;
-            @include h5-labels;
-            box-sizing: border-box;
-            border-radius: 4px; //round the corners of my name box 
-            align-self: right;
-            margin: 1rem 0 1rem 0; //16px
-            width: 70.0vw; // 224px 
-            height: 10.0vw; //32px
-            padding: 1px 0 0 10px; //center placeholder
-            @include tablet {
-                width: 28.8rem; //460px
-                height: 3.0rem; //48px 
-            }
-        }
-        &__note-field {
-            background-color: $alabaster;
-            @include h5-labels;
-            box-sizing: border-box;
-            border-radius: 0.25rem; //4px
-            width: 70.0vw; // 224px 
-            height: 20.0vw; // 64px 
-            margin: 1rem 0 1rem 0; //spaces in between the boxes 16px 
-            resize: none;
-            @include tablet {
-                width: 28.8rem; //460px
-                height: 6.0rem; //96px 
-            }
-            padding: 10px 0 0 10px; //center placeholder
-        }
-        &__button {
-            @include button-biography;
-            @include tablet {
-                float: right;
-            }
+        @include desktop {
+            margin: 0 1.3vw 0 0;
         }
     }
-}
-
-
-/*****************************************CARD FEED SECTION***********************************/
-
-.repository {
-    display: flex;
-    flex-flow: row wrap;
-    margin: 1px 0rem 1rem 0;
-    @include tablet {
-        margin: 0 124px 1.5rem 0; //0 124px 24px 0 
+    &__boxes {
+        padding: 0 0px 0 0px;
     }
-    @include desktop {
-        margin: 40px 264px 0 0; //40px 0 264px 0
+    input:focus,
+    select:focus,
+    textarea:focus,
+    button:focus {
+        outline: $black;
+        border-width: 0.2rem;
+    }
+    &__tag {
+        box-sizing: border-box;
+        @include h5-labels;
+    }
+    &__tag,
+    &__alias-field,
+    &__note-field {
+        padding: 0 30vw 0 0; //move to right side page 
+    }
+    &__alias-field {
+        background-color: $alabaster;
+        @include h5-labels;
+        box-sizing: border-box;
+        border-radius: 4px; //round the corners of my name box 
+        align-self: right;
+        margin: 1rem 0 1rem 0; //16px
+        width: 70.0vw; // 224px 
+        height: 10.0vw; //32px
+        padding: 1px 0 0 10px; //center placeholder
+        @include tablet {
+            width: 28.8rem; //460px
+            height: 3.0rem; //48px 
+        }
+    }
+    &__note-field {
+        background-color: $alabaster;
+        @include h5-labels;
+        box-sizing: border-box;
+        border-radius: 0.25rem; //4px
+        width: 70.0vw; // 224px 
+        height: 20.0vw; // 64px 
+        margin: 1rem 0 1rem 0; //spaces in between the boxes 16px 
+        resize: none;
+        @include tablet {
+            width: 28.8rem; //460px
+            height: 6.0rem; //96px 
+        }
+        padding: 10px 0 0 10px; //center placeholder
+    }
+    &__button {
+        @include button-biography;
+        @include tablet {
+            float: right;
+        }
+    }
+    &__repository {
+        display: flex;
+        flex-flow: row wrap;
+        margin: 1px 0rem 1rem 0;
+        @include tablet {
+            margin: 0 124px 1.5rem 0; //0 124px 24px 0 
+        }
+        @include desktop {
+            margin: 40px 264px 0 0; //40px 0 264px 0
+        }
     }
     &__empty-container {
         width: 90.0vw; //288px 90.0vw
@@ -182,3 +178,6 @@
         }
     }
 }
+
+
+/*****************************************CARD FEED SECTION***********************************/

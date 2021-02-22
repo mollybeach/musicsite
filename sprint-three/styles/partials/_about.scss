@@ -5,47 +5,38 @@
         color: $black;
         display: flex;
         flex-direction: column;
-        padding: 0 1rem; //mobile padding 16px 
-        @include tablet {
-            padding: 0 1.5rem; //horizontal 24px padding change all these to rem
-        }
+        @include standard-padding-left-right;
         &__title {
             margin: 3rem 0; //vertical 48px
             @include h1-main-header-black;
             @include tablet {
                 @include h1-main-header-tablet-desktop;
             }
-            @include desktop {
-                padding: 0 0 0 5rem; //horizontal 80px padding {input: 80, rem: "5.0", mobileVW: "25.0", tabletVW: "10.4", desktopVW: "6.3"}
-            }
         }
-        //Change all of desktop padding in about section excluding title to 80px+24px+68px=172px
         &__content {
             @include desktop {
-                padding: 0 0 0 10.8rem; //padding 172px {input: 172, rem: "10.8", mobileVW: "53.8", tabletVW: "22.4", desktopVW: "13.4"}
+                padding: 0 0 0 13.4vw; //padding 172px left
             }
         }
         &__img {
             display: flex;
             justify-content: center;
             margin: 0px 0 1.5rem; //top horizontal bottom 0 0 24px
-            min-width: 90.0vw; //288px mobile make vw to be responsive at smaller size {input: 288, rem: "18.0", mobileVW: "90.0", tabletVW: "37.5", desktopVW: "22.5"}
-            min-height: 45.0vw; //144px appx. {input: 144, rem: "9.0", mobileVW: "45.0", tabletVW: "18.8", desktopVW: "11.3"}
-            max-width: 90.0vw; //288px mobile {input: 288, rem: "18.0", mobileVW: "90.0", tabletVW: "37.5", desktopVW: "22.5"}
-            max-height: 45.0vw; //144px appx. {input: 144, rem: "9.0", mobileVW: "45.0", tabletVW: "18.8", desktopVW: "11.3"}
+            width: 90.0vw; //288px mobile
+            height: 45.0vw; //144px appx. 
+            max-width: 90.0vw; //288px mobile
+            max-height: 45.0vw; //144px appx
             @include tablet {
-                margin: 0 0 0 0;
-                min-width: 720px; //width size of tablet {input: 720, rem: "45.0", mobileVW: "225.0", tabletVW: "93.8", desktopVW: "56.3"}
-                min-height: 362px; //height size of tablet {input: 362, rem: "22.6", mobileVW: "113.1", tabletVW: "47.1", desktopVW: "28.3"}
-                max-width: 116.7vw; //width of tablet {input: 896, rem: "56.0", mobileVW: "280.0", tabletVW: "116.7", desktopVW: "70.0"}
-                max-height: 58.6vw; //height of tablet {input: 450, rem: "28.1", mobileVW: "140.6", tabletVW: "58.6", desktopVW: "35.2"}
+                min-width: 720px; //720px tablet
+                min-height: 362px; //362px tablet 
+                max-width: 116.7vw; //896px
+                max-height: 58.6vw; //896x tablet
             }
             @include desktop {
-                margin: 0 0 0 0;
-                min-width: 896px; //width of desktop {input: 896, rem: "56.0", mobileVW: "280.0", tabletVW: "116.7", desktopVW: "70.0"}
-                min-height: 450px; //height of tablet {input: 450, rem: "28.1", mobileVW: "140.6", tabletVW: "58.6", desktopVW: "35.2"}
-                max-width: 70.0vw; //width of desktop {input: 896, rem: "56.0", mobileVW: "280.0", tabletVW: "116.7", desktopVW: "70.0"}
-                max-height: 35.2vw; //height of tablet {input: 450, rem: "28.1", mobileVW: "140.6", tabletVW: "58.6", desktopVW: "35.2"}
+                min-width: 896px; //896px
+                min-height: 450px; //450px
+                max-width: 70.0vw; //450px desktop 
+                max-height: 35.2vw; //450px XL
             }
             &--scale {
                 width: 100%;
@@ -55,28 +46,26 @@
         }
         &__quote {
             @include h2-header;
-            margin: 0 0 2rem 0; //0 top 0 right 32px bottom mobile 0px left
-            min-width: 90.0vw; //288px mobile make vw to be responsive at smaller size {input: 288, rem: "18.0", mobileVW: "90.0", tabletVW: "37.5", desktopVW: "22.5"}
-            max-width: 90.0vw; //288px mobile {input: 288, rem: "18.0", mobileVW: "90.0", tabletVW: "37.5", desktopVW: "22.5"}
+            margin: 0 0 2rem 0; //32px
+            min-width: 90.0vw; //288px mobile 
+            max-width: 90.0vw; //288px mobile
             @include tablet {
-                margin: 3rem 0 2.5rem 0rem; //48px top 0 px right  40px bottom 
-                min-width: 720px; //width size of tablet {input: 720, rem: "45.0", mobileVW: "225.0", tabletVW: "93.8", desktopVW: "56.3"}
-                max-width: 116.7vw; //width of tablet {input: 896, rem: "56.0", mobileVW: "280.0", tabletVW: "116.7", desktopVW: "70.0"}
+                margin: 3rem 0 2.5rem 0rem; //48px 0 40px 0
+                min-width: 720px; //720pxwidth size of tablet 
+                max-width: 116.7vw; //720px
             }
             @include desktop {
-                margin: 3rem 0 2.5rem 0; //48px top 0 px right  40px bottom 48px left because of extra spaced section 
-                //desktop quote length column count 68+24+24=116px 896-116px=780 desktop
-                min-width: 780px; //width of desktop {input: 780, rem: "48.8", mobileVW: "243.8", tabletVW: "101.6", desktopVW: "60.9"}
-                max-width: 60.9vw; //width of desktop {input: 780, rem: "48.8", mobileVW: "243.8", tabletVW: "101.6", desktopVW: "60.9"}
+                margin: 3rem 0 2.5rem 0; //48px 0 px 40px 48px left 
+                min-width: 780px; //780px
+                max-width: 60.9vw; //780px 
             }
         }
-        //we can assume that tablet maintains mobile margin because its not defined
         &__name {
             @include h4-paragraphs-and-comments;
             margin: 0 0 2.5rem 0; //0 top 0 right 40px bottom 0px left
             @include h3-subheader;
             @include tablet {
-                margin: 0 0 2.5rem 0; //0 top 0 right 40px bottom 0px left
+                margin: 0 0 2.5rem 0; //0 0 40 0
             }
             @include desktop {
                 margin: 0 0 2.5rem 0; //48px top 0 px right  40px bottom 
@@ -84,7 +73,7 @@
         }
         &__names {
             @include h2-header;
-            margin: 0 0 1.5rem 0; //padding 24px 24px bottom
+            margin: 0 0 1.5rem 0; //0 0 24px
             @include tablet {
                 margin: 0 0 2.5rem 0; //168 left 32 bottom
             }
@@ -106,24 +95,24 @@
         &__top {
             margin: 0 0 1.5rem 0; //bottom mobile 24px
             @include tablet {
-                margin: 0 3.1vw 0 0; //24px right {input: 24, rem: "1.5", mobileVW: "7.5", tabletVW: "3.1", desktopVW: "1.9"}
-                min-width: 348px; //348px {input: 348, rem: "21.8", mobileVW: "108.7", tabletVW: "45.3", desktopVW: "27.2"}
-                max-width: 45.8vw; //420px {input: 420, rem: "26.3", mobileVW: "131.3", tabletVW: "54.7", desktopVW: "32.8"}
+                margin: 0 3.1vw 0 0; //24px right 
+                min-width: 348px; //348px 
+                max-width: 45.8vw; //420px 
             }
             @include desktop {
-                margin: 0 1.9vw 0 0; //24px right {input: 24, rem: "1.5", mobileVW: "7.5", tabletVW: "3.1", desktopVW: "1.9"}
-                min-width: 420px; //420px {input: 420, rem: "26.3", mobileVW: "131.3", tabletVW: "54.7", desktopVW: "32.8"}
-                max-width: 29.1vw; //420px in desktop xl {input: 420, rem: "26.3", mobileVW: "131.3", tabletVW: "54.7", desktopVW: "32.8", desktopxlVW: "29.1" }
+                margin: 0 1.9vw 0 0; //24px right
+                min-width: 420px; //420px 
+                max-width: 29.1vw; //420px in desktop xl 
             }
         }
         &__bottom {
             @include tablet {
-                min-width: 348px; //348px {input: 348, rem: "21.8", mobileVW: "108.7", tabletVW: "45.3", desktopVW: "27.2"}
-                max-width: 45.8vw; //420px {input: 420, rem: "26.3", mobileVW: "131.3", tabletVW: "54.7", desktopVW: "32.8"}
+                min-width: 348px; //348px 
+                max-width: 45.8vw; //420px 
             }
             @include desktop {
-                min-width: 420px; //420px {input: 420, rem: "26.3", mobileVW: "131.3", tabletVW: "54.7", desktopVW: "32.8"}
-                max-width: 29.1vw; //420px in desktop xl {input: 420, rem: "26.3", mobileVW: "131.3", tabletVW: "54.7", desktopVW: "32.8", desktopxlVW: "29.1" }
+                min-width: 420px; //420px 
+                max-width: 29.1vw; //420px in desktop xl 
                 margin: 0 0 0 0;
             }
         }

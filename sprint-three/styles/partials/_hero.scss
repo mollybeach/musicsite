@@ -17,8 +17,8 @@
         background-color: rgba(0, 0, 0, 0.25);
         z-index: -1;
     }
-    min-height: 147.5vw; //472px {input: 472, rem: "29.5", mobileVW: "147.5", tabletVW: "61.5", desktopVW: "36.9"}
-    max-height: 87.2vw; //670px tablets viewwidth {input: 670, rem: "41.9", mobileVW: "209.4", tabletVW: "87.2", desktopVW: "52.3"}
+    min-height: 147.5vw; //472px
+    max-height: 87.2vw; //670px tablets 
     &__mobile-size-biography {
         min-height: 183px; //183px 
         max-height: 57.2vw; //183px
@@ -27,7 +27,7 @@
         min-height: 670px; //670px
         max-height: 52.3vw; //670px
         &--sizing {
-            min-height: 400px; //400px {input: 400, rem: "25.0", mobileVW: "125.0", tabletVW: "52.1", desktopVW: "31.3"}
+            min-height: 400px; //400px 
             max-height: 52.1vw; //400px
         }
     }
@@ -42,7 +42,7 @@
     &__box {
         @include standard-padding-left-right;
         color: $white;
-        margin: 4.0rem 0; //64px {input: 64, rem: "4.0", mobileVW: "20.0", tabletVW: "8.3", desktopVW: "5.0"}
+        margin: 4.0rem 0; //64px 
         &--mobile-box-size-shows {
             min-width: 288px; //288px 
             max-width: 90.0vw; //288px 

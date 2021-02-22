@@ -95,85 +95,63 @@ table {
 /**********************************************DIVIDERS******************************************************/
 /************************************MAIN NAV************************************/
 .main-nav {
-  width: calc(100% - 10.0vw);
   background-color: #323232;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
   color: #AFAFAF;
-  width: 100%;
-  min-height: 25vw;
-  max-height: 10.4vw;
+  min-height: 80px;
+  max-height: 25vw;
 }
 @media (min-width: 768px) {
   .main-nav {
-    width: calc(100% - 6.2vw);
-  }
-}
-@media (min-width: 1280px) {
-  .main-nav {
-    width: calc(100% - 12.6vw);
-  }
-}
-@media (min-width: 768px) {
-  .main-nav {
+    width: calc(100% - 5.0vw);
+    padding: 0 0 0 5vw;
     flex-direction: row;
-    min-height: 10.4vw;
-    max-height: 6.3vw;
+    min-height: 80px;
+    max-height: 80px;
     justify-content: flex-start;
     align-items: center;
   }
 }
+@media (min-width: 768px) and (min-width: 768px) {
+  .main-nav {
+    width: calc(100% - 3.1vw);
+  }
+}
+@media (min-width: 768px) and (min-width: 1280px) {
+  .main-nav {
+    width: calc(100% - 12.6vw);
+  }
+}
+@media (min-width: 768px) and (min-width: 768px) {
+  .main-nav {
+    padding: 0 0 0 3.1vw;
+  }
+}
+@media (min-width: 768px) and (min-width: 1280px) {
+  .main-nav {
+    padding: 0 0 0 6.3vw;
+  }
+}
 @media (min-width: 1280px) {
   .main-nav {
-    min-height: 6.3vw;
-    max-height: 6.3vw;
+    min-height: 80px;
+    max-height: 80px;
   }
 }
 .main-nav__trademark {
   margin: 5vw 0 0;
-  min-width: 37.5vw;
-  min-height: 7.5vw;
-  max-width: 15.6vw;
-  max-height: 3.1vw;
-}
-@media (min-width: 768px) {
-  .main-nav__trademark {
-    min-width: 15.6vw;
-    min-height: 3.1vw;
-    min-width: 15.6vw;
-    min-height: 3.1vw;
-  }
-}
-@media (min-width: 1280px) {
-  .main-nav__trademark {
-    min-width: 9.4vw;
-    min-height: 1.9vw;
-    max-width: 9.4vw;
-    max-height: 1.9vw;
-  }
 }
 .main-nav__trademark img {
-  min-width: 37.5vw;
-  min-height: 7.5vw;
-  max-width: 15.6vw;
-  max-height: 3.1vw;
+  width: 120px;
+  height: 24px;
 }
 @media (min-width: 768px) {
   .main-nav__trademark img {
-    min-width: 15.6vw;
-    min-height: 3.1vw;
-    min-width: 15.6vw;
-    min-height: 3.1vw;
-  }
-}
-@media (min-width: 1280px) {
-  .main-nav__trademark img {
-    min-width: 9.4vw;
-    min-height: 1.9vw;
-    max-width: 9.4vw;
-    max-height: 1.9vw;
+    width: 120px;
+    height: 24px;
   }
 }
 @media (min-width: 768px) {
@@ -210,13 +188,13 @@ table {
   display: flex;
   justify-content: center;
   width: 50%;
-  padding: 0 0 3.8vw 0;
+  padding: 0 0 0.8vw 0;
 }
 @media (min-width: 768px) {
   .main-nav__item {
     align-items: center;
     width: 10.4vw;
-    padding: 3.6vw 0;
+    padding: 2.9vw 0;
     margin: 0 7.3vw 0 0;
   }
 }
@@ -228,7 +206,7 @@ table {
   }
 }
 .main-nav__item--active {
-  border-bottom: solid 1.6vw #FFFF;
+  border-bottom: solid 1.5vw #FFFF;
 }
 @media (min-width: 768px) {
   .main-nav__item--active {
@@ -264,6 +242,28 @@ table {
     line-height: 1.6vw;
   }
 }
+@media (min-width: 768px) {
+  .main-nav__link {
+    color: #323232;
+    font-family: AvenirNextLTProRegular;
+    font-size: 0.8rem;
+    line-height: 1.1rem;
+    font-family: AvenirNextLTProDemi;
+    color: #FFFF;
+  }
+}
+@media (min-width: 768px) and (min-width: 768px) {
+  .main-nav__link {
+    font-size: 0.9rem;
+    line-height: 1.3rem;
+  }
+}
+@media (min-width: 768px) and (min-width: 1280px) {
+  .main-nav__link {
+    font-size: 0.9rem;
+    line-height: 1.3rem;
+  }
+}
 .main-nav__link:hover {
   letter-spacing: 1px;
 }
@@ -285,6 +285,28 @@ table {
   .main-nav__link--active {
     font-size: 1.1vw;
     line-height: 1.6vw;
+  }
+}
+@media (min-width: 768px) {
+  .main-nav__link--active {
+    color: #323232;
+    font-family: AvenirNextLTProRegular;
+    font-size: 0.8rem;
+    line-height: 1.1rem;
+    font-family: AvenirNextLTProDemi;
+    color: #FFFF;
+  }
+}
+@media (min-width: 768px) and (min-width: 768px) {
+  .main-nav__link--active {
+    font-size: 0.9rem;
+    line-height: 1.3rem;
+  }
+}
+@media (min-width: 768px) and (min-width: 1280px) {
+  .main-nav__link--active {
+    font-size: 0.9rem;
+    line-height: 1.3rem;
   }
 }
 
@@ -624,47 +646,15 @@ table {
 }
 .footer__trademark {
   display: none;
-  min-width: 37.5vw;
-  min-height: 7.5vw;
-  max-width: 15.6vw;
-  max-height: 3.1vw;
-}
-@media (min-width: 768px) {
-  .footer__trademark {
-    min-width: 15.6vw;
-    min-height: 3.1vw;
-    min-width: 15.6vw;
-    min-height: 3.1vw;
-  }
-}
-@media (min-width: 1280px) {
-  .footer__trademark {
-    min-width: 9.4vw;
-    min-height: 1.9vw;
-    max-width: 9.4vw;
-    max-height: 1.9vw;
-  }
 }
 .footer__trademark img {
-  min-width: 37.5vw;
-  min-height: 7.5vw;
-  max-width: 15.6vw;
-  max-height: 3.1vw;
+  width: 120px;
+  height: 24px;
 }
 @media (min-width: 768px) {
   .footer__trademark img {
-    min-width: 15.6vw;
-    min-height: 3.1vw;
-    min-width: 15.6vw;
-    min-height: 3.1vw;
-  }
-}
-@media (min-width: 1280px) {
-  .footer__trademark img {
-    min-width: 9.4vw;
-    min-height: 1.9vw;
-    max-width: 9.4vw;
-    max-height: 1.9vw;
+    width: 120px;
+    height: 24px;
   }
 }
 @media (min-width: 768px) {
