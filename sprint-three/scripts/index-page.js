@@ -163,7 +163,7 @@ function displayComment(post) {
         /**********************MAKE DIVS TO HOLD THE CONTENT EASIER TO STYLE**************** */
 
         /***********************GRAB ELEMENT FROM HTML*************************/
-        let repository = document.querySelector('.form__repository'); //class from emtpy card container in html
+        let = document.querySelector('.form__repository'); //class from emtpy card container in html
         /*******************CREATE ELEMENT**************************/
         //div
         let repositoryEmptyContainer = document.createElement('div');

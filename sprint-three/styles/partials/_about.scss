@@ -7,9 +7,10 @@
         flex-direction: column;
         @include standard-padding-left-right;
         &__title {
-            margin: 3rem 0; //vertical 48px
+            margin: 2rem 0; //vertical 32px
             @include h1-main-header-black;
             @include tablet {
+                margin: 3rem 0; //vertical 48px
                 @include h1-main-header-tablet-desktop;
             }
         }

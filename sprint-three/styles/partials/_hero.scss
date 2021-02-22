@@ -43,27 +43,41 @@
         @include standard-padding-left-right;
         color: $white;
         margin: 4.0rem 0; //64px 
+        z-index: 1;
+        &--mobile-box-size-biography {
+            min-width: 210px; //210x 
+            max-width: 27.3vw; //210px 
+        }
         &--mobile-box-size-shows {
             min-width: 288px; //288px 
             max-width: 90.0vw; //288px 
         }
-        &--mobile-box-size-biography {
-            min-width: 224px; //224px  
-            max-width: 70.0vw; //224px 
-        }
-        z-index: 1;
         @include tablet {
             margin: 6.0rem 0; //96px 
-            min-width: 564px; //564px 
-            max-width: 73.4vw; //564px 
+            &--tablet-box-size-biography {
+                min-width: 510px; //apx 500px
+                max-width: 39.8vw; //apx 500px
+                // max-width: 60.1vw; //500px
+            }
+            &--tablet-box-size-shows {
+                min-width: 569px; //564px 74.1
+                max-width: 74.1vw; //564px 
+            }
         }
         @include desktop {
             margin: 10.0rem 0; //160px
-            min-width: 568px; //552px 
-            max-width: 43.1vw; //552px 
+            &--desktop-box-size-biography {
+                min-width: 528px; //528px
+                max-width: 41.3vw; //528px
+            }
+            &--desktop-box-size-shows {
+                min-width: 568px; //552px 484px
+                max-width: 30.8vw; //552px  484px 37.8
+            }
         }
     }
     &__title {
+        margin: 0 0 48px 0;
         @include h2-header-responsive-white; //make hero text reponsive but only for mobile
         @include tablet {
             @include h2-header-white;
@@ -71,14 +85,21 @@
     }
     &__text {
         z-index: 1;
-        &--mobile-font-size-shows {
+        &--font-size-shows {
             @include h1-main-header-tablet-desktop-responsive; //based on the mockup this is the ideal size for the mobile hero heading looks perfect
+            @include tablet {
+                @include h1-hero-heading;
+            }
+            @include desktop {
+                @include h1-hero-heading;
+            }
         }
-        &--mobile-font-size-biography {
-            @include h1-main-header-responsive; //make hero text reponsive but only for mobile
-        }
-        @include tablet {
-            @include h1-hero-heading;
+        &--font-size-biography {
+            @include h1-main-header; //make hero text reponsive but only for mobile
+            @include tablet {
+                @include h1-hero-heading;
+                //564px 74.1
+            }
         }
     }
     &__soundcloud {
@@ -91,12 +112,12 @@
         height: 30.0vw; //96px 
         @include tablet {
             margin: 0 0 6.3vw 0; //48px match 
-            width: 56.8vw; //436px {input: 436, rem: "27.3", mobileVW: "136.3", tabletVW: "56.8", desktopVW: "34.1"}
-            height: 19.0vw; //146px {input: 146, rem: "9.1", mobileVW: "45.6", tabletVW: "19.0", desktopVW: "11.4"}
+            width: 436px;
+            height: 146px;
         }
         @include desktop {
             padding: 0; //remove standard padding mixin
-            margin: 0 0 14.7rem 0; //274px {input: 274, rem: "17.1", mobileVW: "85.6", tabletVW: "35.7", desktopVW: "21.4"}
+            margin: 0 0 17.7rem 0; //274px {input: 274, rem: "17.1", mobileVW: "85.6", tabletVW: "35.7", desktopVW: "21.4"}
             position: relative;
             height: 146px;
             width: 436px;

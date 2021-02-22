@@ -36,6 +36,21 @@
     }
 }
 
+@mixin h1-hero-heading-responsive {
+    font-family: AvenirNextLTProBold;
+    color: $white;
+    font-size: 18.8vw; //60px {input: 60, rem: "3.8", mobileVW: "18.8", tabletVW: "7.8", desktopVW: "4.7"}
+    line-height: 21.3vw; //68px{input: 68, rem: "4.3", mobileVW: "21.3", tabletVW: "8.9", desktopVW: "5.3"}
+    @include tablet {
+        font-size: 7.8vw; //60px {input: 60, rem: "3.8", mobileVW: "18.8", tabletVW: "7.8", desktopVW: "4.7"}
+        line-height: 8.9vw; //68px{input: 68, rem: "4.3", mobileVW: "21.3", tabletVW: "8.9", desktopVW: "5.3"}
+    }
+    @include desktop {
+        font-size: 4.7vw; //60px {input: 60, rem: "3.8", mobileVW: "18.8", tabletVW: "7.8", desktopVW: "4.7"}
+        line-height: 5.3vw; //68px{input: 68, rem: "4.3", mobileVW: "21.3", tabletVW: "8.9", desktopVW: "5.3"}
+    }
+}
+
 
 /*****************************************H1-Main-heading****************************/
 
