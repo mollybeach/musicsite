@@ -849,18 +849,31 @@ table {
 }
 
 /************************************COMMENTS FEED SECTION************************************/
+.article {
+  padding: 0 5vw 0 5vw;
+  background-color: #FFFF;
+}
 @media (min-width: 768px) {
-  article {
+  .article {
+    padding: 0 3.1vw 0 3.1vw;
+  }
+}
+@media (min-width: 1280px) {
+  .article {
+    padding: 0 6.3vw 0 6.3vw;
+  }
+}
+@media (min-width: 768px) {
+  .article {
     width: 528px;
   }
 }
-
-form {
-  background-color: #FFFF;
+@media (min-width: 1280px) {
+  .article {
+    width: 528px;
+  }
 }
-
-.article-header {
-  padding: 0 5vw 0 5vw;
+.article__header {
   font-family: AvenirNextLTProBold;
   font-size: 7.5vw;
   line-height: 10vw;
@@ -872,130 +885,82 @@ form {
   margin: 2rem 0 2.5rem 0;
 }
 @media (min-width: 768px) {
-  .article-header {
-    padding: 0 3.1vw 0 3.1vw;
-  }
-}
-@media (min-width: 1280px) {
-  .article-header {
-    padding: 0 6.3vw 0 6.3vw;
-  }
-}
-@media (min-width: 768px) {
-  .article-header {
+  .article__header {
     font-size: 4.7vw;
     line-height: 5.7vw;
   }
 }
 @media (min-width: 1280px) {
-  .article-header {
+  .article__header {
     font-size: 2.8vw;
     line-height: 3.4vw;
   }
 }
 @media (min-width: 768px) {
-  .article-header {
+  .article__header {
     margin: 3rem 0rem 3.5rem 0;
     padding-right: 0;
   }
 }
 @media (min-width: 1280px) {
-  .article-header {
+  .article__header {
     margin: 3rem 0 3.5rem 0;
     padding-right: 0;
   }
 }
-
-.feed {
-  padding: 0 5vw 0 5vw;
-}
 @media (min-width: 768px) {
-  .feed {
-    padding: 0 3.1vw 0 3.1vw;
+  .article__wrap {
+    margin-left: 100px;
   }
 }
 @media (min-width: 1280px) {
-  .feed {
-    padding: 0 6.3vw 0 6.3vw;
+  .article__wrap {
+    margin-left: 196px;
   }
 }
-.feed .article-header {
-  font-family: AvenirNextLTProBold;
-  font-size: 7.5vw;
-  line-height: 10vw;
-  color: #FFFF;
-  color: #323232;
+.article__binding {
+  padding: 0 0 2rem;
+}
+.article .feed {
+  padding: 0 0 2rem;
+  display: flex;
+  justify-content: space-between;
   width: 100%;
-  display: inline;
-  margin: 2rem 0 2.5rem 1rem;
 }
-@media (min-width: 768px) {
-  .feed .article-header {
-    font-size: 4.7vw;
-    line-height: 5.7vw;
-  }
-}
-@media (min-width: 1280px) {
-  .feed .article-header {
-    font-size: 2.8vw;
-    line-height: 3.4vw;
-  }
-}
-@media (min-width: 768px) {
-  .feed .article-header {
-    padding: 2rem 2rem 3.5rem 2rem;
-  }
-}
-@media (min-width: 1280px) {
-  .feed .article-header {
-    padding: 3rem 1.5rem 3.5rem 5rem;
-  }
-}
-.feed__avi {
-  margin: 1.5rem 0 3rem 0;
+.article .feed__avi {
   height: 3rem;
   width: 3rem;
-  border-radius: 30px;
-  float: left;
-  position: absolute;
+  border-radius: 33.3px;
+  position: relative;
 }
-@media (min-width: 768px) {
-  .feed__avi {
-    margin: 1.5rem 0px 0px 100px;
-  }
-}
-@media (min-width: 1280px) {
-  .feed__avi {
-    margin: 1.5rem 0px 0px 196px;
-  }
-}
-.feed__boxes {
-  padding: 0 0 0 64px;
-  display: block;
-  float: left;
+.article .feed__boxes {
+  display: flex;
+  flex-direction: column;
+  width: calc(100% - 68px);
+  padding: 0 0px 0 0px;
   min-width: 70vw;
   max-width: 460px;
 }
 @media (min-width: 768px) {
-  .feed__boxes {
-    margin: 0 0 0 6.25rem;
+  .article .feed__boxes {
+    margin: 0 0 0 0;
     min-width: 224px;
     max-width: 460px;
   }
 }
 @media (min-width: 1280px) {
-  .feed__boxes {
-    margin: 0 0 0 12.25rem;
+  .article .feed__boxes {
+    margin: 0 0 0 0;
   }
 }
-.feed input:focus,
-.feed select:focus,
-.feed textarea:focus,
-.feed button:focus {
+.article .feed input:focus,
+.article .feed select:focus,
+.article .feed textarea:focus,
+.article .feed button:focus {
   outline: #323232;
   border-width: 0.2rem;
 }
-.feed__tag {
+.article .feed__tag {
   padding: 0 0 0 0;
   box-sizing: border-box;
   font-size: 3.8vw;
@@ -1004,22 +969,22 @@ form {
   color: #AFAFAF;
 }
 @media (min-width: 768px) {
-  .feed__tag {
+  .article .feed__tag {
     font-size: 1.6vw;
     line-height: 2.6vw;
     font-family: AvenirNextLTProDemi;
   }
 }
 @media (min-width: 1280px) {
-  .feed__tag {
+  .article .feed__tag {
     font-size: 0.9vw;
     line-height: 1.6vw;
   }
 }
-.feed__tag, .feed__alias-field, .feed__note-field {
+.article .feed__tag, .article .feed__alias-field, .article .feed__note-field {
   padding: 0 30vw 0 0;
 }
-.feed__alias-field {
+.article .feed__alias-field {
   box-sizing: border-box;
   font-size: 12px;
   color: #AFAFAF;
@@ -1032,7 +997,7 @@ form {
   padding: 3px 0 0 10px;
 }
 @media (min-width: 768px) {
-  .feed__alias-field {
+  .article .feed__alias-field {
     width: 28.75rem;
     min-height: 48px;
     max-height: 3.8vw;
@@ -1041,14 +1006,14 @@ form {
   }
 }
 @media (min-width: 1280px) {
-  .feed__alias-field {
+  .article .feed__alias-field {
     min-width: 460px;
     max-width: 460px;
     min-height: 48px;
     min-height: 3.8vw;
   }
 }
-.feed__note-field {
+.article .feed__note-field {
   box-sizing: border-box;
   border-radius: 0.25rem;
   min-width: 70vw;
@@ -1064,19 +1029,19 @@ form {
   padding: 10px 0 0 10px;
 }
 @media (min-width: 768px) {
-  .feed__note-field {
+  .article .feed__note-field {
     font-size: 1.82vw;
     line-height: 2.6vw;
   }
 }
 @media (min-width: 1280px) {
-  .feed__note-field {
+  .article .feed__note-field {
     font-size: 1.1vw;
     line-height: 1.6vw;
   }
 }
 @media (min-width: 768px) {
-  .feed__note-field {
+  .article .feed__note-field {
     min-width: 460px;
     max-width: 35.9vw;
     min-height: 96px;
@@ -1084,14 +1049,14 @@ form {
   }
 }
 @media (min-width: 1280px) {
-  .feed__note-field {
+  .article .feed__note-field {
     min-width: 460px;
     max-width: 460px;
     min-height: 96px;
     max-height: 7.5vw;
   }
 }
-.feed__button {
+.article .feed__button {
   background-color: #323232;
   font-family: AvenirNextLTProRegular;
   color: #323232;
@@ -1108,25 +1073,25 @@ form {
   margin: 1rem 0 1rem 0px;
 }
 @media (min-width: 768px) {
-  .feed__button {
+  .article .feed__button {
     font-size: 1.8vw;
     line-height: 1.9vw;
   }
 }
 @media (min-width: 1280px) {
-  .feed__button {
+  .article .feed__button {
     font-size: 1.1vw;
     line-height: 1.7vw;
   }
 }
-.feed__button:hover {
+.article .feed__button:hover {
   background: black;
 }
-.feed__button:focus {
+.article .feed__button:focus {
   outline: none;
 }
 @media (min-width: 768px) {
-  .feed__button {
+  .article .feed__button {
     min-width: unset;
     max-width: unset;
     min-height: unset;
@@ -1137,14 +1102,14 @@ form {
   }
 }
 @media (min-width: 1280px) {
-  .feed__button {
+  .article .feed__button {
     padding: 0;
     margin: 1rem 0 1rem 0;
   }
 }
 @media (min-width: 768px) {
-  .feed__button {
-    float: right;
+  .article .feed__button {
+    float: left;
   }
 }
 
@@ -1160,12 +1125,12 @@ form {
   .repository {
     min-width: 528px;
     max-width: 41.3vw;
-    margin: 0 124px 1.5rem 124px;
+    margin: 0 124px 1.5rem 0;
   }
 }
 @media (min-width: 1280px) {
   .repository {
-    margin: 40px 264px 0 264px;
+    margin: 40px 264px 0 0;
   }
 }
 .repository__empty-container {

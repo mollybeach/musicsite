@@ -89,23 +89,27 @@
             <!-------------------------------------------  COMMENTS SECTION ------------------------------------------------>
 
             <article class="article">
-                <div class="article-header">Join the Conversation</div>
+                <div class="article__header">Join the Conversation</div>
+                <div class="article__wrap">
+                    <div class="feed__binding">
+                        <form id="feed" class="feed" value="feed">
 
-                <form id="feed" class="feed" value="feed">
 
-                    <img src=" https://www.sbdems.org/wp-content/uploads/2020/08/facebook-female-profile-icon-67.png" class="feed__avi">
+                            <img src=" https://www.sbdems.org/wp-content/uploads/2020/08/facebook-female-profile-icon-67.png" class="feed__avi">
 
+                            <div class=feed__boxes>
+                                <label for="name" class="feed__tag">NAME</label>
 
-                    <div class=feed__boxes>
-                        <label for="name" data-domain="Enter your name" class="feed__tag">NAME</label>
-                        <input id="name" class="feed__alias-field" type="text" name="name" placeholder="Enter your name" />
-                        <label for="comment" data-domain="Add a new comment" class="feed__tag">COMMENT</label>
-                        <textarea id="comment" class="feed__note-field" type="text" comment="comment" placeholder="Add a new comment"></textarea>
-                        <button type="submit" class="feed__button"> COMMENT</button>
+                                <input id="name" class="feed__alias-field" type="text" name="name" placeholder="Enter your name" />
+                                <label for="comment" data-domain="Add a new comment" class="feed__tag">COMMENT</label>
+                                <textarea id="comment" class="feed__note-field" type="text" comment="comment" placeholder="Add a new comment"></textarea>
+                                <button type="submit" class="feed__button"> COMMENT</button>
+                            </div>
+
+                        </form>
                     </div>
-
-                </form>
-                <div class="repository" id="repository" name="repository"></div>
+                    <div class="repository" id="repository" name="repository"></div>
+                </div>
             </article>
 
             <!--------------------------------------------------------------FOOTER BANNER-------------------------------------------------------------->
