@@ -43,8 +43,11 @@
         list-style-type: none;
         @include tablet {
             align-items: stretch;
-            width: 30%; //13.5rem
+            width: 32.3vw; ///width of list 248px {input: 248, rem: "15.5", mobileVW: "77.5", tabletVW: "32.3", desktopVW: "19.4"}
             height: 100%;
+        }
+        @include desktop {
+            width: 28.7vw; ///368px {input: 368, rem: "23.0", mobileVW: "115.0", tabletVW: "47.9", desktopVW: "28.7"}
         }
     }
     &__item {
@@ -55,11 +58,12 @@
         padding: 0 0 3.8vw 0; //12px {input: 12, rem: "0.8", mobileVW: "3.8", tabletVW: "1.6", desktopVW: "0.9"}
         @include tablet {
             align-items: center;
+            width: 10.4vw; ///80px mobile{ input: 80, rem: "5.0", mobileVW: "25.0", tabletVW: "10.4", desktopVW: "6.3"}
             padding: 3.6vw 0; //28px{input: 28, rem: "1.8", mobileVW: "8.8", tabletVW: "3.6", desktopVW: "2.2"}
             margin: 0 7.3vw 0 0; //56px{input: 56, rem: "3.5", mobileVW: "17.5", tabletVW: "7.3", desktopVW: "4.4"}
         }
         @include desktop {
-            width: 5rem;
+            width: 6.3vw; ///80px mobile{ input: 80, rem: "5.0", mobileVW: "25.0", tabletVW: "10.4", desktopVW: "6.3"}
             padding: 2.2vw 0; //28px{input: 28, rem: "1.8", mobileVW: "8.8", tabletVW: "3.6", desktopVW: "2.2"}
             margin: 0 4.4vw 0 0; //56px{input: 56, rem: "3.5", mobileVW: "17.5", tabletVW: "7.3", desktopVW: "4.4"}
         }

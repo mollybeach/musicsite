@@ -205,8 +205,13 @@ table {
 @media (min-width: 768px) {
   .main-nav__list {
     align-items: stretch;
-    width: 30%;
+    width: 32.3vw;
     height: 100%;
+  }
+}
+@media (min-width: 1280px) {
+  .main-nav__list {
+    width: 28.7vw;
   }
 }
 .main-nav__item {
@@ -219,13 +224,14 @@ table {
 @media (min-width: 768px) {
   .main-nav__item {
     align-items: center;
+    width: 10.4vw;
     padding: 3.6vw 0;
     margin: 0 7.3vw 0 0;
   }
 }
 @media (min-width: 1280px) {
   .main-nav__item {
-    width: 5rem;
+    width: 6.3vw;
     padding: 2.2vw 0;
     margin: 0 4.4vw 0 0;
   }
