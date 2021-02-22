@@ -1,6 +1,7 @@
 /************************************MAIN NAV************************************/
 
 .main-nav {
+    @include width-100-percent-at-standard-padding;
     background-color: $black;
     display: flex;
     flex-direction: column;
@@ -8,31 +9,27 @@
     align-items: center;
     color: $silver;
     width: 100%;
-    min-height: 25.0vw; //80px mobile{ input: 80, rem: "5.0", mobileVW: "25.0", tabletVW: "10.4", desktopVW: "6.3"}
-    max-height: 10.4vw; //80px tablet{input: 80, rem: "5.0", mobileVW: "25.0", tabletVW: "10.4", desktopVW: "6.3"}
-    @include standard-padding-left-right;
+    min-height: 25.0vw; //80px mobile 25.0vw
+    max-height: 10.4vw; //80px tablet
     @include tablet {
         flex-direction: row;
-        min-height: 10.4vw; //80px tablet mobile{ input: 80, rem: "5.0", mobileVW: "25.0", tabletVW: "10.4", desktopVW: "6.3"}
-        max-height: 6.3vw; //80px tablet{input: 80, rem: "5.0", mobileVW: "25.0", tabletVW: "10.4", desktopVW: "6.3"}
+        min-height: 10.4vw; //80px tablet tablet
+        max-height: 6.3vw; //80px desktop
         justify-content: flex-start;
         align-items: center;
     }
     @include desktop {
-        min-height: 6.3vw; //80px mobile{ input: 80, rem: "5.0", mobileVW: "25.0", tabletVW: "10.4", desktopVW: "6.3"}
-        max-height: 6.3vw; //80px tablet{input: 80, rem: "5.0", mobileVW: "25.0", tabletVW: "10.4", desktopVW: "6.3"}
+        min-height: 6.3vw; //80px desktop
+        max-height: 6.3vw; //80px 
     }
     &__trademark {
-        margin: 5.0vw 0 0; //16px{input: 16, rem: "1.0", mobileVW: "5.0", tabletVW: "2.1", desktopVW: "1.3"} 
+        margin: 5.0vw 0 0; //16px
         @include logo-bandsite;
         @include tablet {
-            @include standard-padding-left-right;
-            margin: 2.1vw 7.3vw 2.1vw 0; //56px{input: 56, rem: "3.5", mobileVW: "17.5", tabletVW: "7.3", desktopVW: "4.4"}
-            //16px{input: 16, rem: "1.0", mobileVW: "5.0", tabletVW: "2.1", desktopVW: "1.3"}
+            margin: 2.1vw 7.3vw 2.1vw 0; //16px 56px 16px 0 
         }
         @include desktop {
-            margin: 1.3vw 4.4vw 1.3vw 0; //56px{input: 56, rem: "3.5", mobileVW: "17.5", tabletVW: "7.3", desktopVW: "4.4"}
-            //16px{input: 16, rem: "1.0", mobileVW: "5.0", tabletVW: "2.1", desktopVW: "1.3"}
+            margin: 1.3vw 4.4vw 1.3vw 0; //16px 56px 16px 0 
         }
     }
     &__list {
@@ -43,11 +40,11 @@
         list-style-type: none;
         @include tablet {
             align-items: stretch;
-            width: 32.3vw; ///width of list 248px {input: 248, rem: "15.5", mobileVW: "77.5", tabletVW: "32.3", desktopVW: "19.4"}
+            width: 32.3vw; // 248px width of list tablet
             height: 100%;
         }
         @include desktop {
-            width: 28.7vw; ///368px {input: 368, rem: "23.0", mobileVW: "115.0", tabletVW: "47.9", desktopVW: "28.7"}
+            width: 28.7vw; ///368px desktop
         }
     }
     &__item {
@@ -63,22 +60,22 @@
             margin: 0 7.3vw 0 0; //56px{input: 56, rem: "3.5", mobileVW: "17.5", tabletVW: "7.3", desktopVW: "4.4"}
         }
         @include desktop {
-            width: 6.3vw; ///80px mobile{ input: 80, rem: "5.0", mobileVW: "25.0", tabletVW: "10.4", desktopVW: "6.3"}
-            padding: 2.2vw 0; //28px{input: 28, rem: "1.8", mobileVW: "8.8", tabletVW: "3.6", desktopVW: "2.2"}
-            margin: 0 4.4vw 0 0; //56px{input: 56, rem: "3.5", mobileVW: "17.5", tabletVW: "7.3", desktopVW: "4.4"}
+            width: 6.3vw; ///80px mobile
+            padding: 2.2vw 0; //28px
+            margin: 0 4.4vw 0 0; //56px
         }
         &--active {
-            border-bottom: solid 1.6vw $white; //5px{input: 5, rem: "0.3", mobileVW: "1.6", tabletVW: "0.7", desktopVW: "0.4"}
+            border-bottom: solid 1.6vw $white; //5px
             @include tablet {
-                border-bottom: solid 0.7vw $white; //{input: 5, rem: "0.3", mobileVW: "1.6", tabletVW: "0.7", desktopVW: "0.4"}
+                border-bottom: solid 0.7vw $white; //5px
             }
             @include desktop {
-                border-bottom: solid 0.4vw $white; //{input: 5, rem: "0.3", mobileVW: "1.6", tabletVW: "0.7", desktopVW: "0.4"}
+                border-bottom: solid 0.4vw $white; //5px
             }
         }
     }
     &__link {
-        @include h4-list-contact-information-white-demi;
+        @include h4-list-contact-information-responsive-white-demi; //nav bar responsive
         text-decoration: none;
         color: $silver;
         text-decoration: none;
@@ -87,7 +84,7 @@
             letter-spacing: 1.0px;
         }
         &--active {
-            @include h4-list-contact-information-white-demi;
+            @include h4-list-contact-information-responsive-white-demi; //nav bar responsive
         }
     }
 }

@@ -3,9 +3,8 @@
 .footer {
     background-color: $black;
     @include standard-padding-left-right;
-    color: $white;
     &__binding {
-        padding: 3rem 0; //48px top bottom 3rem {input: 48, rem: "3.0", mobileVW: "15.0", tabletVW: "6.3", desktopVW: "3.8"}
+        padding: 3rem 0; //48px top bottom 3rem {
     }
     &__network-partition {
         align-items: center;
@@ -14,11 +13,10 @@
     &__banner {
         align-items: center;
         display: flex;
-        width: 100%;
-        //margin-bottom: 56px; //{input: 56, rem: "3.5", mobileVW: "17.5", tabletVW: "7.3", desktopVW: "4.4"}
         justify-content: space-between;
+        width: 100%;
         @include tablet {
-            margin: 0 0 56px 0; //{input: 56, rem: "3.5", mobileVW: "17.5", tabletVW: "7.3", desktopVW: "4.4"}
+            margin: 0 0 3.5rem 0; //56px
         }
     }
     &__banner-left {
@@ -27,42 +25,36 @@
         }
     }
     &__title {
-        margin: 1rem 0 0 0; //16px top 16px bottom
-        @include h1-main-header;
+        @include h1-main-header-responsive; //mobile looks better in vw
         @include tablet {
-            width: 52.1vw; //400px {input: 400, rem: "25.0", mobileVW: "125.0", tabletVW: "52.1", desktopVW: "31.3", desktopxlVW: "27.7" }
+            @include h1-main-header;
+            width: 52.1vw; //400px 
         }
         @include desktop {
-            width: 31.3vw; //400px {input: 400, rem: "25.0", mobileVW: "125.0", tabletVW: "52.1", desktopVW: "31.3", desktopxlVW: "27.7" }
+            width: 31.3vw; //400px 
         }
     }
     &__network-partition {
-        width: 80%; //256px {input: 256, rem: "16.0", mobileVW: "80.0", tabletVW: "33.3", desktopVW: "20.0"}
-        margin: 56px 0;
+        width: 79%; //256px 
+        margin: 2rem 0; //32px
         @include tablet {
             margin: 0;
-            width: 80%; //614px {input: 614, rem: "38.4", mobileVW: "191.9", tabletVW: "79.9", desktopVW: "48.0"}
-        }
-        @include desktop {
-            width: 80%; //1024px {input: 1024, rem: "64.0", mobileVW: "320.0", tabletVW: "133.3", desktopVW: "80.0"}
         }
     }
     &__network-icon {
-        min-width: 5.0vw; //16px {input: 16, rem: "1.0", mobileVW: "5.0", tabletVW: "2.1", desktopVW: "1.3"}
-        min-height: 5.0vw; //16px {input: 16, rem: "1.0", mobileVW: "5.0", tabletVW: "2.1", desktopVW: "1.3"}
-        max-width: 5.0vw; //16px {input: 16, rem: "1.0", mobileVW: "5.0", tabletVW: "2.1", desktopVW: "1.3"}
-        max-height: 5.0vw; //16px {input: 16, rem: "1.0", mobileVW: "5.0", tabletVW: "2.1", desktopVW: "1.3"}
+        width: 5.0vw; //16px {input: 16, rem: "1.0", mobileVW: "5.0", tabletVW: "2.1", desktopVW: "1.3"}
+        height: 5.0vw; //16px 
         @include tablet {
             min-width: 3.1vw; //24px  {input: 24, rem: "1.5", mobileVW: "7.5", tabletVW: "3.1", desktopVW: "1.9"}
-            min-height: 3.1vw; //24px  {input: 24, rem: "1.5", mobileVW: "7.5", tabletVW: "3.1", desktopVW: "1.9"}
-            max-width: 1.9vw; //24px  {input: 24, rem: "1.5", mobileVW: "7.5", tabletVW: "3.1", desktopVW: "1.9"}
-            max-height: 1.9vw; //24px  {input: 24, rem: "1.5", mobileVW: "7.5", tabletVW: "3.1", desktopVW: "1.9"}
+            min-height: 3.1vw; //24px  
+            max-width: 1.9vw; //24px 
+            max-height: 1.9vw; //24px 
         }
         @include desktop {
             min-width: 1.9vw; //24px  {input: 24, rem: "1.5", mobileVW: "7.5", tabletVW: "3.1", desktopVW: "1.9"}
-            min-height: 1.9vw; //24px  {input: 24, rem: "1.5", mobileVW: "7.5", tabletVW: "3.1", desktopVW: "1.9"}
-            max-width: 1.9vw; //24px  {input: 24, rem: "1.5", mobileVW: "7.5", tabletVW: "3.1", desktopVW: "1.9"}
-            max-height: 1.9vw; //24px  {input: 24, rem: "1.5", mobileVW: "7.5", tabletVW: "3.1", desktopVW: "1.9"}
+            min-height: 1.9vw; //24px  
+            max-width: 1.9vw; //24px  
+            max-height: 1.9vw; //24px  
         }
         &--margin {
             margin-left: 32px;
@@ -87,7 +79,7 @@
         }
     }
     &__partition-card {
-        margin-bottom: 16px; //16px {input: 16, rem: "1.0", mobileVW: "5.0", tabletVW: "2.1", desktopVW: "1.3"}
+        margin: 0 0 1rem 0; //16px
         width: 100%;
         @include tablet {
             width: 32.6vw; //{input: 250, rem: "15.6", mobileVW: "78.1", tabletVW: "32.6", desktopVW: "19.5"}
@@ -95,14 +87,14 @@
     }
     &__partition-top {
         @include h4-list-contact-information-white-bold;
-        margin-bottom: 16px; //16px {input: 16, rem: "1.0", mobileVW: "5.0", tabletVW: "2.1", desktopVW: "1.3"}
+        margin: 0 0 1rem 0; //16px 
         width: 100%;
         @include tablet {
             @include h3-subheader-white;
         }
     }
     &__partition-bottom {
-        margin-bottom: 16px; //16px {input: 16, rem: "1.0", mobileVW: "5.0", tabletVW: "2.1", desktopVW: "1.3"}
+        margin: 0 0 1rem 0; //16px 
         width: 100%;
         @include h4-list-contact-information-white;
     }
@@ -111,6 +103,6 @@
     }
     &__partition-base-last {
         @include h4-list-contact-information-white;
-        padding: 0 0 48px 0; //{input: 48, rem: "3.0", mobileVW: "15.0", tabletVW: "6.3", desktopVW: "3.8"}
+        padding: 0 0 3.0rem 0; //48px 
     }
 }

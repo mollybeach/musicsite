@@ -28,12 +28,14 @@
 .shows {
     @include standard-padding-left-right;
     margin: 1.5rem 0; //vertical 24px horizontal 16px
-    width: 100%;
+    width: 288px;
+    @include tablet {
+        width: 720px;
+    }
     @include desktop {
-        padding: 0 11.25rem; //{input: 184, rem: "11.5", mobileVW: "57.5", tabletVW: "24.0", desktopVW: "14.4"}
         justify-content: space-between;
         display: flex;
-        width: 1080px;
+        width: 1120px;
     }
     &__headline {
         @include h1-main-header-black;
@@ -42,41 +44,41 @@
             padding: 1.5rem 0; //vertical 24px
         }
         @include desktop {
-            padding: 3rem 2rem 0 0; //top 48px right 32px
+            padding: 3rem 3rem 0 0; //top 48px right 128px
         }
     }
     &__card {
         //padding: 0 0 1rem 0; //16px
         @include tablet {
-            min-width: 93.9vw; //720px {input: 720, rem: "45.0", mobileVW: "225.0", tabletVW: "93.8", desktopVW: "56.3"}
-            max-width: 58.2vw; //720px in desktop max-width  {input: 720, rem: "45.0", mobileVW: "225.0", tabletVW: "93.8", desktopVW: "56.3", desktopxlVW: "55.8" }
+            min-width: 93.9vw; //720px in tablet 
+            max-width: 58.2vw; //720px in desktop max-width 
             padding: 0 0 1rem 0; //16px
         }
         @include desktop {
-            min-width: 804px; //804px {input: 804, rem: "50.3", mobileVW: "251.3", tabletVW: "104.7", desktopVW: "62.8"}
-            max-width: 62.8vw; //804px max-width { input: 804, rem: "50.3", desktopxlVW: "55.8" }
-            padding: 3rem 0; //48px
+            min-width: 804px; //804px in desktop
+            max-width: 62.8vw; //804px in desktop
+            padding: 3rem 0; //48px 
         }
     }
     &__divider {
         @include divider;
     }
     &__date-partition {
-        width: 50.0vw; //160px mobile {input: 160, rem: "10.0", mobileVW: "50.0", tabletVW: "20.8", desktopVW: "12.5"}
+        width: 49.0%; //160px mobile 
         @include tablet {
-            width: 20.0vw; //{154px input: 154, rem: "9.6", mobileVW: "48.1", tabletVW: "20.1", desktopVW: "12.0"}
+            width: 22.0%; //154px 
         }
     }
     &__venue-partition {
-        width: 50.0vw; //{input: 110, rem: "6.9", mobileVW: "34.4", tabletVW: "14.3", desktopVW: "8.6"}
+        width: 49.0%; //160px
         @include tablet {
-            width: 20.0vw; //154px {input: 154, rem: "9.6", mobileVW: "48.1", tabletVW: "20.1", desktopVW: "12.0"}
+            width: 18%; //154px
         }
     }
     &__location-partition {
-        width: 90.0vw; //288px {input: 288, rem: "18.0", mobileVW: "90.0", tabletVW: "37.5", desktopVW: "22.5"}
+        width: 90.0%; //259px 
         @include tablet {
-            width: 20vw; //154px {input: 154, rem: "9.6", mobileVW: "48.1", tabletVW: "20.1", desktopVW: "12.0"}
+            width: 19%; //154px 
         }
     }
     &__instance {
@@ -92,7 +94,7 @@
             align-items: center;
         }
         @include desktop {
-            padding: 3.1vw 0 1.3vw 0; //40px top 16px bottom {input: 40, rem: "2.5", mobileVW: "12.5", tabletVW: "5.2", desktopVW: "3.1"}
+            padding: 3.1vw 0 1.3vw 0; //40px top 16px bottom 
         }
     }
     &__instance-header {
@@ -101,9 +103,9 @@
         @include tablet {
             display: none;
             &--hidden-header {
-                position: absolute;
-                top: 0;
                 display: block;
+                top: 0;
+                position: absolute;
             }
         }
     }
