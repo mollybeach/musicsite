@@ -166,6 +166,12 @@
     color: $white;
 }
 
+@mixin h4-paragraphs-and-comments-white-demi {
+    @include h4-paragraphs-and-comments-white;
+    font-family: AvenirNextLTProDemi;
+    color: $white;
+}
+
 
 /********************************h4-lists-and-contacts-information**************/
 

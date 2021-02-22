@@ -62,21 +62,21 @@
         @include divider;
     }
     &__date-partition {
-        width: 50%; //{input: 110, rem: "6.9", mobileVW: "34.4", tabletVW: "14.3", desktopVW: "8.6"}
+        width: 50.0vw; //160px mobile {input: 160, rem: "10.0", mobileVW: "50.0", tabletVW: "20.8", desktopVW: "12.5"}
         @include tablet {
-            width: 20%;
+            width: 20.0vw; //{154px input: 154, rem: "9.6", mobileVW: "48.1", tabletVW: "20.1", desktopVW: "12.0"}
         }
     }
     &__venue-partition {
-        width: 50%; //{input: 110, rem: "6.9", mobileVW: "34.4", tabletVW: "14.3", desktopVW: "8.6"}
+        width: 50.0vw; //{input: 110, rem: "6.9", mobileVW: "34.4", tabletVW: "14.3", desktopVW: "8.6"}
         @include tablet {
-            width: 20%;
+            width: 20.0vw; //154px {input: 154, rem: "9.6", mobileVW: "48.1", tabletVW: "20.1", desktopVW: "12.0"}
         }
     }
     &__location-partition {
-        width: 90%;
+        width: 90.0vw; //288px {input: 288, rem: "18.0", mobileVW: "90.0", tabletVW: "37.5", desktopVW: "22.5"}
         @include tablet {
-            width: 20%;
+            width: 20vw; //154px {input: 154, rem: "9.6", mobileVW: "48.1", tabletVW: "20.1", desktopVW: "12.0"}
         }
     }
     &__instance {
@@ -86,14 +86,17 @@
         display: flex;
         flex-direction: column;
         @include tablet {
-            padding: 1rem 0; //16px
+            padding: 5.2vw 0 2.1vw 0; //16px
             flex-direction: row;
             justify-content: space-between;
             align-items: center;
         }
+        @include desktop {
+            padding: 3.1vw 0 1.3vw 0; //40px top 16px bottom {input: 40, rem: "2.5", mobileVW: "12.5", tabletVW: "5.2", desktopVW: "3.1"}
+        }
     }
     &__instance-header {
-        padding-bottom: 1rem; //16px
+        padding: 0 0 1rem 0; //16px
         @include h5-labels;
         @include tablet {
             display: none;

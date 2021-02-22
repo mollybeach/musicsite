@@ -860,12 +860,26 @@ form {
 }
 
 .article-header {
+  padding: 0 5vw 0 5vw;
   font-family: AvenirNextLTProBold;
   font-size: 7.5vw;
   line-height: 10vw;
   color: #FFFF;
   color: #323232;
-  padding: 2rem 0 2.5rem 1rem;
+  min-width: 87.5vw;
+  max-width: 58.2vw;
+  display: inline-flex;
+  margin: 2rem 0 2.5rem 0;
+}
+@media (min-width: 768px) {
+  .article-header {
+    padding: 0 3.1vw 0 3.1vw;
+  }
+}
+@media (min-width: 1280px) {
+  .article-header {
+    padding: 0 6.3vw 0 6.3vw;
+  }
 }
 @media (min-width: 768px) {
   .article-header {
@@ -881,12 +895,14 @@ form {
 }
 @media (min-width: 768px) {
   .article-header {
-    padding: 2rem 2rem 3.5rem 2rem;
+    margin: 3rem 0rem 3.5rem 0;
+    padding-right: 0;
   }
 }
 @media (min-width: 1280px) {
   .article-header {
-    padding: 3rem 1.5rem 3.5rem 5rem;
+    margin: 3rem 0 3.5rem 0;
+    padding-right: 0;
   }
 }
 
@@ -901,6 +917,38 @@ form {
 @media (min-width: 1280px) {
   .feed {
     padding: 0 6.3vw 0 6.3vw;
+  }
+}
+.feed .article-header {
+  font-family: AvenirNextLTProBold;
+  font-size: 7.5vw;
+  line-height: 10vw;
+  color: #FFFF;
+  color: #323232;
+  width: 100%;
+  display: inline;
+  margin: 2rem 0 2.5rem 1rem;
+}
+@media (min-width: 768px) {
+  .feed .article-header {
+    font-size: 4.7vw;
+    line-height: 5.7vw;
+  }
+}
+@media (min-width: 1280px) {
+  .feed .article-header {
+    font-size: 2.8vw;
+    line-height: 3.4vw;
+  }
+}
+@media (min-width: 768px) {
+  .feed .article-header {
+    padding: 2rem 2rem 3.5rem 2rem;
+  }
+}
+@media (min-width: 1280px) {
+  .feed .article-header {
+    padding: 3rem 1.5rem 3.5rem 5rem;
   }
 }
 .feed__avi {
@@ -1044,16 +1092,38 @@ form {
   }
 }
 .feed__button {
-  float: right;
   background-color: #323232;
   font-family: AvenirNextLTProRegular;
+  color: #323232;
+  font-size: 4.1vw;
+  line-height: 5.6vw;
   color: #FFFF;
-  min-width: 90vw;
-  max-width: 90vw;
+  font-family: AvenirNextLTProDemi;
+  color: #FFFF;
+  min-width: 65.5vw;
+  max-width: 29.2vw;
   min-height: 10vw;
   max-height: 15vw;
   border-radius: 4px;
   margin: 1rem 0 1rem 0px;
+}
+@media (min-width: 768px) {
+  .feed__button {
+    font-size: 1.8vw;
+    line-height: 1.9vw;
+  }
+}
+@media (min-width: 1280px) {
+  .feed__button {
+    font-size: 1.1vw;
+    line-height: 1.7vw;
+  }
+}
+.feed__button:hover {
+  background: black;
+}
+.feed__button:focus {
+  outline: none;
 }
 @media (min-width: 768px) {
   .feed__button {
@@ -1072,12 +1142,18 @@ form {
     margin: 1rem 0 1rem 0;
   }
 }
+@media (min-width: 768px) {
+  .feed__button {
+    float: right;
+  }
+}
 
 /*****************************************CARD FEED SECTION***********************************/
 .repository {
   display: flex;
   flex-flow: row wrap;
   min-width: 87.5vw;
+  max-width: 36.5vw;
   margin: 0px 1rem 1.5rem 1rem;
 }
 @media (min-width: 768px) {
@@ -1093,6 +1169,7 @@ form {
   }
 }
 .repository__empty-container {
+  width: 100%;
   padding: 1.5rem 1rem 0;
 }
 @media (min-width: 768px) {
@@ -1133,7 +1210,20 @@ form {
 .repository__border {
   background: #E1E1E1;
   width: 100%;
-  height: 1px;
+  min-height: 0.3vw;
+  max-height: 0.13vw;
+}
+@media (min-width: 768px) {
+  .repository__border {
+    min-height: 0.13vw;
+    max-height: 0.1vw;
+  }
+}
+@media (min-width: 1280px) {
+  .repository__border {
+    min-height: 0.1vw;
+    max-height: 0.1vw;
+  }
 }
 .repository__avi {
   height: 3rem;

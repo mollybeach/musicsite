@@ -11,18 +11,37 @@ form {
 }
 
 .article-header {
+    @include standard-padding-left-right;
     @include h1-main-header-black;
-    padding: 2.0rem 0 2.5rem 1rem; //mobile: top 32px, 0, bottom 40px, 16px left
+    min-width: 87.5vw; //mobile version {input: 280, rem: "17.5", mobileVW: "87.5", tabletVW: "36.5", desktopVW: "21.9"}
+    max-width: 58.2vw; //448px{input: 447, rem: "27.9", mobileVW: "139.7", tabletVW: "58.2", desktopVW: "34.9"}
+    display: inline-flex;
+    margin: 2.0rem 0 2.5rem 0; //mobile: top 32px, 0, bottom 40px, 16px left
     @include tablet {
-        padding: 2.0rem 2rem 3.5rem 2rem; //top 48px 
+        // min-width: 58.2vw; //448px{input: 447, rem: "27.9", mobileVW: "139.7", tabletVW: "58.2", desktopVW: "34.9"}
+        margin: 3.0rem 0rem 3.5rem 0; //top 48px 
+        padding-right: 0;
     }
     @include desktop {
-        padding: 3.0rem 1.5rem 3.5rem 5rem; //top 48px left 80px 
+        margin: 3.0rem 0 3.5rem 0; //top 48px bottom 56px left 80px 
+        padding-right: 0;
     }
 }
 
 .feed {
     @include standard-padding-left-right;
+    .article-header {
+        @include h1-main-header-black;
+        width: 100%;
+        display: inline;
+        margin: 2.0rem 0 2.5rem 1rem; //mobile: top 32px, 0, bottom 40px, 16px left
+        @include tablet {
+            padding: 2.0rem 2rem 3.5rem 2rem; //top 48px 
+        }
+        @include desktop {
+            padding: 3.0rem 1.5rem 3.5rem 5rem; //top 48px left 80px 
+        }
+    }
     &__avi {
         margin: 1.5rem 0 3.0rem 0; //top 24px mobile 48px top
         height: 3rem; // just seems like 48px
@@ -32,6 +51,7 @@ form {
         position: absolute;
         @include tablet {
             margin: 1.5rem 0px 0px 100px; //top 24px mobile left 124px-24=100px
+            // width: 528px; //528px 33rem 528/768 68.75vw
         }
         @include desktop {
             margin: 1.5rem 0px 0px 196px; //top 24px desktop 264px-(size of avi 48px+20=68px)=196px margin between comment box and avi
@@ -122,8 +142,10 @@ form {
         padding: 10px 0 0 10px; //remove the 20vw padding for place holder and center it in the box check
     }
     &__button {
-        float: right;
-        @include button;
+        @include button-biography;
+        @include tablet {
+            float: right;
+        }
     }
 }
 
@@ -134,7 +156,7 @@ form {
     display: flex;
     flex-flow: row wrap;
     min-width: 87.5vw; //280px //
-    // max-width: 87.5vw; //mobile version 320px -16px-16px=288px  {input: 280, rem: "17.5", mobileVW: "87.5", tabletVW: "36.5", desktopVW: "21.9"}
+    max-width: 36.5vw; //mobile version 320px -16px-16px=288px  {input: 280, rem: "17.5", mobileVW: "87.5", tabletVW: "36.5", desktopVW: "21.9"}
     margin: 0px 1rem 1.5rem 1rem; //top 40px bottom 40px  mobile padding 16px left for mobile 
     @include tablet {
         min-width: 528px; //width is actually 528px {input: 528, rem: "33.0", mobileVW: "165.0", tabletVW: "68.8", desktopVW: "41.3"}
@@ -145,6 +167,7 @@ form {
         margin: 40px 264px 0 264px; //desktop does not say counted column 64*3+24*3= 264px left 264px right
     }
     &__empty-container {
+        width: 100%;
         padding: 1.5rem 1rem 0;
         @include tablet {
             max-width: 528px;

@@ -63,15 +63,60 @@
 @mixin divider {
     background: $mercury;
     width: 100%;
-    height: 1px;
+    min-height: 0.3vw; //{input: 1, rem: "0.1", mobileVW: "0.3", tabletVW: "0.13", desktopVW: "0.1"}
+    max-height: 0.13vw; //{input: 1, rem: "0.1", mobileVW: "0.3", tabletVW: "0.13", desktopVW: "0.1"}
+    @include tablet {
+        min-height: 0.13vw; //{input: 1, rem: "0.1", mobileVW: "0.3", tabletVW: "0.13", desktopVW: "0.1"}
+        max-height: 0.1vw; //{input: 1, rem: "0.1", mobileVW: "0.3", tabletVW: "0.13", desktopVW: "0.1"}
+    }
+    @include desktop {
+        min-height: 0.1vw; //{input: 1, rem: "0.1", mobileVW: "0.3", tabletVW: "0.13", desktopVW: "0.1"}
+        max-height: 0.1vw; //{input: 1, rem: "0.1", mobileVW: "0.3", tabletVW: "0.13", desktopVW: "0.1"}
+    }
 }
 
 @mixin button {
     background-color: $black;
     font-family: AvenirNextLTProRegular;
     color: $white;
+    &:hover {
+        background: black;
+    }
+    &:focus {
+        outline: none;
+    }
     min-width: 90vw; //288px /mobile needs to be 288px {input: 288, rem: "18.0", mobileVW: "90.0", tabletVW: "37.5", desktopVW: "22.5"}
     max-width: 90vw; //288px {input: 288, rem: "18.0", mobileVW: "90.0", tabletVW: "37.5", desktopVW: "22.5"}
+    min-height: 10.0vw; //32px {input: 32, rem: "2.0", mobileVW: "10.0", tabletVW: "4.2", desktopVW: "2.5"}
+    max-height: 15.0vw; //48px {input: 48, rem: "3.0", mobileVW: "15.0", tabletVW: "6.3", desktopVW: "3.8"}
+    border-radius: 4px; //round the corners of my button
+    margin: 1rem 0 1rem 0px; //16 bottom
+    @include tablet {
+        min-width: unset; //remove responsive button 
+        max-width: unset; //remove responsive button 
+        min-height: unset; //remove responsive button 
+        max-height: unset; //remove responsive button 
+        padding: 0;
+        width: 160px; //160px {input: 160, rem: "10.0", mobileVW: "50.0", tabletVW: "20.8", desktopVW: "12.5"}
+        height: 3.0rem; //48px {input: 48, rem: "3.0", mobileVW: "15.0", tabletVW: "6.3", desktopVW: "3.8"}
+    }
+    @include desktop {
+        padding: 0;
+        margin: 1rem 0 1rem 0; //16px top 16px check 
+    }
+}
+
+@mixin button-biography {
+    background-color: $black;
+    @include h4-paragraphs-and-comments-white-demi;
+    &:hover {
+        background: black;
+    }
+    &:focus {
+        outline: none;
+    }
+    min-width: 65.5vw; //it's acting up 224px {input: 224, rem: "14.0", mobileVW: "70.0", tabletVW: "29.2", desktopVW: "17.5"}
+    max-width: 29.2vw; // 224px {input: 224, rem: "14.0", mobileVW: "70.0", tabletVW: "29.2", desktopVW: "17.5"}
     min-height: 10.0vw; //32px {input: 32, rem: "2.0", mobileVW: "10.0", tabletVW: "4.2", desktopVW: "2.5"}
     max-height: 15.0vw; //48px {input: 48, rem: "3.0", mobileVW: "15.0", tabletVW: "6.3", desktopVW: "3.8"}
     border-radius: 4px; //round the corners of my button
