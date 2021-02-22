@@ -1,0 +1,42 @@
+/************************************PHOTO GALLERY SECTION************************************/
+
+.photo-gallery-section {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: $alabaster;
+    margin: 0 0 0 0; // 40px bottom 
+    @include standard-padding-left-right;
+    &__title {
+        @include h1-main-header-black;
+        margin: 2rem 0 1.5rem; //margin top 32px bottom 24px
+        @include tablet {
+            margin: 3rem 0 4rem; //margin top 48px bottom 64px
+        }
+    }
+    &__photo {
+        margin: 0px 0 1rem 0px; //16px {input: 16, rem: "1.0", mobileVW: "5.0", tabletVW: "2.1", desktopVW: "1.3"}
+        min-width: 90.0vw; //288px mobile make vw to be responsive at smaller size {input: 288, rem: "18.0", mobileVW: "90.0", tabletVW: "37.5", desktopVW: "22.5"}
+        min-height: 50.6vw; //162px for mobile {input: 162, rem: "10.1", mobileVW: "50.6", tabletVW: "21.1", desktopVW: "12.7"}
+        max-width: 90.0vw; //288px mobile {input: 288, rem: "18.0", mobileVW: "90.0", tabletVW: "37.5", desktopVW: "22.5"}
+        max-height: 50.6vw; //162px mobile {input: 162, rem: "10.1", mobileVW: "50.6", tabletVW: "21.1", desktopVW: "12.7"}
+        @include tablet {
+            min-width: 224px; //224px width of single photo of tablet {input: 224, rem: "14.0", mobileVW: "70.0", tabletVW: "29.2", desktopVW: "17.5"}
+            min-height: 126px; //126px {input: 126, rem: "7.9", mobileVW: "39.4", tabletVW: "16.4", desktopVW: "9.8"}
+            max-width: 29.16vw; //224px {input: 224, rem: "14.0", mobileVW: "70.0", tabletVW: "29.2", desktopVW: "17.5"}
+            max-height: 16.4vw; //162px tablet {input: 126, rem: "7.9", mobileVW: "39.4", tabletVW: "16.4", desktopVW: "9.8"}
+            margin: 0px 1.6vw 3.1vw 0px; //tablet bottom is 24px not specified for the in between the maximum before pushing photo to next line is 12px 24px{input: 24, rem: "1.5", mobileVW: "7.5", tabletVW: "3.1", desktopVW: "1.9"}{input: 12, rem: "0.8", mobileVW: "3.8", tabletVW: "1.6", desktopVW: "0.9"}
+        }
+        @include desktop {
+            min-width: 344px; //width of single photo of desktop {input: 344, rem: "21.5", mobileVW: "107.5", tabletVW: "44.8", desktopVW: "26.9"}
+            min-height: 193px; //width of single height of photo on dekstop {input: 193, rem: "12.1", mobileVW: "60.3", tabletVW: "25.1", desktopVW: "15.1"}
+            max-width: 26.9vw; //344 {input: 344, rem: "21.5", mobileVW: "107.5", tabletVW: "44.8", desktopVW: "26.9"}
+            max-height: 15.1vw; //193px{input: 193, rem: "12.1", mobileVW: "60.3", tabletVW: "25.1", desktopVW: "15.1"}
+            margin: 0px 1.9vw 1.9vw 0px; //24px {input: 24, rem: "1.5", mobileVW: "7.5", tabletVW: "3.1", desktopVW: "1.9"}
+        }
+        &--scale {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+}

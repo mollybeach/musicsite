@@ -1,0 +1,109 @@
+/************************************HERO CONTAINER****************************/
+
+.hero-container {
+    display: flex;
+    position: relative;
+    background-image: url("../assets/images/hero-image.jpg");
+    background-position: center;
+    background-size: cover;
+    background-color: rgba(50, 50, 50, 0.50);
+     ::before {
+        content: "";
+        position: absolute;
+        top: 0rem;
+        right: 0rem;
+        bottom: 0rem;
+        left: 0rem;
+        background-color: rgba(0, 0, 0, 0.25);
+        z-index: -1;
+    }
+    min-height: 147.5vw; //472px {input: 472, rem: "29.5", mobileVW: "147.5", tabletVW: "61.5", desktopVW: "36.9"}
+    max-height: 87.2vw; //670px tablets viewwidth {input: 670, rem: "41.9", mobileVW: "209.4", tabletVW: "87.2", desktopVW: "52.3"}
+    &__mobile-size-biography {
+        min-height: 183px; //183px {input: 183, rem: "11.4", mobileVW: "57.2", tabletVW: "23.8", desktopVW: "14.3"}
+        max-height: 57.2vw; //183px tablets viewwidth  {input: 183, rem: "11.4", mobileVW: "57.2", tabletVW: "23.8", desktopVW: "14.3"}
+    }
+    @include tablet {
+        min-height: 670px; //670px
+        max-height: 52.3vw; //670px desktops viewwidth {input: 670, rem: "41.9", mobileVW: "209.4", tabletVW: "87.2", desktopVW: "52.3"}
+    }
+    @include desktop {
+        margin: 0 0 3rem 0; //48px
+    }
+    &--scale {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    &__box {
+        @include standard-padding-left-right;
+        color: $white;
+        margin: 4.0rem 0; //64px {input: 64, rem: "4.0", mobileVW: "20.0", tabletVW: "8.3", desktopVW: "5.0"}
+        &--mobile-box-size-shows {
+            min-width: 288px; //288px  320-(16*2)=288px
+            max-width: 90.0vw; //288px { input: 288, rem: "18.0", mobileVW: "90.0", tabletVW: "37.5", desktopVW: "22.5" }
+        }
+        &--mobile-box-size-biography {
+            min-width: 224px; //224px  320-(16*2)=288px {input: 224, rem: "14.0", mobileVW: "70.0", tabletVW: "29.2", desktopVW: "17.5"}
+            max-width: 70.0vw; //224px {input: 224, rem: "14.0", mobileVW: "70.0", tabletVW: "29.2", desktopVW: "17.5"}
+        }
+        z-index: 1;
+        @include tablet {
+            margin: 6.0rem 0; //96px {input: 96, rem: "6.0", mobileVW: "30.0", tabletVW: "12.5", desktopVW: "7.5"}
+            min-width: 564px; //564px 768-((24*3+100+~32)=204)=564px 
+            max-width: 73.4vw; //564px {input: 564, rem: "35.3", mobileVW: "176.3", tabletVW: "73.4", desktopVW: "44.1"}}
+        }
+        @include desktop {
+            margin: 10.0rem 0; //160px {input: 160, rem: "10.0", mobileVW: "50.0", tabletVW: "20.8", desktopVW: "12.5"}
+            min-width: 568px; //552px (24*6+68*6+~16)=568px
+            max-width: 43.1vw; //552px {input: 552, rem: "34.5", mobileVW: "172.5", tabletVW: "71.9", desktopVW: "43.1"}
+        }
+    }
+    &__title {
+        @include h2-header;
+        color: $white;
+        margin: 0 0 0.0rem 0; //looks about 32px check  { input: 32, rem: "2.0", mobileVW: "10.0", tabletVW: "4.2", desktopVW: "2.5" }
+        @include tablet {
+            margin: 0 0 0.0rem 0; //48px desktop { input: 48, rem: "3.0", mobileVW: "15.0", tabletVW: "6.3", desktopVW: "3.8" }
+        }
+    }
+    &__text {
+        z-index: 1;
+        &--mobile-font-size-shows {
+            @include h1-main-header-tablet-desktop; //based on the mockup this is the ideal size for the mobile hero heading looks perfect
+        }
+        &--mobile-font-size-biography {
+            @include h1-main-header;
+        }
+        @include tablet {
+            @include h1-hero-heading;
+        }
+    }
+    &__soundcloud {
+        @include standard-padding-left-right;
+        position: absolute;
+        z-index: 1;
+        align-self: flex-end; //push soundcloud to bottom of container
+        margin: 0 0 20.0vw 0; //64px bottom match top input: 64, rem: "4.0", mobileVW: "20.0", tabletVW: "8.3", desktopVW: "5.0"}
+        min-width: 288px; //288px mockup column grid
+        min-height: 96px; //looked about right for the mockup
+        max-width: 90.0vw; // 288px { input: 288, rem: "18.0", mobileVW: "90.0", tabletVW: "37.5", desktopVW: "22.5" }
+        max-height: 30.0vw; //96px {input: 96, rem: "6.0", mobileVW: "30.0", tabletVW: "12.5", desktopVW: "7.5" }
+        @include tablet {
+            margin: 0 0 6.3vw 0; //48px match  {input: 48, rem: "3.0", mobileVW: "15.0", tabletVW: "6.3", desktopVW: "3.8"}
+            min-width: 436px; //436px {input: 436, rem: "27.3", mobileVW: "136.3", tabletVW: "56.8", desktopVW: "34.1"}
+            min-height: 146px; //146px {input: 146, rem: "9.1", mobileVW: "45.6", tabletVW: "19.0", desktopVW: "11.4"}
+            max-width: 56.8vw; //436px {input: 436, rem: "27.3", mobileVW: "136.3", tabletVW: "56.8", desktopVW: "34.1"}
+            max-height: 19.0vw; //146px {input: 146, rem: "9.1", mobileVW: "45.6", tabletVW: "19.0", desktopVW: "11.4"}
+        }
+        @include desktop {
+            padding: 0; //remove standard padding mixin
+            margin: 0 0 14.7rem 0; //274px {input: 274, rem: "17.1", mobileVW: "85.6", tabletVW: "35.7", desktopVW: "21.4"}
+            position: relative;
+            min-width: 436px; //436px {input: 436, rem: "27.3", mobileVW: "136.3", tabletVW: "56.8", desktopVW: "34.1"}
+            min-height: 146px; //146px {input: 146, rem: "9.1", mobileVW: "45.6", tabletVW: "19.0", desktopVW: "11.4"}
+            max-width: 34.1vw; //436px {input: 436, rem: "27.3", mobileVW: "136.3", tabletVW: "56.8", desktopVW: "34.1"}
+            max-height: 11.4vw; //146px {input: 146, rem: "9.1", mobileVW: "45.6", tabletVW: "19.0", desktopVW: "11.4"}
+        }
+    }
+}

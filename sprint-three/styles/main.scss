@@ -1,0 +1,44 @@
+    /*********************************IMPORTS********************************************/
+    
+    // Imports
+    //main import
+    @import "./partials/_reset.scss";
+    @import "./partials/_variables.scss";
+    @import "./partials/_breakpoints.scss";
+    @import "./partials/_typography.scss";
+    @import "./partials/_variables.scss";
+    @import "./partials/_mixins.scss";
+    //section imports
+    @import "./partials/_navigation.scss";
+    @import "./partials/_hero.scss";
+    @import "./partials/_about.scss";
+    @import "./partials/_photogallery.scss";
+    @import "./partials/_form.scss";
+    @import "./partials/_footer.scss";
+    *,
+    *::before,
+    *::after {
+        box-sizing: inherit;
+        margin: 0px;
+    }
+    /*********************************************HEADINGS**h1-h6**************************************/
+    /*H1 - Header*/
+    /*********************************************END OF HEADINGS**h1-h6**************************************/
+    /************************************HERO CONTAINER************************************/
+    /* Imports
+    
+    //main import
+    @use "./partials/_reset.scss" as *;
+    @use "./partials/_variables.scss" as *;
+    @use "./partials/_breakpoints.scss" as *;
+    @use "./partials/_typography.scss" as *;
+    @use "./partials/_variables.scss" as *;
+    @use "./partials/_mixins.scss" as *;
+    //section imports
+    @use "./partials/_navigation.scss" as *;
+    @use "./partials/_hero.scss" as *;
+    @use "./partials/_about.scss" as *;
+    @use "./partials/_photogallery.scss" as *;
+    @use "./partials/_form.scss" as *;
+    @use "./partials/_footer.scss" as *;
+     */

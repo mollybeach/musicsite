@@ -1,0 +1,135 @@
+/*********************************IMPORTS********************************************/
+
+//Imports 
+//main import
+@import "./partials/_reset.scss";
+@import "./partials/_variables.scss";
+@import "./partials/_breakpoints.scss";
+@import "./partials/_typography.scss";
+@import "./partials/_variables.scss";
+@import "./partials/_mixins.scss";
+//section imports
+@import "./partials/_navigation.scss";
+@import "./partials/_hero.scss";
+@import "./partials/_footer.scss";
+
+/*********************************************END OF HEADINGS**h1-h6**************************************/
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+    margin: 0px;
+}
+
+
+/************************************SHOWS SECTION************************************/
+
+.shows {
+    @include standard-padding-left-right;
+    margin: 1.5rem 0; //vertical 24px horizontal 16px
+    width: 100%;
+    @include desktop {
+        padding: 0 11.25rem; //{input: 184, rem: "11.5", mobileVW: "57.5", tabletVW: "24.0", desktopVW: "14.4"}
+        justify-content: space-between;
+        display: flex;
+        width: 1080px;
+    }
+    &__headline {
+        @include h1-main-header-black;
+        @include tablet {
+            @include h1-main-header-black;
+            padding: 1.5rem 0; //vertical 24px
+        }
+        @include desktop {
+            padding: 3rem 2rem 0 0; //top 48px right 32px
+        }
+    }
+    &__card {
+        //padding: 0 0 1rem 0; //16px
+        @include tablet {
+            min-width: 93.9vw; //720px {input: 720, rem: "45.0", mobileVW: "225.0", tabletVW: "93.8", desktopVW: "56.3"}
+            max-width: 58.2vw; //720px in desktop max-width  {input: 720, rem: "45.0", mobileVW: "225.0", tabletVW: "93.8", desktopVW: "56.3", desktopxlVW: "55.8" }
+            padding: 0 0 1rem 0; //16px
+        }
+        @include desktop {
+            min-width: 804px; //804px {input: 804, rem: "50.3", mobileVW: "251.3", tabletVW: "104.7", desktopVW: "62.8"}
+            max-width: 62.8vw; //804px max-width { input: 804, rem: "50.3", desktopxlVW: "55.8" }
+            padding: 3rem 0; //48px
+        }
+    }
+    &__divider {
+        @include divider;
+    }
+    &__date-partition {
+        width: 50%; //{input: 110, rem: "6.9", mobileVW: "34.4", tabletVW: "14.3", desktopVW: "8.6"}
+        @include tablet {
+            width: 20%;
+        }
+    }
+    &__venue-partition {
+        width: 50%; //{input: 110, rem: "6.9", mobileVW: "34.4", tabletVW: "14.3", desktopVW: "8.6"}
+        @include tablet {
+            width: 20%;
+        }
+    }
+    &__location-partition {
+        width: 90%;
+        @include tablet {
+            width: 20%;
+        }
+    }
+    &__instance {
+        @include h4-paragraphs-and-comments;
+        position: relative;
+        padding: 2.5rem 0 0;
+        display: flex;
+        flex-direction: column;
+        @include tablet {
+            padding: 1rem 0; //16px
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+        }
+    }
+    &__instance-header {
+        padding-bottom: 1rem; //16px
+        @include h5-labels;
+        @include tablet {
+            display: none;
+            &--hidden-header {
+                position: absolute;
+                top: 0;
+                display: block;
+            }
+        }
+    }
+    &__instance-figure {
+        padding-bottom: 1.5rem;
+        @include h4-paragraphs-and-comments;
+        &--bold {
+            @include h4-paragraphs-and-comments-bold;
+        }
+        @include tablet {
+            padding-bottom: 0;
+        }
+    }
+    &__button {
+        @include button;
+    }
+}
+
+
+/*Imports 
+//main import
+@use "./partials/_reset.scss" as *;
+@use "./partials/_variables.scss" as *;
+@use "./partials/_breakpoints.scss" as *;
+@use "./partials/_typography.scss" as *;
+@use "./partials/_variables.scss" as *;
+@use "./partials/_mixins.scss" as *;
+//section imports
+@use "./partials/_navigation.scss" as *;
+@use "./partials/_hero.scss" as *;
+@use "./partials/_footer.scss" as *;
+*/
