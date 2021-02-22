@@ -85,8 +85,8 @@
         z-index: 1;
         align-self: flex-end; //push soundcloud to bottom of container
         margin: 0 0 20.0vw 0; //64px bottom match top input: 64, rem: "4.0", mobileVW: "20.0", tabletVW: "8.3", desktopVW: "5.0"}
-        min-width: 288px; //288px mockup column grid
-        min-height: 96px; //looked about right for the mockup
+        min-width: 90.0vw; // 288px { input: 288, rem: "18.0", mobileVW: "90.0", tabletVW: "37.5", desktopVW: "22.5" }
+        min-height: 30.0vw; //96px {input: 96, rem: "6.0", mobileVW: "30.0", tabletVW: "12.5", desktopVW: "7.5" }
         max-width: 90.0vw; // 288px { input: 288, rem: "18.0", mobileVW: "90.0", tabletVW: "37.5", desktopVW: "22.5" }
         max-height: 30.0vw; //96px {input: 96, rem: "6.0", mobileVW: "30.0", tabletVW: "12.5", desktopVW: "7.5" }
         @include tablet {

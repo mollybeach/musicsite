@@ -19,7 +19,7 @@
 }
 
 
-/*********************************************HEADINGS**h1-h6**************************************/
+/*********************************RESPONSIVE-HEADINGS**h1-h6**************************************/
 
 
 /*************************************H1 HERO HEADING************************************/
@@ -100,6 +100,11 @@
     }
 }
 
+@mixin h2-header-white {
+    @include h2-header;
+    color: $white;
+}
+
 
 /*******************************H3 - Subheader for Tablet and Desktop*************/
 
@@ -119,18 +124,13 @@
 }
 
 @mixin h3-subheader-white {
-    font-size: 5.0vw; //16px {input: 16, rem: "1.0", mobileVW: "5.0", tabletVW: "2.1", desktopVW: "1.3"}
-    line-height: 7.5vw; // 24px{input: 24, rem: "1.5", mobileVW: "7.5", tabletVW: "3.1", desktopVW: "1.9"}
-    font-family: AvenirNextLTProDemi;
+    @include h3-subheader;
     color: $white;
-    @include tablet {
-        font-size: 2.1vw; //16px {input: 16, rem: "1.0", mobileVW: "5.0", tabletVW: "2.1", desktopVW: "1.3"}
-        line-height: 3.1vw; // 24px{input: 24, rem: "1.5", mobileVW: "7.5", tabletVW: "3.1", desktopVW: "1.9"}
-    }
-    @include desktop {
-        font-size: 1.3vw; //16px {input: 16, rem: "1.0", mobileVW: "5.0", tabletVW: "2.1", desktopVW: "1.3"}
-        line-height: 1.9vw; // 24px{input: 24, rem: "1.5", mobileVW: "7.5", tabletVW: "3.1", desktopVW: "1.9"}
-    }
+}
+
+@mixin h3-subheader-bold {
+    @include h3-subheader;
+    font-family: AvenirNextLTProBold;
 }
 
 
@@ -184,8 +184,24 @@
     }
 }
 
+@mixin h4-list-contact-information-bold {
+    @include h4-list-contact-information;
+    font-family: AvenirNextLTProBold;
+}
+
+@mixin h4-list-contact-information-demi {
+    @include h4-list-contact-information;
+    font-family: AvenirNextLTProDemi;
+}
+
 @mixin h4-list-contact-information-white {
     @include h4-list-contact-information;
+    color: $white;
+}
+
+@mixin h4-list-contact-information-white-demi {
+    @include h4-list-contact-information;
+    font-family: AvenirNextLTProDemi;
     color: $white;
 }
 

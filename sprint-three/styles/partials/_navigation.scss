@@ -8,10 +8,8 @@
     align-items: center;
     color: $silver;
     width: 100%;
-    //height: 90px;
     min-height: 25.0vw; //80px mobile{ input: 80, rem: "5.0", mobileVW: "25.0", tabletVW: "10.4", desktopVW: "6.3"}
     max-height: 10.4vw; //80px tablet{input: 80, rem: "5.0", mobileVW: "25.0", tabletVW: "10.4", desktopVW: "6.3"}
-    width: 100%;
     @include standard-padding-left-right;
     @include tablet {
         flex-direction: row;
@@ -19,26 +17,22 @@
         max-height: 6.3vw; //80px tablet{input: 80, rem: "5.0", mobileVW: "25.0", tabletVW: "10.4", desktopVW: "6.3"}
         justify-content: flex-start;
         align-items: center;
-        padding: 0 1.5rem; //{input: 24, rem: "1.5", mobileVW: "7.5", tabletVW: "3.1", desktopVW: "1.9"}
     }
     @include desktop {
-        //padding: none; //{input: 24, rem: "1.5", mobileVW: "7.5", tabletVW: "3.1", desktopVW: "1.9"}
         min-height: 6.3vw; //80px mobile{ input: 80, rem: "5.0", mobileVW: "25.0", tabletVW: "10.4", desktopVW: "6.3"}
         max-height: 6.3vw; //80px tablet{input: 80, rem: "5.0", mobileVW: "25.0", tabletVW: "10.4", desktopVW: "6.3"}
     }
     &__trademark {
-        // padding: 16px 0 0;
-        padding: 5.0vw 0 0; //16px{input: 16, rem: "1.0", mobileVW: "5.0", tabletVW: "2.1", desktopVW: "1.3"}
+        margin: 5.0vw 0 0; //16px{input: 16, rem: "1.0", mobileVW: "5.0", tabletVW: "2.1", desktopVW: "1.3"} 
         @include logo-bandsite;
-        // color: $white;
         @include tablet {
-            padding: 2.1vw 0; //16px{input: 16, rem: "1.0", mobileVW: "5.0", tabletVW: "2.1", desktopVW: "1.3"}
-            //padding: 0 3rem 0 0rem;
-            margin-right: 56px;
+            @include standard-padding-left-right;
+            margin: 2.1vw 7.3vw 2.1vw 0; //56px{input: 56, rem: "3.5", mobileVW: "17.5", tabletVW: "7.3", desktopVW: "4.4"}
+            //16px{input: 16, rem: "1.0", mobileVW: "5.0", tabletVW: "2.1", desktopVW: "1.3"}
         }
         @include desktop {
-            //padding: 0 3.5rem 0 0rem;
-            padding: 1.3vw 0; //16px{input: 16, rem: "1.0", mobileVW: "5.0", tabletVW: "2.1", desktopVW: "1.3"}
+            margin: 1.3vw 4.4vw 1.3vw 0; //56px{input: 56, rem: "3.5", mobileVW: "17.5", tabletVW: "7.3", desktopVW: "4.4"}
+            //16px{input: 16, rem: "1.0", mobileVW: "5.0", tabletVW: "2.1", desktopVW: "1.3"}
         }
     }
     &__list {
@@ -58,27 +52,29 @@
         display: flex;
         justify-content: center;
         width: 50%;
-        // padding-bottom: 16px;
         padding: 0 0 3.8vw 0; //12px {input: 12, rem: "0.8", mobileVW: "3.8", tabletVW: "1.6", desktopVW: "0.9"}
         @include tablet {
             align-items: center;
-            padding-bottom: 0;
-            //width: 5rem;
-            // padding: 2rem 3rem 0 3.5rem;
             padding: 3.6vw 0; //28px{input: 28, rem: "1.8", mobileVW: "8.8", tabletVW: "3.6", desktopVW: "2.2"}
+            margin: 0 7.3vw 0 0; //56px{input: 56, rem: "3.5", mobileVW: "17.5", tabletVW: "7.3", desktopVW: "4.4"}
         }
         @include desktop {
             width: 5rem;
-            //  padding: 2rem 3.5rem 0 3.5rem;
             padding: 2.2vw 0; //28px{input: 28, rem: "1.8", mobileVW: "8.8", tabletVW: "3.6", desktopVW: "2.2"}
-            margin: 0 56px 0 0;
+            margin: 0 4.4vw 0 0; //56px{input: 56, rem: "3.5", mobileVW: "17.5", tabletVW: "7.3", desktopVW: "4.4"}
         }
         &--active {
-            border-bottom: solid 5px $white;
+            border-bottom: solid 1.6vw $white; //5px{input: 5, rem: "0.3", mobileVW: "1.6", tabletVW: "0.7", desktopVW: "0.4"}
+            @include tablet {
+                border-bottom: solid 0.7vw $white; //{input: 5, rem: "0.3", mobileVW: "1.6", tabletVW: "0.7", desktopVW: "0.4"}
+            }
+            @include desktop {
+                border-bottom: solid 0.4vw $white; //{input: 5, rem: "0.3", mobileVW: "1.6", tabletVW: "0.7", desktopVW: "0.4"}
+            }
         }
     }
     &__link {
-        @include h4-list-contact-information-white-bold;
+        @include h4-list-contact-information-white-demi;
         text-decoration: none;
         color: $silver;
         text-decoration: none;
@@ -87,7 +83,7 @@
             letter-spacing: 1.0px;
         }
         &--active {
-            @include h4-list-contact-information-white-bold;
+            @include h4-list-contact-information-white-demi;
         }
     }
 }

@@ -79,7 +79,7 @@ table {
   src: url("../assets/fonts/AvenirNextLTPro-Bold.woff") format("woff"), url("../assets/fonts/AvenirNextLTPro-Bold.woff2") format("woff2");
   font-weight: 700;
 }
-/*********************************************HEADINGS**h1-h6**************************************/
+/*********************************RESPONSIVE-HEADINGS**h1-h6**************************************/
 /*************************************H1 HERO HEADING************************************/
 /*****************************************H1-Main-heading****************************/
 /*********************H2 - Header subheader for mobile*********************/
@@ -102,17 +102,16 @@ table {
   width: 100%;
   min-height: 25vw;
   max-height: 10.4vw;
-  width: 100%;
-  padding: 0 1rem 0 1rem;
+  padding: 0 5vw 0 5vw;
 }
 @media (min-width: 768px) {
   .main-nav {
-    padding: 0 1.5rem 0 1.5rem;
+    padding: 0 3.1vw 0 3.1vw;
   }
 }
 @media (min-width: 1280px) {
   .main-nav {
-    padding: 0 5rem 0 5rem;
+    padding: 0 6.3vw 0 6.3vw;
   }
 }
 @media (min-width: 768px) {
@@ -122,7 +121,6 @@ table {
     max-height: 6.3vw;
     justify-content: flex-start;
     align-items: center;
-    padding: 0 1.5rem;
   }
 }
 @media (min-width: 1280px) {
@@ -132,7 +130,7 @@ table {
   }
 }
 .main-nav__trademark {
-  padding: 5vw 0 0;
+  margin: 5vw 0 0;
   min-width: 37.5vw;
   min-height: 7.5vw;
   max-width: 15.6vw;
@@ -178,13 +176,23 @@ table {
 }
 @media (min-width: 768px) {
   .main-nav__trademark {
-    padding: 2.1vw 0;
-    margin-right: 56px;
+    padding: 0 5vw 0 5vw;
+    margin: 2.1vw 7.3vw 2.1vw 0;
+  }
+}
+@media (min-width: 768px) and (min-width: 768px) {
+  .main-nav__trademark {
+    padding: 0 3.1vw 0 3.1vw;
+  }
+}
+@media (min-width: 768px) and (min-width: 1280px) {
+  .main-nav__trademark {
+    padding: 0 6.3vw 0 6.3vw;
   }
 }
 @media (min-width: 1280px) {
   .main-nav__trademark {
-    padding: 1.3vw 0;
+    margin: 1.3vw 4.4vw 1.3vw 0;
   }
 }
 .main-nav__list {
@@ -211,26 +219,36 @@ table {
 @media (min-width: 768px) {
   .main-nav__item {
     align-items: center;
-    padding-bottom: 0;
     padding: 3.6vw 0;
+    margin: 0 7.3vw 0 0;
   }
 }
 @media (min-width: 1280px) {
   .main-nav__item {
     width: 5rem;
     padding: 2.2vw 0;
-    margin: 0 56px 0 0;
+    margin: 0 4.4vw 0 0;
   }
 }
 .main-nav__item--active {
-  border-bottom: solid 5px #FFFF;
+  border-bottom: solid 1.6vw #FFFF;
+}
+@media (min-width: 768px) {
+  .main-nav__item--active {
+    border-bottom: solid 0.7vw #FFFF;
+  }
+}
+@media (min-width: 1280px) {
+  .main-nav__item--active {
+    border-bottom: solid 0.4vw #FFFF;
+  }
 }
 .main-nav__link {
   color: #323232;
   font-family: AvenirNextLTProRegular;
   font-size: 4.1vw;
   line-height: 5.6vw;
-  font-family: AvenirNextLTProBold;
+  font-family: AvenirNextLTProDemi;
   color: #FFFF;
   text-decoration: none;
   color: #AFAFAF;
@@ -257,7 +275,7 @@ table {
   font-family: AvenirNextLTProRegular;
   font-size: 4.1vw;
   line-height: 5.6vw;
-  font-family: AvenirNextLTProBold;
+  font-family: AvenirNextLTProDemi;
   color: #FFFF;
 }
 @media (min-width: 768px) {
@@ -316,19 +334,19 @@ table {
      object-fit: cover;
 }
 .hero-container__box {
-  padding: 0 1rem 0 1rem;
+  padding: 0 5vw 0 5vw;
   color: #FFFF;
   margin: 4rem 0;
   z-index: 1;
 }
 @media (min-width: 768px) {
   .hero-container__box {
-    padding: 0 1.5rem 0 1.5rem;
+    padding: 0 3.1vw 0 3.1vw;
   }
 }
 @media (min-width: 1280px) {
   .hero-container__box {
-    padding: 0 5rem 0 5rem;
+    padding: 0 6.3vw 0 6.3vw;
   }
 }
 .hero-container__box--mobile-box-size-shows {
@@ -438,24 +456,24 @@ table {
   }
 }
 .hero-container__soundcloud {
-  padding: 0 1rem 0 1rem;
+  padding: 0 5vw 0 5vw;
   position: absolute;
   z-index: 1;
   align-self: flex-end;
   margin: 0 0 20vw 0;
-  min-width: 288px;
-  min-height: 96px;
+  min-width: 90vw;
+  min-height: 30vw;
   max-width: 90vw;
   max-height: 30vw;
 }
 @media (min-width: 768px) {
   .hero-container__soundcloud {
-    padding: 0 1.5rem 0 1.5rem;
+    padding: 0 3.1vw 0 3.1vw;
   }
 }
 @media (min-width: 1280px) {
   .hero-container__soundcloud {
-    padding: 0 5rem 0 5rem;
+    padding: 0 6.3vw 0 6.3vw;
   }
 }
 @media (min-width: 768px) {
@@ -754,16 +772,16 @@ table {
   flex-wrap: wrap;
   background-color: #FAFAFA;
   margin: 0 0 0 0;
-  padding: 0 1rem 0 1rem;
+  padding: 0 5vw 0 5vw;
 }
 @media (min-width: 768px) {
   .photo-gallery-section {
-    padding: 0 1.5rem 0 1.5rem;
+    padding: 0 3.1vw 0 3.1vw;
   }
 }
 @media (min-width: 1280px) {
   .photo-gallery-section {
-    padding: 0 5rem 0 5rem;
+    padding: 0 6.3vw 0 6.3vw;
   }
 }
 .photo-gallery-section__title {
@@ -866,16 +884,16 @@ form {
 }
 
 .feed {
-  padding: 0 1rem 0 1rem;
+  padding: 0 5vw 0 5vw;
 }
 @media (min-width: 768px) {
   .feed {
-    padding: 0 1.5rem 0 1.5rem;
+    padding: 0 3.1vw 0 3.1vw;
   }
 }
 @media (min-width: 1280px) {
   .feed {
-    padding: 0 5rem 0 5rem;
+    padding: 0 6.3vw 0 6.3vw;
   }
 }
 .feed__avi {
@@ -1034,6 +1052,8 @@ form {
   .feed__button {
     min-width: unset;
     max-width: unset;
+    min-height: unset;
+    max-height: unset;
     padding: 0;
     width: 160px;
     height: 3rem;
@@ -1192,17 +1212,17 @@ form {
 /************************************FOOTER BANNER************************************/
 .footer {
   background-color: #323232;
-  padding: 0 1rem 0 1rem;
+  padding: 0 5vw 0 5vw;
   color: #FFFF;
 }
 @media (min-width: 768px) {
   .footer {
-    padding: 0 1.5rem 0 1.5rem;
+    padding: 0 3.1vw 0 3.1vw;
   }
 }
 @media (min-width: 1280px) {
   .footer {
-    padding: 0 5rem 0 5rem;
+    padding: 0 6.3vw 0 6.3vw;
   }
 }
 .footer__binding {
@@ -1396,6 +1416,7 @@ form {
     font-size: 5vw;
     line-height: 7.5vw;
     font-family: AvenirNextLTProDemi;
+    color: #323232;
     color: #FFFF;
   }
 }
