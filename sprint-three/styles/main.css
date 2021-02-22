@@ -865,12 +865,14 @@ table {
 }
 @media (min-width: 768px) {
   .article {
-    width: 528px;
+    min-width: 68.8vw;
+    max-width: 41.3vw;
   }
 }
 @media (min-width: 1280px) {
   .article {
-    width: 528px;
+    min-width: 41.3vw;
+    max-width: 41.3vw;
   }
 }
 .article__header {
@@ -910,12 +912,12 @@ table {
 }
 @media (min-width: 768px) {
   .article__wrap {
-    margin-left: 100px;
+    margin: 0 13vw 0 13vw;
   }
 }
 @media (min-width: 1280px) {
   .article__wrap {
-    margin-left: 196px;
+    margin-left: 0 196px 0 196px;
   }
 }
 .article__binding {
@@ -928,24 +930,28 @@ table {
   width: 100%;
 }
 .article .feed__avi {
-  height: 3rem;
   width: 3rem;
+  height: 3rem;
   border-radius: 33.3px;
+  margin: 0 5vw 0 0;
   position: relative;
 }
+@media (min-width: 768px) {
+  .article .feed__avi {
+    margin: 0 2.1vw 0 0;
+  }
+}
+@media (min-width: 1280px) {
+  .article .feed__avi {
+    margin: 0 1.3vw 0 0;
+  }
+}
 .article .feed__boxes {
-  display: flex;
-  flex-direction: column;
-  width: calc(100% - 68px);
   padding: 0 0px 0 0px;
-  min-width: 70vw;
-  max-width: 460px;
 }
 @media (min-width: 768px) {
   .article .feed__boxes {
     margin: 0 0 0 0;
-    min-width: 224px;
-    max-width: 460px;
   }
 }
 @media (min-width: 1280px) {
@@ -985,31 +991,46 @@ table {
   padding: 0 30vw 0 0;
 }
 .article .feed__alias-field {
+  color: #323232;
+  font-family: AvenirNextLTProRegular;
+  font-size: 4.1vw;
+  line-height: 5.6vw;
   box-sizing: border-box;
   font-size: 12px;
   color: #AFAFAF;
   margin: 1rem 0 1rem 0;
   min-width: 70vw;
-  max-width: 460px;
+  max-width: 70vw;
   min-height: 10vw;
-  max-height: 48px;
+  max-height: 10vw;
   border-radius: 4px;
   padding: 3px 0 0 10px;
 }
 @media (min-width: 768px) {
   .article .feed__alias-field {
-    width: 28.75rem;
-    min-height: 48px;
-    max-height: 3.8vw;
-    min-width: 460px;
-    max-width: 35.9vw;
+    font-size: 1.82vw;
+    line-height: 2.6vw;
   }
 }
 @media (min-width: 1280px) {
   .article .feed__alias-field {
-    min-width: 460px;
-    max-width: 460px;
-    min-height: 48px;
+    font-size: 1.1vw;
+    line-height: 1.6vw;
+  }
+}
+@media (min-width: 768px) {
+  .article .feed__alias-field {
+    min-height: 6.3vw;
+    max-height: 6.3vw;
+    min-width: 59.9vw;
+    max-width: 59.9vw;
+  }
+}
+@media (min-width: 1280px) {
+  .article .feed__alias-field {
+    min-width: 35.9vw;
+    max-width: 35.9vw;
+    min-height: 3.8vw;
     min-height: 3.8vw;
   }
 }
@@ -1017,9 +1038,9 @@ table {
   box-sizing: border-box;
   border-radius: 0.25rem;
   min-width: 70vw;
-  max-width: 460px;
+  max-width: 70vw;
   min-height: 20vw;
-  max-height: 96px;
+  max-height: 12.5vw;
   margin: 1rem 0 1rem 0;
   resize: none;
   color: #323232;
@@ -1042,18 +1063,18 @@ table {
 }
 @media (min-width: 768px) {
   .article .feed__note-field {
-    min-width: 460px;
-    max-width: 35.9vw;
-    min-height: 96px;
+    min-width: 59.9vw;
+    max-width: 59.9vw;
+    min-height: 12.5vw;
     max-height: 7.5vw;
   }
 }
 @media (min-width: 1280px) {
   .article .feed__note-field {
-    min-width: 460px;
-    max-width: 460px;
-    min-height: 96px;
-    max-height: 7.5vw;
+    min-width: 59.9vw;
+    max-width: 59.9vw;
+    min-height: 3.8vw;
+    max-height: 3.8vw;
   }
 }
 .article .feed__button {
@@ -1109,7 +1130,7 @@ table {
 }
 @media (min-width: 768px) {
   .article .feed__button {
-    float: left;
+    float: right;
   }
 }
 
@@ -1117,14 +1138,10 @@ table {
 .repository {
   display: flex;
   flex-flow: row wrap;
-  min-width: 87.5vw;
-  max-width: 36.5vw;
   margin: 0px 1rem 1.5rem 1rem;
 }
 @media (min-width: 768px) {
   .repository {
-    min-width: 528px;
-    max-width: 41.3vw;
     margin: 0 124px 1.5rem 0;
   }
 }
@@ -1134,12 +1151,22 @@ table {
   }
 }
 .repository__empty-container {
-  width: 100%;
-  padding: 1.5rem 1rem 0;
+  min-width: 90vw;
+  max-width: 90vw;
+  padding: 1.5rem 0rem 0;
 }
 @media (min-width: 768px) {
   .repository__empty-container {
-    max-width: 528px;
+    min-width: 68.8vw;
+    max-width: 41.3vw;
+    margin: 0 auto;
+    padding: 0rem 1rem 0;
+  }
+}
+@media (min-width: 1280px) {
+  .repository__empty-container {
+    min-width: 41.3vw;
+    max-width: 41.3vw;
     margin: 0 auto;
     padding: 0rem 1rem 0;
   }
@@ -1155,15 +1182,20 @@ table {
   }
 }
 .repository__top-right-container {
-  min-width: 240px;
-  max-width: 75vw;
-  padding: 0 0 1.5rem 1rem;
+  min-width: 74.7vw;
+  max-width: 74.7vw;
+  padding: 0 0 1.5rem 0rem;
 }
 @media (min-width: 768px) {
   .repository__top-right-container {
-    min-width: 476px;
-    max-width: 476px;
-    padding: 0px 0px 1.5rem 1rem;
+    min-width: 57.8vw;
+    max-width: 57.8vw;
+  }
+}
+@media (min-width: 1280px) {
+  .repository__top-right-container {
+    min-width: 34.7vw;
+    max-width: 34.7vw;
   }
 }
 .repository__top-right-left-container {
@@ -1191,13 +1223,14 @@ table {
   }
 }
 .repository__avi {
+  margin: 0 1.5rem 0 0;
   height: 3rem;
   width: 3rem;
   border-radius: 30px;
 }
 .repository__name {
-  min-width: 43.8vw;
-  max-width: 18.1vw;
+  min-width: 40.8vw;
+  max-width: 40.1vw;
   font-family: AvenirNextLTProRegular;
   color: #323232;
   font-size: 4.1vw;
@@ -1218,23 +1251,24 @@ table {
 }
 @media (min-width: 768px) {
   .repository__name {
-    min-width: 140px;
-    max-width: 18.1vw;
+    min-width: 18.4vw;
+    max-width: 18.4vw;
     line-height: none;
     height: 1rem;
   }
 }
 @media (min-width: 1280px) {
   .repository__name {
-    min-width: 140px;
-    max-width: 140px;
+    min-width: 10.6vw;
+    max-width: 10.6vw;
     line-height: none;
     height: 1rem;
   }
 }
 .repository__time {
   height: 1rem;
-  width: 9rem;
+  min-width: 30.8vw;
+  max-width: 30.4vw;
   color: #323232;
   font-family: AvenirNextLTProRegular;
   font-size: 4.1vw;
@@ -1250,6 +1284,18 @@ table {
   .repository__time {
     font-size: 1.1vw;
     line-height: 1.6vw;
+  }
+}
+@media (min-width: 768px) {
+  .repository__time {
+    min-width: 18.4vw;
+    max-width: 18.4vw;
+  }
+}
+@media (min-width: 1280px) {
+  .repository__time {
+    min-width: 10.6vw;
+    max-width: 10.6vw;
   }
 }
 .repository__comment {
@@ -1257,6 +1303,8 @@ table {
   font-family: AvenirNextLTProRegular;
   font-size: 4.1vw;
   line-height: 5.6vw;
+  min-width: 63.7vw;
+  max-width: 63.7vw;
 }
 @media (min-width: 768px) {
   .repository__comment {
@@ -1268,6 +1316,18 @@ table {
   .repository__comment {
     font-size: 1.1vw;
     line-height: 1.6vw;
+  }
+}
+@media (min-width: 768px) {
+  .repository__comment {
+    min-width: 57.8vw;
+    max-width: 57.8vw;
+  }
+}
+@media (min-width: 1280px) {
+  .repository__comment {
+    min-width: 34.7vw;
+    max-width: 34.7vw;
   }
 }
 
