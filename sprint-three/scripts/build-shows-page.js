@@ -1,7 +1,3 @@
-let newArray = [];
-
-//let apiSite = 'https://project-1-api.herokuapp.com/showdates?api_key=mollystation'
-
 let apiURL = `https://project-1-api.herokuapp.com/`;
 let apiFolder = `showdates`;
 let apiKey = `?api_key=mollystation`;
@@ -39,7 +35,6 @@ eventComponent.appendChild(eventHeadline);
 eventComponent.appendChild(eventCard);
 
 
-// function that builds the 'shows__card'
 function displayShows(post) {
     for (let i = 0; i < post.length; i++) {
 
@@ -108,9 +103,6 @@ function displayShows(post) {
         eventCard.appendChild(eventInstance);
         eventCard.appendChild(eventDivider);
         eventInstance.appendChild(eventButton);
-
-
-
 
         let instance = document.querySelector('.shows__instance');
         let caption = instance.getElementsByClassName('shows__instance-header');
