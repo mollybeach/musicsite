@@ -13,14 +13,8 @@
         @include width-100-percent-at-standard-padding;
         @include standard-padding-left;
         flex-direction: row;
-        min-height: 80px; //80px tablet tablet
-        max-height: 80px; //80px desktop
         justify-content: flex-start;
         align-items: center;
-    }
-    @include desktop {
-        min-height: 80px; //80px desktop
-        max-height: 80px; //80px 
     }
     &__trademark {
         margin: 5.0vw 0 0; //16px
@@ -52,16 +46,13 @@
         display: flex;
         justify-content: center;
         width: 50%;
-        // padding: 0 0 0.8vw 0; //12px {input: 12, rem: "0.8", mobileVW: "3.8", tabletVW: "1.6", desktopVW: "0.9"}
         @include tablet {
             align-items: center;
-            width: 10.4vw; ///80px mobile{ input: 80, rem: "5.0", mobileVW: "25.0", tabletVW: "10.4", desktopVW: "6.3"}
-            //padding: 2.9vw 0; //28px{input: 28, rem: "1.8", mobileVW: "8.8", tabletVW: "3.6", desktopVW: "2.2"}
-            margin: 0 7.3vw 0 0; //56px{input: 56, rem: "3.5", mobileVW: "17.5", tabletVW: "7.3", desktopVW: "4.4"}
+            width: 10.4vw; ///80px mobile
+            margin: 0 7.3vw 0 0; //56px
         }
         @include desktop {
             width: 6.3vw; ///80px mobile
-            // padding: 2.2vw 0; //28px
             margin: 0 4.4vw 0 0; //56px
         }
         &--active {
@@ -75,7 +66,7 @@
         }
     }
     &__link {
-        @include h4-list-contact-information-white-demi; //nav bar responsive
+        @include h4-list-contact-information-white-demi;
         padding: 0px 0 5px 0;
         @include tablet {
             @include h4-list-contact-information-white-demi;
@@ -89,7 +80,7 @@
             letter-spacing: 1.0px;
         }
         &--active {
-            @include h4-list-contact-information-white-demi; //nav bar responsive
+            @include h4-list-contact-information-white-demi;
             @include tablet {
                 @include h4-list-contact-information-white-demi;
             }

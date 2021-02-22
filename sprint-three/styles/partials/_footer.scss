@@ -25,9 +25,8 @@
         }
     }
     &__title {
-        @include h1-main-header-responsive; //mobile looks better in vw
+        @include h1-main-header;
         @include tablet {
-            @include h1-main-header;
             width: 52.1vw; //400px 
         }
         @include desktop {

@@ -78,7 +78,7 @@
     }
     &__title {
         margin: 0 0 48px 0;
-        @include h2-header-responsive-white; //make hero text reponsive but only for mobile
+        @include h2-header-white;
         @include tablet {
             @include h2-header-white;
         }
@@ -86,7 +86,7 @@
     &__text {
         z-index: 1;
         &--font-size-shows {
-            @include h1-main-header-tablet-desktop-responsive; //based on the mockup this is the ideal size for the mobile hero heading looks perfect
+            @include h1-main-header-tablet-desktop; //based on the mockup this is the ideal size for the mobile hero heading looks perfect
             @include tablet {
                 @include h1-hero-heading;
             }
@@ -117,7 +117,7 @@
         }
         @include desktop {
             padding: 0; //remove standard padding mixin
-            margin: 0 0 17.7rem 0; //274px {input: 274, rem: "17.1", mobileVW: "85.6", tabletVW: "35.7", desktopVW: "21.4"}
+            margin: 0 0 17.7rem 0; //274px 
             position: relative;
             height: 146px;
             width: 436px;

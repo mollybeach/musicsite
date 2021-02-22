@@ -24,30 +24,15 @@
 @mixin h1-hero-heading {
     font-family: AvenirNextLTProBold;
     color: $white;
-    font-size: 3.8rem; //60px {input: 60, rem: "3.8", mobileVW: "18.8", tabletVW: "7.8", desktopVW: "4.7"}
-    line-height: 4.3rem; //68px{input: 68, rem: "4.3", mobileVW: "21.3", tabletVW: "8.9", desktopVW: "5.3"}
+    font-size: 3.8rem; //60px 
+    line-height: 4.3rem; //68px
     @include tablet {
-        font-size: 3.8rem; //60px {input: 60, rem: "3.8", mobileVW: "18.8", tabletVW: "7.8", desktopVW: "4.7"}
-        line-height: 4.3rem; //68px{input: 68, rem: "4.3", mobileVW: "21.3", tabletVW: "8.9", desktopVW: "5.3"}
+        font-size: 3.8rem; //60px
+        line-height: 4.3rem; //68px
     }
     @include desktop {
-        font-size: 3.8rem; //60px {input: 60, rem: "3.8", mobileVW: "18.8", tabletVW: "7.8", desktopVW: "4.7"}
-        line-height: 4.3rem; //68px{input: 68, rem: "4.3", mobileVW: "21.3", tabletVW: "8.9", desktopVW: "5.3"}
-    }
-}
-
-@mixin h1-hero-heading-responsive {
-    font-family: AvenirNextLTProBold;
-    color: $white;
-    font-size: 18.8vw; //60px {input: 60, rem: "3.8", mobileVW: "18.8", tabletVW: "7.8", desktopVW: "4.7"}
-    line-height: 21.3vw; //68px{input: 68, rem: "4.3", mobileVW: "21.3", tabletVW: "8.9", desktopVW: "5.3"}
-    @include tablet {
-        font-size: 7.8vw; //60px {input: 60, rem: "3.8", mobileVW: "18.8", tabletVW: "7.8", desktopVW: "4.7"}
-        line-height: 8.9vw; //68px{input: 68, rem: "4.3", mobileVW: "21.3", tabletVW: "8.9", desktopVW: "5.3"}
-    }
-    @include desktop {
-        font-size: 4.7vw; //60px {input: 60, rem: "3.8", mobileVW: "18.8", tabletVW: "7.8", desktopVW: "4.7"}
-        line-height: 5.3vw; //68px{input: 68, rem: "4.3", mobileVW: "21.3", tabletVW: "8.9", desktopVW: "5.3"}
+        font-size: 3.8rem; //60px 
+        line-height: 4.3rem; //68px
     }
 }
 
@@ -56,16 +41,16 @@
 
 @mixin h1-main-header {
     font-family: AvenirNextLTProBold;
-    font-size: 1.5rem; //24px  {input: 24, rem: "1.5", mobileVW: "7.5", tabletVW: "3.1", desktopVW: "1.9"}
-    line-height: 2.0rem; //32px 2rem : {input: 32, rem: "2.0", mobileVW: "10.0", tabletVW: "4.2", desktopVW: "2.5"}
+    font-size: 1.5rem; //24px 
+    line-height: 2.0rem; //32px
     color: $white;
     @include tablet {
-        font-size: 2.3rem; //36px 2.25rem 37: {input: 36, rem: "2.3", mobileVW: "11.3", tabletVW: "4.7", desktopVW: "2.8"}
-        line-height: 2.8rem; //44px {input: 44, rem: "2.8", mobileVW: "13.8", tabletVW: "5.7", desktopVW: "3.4"}
+        font-size: 2.3rem; //36px 2.25rem 
+        line-height: 2.8rem; //44px
     }
     @include desktop {
-        font-size: 2.3rem; //36px 2.25rem 37: {input: 36, rem: "2.3", mobileVW: "11.3", tabletVW: "4.7", desktopVW: "2.8"}
-        line-height: 2.8rem; //44px {input: 44, rem: "2.8", mobileVW: "13.8", tabletVW: "5.7", desktopVW: "3.4"}
+        font-size: 2.3rem; //36px 2.25rem 
+        line-height: 2.8rem; //44px
     }
 }
 
@@ -81,52 +66,15 @@
 
 @mixin h1-main-header-tablet-desktop {
     font-family: AvenirNextLTProBold;
-    font-size: 2.3rem; // 36px {input: 36, rem: "2.3", mobileVW: "11.3", tabletVW: "4.7", desktopVW: "2.8"}
-    line-height: 2.8rem; //44px 2.75rem  {input: 44, rem: "2.8", mobileVW: "13.8", tabletVW: "5.7", desktopVW: "3.4"}
+    font-size: 2.3rem; // 36px 
+    line-height: 2.8rem; //44px 2.75rem 
     @include tablet {
-        font-size: 2.3rem; // 36px {input: 36, rem: "2.3", mobileVW: "11.3", tabletVW: "4.7", desktopVW: "2.8"}
-        line-height: 2.8rem; //44px 2.75rem  {input: 44, rem: "2.8", mobileVW: "13.8", tabletVW: "5.7", desktopVW: "3.4"}
+        font-size: 2.3rem; // 36px 
+        line-height: 2.8rem; //44px 2.75rem 
     }
     @include desktop {
-        font-size: 2.3rem; // 36px{input: 36, rem: "2.3", mobileVW: "11.3", tabletVW: "4.7", desktopVW: "2.8"}
-        line-height: 2.8rem; //44px 2.75rem  {input: 44, rem: "2.8", mobileVW: "13.8", tabletVW: "5.7", desktopVW: "3.4"}
-    }
-}
-
-
-/*********************************************H1 MAIN HEADER RESPONSIVE****************/
-
-@mixin h1-main-header-responsive {
-    color: $white;
-    font-family: AvenirNextLTProBold;
-    font-size: 7.5vw; //24px  {input: 24, rem: "1.5", mobileVW: "7.5", tabletVW: "3.1", desktopVW: "1.9"}
-    line-height: 10.0vw; //32px 2rem : {input: 32, rem: "2.0", mobileVW: "10.0", tabletVW: "4.2", desktopVW: "2.5"}
-    @include tablet {
-        font-size: 4.7vw; //36px 2.25rem 37: {input: 36, rem: "2.3", mobileVW: "11.3", tabletVW: "4.7", desktopVW: "2.8"}
-        line-height: 5.7vw; //44px {input: 44, rem: "2.8", mobileVW: "13.8", tabletVW: "5.7", desktopVW: "3.4"}
-    }
-    @include desktop {
-        font-size: 2.8vw; //36px 2.25rem 37: {input: 36, rem: "2.3", mobileVW: "11.3", tabletVW: "4.7", desktopVW: "2.8"}
-        line-height: 3.4vw; //44px {input: 44, rem: "2.8", mobileVW: "13.8", tabletVW: "5.7", desktopVW: "3.4"}
-    }
-}
-
-@mixin h1-main-header-black-responsive {
-    @include h1-main-header;
-    color: $black;
-}
-
-@mixin h1-main-header-tablet-desktop-responsive {
-    font-family: AvenirNextLTProBold;
-    font-size: 11.0vw; // 36px {input: 36, rem: "2.3", mobileVW: "11.3", tabletVW: "4.7", desktopVW: "2.8"}
-    line-height: 13.8vw; //44px 2.75rem  {input: 44, rem: "2.8", mobileVW: "13.8", tabletVW: "5.7", desktopVW: "3.4"}
-    @include tablet {
-        font-size: 4.7vw; // 36px {input: 36, rem: "2.3", mobileVW: "11.3", tabletVW: "4.7", desktopVW: "2.8"}
-        line-height: 5.7vw; //44px 2.75rem  {input: 44, rem: "2.8", mobileVW: "13.8", tabletVW: "5.7", desktopVW: "3.4"}
-    }
-    @include desktop {
-        font-size: 2.8vw; // 36px{input: 36, rem: "2.3", mobileVW: "11.3", tabletVW: "4.7", desktopVW: "2.8"}
-        line-height: 3.4vw; //44px 2.75rem  {input: 44, rem: "2.8", mobileVW: "13.8", tabletVW: "5.7", desktopVW: "3.4"}
+        font-size: 2.3rem; // 36px
+        line-height: 2.8rem; //44px 2.75rem 
     }
 }
 
@@ -134,18 +82,18 @@
 /*********************H2 - Header subheader for mobile*********************/
 
 @mixin h2-header {
-    font-size: 0.9rem; //14px {input: 14, rem: "0.9", mobileVW: "4.4", tabletVW: "1.8", desktopVW: "1.1"}
-    line-height: 1.4rem; //22px {input: 22, rem: "1.4", mobileVW: "6.9", tabletVW: "2.9", desktopVW: "1.7"}
+    font-size: 0.9rem; //14px 
+    line-height: 1.4rem; //22px 
     font-family: AvenirNextLTProDemi;
     color: $black;
     @include tablet {
-        font-size: 1.5rem; //24px 1.5rem  {input: 24, rem: "1.5", mobileVW: "7.5", tabletVW: "3.1", desktopVW: "1.9"}
-        line-height: 2.0; //32px 2rem : {input: 32, rem: "2.0", mobileVW: "10.0", tabletVW: "4.2", desktopVW: "2.5"}
+        font-size: 1.5rem; //24px 1.5rem 
+        line-height: 2.0; //32px 2rem
         font-family: AvenirNextLTProBold;
     }
     @include desktop {
-        font-size: 1.5rem; //24px 1.5rem  {input: 24, rem: "1.5", mobileVW: "7.5", tabletVW: "3.1", desktopVW: "1.9"}
-        line-height: 2.0rem; //32px 2rem : {input: 32, rem: "2.0", mobileVW: "10.0", tabletVW: "4.2", desktopVW: "2.5"}
+        font-size: 1.5rem; //24px 1.5rem 
+        line-height: 2.0rem; //32px 2rem 
     }
 }
 
@@ -160,39 +108,20 @@
 }
 
 
-/****************************************H2 HEADER RESPONSIVE*********************/
-
-@mixin h2-header-responsive {
-    font-size: 4.4vw; //14px {input: 14, rem: "0.9", mobileVW: "4.4", tabletVW: "1.8", desktopVW: "1.1"}
-    line-height: 6.9vw; //22px {input: 22, rem: "1.4", mobileVW: "6.9", tabletVW: "2.9", desktopVW: "1.7"}
-    font-family: AvenirNextLTProDemi;
-    color: $black;
-    @include tablet {
-        font-size: 3.1vw; //24px 1.5rem  {input: 24, rem: "1.5", mobileVW: "7.5", tabletVW: "3.1", desktopVW: "1.9"}
-        line-height: 4.2vw; //32px 2rem : {input: 32, rem: "2.0", mobileVW: "10.0", tabletVW: "4.2", desktopVW: "2.5"}
-        font-family: AvenirNextLTProBold;
-    }
-    @include desktop {
-        font-size: 1.9vw; //24px 1.5rem  {input: 24, rem: "1.5", mobileVW: "7.5", tabletVW: "3.1", desktopVW: "1.9"}
-        line-height: 2.5vw; //32px 2rem : {input: 32, rem: "2.0", mobileVW: "10.0", tabletVW: "4.2", desktopVW: "2.5"}
-    }
-}
-
-
 /*******************************H3 - Subheader for Tablet and Desktop*************/
 
 @mixin h3-subheader {
-    font-size: 1.0rem; //16px {input: 16, rem: "1.0", mobileVW: "5.0", tabletVW: "2.1", desktopVW: "1.3"}
-    line-height: 1.5rem; // 24px{input: 24, rem: "1.5", mobileVW: "7.5", tabletVW: "3.1", desktopVW: "1.9"}
+    font-size: 1.0rem; //16px 
+    line-height: 1.5rem; // 24px
     font-family: AvenirNextLTProDemi;
     color: $black;
     @include tablet {
-        font-size: 1.0rem; //16px {input: 16, rem: "1.0", mobileVW: "5.0", tabletVW: "2.1", desktopVW: "1.3"}
-        line-height: 1.5rem; // 24px{input: 24, rem: "1.5", mobileVW: "7.5", tabletVW: "3.1", desktopVW: "1.9"}
+        font-size: 1.0rem; //16px 
+        line-height: 1.5rem; // 24px
     }
     @include desktop {
-        font-size: 1.0rem; //16px {input: 16, rem: "1.0", mobileVW: "5.0", tabletVW: "2.1", desktopVW: "1.3"}
-        line-height: 1.5rem; // 24px{input: 24, rem: "1.5", mobileVW: "7.5", tabletVW: "3.1", desktopVW: "1.9"}
+        font-size: 1.0rem; //16px 
+        line-height: 1.5rem; // 24px
     }
 }
 
@@ -212,15 +141,15 @@
 @mixin h4-paragraphs-and-comments {
     font-family: AvenirNextLTProRegular;
     color: $black;
-    font-size: 0.8rem; // 13px{input: 13, rem: "0.8", mobileVW: "4.1", tabletVW: "1.7", desktopVW: "1.0"}
-    line-height: 1.1rem; //18px{input: 18, rem: "1.1", mobileVW: "5.6", tabletVW: "2.3", desktopVW: "1.4"}
+    font-size: 0.8rem; // 13px
+    line-height: 1.1rem; //18px
     @include tablet {
-        font-size: 0.9rem; // 14px{input: 14, rem: "0.9", mobileVW: "4.4", tabletVW: "1.8", desktopVW: "1.1"}
-        line-height: 1.4rem; //22px{input: 22, rem: "1.4", mobileVW: "6.9", tabletVW: "2.9", desktopVW: "1.7"}
+        font-size: 0.9rem; // 14px
+        line-height: 1.4rem; //22px
     }
     @include desktop {
-        font-size: 0.9rem; // 14px{input: 14, rem: "0.9", mobileVW: "4.4", tabletVW: "1.8", desktopVW: "1.1"}
-        line-height: 1.4rem; // 22px {input: 22, rem: "1.4", mobileVW: "6.9", tabletVW: "2.9", desktopVW: "1.7"}
+        font-size: 0.9rem; // 14px
+        line-height: 1.4rem; // 22px 
     }
 }
 
@@ -251,15 +180,15 @@
 @mixin h4-list-contact-information {
     color: $black;
     font-family: AvenirNextLTProRegular;
-    font-size: 0.8rem; //13px {input: 13, rem: "0.8", mobileVW: "4.1", tabletVW: "1.7", desktopVW: "1.0"}
-    line-height: 1.1rem; //18px {input: 18, rem: "1.1", mobileVW: "5.6", tabletVW: "2.3", desktopVW: "1.4"}
+    font-size: 0.8rem; //13px 
+    line-height: 1.1rem; //18px 
     @include tablet {
-        font-size: 0.9rem; //14px {input: 14, rem: "0.9", mobileVW: "4.4", tabletVW: "1.8", desktopVW: "1.1"}
-        line-height: 1.3rem; //20px {input: 20, rem: "1.3", mobileVW: "6.3", tabletVW: "2.6", desktopVW: "1.6"}
+        font-size: 0.9rem; //14px 
+        line-height: 1.3rem; //20px
     }
     @include desktop {
-        font-size: 0.9rem; //14px {input: 14, rem: "0.9", mobileVW: "4.4", tabletVW: "1.8", desktopVW: "1.1"}
-        line-height: 1.3rem; //20px {input: 20, rem: "1.3", mobileVW: "6.3", tabletVW: "2.6", desktopVW: "1.6"}
+        font-size: 0.9rem; //14px 
+        line-height: 1.3rem; //20px 
     }
 }
 
@@ -291,60 +220,21 @@
 }
 
 
-/************************************H4 Responsive*******************************/
-
-@mixin h4-list-contact-information-responsive {
-    color: $black;
-    font-family: AvenirNextLTProRegular;
-    font-size: 4.1vw; //13px {input: 13, rem: "0.8", mobileVW: "4.1", tabletVW: "1.7", desktopVW: "1.0"}
-    line-height: 5.6vw; //18px {input: 18, rem: "1.1", mobileVW: "5.6", tabletVW: "2.3", desktopVW: "1.4"}
-    @include tablet {
-        font-size: 1.82vw; //14px {input: 14, rem: "0.9", mobileVW: "4.4", tabletVW: "1.8", desktopVW: "1.1"}
-        line-height: 2.6vw; //20px {input: 20, rem: "1.3", mobileVW: "6.3", tabletVW: "2.6", desktopVW: "1.6"}
-    }
-    @include desktop {
-        font-size: 1.1vw; //14px {input: 14, rem: "0.9", mobileVW: "4.4", tabletVW: "1.8", desktopVW: "1.1"}
-        line-height: 1.6vw; //20px {input: 20, rem: "1.3", mobileVW: "6.3", tabletVW: "2.6", desktopVW: "1.6"}
-    }
-}
-
-@mixin h4-list-contact-information-responsive-white-demi {
-    @include h4-list-contact-information-responsive;
-    font-family: AvenirNextLTProDemi;
-    color: $white;
-}
-
-@mixin h4-paragraphs-and-comments-responsive {
-    font-family: AvenirNextLTProRegular;
-    color: $black;
-    font-size: 4.1vw; // 13px{input: 13, rem: "0.8", mobileVW: "4.1", tabletVW: "1.7", desktopVW: "1.0"}
-    line-height: 5.6vw; //18px{input: 18, rem: "1.1", mobileVW: "5.6", tabletVW: "2.3", desktopVW: "1.4"}
-    @include tablet {
-        font-size: 1.8vw; // 14px{input: 14, rem: "0.9", mobileVW: "4.4", tabletVW: "1.8", desktopVW: "1.1"}
-        line-height: 1.9vw; //22px{input: 22, rem: "1.4", mobileVW: "6.9", tabletVW: "2.9", desktopVW: "1.7"}
-    }
-    @include desktop {
-        font-size: 1.1vw; // 14px{input: 14, rem: "0.9", mobileVW: "4.4", tabletVW: "1.8", desktopVW: "1.1"}
-        line-height: 1.7vw; // 22px {input: 22, rem: "1.4", mobileVW: "6.9", tabletVW: "2.9", desktopVW: "1.7"}
-    }
-}
-
-
 /********************************P-Paragraph****************************/
 
 @mixin p-paragraph {
     font-family: AvenirNextLTProRegular;
     color: $black;
-    font-size: 0.8rem; //13px {input: 13, rem: "0.8", mobileVW: "4.1", tabletVW: "1.7", desktopVW: "1.0"}
-    line-height: 1.1rem; //18px{input: 18, rem: "1.1", mobileVW: "5.6", tabletVW: "2.3", desktopVW: "1.4"}
+    font-size: 0.8rem; //13px
+    line-height: 1.1rem; //18px
     @include tablet {
-        font-size: 0.9rem; //13px {input: 14, rem: "0.9", mobileVW: "4.4", tabletVW: "1.8", desktopVW: "1.1"}
-        line-height: 1.3rem; //18px {input: 20, rem: "1.3", mobileVW: "6.3", tabletVW: "2.6", desktopVW: "1.6"}
+        font-size: 0.9rem; //13px 
+        line-height: 1.3rem; //18px 
         display: inline-block;
     }
     @include desktop {
-        font-size: 0.9rem; //13px {input: 14, rem: "0.9", mobileVW: "4.4", tabletVW: "1.8", desktopVW: "1.1"}
-        line-height: 1.3rem; //18px {input: 20, rem: "1.3", mobileVW: "6.3", tabletVW: "2.6", desktopVW: "1.6"}
+        font-size: 0.9rem; //13px 
+        line-height: 1.3rem; //18px
         display: inline-block;
     }
 }
@@ -368,18 +258,18 @@
 /*******************************************H5-Labels***********************/
 
 @mixin h5-labels {
-    font-size: 0.8rem; //12px{input: 12, rem: "0.8", mobileVW: "3.8", tabletVW: "1.6", desktopVW: "0.9"}
-    line-height: 1.3rem; //20px {input: 20, rem: "1.3", mobileVW: "6.3", tabletVW: "2.6", desktopVW: "1.6"}
+    font-size: 0.8rem; //12px
+    line-height: 1.3rem; //20px 
     font-family: AvenirNextLTProRegular;
     color: $silver; //labels
     @include tablet {
-        font-size: 0.8rem; //12px{input: 12, rem: "0.8", mobileVW: "3.8", tabletVW: "1.6", desktopVW: "0.9"}
-        line-height: 1.3rem; // 20px{input: 20, rem: "1.3", mobileVW: "6.3", tabletVW: "2.6", desktopVW: "1.6"}
+        font-size: 0.8rem; //12px
+        line-height: 1.3rem; // 20px
         font-family: AvenirNextLTProDemi;
     }
     @include desktop {
-        font-size: 0.8rem; //12px{input: 12, rem: "0.8", mobileVW: "3.8", tabletVW: "1.6", desktopVW: "0.9"}
-        line-height: 1.8rem; // 20px{input: 20, rem: "1.3", mobileVW: "6.3", tabletVW: "2.6", desktopVW: "1.6"}
+        font-size: 0.8rem; //12px
+        line-height: 1.8rem; // 20px
     }
 }
 

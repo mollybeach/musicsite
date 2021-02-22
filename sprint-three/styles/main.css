@@ -81,13 +81,10 @@ table {
 }
 /*************************************H1 HERO HEADING************************************/
 /*****************************************H1-Main-heading****************************/
-/*********************************************H1 MAIN HEADER RESPONSIVE****************/
 /*********************H2 - Header subheader for mobile*********************/
-/****************************************H2 HEADER RESPONSIVE*********************/
 /*******************************H3 - Subheader for Tablet and Desktop*************/
 /********************H4 Paragraph & Comments*******************************/
 /********************************h4-lists-and-contacts-information**************/
-/************************************H4 Responsive*******************************/
 /********************************P-Paragraph****************************/
 /*******************************************H5-Labels***********************/
 /************************************VARIABLES******************************************/
@@ -109,8 +106,6 @@ table {
     width: calc(100% - 5.0vw);
     padding: 0 0 0 5vw;
     flex-direction: row;
-    min-height: 80px;
-    max-height: 80px;
     justify-content: flex-start;
     align-items: center;
   }
@@ -133,12 +128,6 @@ table {
 @media (min-width: 768px) and (min-width: 1280px) {
   .main-nav {
     padding: 0 0 0 6.3vw;
-  }
-}
-@media (min-width: 1280px) {
-  .main-nav {
-    min-height: 80px;
-    max-height: 80px;
   }
 }
 .main-nav__trademark {
@@ -407,23 +396,23 @@ table {
 }
 .hero-container__title {
   margin: 0 0 48px 0;
-  font-size: 4.4vw;
-  line-height: 6.9vw;
+  font-size: 0.9rem;
+  line-height: 1.4rem;
   font-family: AvenirNextLTProDemi;
   color: #323232;
   color: #FFFF;
 }
 @media (min-width: 768px) {
   .hero-container__title {
-    font-size: 3.1vw;
-    line-height: 4.2vw;
+    font-size: 1.5rem;
+    line-height: 2;
     font-family: AvenirNextLTProBold;
   }
 }
 @media (min-width: 1280px) {
   .hero-container__title {
-    font-size: 1.9vw;
-    line-height: 2.5vw;
+    font-size: 1.5rem;
+    line-height: 2rem;
   }
 }
 @media (min-width: 768px) {
@@ -453,19 +442,19 @@ table {
 }
 .hero-container__text--font-size-shows {
   font-family: AvenirNextLTProBold;
-  font-size: 11vw;
-  line-height: 13.8vw;
+  font-size: 2.3rem;
+  line-height: 2.8rem;
 }
 @media (min-width: 768px) {
   .hero-container__text--font-size-shows {
-    font-size: 4.7vw;
-    line-height: 5.7vw;
+    font-size: 2.3rem;
+    line-height: 2.8rem;
   }
 }
 @media (min-width: 1280px) {
   .hero-container__text--font-size-shows {
-    font-size: 2.8vw;
-    line-height: 3.4vw;
+    font-size: 2.3rem;
+    line-height: 2.8rem;
   }
 }
 @media (min-width: 768px) {
@@ -1357,42 +1346,26 @@ table {
   }
 }
 .footer__title {
-  color: #FFFF;
   font-family: AvenirNextLTProBold;
-  font-size: 7.5vw;
-  line-height: 10vw;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  color: #FFFF;
 }
 @media (min-width: 768px) {
   .footer__title {
-    font-size: 4.7vw;
-    line-height: 5.7vw;
+    font-size: 2.3rem;
+    line-height: 2.8rem;
   }
 }
 @media (min-width: 1280px) {
   .footer__title {
-    font-size: 2.8vw;
-    line-height: 3.4vw;
+    font-size: 2.3rem;
+    line-height: 2.8rem;
   }
 }
 @media (min-width: 768px) {
   .footer__title {
-    font-family: AvenirNextLTProBold;
-    font-size: 1.5rem;
-    line-height: 2rem;
-    color: #FFFF;
     width: 52.1vw;
-  }
-}
-@media (min-width: 768px) and (min-width: 768px) {
-  .footer__title {
-    font-size: 2.3rem;
-    line-height: 2.8rem;
-  }
-}
-@media (min-width: 768px) and (min-width: 1280px) {
-  .footer__title {
-    font-size: 2.3rem;
-    line-height: 2.8rem;
   }
 }
 @media (min-width: 1280px) {
