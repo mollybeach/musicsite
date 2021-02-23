@@ -66,8 +66,8 @@
 
 @mixin h1-main-header-tablet-desktop {
     font-family: AvenirNextLTProBold;
-    font-size: 2.3rem; // 36px 
-    line-height: 2.8rem; //44px 2.75rem 
+    font-size: 11.0vw; // 36px 
+    line-height: 13.8vw; //44px 2.75rem  
     @include tablet {
         font-size: 2.3rem; // 36px 
         line-height: 2.8rem; //44px 2.75rem 

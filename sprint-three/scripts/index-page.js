@@ -1,91 +1,30 @@
-//let apiSite = `https://project-1-api.herokuapp.com/comments?api_key=mollystation`;
-let newArray = [];
-//console.log(posts);
-
-
-
 let apiURL = `https://project-1-api.herokuapp.com/`;
 let apiFolder = `comments`;
-let apiFolderLikes = `likes`;
 let apiKey = `?api_key=mollystation`;
 
 let apiPost = (apiURL + apiFolder + apiKey);
 
-function timeStamp(date) {
-    // calculate days since last post
-    let date1 = new Date(date).getTime();
-    let today = new Date().getTime();
-
-    // calculate difference between dates in milliseconds
-    let difference = today - date1;
-
-    // calculate difference between dates in seconds
-    difference = difference / 1000;
-    let seconds = Math.floor(difference % 60);
-
-    // calculate difference between dates in minutes
-    difference = difference / 60;
-    let minutes = Math.floor(difference % 60);
-
-    // calculate difference between dates in hours
-    difference = difference / 60;
-    let hours = Math.floor(difference % 24);
-
-    // calculate difference between dates in days
-
-    let days = Math.floor(difference / 24);
-
-    // conditional to determine output of days, hours, minutes or seconds
-    if (days > 0) {
-        dateSince = `${days} days ago`;
-    } else if (days == 0 & hours == 1) {
-        dateSince = `${hours} hour ago`;
-    } else if (days == 0 & hours > 0) {
-        dateSince = `${hours} hours ago`;
-    } else if (hours == 0 & minutes == 1) {
-        dateSince = `${minutes} minute ago`;
-    } else if (hours == 0 & minutes > 0) {
-        dateSince = `${minutes} minutes ago`;
-    } else {
-        dateSince = `${seconds} seconds ago`;
-    };
-
-    // return the value
-    return dateSince
-}
 getComment = () => {
 
-        axios.get(apiPost)
-            .then(response => {
-                console.log(response.data);
-                newArray = response.data;
-                return newArray;
-            })
-            .then(response => {
-                displayComment(response);
-            })
-            .catch(error => {
-                console.log('something went wrong', error);
-            })
+    axios.get(apiPost)
+        .then(response => {
+            console.log(response.data);
+            newArray = response.data;
+            return newArray;
+        })
+        .then(response => {
+            displayComment(response);
+        })
+        .catch(error => {
+            console.log('something went wrong', error);
+        })
 
-    }
-    // create a function for updated time stamp
-    /*function timeStamp(s) {
-        let date = new Date(s);
-        let mm = date.getMonth() + 1;
-        let dd = date.getDate();
-        let yyyy = date.getFullYear();
-        return mm + '/' + dd + '/' + yyyy
-    }
-*/
-    // function to calculate date difference
-
+}
 
 const form = document.querySelector('.form__feed');
 
 form.addEventListener('submit', function(event) {
-
-    //clear the previous feed
+    //clear previous feed
     document.querySelector('.form__repository').innerText = '';
     event.preventDefault();
     let newUser = {
@@ -101,31 +40,65 @@ form.addEventListener('submit', function(event) {
             displayComment(newArray);
         })
         .catch(error => {
-            console.log("There's an error in your code ", error)
+            console.log("Yikes!", error)
         })
-        //event.target.reset();
+
     clearComments();
 });
-
+/*******************CLEAR COMMENTS***************************/
 function clearComments() {
     document.querySelector('.form__feed').reset(); //clears the text inside textbox the name and the comment 
     let element = document.querySelector('.form__repository');
     element.innerText = '';
 }
+/***************************GET TIME***********************************/
+function timeStamp(utc) {
+    let utcStart = new Date(utc).getTime();
+    let today = new Date().getTime();
+    let unit = today - utcStart;
+    //Mil to Sec
+    unit = unit / 1000;
+    //Sec to Min
+    let seconds = Math.floor(unit % 60);
+    unit = unit / 60;
+    //Min to Hours
+    let min = Math.floor(unit % 60);
+    unit = unit / 60;
+    //Hours to Days
+    let hours = Math.floor(unit % 24);
+    let days = Math.floor(unit / 24);
 
+    let timeSinceUtcStart;
+    if (days > 0) {
+        timeSinceUtcStart = `${days} days ago`;
+    } else if (days == 0 & hours == 1) {
+        timeSinceUtcStart = `${hours} hour ago`;
+    } else if (days == 0 & hours > 0) {
+        timeSinceUtcStart = `${hours} hours ago`;
+    } else if (hours == 0 & min == 1) {
+        timeSinceUtcStart = `${min} minute ago`;
+    } else if (hours == 0 & min > 0) {
+        timeSinceUtcStart = `${min} minutes ago`;
+    } else {
+        timeSinceUtcStart = `${seconds} seconds ago`;
+    };
+    return timeSinceUtcStart
+}
+
+/******************RANDOM PHOTO GENERATOR*******************/
 let apiRandomPhoto;
 
-function randomPhotoGenerator(varient) {
+function randomPhotoGenerator(variant) {
     let apiRandomImageURL = `https://randomuser.me/api/portraits/thumb/`;
     let apiRandomGenderM = `men/`;
     let apiRandomGenderF = `women/`;
     let apiRandomGender;
-    if (varient % 2 === 0) {
+    if (variant % 2 === 0) {
         apiRandomGender = apiRandomGenderM;
     } else {
         apiRandomGender = apiRandomGenderF;
     }
-    let apiRandomNumber = Math.floor(Math.random() * (100 - varient));
+    let apiRandomNumber = Math.floor(Math.random() * (100 - variant));
     let apiRandomImageEndOf = `.jpg`;
     let apiRandomPhoto = (apiRandomImageURL + apiRandomGender + apiRandomNumber + apiRandomImageEndOf);
     return apiRandomPhoto;
@@ -177,7 +150,6 @@ function displayComment(post) {
         repositoryTopRightLeftContainer.classList.add('form__top-right-left-container');
         /**********************APPEND THE CONTENT TO THIER CONTAINERS*******************/
 
-
         repositoryTopContainer.appendChild(repositoryName);
         repositoryTopContainer.appendChild(repositoryTime);
 
@@ -190,12 +162,10 @@ function displayComment(post) {
         repositoryEmptyContainer.appendChild(repositoryBorder);
         repositoryEmptyContainer.appendChild(repositoryTopRightLeftContainer);
 
-
         /**********************APPEND THE CONTAINERS TO THE HTML ELEMENT******************/
         repository.appendChild(repositoryEmptyContainer);
 
     }
 }
-
 
 getComment();

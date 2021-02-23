@@ -41,7 +41,6 @@
     }
     &__box {
         @include standard-padding-left-right;
-        color: $white;
         margin: 4.0rem 0; //64px 
         z-index: 1;
         &--mobile-box-size-biography {
@@ -57,7 +56,6 @@
             &--tablet-box-size-biography {
                 min-width: 510px; //apx 500px
                 max-width: 39.8vw; //apx 500px
-                // max-width: 60.1vw; //500px
             }
             &--tablet-box-size-shows {
                 min-width: 569px; //564px 74.1
