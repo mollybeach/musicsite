@@ -101,8 +101,9 @@ function displayShows(post) {
 
 
         eventCard.appendChild(eventInstance);
-        eventCard.appendChild(eventDivider);
         eventInstance.appendChild(eventButton);
+        eventCard.appendChild(eventDivider);
+
 
         let instance = document.querySelector('.shows__instance');
         let caption = instance.getElementsByClassName('shows__instance-header');

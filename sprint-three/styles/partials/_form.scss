@@ -30,13 +30,18 @@
         }
     }
     &__binding {
-        padding: 0 0 2rem; //32px
+        padding: 0 0 0rem; //32px
+        @include tablet {
+            padding: 0 0 2rem; //32px
+        }
     }
     &__feed {
-        padding: 0 0 2rem;
         display: flex;
         justify-content: space-between;
         width: 100%;
+        @include tablet {
+            padding: 0 0 2rem;
+        }
     }
     &__avi {
         width: 3.0rem; // 48px 
@@ -100,12 +105,6 @@
         }
         padding: 10px 0 0 10px; //center placeholder
     }
-    &__button {
-        @include button-biography;
-        @include tablet {
-            float: right;
-        }
-    }
     &__repository {
         display: flex;
         flex-flow: row wrap;
@@ -118,7 +117,8 @@
         }
     }
     &__empty-container {
-        width: 90.0vw; //288px 90.0vw
+        // width: 90.0vw; //288px 90.0vw
+        width: 100%;
         padding: 1.5rem 0rem 0;
         @include tablet {
             width: 528px;
@@ -175,6 +175,12 @@
         width: 62.50vw; //62.50vw 200px
         @include tablet {
             width: 444px; //444px 27.8rem 
+        }
+    }
+    &__button {
+        @include button-biography;
+        @include tablet {
+            float: right;
         }
     }
 }

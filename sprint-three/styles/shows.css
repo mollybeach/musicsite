@@ -329,29 +329,22 @@ table {
      object-fit: cover;
 }
 .hero-container__box {
-  padding: 0 5vw 0 5vw;
   margin: 4rem 0;
   z-index: 1;
-}
-@media (min-width: 768px) {
-  .hero-container__box {
-    padding: 0 3.1vw 0 3.1vw;
-  }
-}
-@media (min-width: 1280px) {
-  .hero-container__box {
-    padding: 0 6.3vw 0 6.3vw;
-  }
+  margin-left: 5vw;
 }
 .hero-container__box--mobile-box-size-biography {
-  width: 52%;
+  min-width: 224px;
+  max-width: 30vw;
 }
 .hero-container__box--mobile-box-size-shows {
-  width: 100%;
+  min-width: 288px;
+  max-width: 90vw;
 }
 @media (min-width: 768px) {
   .hero-container__box {
     margin: 6rem 0;
+    margin-left: 3.1vw;
   }
   .hero-container__box--tablet-box-size-biography {
     min-width: 510px;
@@ -365,10 +358,10 @@ table {
 @media (min-width: 1280px) {
   .hero-container__box {
     margin: 10rem 0;
+    margin-left: 6.25vw;
   }
   .hero-container__box--desktop-box-size-biography {
-    min-width: 528px;
-    max-width: 41.3vw;
+    width: 41%;
   }
   .hero-container__box--desktop-box-size-shows {
     min-width: 568px;
@@ -422,9 +415,10 @@ table {
   z-index: 1;
 }
 .hero-container__text--font-size-shows {
+  color: #FFFF;
   font-family: AvenirNextLTProBold;
-  font-size: 1.7rem;
-  line-height: 2.3rem;
+  font-size: 8vw;
+  line-height: 10.8vw;
   color: #FFFF;
 }
 @media (min-width: 768px) {
@@ -807,7 +801,6 @@ html {
 .shows {
   padding: 0 5vw 0 5vw;
   margin: 1.5rem 0;
-  width: 288px;
 }
 @media (min-width: 768px) {
   .shows {
@@ -1064,7 +1057,6 @@ html {
 }
 
 /*Imports 
-//main import
 @use "./partials/_reset.scss" as *;
 @use "./partials/_variables.scss" as *;
 @use "./partials/_breakpoints.scss" as *;

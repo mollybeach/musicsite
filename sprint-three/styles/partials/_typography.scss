@@ -65,9 +65,10 @@
 }
 
 @mixin h1-desktop-size-that-should-be-available-on-mobile {
+    color: $white;
     font-family: AvenirNextLTProBold;
-    font-size: 1.7rem; // 36px 
-    line-height: 2.3rem; //44px 2.75rem  
+    font-size: 8.0vw;
+    line-height: 10.8vw;
 }
 
 

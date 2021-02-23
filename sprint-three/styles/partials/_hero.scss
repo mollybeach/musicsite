@@ -40,19 +40,20 @@
         object-fit: cover;
     }
     &__box {
-        @include standard-padding-left-right;
         margin: 4.0rem 0; //64px 
         z-index: 1;
+        margin-left: 5.0vw;
         &--mobile-box-size-biography {
-            width: 52%;
+            min-width: 224px; //224px 
+            max-width: 30.0vw; //224px
         }
         &--mobile-box-size-shows {
-            //min-width: 288px; //288px 
-            // max-width: 90.0vw; //288px 
-            width: 100%;
+            min-width: 288px; //288px 
+            max-width: 90.0vw; //288px 
         }
         @include tablet {
             margin: 6.0rem 0; //96px 
+            margin-left: 3.1vw;
             &--tablet-box-size-biography {
                 min-width: 510px; //apx 500px
                 max-width: 39.8vw; //apx 500px
@@ -64,9 +65,9 @@
         }
         @include desktop {
             margin: 10.0rem 0; //160px
+            margin-left: 6.25vw;
             &--desktop-box-size-biography {
-                min-width: 528px; //528px
-                max-width: 41.3vw; //528px
+                width: 41%;
             }
             &--desktop-box-size-shows {
                 min-width: 568px; //552px 484px

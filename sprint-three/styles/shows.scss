@@ -31,7 +31,7 @@ html {
 .shows {
     @include standard-padding-left-right;
     margin: 1.5rem 0; //vertical 24px horizontal 16px
-    width: 288px;
+    //width: 288px;
     @include tablet {
         width: 720px;
     }
@@ -129,7 +129,6 @@ html {
 
 
 /*Imports 
-//main import
 @use "./partials/_reset.scss" as *;
 @use "./partials/_variables.scss" as *;
 @use "./partials/_breakpoints.scss" as *;
