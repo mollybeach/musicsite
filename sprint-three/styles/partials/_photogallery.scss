@@ -1,42 +1,42 @@
-    /************************************PHOTO GALLERY SECTION************************************/
-    
-    .photo-gallery-section {
-        display: flex;
-        flex-wrap: wrap;
-        background-color: $alabaster;
-        margin: 0 0 0 0; // 40px bottom 
-        @include standard-padding-left-right;
-        @include width-100-percent-gallery;
-        &__title {
-            @include h1-main-header-black;
-            margin: 2rem 0 1.5rem; //margin top 32px bottom 24px
-            @include tablet {
-                margin: 3rem 0 4rem; //margin top 48px bottom 64px
-            }
-        }
-        &__photo {
-            margin: 0px 0 1rem 0px; //16px 
-            min-width: 90.0vw; //288px 
-            min-height: 50.6vw; //162px 
-            max-width: 90.0vw; //288px 
-            max-height: 50.6vw; //162px 
-            @include tablet {
-                min-width: 224px; //224px 
-                min-height: 126px; //126px 
-                max-width: 29.16vw; //224px 
-                max-height: 16.4vw; //126px 
-                margin: 0px 1.6vw 3.1vw 0px;
-            }
-            @include desktop {
-                min-width: 344px; //344px
-                max-width: 26.9vw;
-                max-height: 15.1vw;
-                margin: 0px 1.9vw 1.9vw 0px; //24px 
-            }
-            &--scale {
-                width: 100%;
-                height: 100%;
-                object-fit: cover;
-            }
+/************************************PHOTO GALLERY SECTION************************************/
+
+.photo-gallery-section {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: $alabaster;
+    @include standard-padding-left;
+    //@include width-100-percent-gallery;
+    //width: 100%;
+    &__title {
+        @include h1-main-header-black;
+        margin: 2rem 0 1.5rem; //margin top 32px bottom 24px
+        @include tablet {
+            margin: 3rem 0 4rem; //margin top 48px bottom 64px
         }
     }
+    &__photo {
+        margin: 0px 0 1rem 0px; //16px 
+        min-width: 90.0vw; //288px 
+        min-height: 50.6vw; //162px 
+        max-width: 90.0vw; //288px 
+        max-height: 50.6vw; //162px 
+        @include tablet {
+            min-width: 224px; //224px 
+            min-height: 126px; //126px 
+            max-width: 29.16vw; //224px 
+            max-height: 16.4vw; //126px 
+            margin: 0px 1.6vw 3.1vw 0px;
+        }
+        @include desktop {
+            min-width: 344px; //344px
+            max-width: 26.9vw;
+            max-height: 15.1vw;
+            margin: 0px 1.9vw 1.9vw 0px; //24px 
+        }
+        &--scale {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+}

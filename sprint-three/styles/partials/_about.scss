@@ -1,120 +1,119 @@
-    /************************************ABOUT SECTION************************************/
-    
-    .about-section {
-        background-color: $white;
-        color: $black;
-        display: flex;
-        flex-direction: column;
-        @include standard-padding-left-right;
-        &__title {
-            margin: 2rem 0; //vertical 32px
-            @include h1-main-header-black;
-            @include tablet {
-                margin: 3rem 0; //vertical 48px
-                @include h1-main-header-tablet-desktop;
-            }
-        }
-        &__content {
-            @include desktop {
-                padding: 0 0 0 13.4vw; //padding 172px left
-            }
-        }
-        &__img {
-            display: flex;
-            justify-content: center;
-            margin: 0px 0 1.5rem; //top horizontal bottom 0 0 24px
-            width: 90.0vw; //288px mobile
-            height: 45.0vw; //144px appx. 
-            max-width: 90.0vw; //288px mobile
-            max-height: 45.0vw; //144px appx
-            @include tablet {
-                min-width: 720px; //720px tablet
-                min-height: 362px; //362px tablet 
-                max-width: 116.7vw; //896px
-                max-height: 58.6vw; //896x tablet
-            }
-            @include desktop {
-                min-width: 896px; //896px
-                min-height: 450px; //450px
-                max-width: 70.0vw; //450px desktop 
-                max-height: 35.2vw; //450px XL
-            }
-            &--scale {
-                width: 100%;
-                height: 100%;
-                object-fit: cover;
-            }
-        }
-        &__quote {
-            @include h2-header;
-            margin: 0 0 2rem 0; //32px
-            min-width: 90.0vw; //288px mobile 
-            max-width: 90.0vw; //288px mobile
-            @include tablet {
-                margin: 3rem 0 2.5rem 0rem; //48px 0 40px 0
-                min-width: 720px; //720pxwidth size of tablet 
-                max-width: 116.7vw; //720px
-            }
-            @include desktop {
-                margin: 3rem 0 2.5rem 0; //48px 0 px 40px 48px left 
-                min-width: 780px; //780px
-                max-width: 60.9vw; //780px 
-            }
-        }
-        &__name {
-            @include h4-paragraphs-and-comments;
-            margin: 0 0 2.5rem 0; //0 top 0 right 40px bottom 0px left
-            @include h3-subheader;
-            @include tablet {
-                margin: 0 0 2.5rem 0; //0 0 40 0
-            }
-            @include desktop {
-                margin: 0 0 2.5rem 0; //48px top 0 px right  40px bottom 
-            }
-        }
-        &__names {
-            @include h2-header;
-            margin: 0 0 1.5rem 0; //0 0 24px
-            @include tablet {
-                margin: 0 0 2.5rem 0; //168 left 32 bottom
-            }
-            @include desktop {
-                margin: 0 0 2.5rem 0; //48px top 0 px right  40px bottom
-            }
-        }
-        &__text {
-            @include p-paragraph;
-            display: inline-block;
-            margin: 0 0 2.5rem; //top24 bottom40 
-            @include tablet {
-                display: flex;
-            }
-            @include desktop {
-                margin: 0 0 2.5rem 0;
-            }
-        }
-        &__top {
-            margin: 0 0 1.5rem 0; //bottom mobile 24px
-            @include tablet {
-                margin: 0 3.1vw 0 0; //24px right 
-                min-width: 348px; //348px 
-                max-width: 45.8vw; //420px 
-            }
-            @include desktop {
-                margin: 0 1.9vw 0 0; //24px right
-                min-width: 420px; //420px 
-                max-width: 29.1vw; //420px in desktop xl 
-            }
-        }
-        &__bottom {
-            @include tablet {
-                min-width: 348px; //348px 
-                max-width: 45.8vw; //420px 
-            }
-            @include desktop {
-                min-width: 420px; //420px 
-                max-width: 29.1vw; //420px in desktop xl 
-                margin: 0 0 0 0;
-            }
+/************************************ABOUT SECTION************************************/
+
+.about-section {
+    background-color: $white;
+    color: $black;
+    display: flex;
+    flex-direction: column;
+    @include standard-padding-left-right;
+    &__title {
+        margin: 2rem 0; //vertical 32px
+        @include h1-main-header-black;
+        @include tablet {
+            margin: 3rem 0; //vertical 48px
         }
     }
+    &__content {
+        @include desktop {
+            padding: 0 0 0 13.4vw; //padding 172px left
+        }
+    }
+    &__img {
+        display: flex;
+        justify-content: center;
+        margin: 0px 0 1.5rem; //top horizontal bottom 0 0 24px
+        width: 90.0vw; //288px mobile
+        height: 45.0vw; //144px appx. 
+        max-width: 90.0vw; //288px mobile
+        max-height: 45.0vw; //144px appx
+        @include tablet {
+            min-width: 720px; //720px tablet
+            min-height: 362px; //362px tablet 
+            max-width: 116.7vw; //896px
+            max-height: 58.6vw; //896x tablet
+        }
+        @include desktop {
+            min-width: 896px; //896px
+            min-height: 450px; //450px
+            max-width: 70.0vw; //450px desktop 
+            max-height: 35.2vw; //450px XL
+        }
+        &--scale {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+    &__quote {
+        @include h2-header;
+        margin: 0 0 2rem 0; //32px
+        min-width: 90.0vw; //288px mobile 
+        max-width: 90.0vw; //288px mobile
+        @include tablet {
+            margin: 3rem 0 2.5rem 0rem; //48px 0 40px 0
+            min-width: 720px; //720pxwidth size of tablet 
+            max-width: 116.7vw; //720px
+        }
+        @include desktop {
+            margin: 3rem 0 2.5rem 0; //48px 0 px 40px 48px left 
+            min-width: 780px; //780px
+            max-width: 60.9vw; //780px 
+        }
+    }
+    &__name {
+        @include h4-paragraphs-and-comments;
+        margin: 0 0 2.5rem 0; //0 top 0 right 40px bottom 0px left
+        @include h3-subheader;
+        @include tablet {
+            margin: 0 0 2.5rem 0; //0 0 40 0
+        }
+        @include desktop {
+            margin: 0 0 2.5rem 0; //48px top 0 px right  40px bottom 
+        }
+    }
+    &__names {
+        @include h2-header;
+        margin: 0 0 1.5rem 0; //0 0 24px
+        @include tablet {
+            margin: 0 0 2.5rem 0; //168 left 32 bottom
+        }
+        @include desktop {
+            margin: 0 0 2.5rem 0; //48px top 0 px right  40px bottom
+        }
+    }
+    &__text {
+        @include p-paragraph;
+        display: inline-block;
+        margin: 0 0 2.5rem; //top24 bottom40 
+        @include tablet {
+            display: flex;
+        }
+        @include desktop {
+            margin: 0 0 2.5rem 0;
+        }
+    }
+    &__top {
+        margin: 0 0 1.5rem 0; //bottom mobile 24px
+        @include tablet {
+            margin: 0 3.1vw 0 0; //24px right 
+            min-width: 348px; //348px 
+            max-width: 45.8vw; //420px 
+        }
+        @include desktop {
+            margin: 0 1.9vw 0 0; //24px right
+            min-width: 420px; //420px 
+            max-width: 29.1vw; //420px in desktop xl 
+        }
+    }
+    &__bottom {
+        @include tablet {
+            min-width: 348px; //348px 
+            max-width: 45.8vw; //420px 
+        }
+        @include desktop {
+            min-width: 420px; //420px 
+            max-width: 29.1vw; //420px in desktop xl 
+            margin: 0 0 0 0;
+        }
+    }
+}

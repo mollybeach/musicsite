@@ -64,18 +64,10 @@
     color: $black;
 }
 
-@mixin h1-main-header-tablet-desktop {
+@mixin h1-desktop-size-that-should-be-available-on-mobile {
     font-family: AvenirNextLTProBold;
-    font-size: 11.0vw; // 36px 
-    line-height: 13.8vw; //44px 2.75rem  
-    @include tablet {
-        font-size: 2.3rem; // 36px 
-        line-height: 2.8rem; //44px 2.75rem 
-    }
-    @include desktop {
-        font-size: 2.3rem; // 36px
-        line-height: 2.8rem; //44px 2.75rem 
-    }
+    font-size: 1.7rem; // 36px 
+    line-height: 2.3rem; //44px 2.75rem  
 }
 
 
@@ -107,6 +99,13 @@
     color: $white;
 }
 
+@mixin h2-desktop-size-that-should-be-available-on-mobile {
+    color: $white;
+    font-size: 1.5rem; //24px 1.5rem 
+    line-height: 2.0; //32px 2rem
+    font-family: AvenirNextLTProBold;
+}
+
 
 /*******************************H3 - Subheader for Tablet and Desktop*************/
 
@@ -133,6 +132,12 @@
 @mixin h3-subheader-bold {
     @include h3-subheader;
     font-family: AvenirNextLTProBold;
+}
+
+@mixin h3-subheader-white-bold {
+    @include h3-subheader;
+    font-family: AvenirNextLTProBold;
+    color: $white;
 }
 
 

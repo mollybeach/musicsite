@@ -44,12 +44,12 @@
         margin: 4.0rem 0; //64px 
         z-index: 1;
         &--mobile-box-size-biography {
-            min-width: 210px; //210x 
-            max-width: 27.3vw; //210px 
+            width: 52%;
         }
         &--mobile-box-size-shows {
-            min-width: 288px; //288px 
-            max-width: 90.0vw; //288px 
+            //min-width: 288px; //288px 
+            // max-width: 90.0vw; //288px 
+            width: 100%;
         }
         @include tablet {
             margin: 6.0rem 0; //96px 
@@ -75,16 +75,18 @@
         }
     }
     &__title {
-        margin: 0 0 48px 0;
-        @include h2-header-white;
+        margin: 0 0 24px 0;
+        @include h3-subheader-white;
         @include tablet {
             @include h2-header-white;
+            margin: 0 0 48px 0;
         }
     }
     &__text {
         z-index: 1;
         &--font-size-shows {
-            @include h1-main-header-tablet-desktop; //based on the mockup this is the ideal size for the mobile hero heading looks perfect
+            @include h1-desktop-size-that-should-be-available-on-mobile; //based on the mockup this is the ideal size for the mobile hero heading looks perfect color: $white;
+            color: $white;
             @include tablet {
                 @include h1-hero-heading;
             }
@@ -108,6 +110,7 @@
         margin: 0 0 20.0vw 0; //64px
         width: 90.0vw; // 288px 
         height: 30.0vw; //96px 
+        padding: 0 0 0 16px;
         @include tablet {
             margin: 0 0 6.3vw 0; //48px match 
             width: 436px;

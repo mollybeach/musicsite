@@ -60,7 +60,6 @@ table {
 }
 
 /************************************VARIABLES******************************************/
-/********************************* BREAKPOINTS**********************************************************/
 /********************************* FOR TABLETS**********************************************************/
 /********************************* FOR DESKTOP*************************************/
 /************************************FONTS******************************************/
@@ -87,7 +86,6 @@ table {
 /********************************h4-lists-and-contacts-information**************/
 /********************************P-Paragraph****************************/
 /*******************************************H5-Labels***********************/
-/************************************VARIABLES******************************************/
 /***************************************PADDING**************************************************/
 /**********************************************DIVIDERS******************************************************/
 /************************************MAIN NAV************************************/
@@ -103,31 +101,10 @@ table {
 }
 @media (min-width: 768px) {
   .main-nav {
-    width: calc(100% - 10.0vw);
-    padding: 0 5vw 0 5vw;
+    width: 100%;
     flex-direction: row;
     justify-content: flex-start;
     align-items: center;
-  }
-}
-@media (min-width: 768px) and (min-width: 768px) {
-  .main-nav {
-    width: calc(100% - 6.2vw);
-  }
-}
-@media (min-width: 768px) and (min-width: 1280px) {
-  .main-nav {
-    width: calc(100% - 12.6vw);
-  }
-}
-@media (min-width: 768px) and (min-width: 768px) {
-  .main-nav {
-    padding: 0 3.1vw 0 3.1vw;
-  }
-}
-@media (min-width: 768px) and (min-width: 1280px) {
-  .main-nav {
-    padding: 0 6.3vw 0 6.3vw;
   }
 }
 .main-nav__trademark {
@@ -136,11 +113,18 @@ table {
 .main-nav__trademark img {
   width: 120px;
   height: 24px;
+  margin-left: 1rem;
 }
 @media (min-width: 768px) {
   .main-nav__trademark img {
+    margin-left: 2rem;
     width: 120px;
     height: 24px;
+  }
+}
+@media (min-width: 1280px) {
+  .main-nav__trademark img {
+    margin-left: 5rem;
   }
 }
 @media (min-width: 768px) {
@@ -360,12 +344,10 @@ table {
   }
 }
 .hero-container__box--mobile-box-size-biography {
-  min-width: 210px;
-  max-width: 27.3vw;
+  width: 52%;
 }
 .hero-container__box--mobile-box-size-shows {
-  min-width: 288px;
-  max-width: 90vw;
+  width: 100%;
 }
 @media (min-width: 768px) {
   .hero-container__box {
@@ -394,24 +376,23 @@ table {
   }
 }
 .hero-container__title {
-  margin: 0 0 48px 0;
-  font-size: 0.9rem;
-  line-height: 1.4rem;
+  margin: 0 0 24px 0;
+  font-size: 1rem;
+  line-height: 1.5rem;
   font-family: AvenirNextLTProDemi;
   color: #323232;
   color: #FFFF;
 }
 @media (min-width: 768px) {
   .hero-container__title {
-    font-size: 1.5rem;
-    line-height: 2;
-    font-family: AvenirNextLTProBold;
+    font-size: 1rem;
+    line-height: 1.5rem;
   }
 }
 @media (min-width: 1280px) {
   .hero-container__title {
-    font-size: 1.5rem;
-    line-height: 2rem;
+    font-size: 1rem;
+    line-height: 1.5rem;
   }
 }
 @media (min-width: 768px) {
@@ -421,6 +402,7 @@ table {
     font-family: AvenirNextLTProDemi;
     color: #323232;
     color: #FFFF;
+    margin: 0 0 48px 0;
   }
 }
 @media (min-width: 768px) and (min-width: 768px) {
@@ -441,20 +423,9 @@ table {
 }
 .hero-container__text--font-size-shows {
   font-family: AvenirNextLTProBold;
-  font-size: 11vw;
-  line-height: 13.8vw;
-}
-@media (min-width: 768px) {
-  .hero-container__text--font-size-shows {
-    font-size: 2.3rem;
-    line-height: 2.8rem;
-  }
-}
-@media (min-width: 1280px) {
-  .hero-container__text--font-size-shows {
-    font-size: 2.3rem;
-    line-height: 2.8rem;
-  }
+  font-size: 1.7rem;
+  line-height: 2.3rem;
+  color: #FFFF;
 }
 @media (min-width: 768px) {
   .hero-container__text--font-size-shows {
@@ -542,6 +513,7 @@ table {
   margin: 0 0 20vw 0;
   width: 90vw;
   height: 30vw;
+  padding: 0 0 0 16px;
 }
 @media (min-width: 768px) {
   .hero-container__soundcloud {
@@ -611,21 +583,6 @@ table {
 @media (min-width: 768px) {
   .about-section__title {
     margin: 3rem 0;
-    font-family: AvenirNextLTProBold;
-    font-size: 11vw;
-    line-height: 13.8vw;
-  }
-}
-@media (min-width: 768px) and (min-width: 768px) {
-  .about-section__title {
-    font-size: 2.3rem;
-    line-height: 2.8rem;
-  }
-}
-@media (min-width: 768px) and (min-width: 1280px) {
-  .about-section__title {
-    font-size: 2.3rem;
-    line-height: 2.8rem;
   }
 }
 @media (min-width: 1280px) {
@@ -843,28 +800,16 @@ table {
   display: flex;
   flex-wrap: wrap;
   background-color: #FAFAFA;
-  margin: 0 0 0 0;
-  padding: 0 5vw 0 5vw;
-  width: calc(100% - 5.0vw);
+  padding: 0 0 0 5vw;
 }
 @media (min-width: 768px) {
   .photo-gallery-section {
-    padding: 0 3.1vw 0 3.1vw;
+    padding: 0 0 0 3.1vw;
   }
 }
 @media (min-width: 1280px) {
   .photo-gallery-section {
-    padding: 0 6.3vw 0 6.3vw;
-  }
-}
-@media (min-width: 768px) {
-  .photo-gallery-section {
-    width: calc(100% - 3.1vw);
-  }
-}
-@media (min-width: 1280px) {
-  .photo-gallery-section {
-    width: calc(100% - 12.6vw);
+    padding: 0 0 0 6.3vw;
   }
 }
 .photo-gallery-section__title {
@@ -1410,11 +1355,18 @@ table {
 .footer__trademark img {
   width: 120px;
   height: 24px;
+  margin-left: 1rem;
 }
 @media (min-width: 768px) {
   .footer__trademark img {
+    margin-left: 2rem;
     width: 120px;
     height: 24px;
+  }
+}
+@media (min-width: 1280px) {
+  .footer__trademark img {
+    margin-left: 5rem;
   }
 }
 @media (min-width: 768px) {
@@ -1548,31 +1500,18 @@ table {
   }
 }
 
+/*********************************************HEADINGS**h1-h6**************************************/
+html {
+  box-sizing: border-box;
+}
+
 *,
-*::before,
-*::after {
+*:before,
+*:after {
   box-sizing: inherit;
   margin: 0px;
 }
 
-/*********************************************HEADINGS**h1-h6**************************************/
 /*H1 - Header*/
 /*********************************************END OF HEADINGS**h1-h6**************************************/
-/************************************HERO CONTAINER************************************/
-/* Imports
-
-//main import
-@use "./partials/_reset.scss" as *;
-@use "./partials/_variables.scss" as *;
-@use "./partials/_breakpoints.scss" as *;
-@use "./partials/_typography.scss" as *;
-@use "./partials/_variables.scss" as *;
-@use "./partials/_mixins.scss" as *;
-//section imports
-@use "./partials/_navigation.scss" as *;
-@use "./partials/_hero.scss" as *;
-@use "./partials/_about.scss" as *;
-@use "./partials/_photogallery.scss" as *;
-@use "./partials/_form.scss" as *;
-@use "./partials/_footer.scss" as *;
- *//*# sourceMappingURL=main.css.map */
+/************************************HERO CONTAINER************************************//*# sourceMappingURL=main.css.map */

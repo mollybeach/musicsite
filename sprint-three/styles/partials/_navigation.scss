@@ -10,8 +10,9 @@
     min-height: 80px; //80px mobile 25.0vw
     max-height: 25vw; //80px tablet
     @include tablet {
-        @include width-100-percent-at-standard-padding;
-        @include standard-padding-left-right;
+        //@include width-100-percent-at-standard-padding;
+        //@include standard-padding-left-right;
+        width: 100%;
         flex-direction: row;
         justify-content: flex-start;
         align-items: center;

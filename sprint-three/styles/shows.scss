@@ -6,18 +6,21 @@
 @import "./partials/_variables.scss";
 @import "./partials/_breakpoints.scss";
 @import "./partials/_typography.scss";
-@import "./partials/_variables.scss";
 @import "./partials/_mixins.scss";
 //section imports
 @import "./partials/_navigation.scss";
 @import "./partials/_hero.scss";
 @import "./partials/_footer.scss";
 
-/*********************************************END OF HEADINGS**h1-h6**************************************/
+/*********************************************END OF HEADINGS**h1-h6***************************************/
+
+html {
+    box-sizing: border-box;
+}
 
 *,
-*::before,
-*::after {
+*:before,
+*:after {
     box-sizing: inherit;
     margin: 0px;
 }
