@@ -31,6 +31,16 @@
 }
 
 @mixin width-100-percent-at-standard-padding {
+    width: calc(100% - 10.0vw); //5.0*2
+    @include tablet {
+        width: calc(100% - 6.2vw); //3.1*2
+    }
+    @include desktop {
+        width: calc(100% - 12.6vw); //6.3*2
+    }
+}
+
+@mixin width-100-percent-gallery {
     width: calc(100% - 5.0vw); //5.0*2
     @include tablet {
         width: calc(100% - 3.1vw); //3.1*2

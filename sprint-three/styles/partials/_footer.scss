@@ -41,16 +41,16 @@
         }
     }
     &__network-icon {
-        width: 5.0vw; //16px {input: 16, rem: "1.0", mobileVW: "5.0", tabletVW: "2.1", desktopVW: "1.3"}
+        width: 5.0vw; //16px 
         height: 5.0vw; //16px 
         @include tablet {
-            min-width: 3.1vw; //24px  {input: 24, rem: "1.5", mobileVW: "7.5", tabletVW: "3.1", desktopVW: "1.9"}
+            min-width: 3.1vw; //24px 
             min-height: 3.1vw; //24px  
             max-width: 1.9vw; //24px 
             max-height: 1.9vw; //24px 
         }
         @include desktop {
-            min-width: 1.9vw; //24px  {input: 24, rem: "1.5", mobileVW: "7.5", tabletVW: "3.1", desktopVW: "1.9"}
+            min-width: 1.9vw; //24px 
             min-height: 1.9vw; //24px  
             max-width: 1.9vw; //24px  
             max-height: 1.9vw; //24px  

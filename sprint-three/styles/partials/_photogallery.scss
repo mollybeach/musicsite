@@ -6,7 +6,7 @@
         background-color: $alabaster;
         margin: 0 0 0 0; // 40px bottom 
         @include standard-padding-left-right;
-        @include width-100-percent-at-standard-padding;
+        @include width-100-percent-gallery;
         &__title {
             @include h1-main-header-black;
             margin: 2rem 0 1.5rem; //margin top 32px bottom 24px
@@ -28,7 +28,7 @@
                 margin: 0px 1.6vw 3.1vw 0px;
             }
             @include desktop {
-                min-width: 344px;
+                min-width: 344px; //344px
                 max-width: 26.9vw;
                 max-height: 15.1vw;
                 margin: 0px 1.9vw 1.9vw 0px; //24px 

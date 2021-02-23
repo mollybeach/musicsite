@@ -11,7 +11,7 @@
     max-height: 25vw; //80px tablet
     @include tablet {
         @include width-100-percent-at-standard-padding;
-        @include standard-padding-left;
+        @include standard-padding-left-right;
         flex-direction: row;
         justify-content: flex-start;
         align-items: center;
@@ -56,12 +56,12 @@
             margin: 0 4.4vw 0 0; //56px
         }
         &--active {
-            border-bottom: solid .8vw $white; //5px
+            border-bottom: solid .8vw $white;
             @include tablet {
-                border-bottom: solid 0.7vw $white; //5px
+                border-bottom: solid 0.7vw $white;
             }
             @include desktop {
-                border-bottom: solid 0.4vw $white; //5px
+                border-bottom: solid 0.4vw $white;
             }
         }
     }
